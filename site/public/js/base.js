@@ -40,7 +40,8 @@ function h(t, a, ...k) {
 }
 
 function mount(...n) {
-  $.replaceChildren(...n.flat());
+  // replaceChildren escreveria "null" na tela para filhos vazios.
+  $.replaceChildren(...n.flat().filter((x) => x != null));
   // Durante a prova a barra lateral some, para não sair sem querer.
   document.documentElement.toggleAttribute("data-exam", !!(T && T.live));
   $.classList.remove("in");
@@ -57,33 +58,48 @@ function keep(fn) {
   scrollTo(0, y);
 }
 
-// Transição entre áreas e abas: um véu preto sobe cobrindo a tela, a tela
-// nova é desenhada por baixo e o véu continua subindo até sair. Só
-// transform; com movimento reduzido vira um fade. Sem animate(), troca direto.
+// Transição entre áreas e abas: a tela se desfaz em quadrados pretos que
+// acendem em ordem aleatória, a tela nova é desenhada por baixo e os
+// quadrados se apagam, também ao acaso. Só opacity; com movimento reduzido
+// o véu inteiro faz um fade. Sem animate() (testes), troca direto.
 let veu = null;
 let veuFila = null;
+const PIX = { dur: 140, ida: 260, volta: 300 };
+function veuGrade() {
+  const lado = Math.max(44, Math.ceil(innerWidth / 18));
+  const cols = Math.ceil(innerWidth / lado);
+  const n = cols * Math.ceil(innerHeight / lado);
+  if (veu && veu.dataset.n === String(n)) return veu;
+  veu?.remove();
+  veu = h("div", { class: "veu", "aria-hidden": "true", "data-n": n, style: "--lado:" + lado + "px;--cols:" + cols });
+  for (let i = 0; i < n; i++) veu.append(h("i"));
+  return document.body.appendChild(veu);
+}
 function swap(fn) {
   if (!document.body.animate) return fn();
   if (veuFila) return void (veuFila = fn);
   veuFila = fn;
-  veu ||= document.body.appendChild(h("div", { class: "veu", "aria-hidden": "true" }));
+  const v = veuGrade();
   const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const ease = "cubic-bezier(0.77, 0, 0.175, 1)";
-  const ida = calmo
-    ? [{ opacity: 0 }, { opacity: 1 }]
-    : [{ transform: "translateY(100%)" }, { transform: "translateY(0)" }];
-  const volta = calmo
-    ? [{ opacity: 1 }, { opacity: 0 }]
-    : [{ transform: "translateY(0)" }, { transform: "translateY(-100%)" }];
-  const dur = calmo ? 150 : 420;
-  veu.animate(ida, { duration: dur, easing: ease, fill: "forwards" });
+  const pix = calmo ? [] : [...v.children];
+  const anima = (de, ate, max) => {
+    if (calmo) return v.animate([{ opacity: de }, { opacity: ate }], { duration: 150, fill: "forwards" });
+    for (const p of pix)
+      p.animate([{ opacity: de }, { opacity: ate }], {
+        duration: PIX.dur,
+        delay: Math.random() * max,
+        easing: "cubic-bezier(0.23, 1, 0.32, 1)",
+        fill: "both",
+      });
+  };
+  anima(0, 1, PIX.ida);
   // Relógio, não o fim da animação: com a aba parada a troca acontece igual.
   setTimeout(() => {
     const f = veuFila;
     veuFila = null;
     f();
-    veu.animate(volta, { duration: calmo ? 150 : 460, easing: ease, fill: "forwards" });
-  }, dur);
+    anima(1, 0, PIX.volta);
+  }, calmo ? 150 : PIX.ida + PIX.dur + 40);
 }
 
 function shuffle(a) {

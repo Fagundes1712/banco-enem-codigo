@@ -1423,20 +1423,27 @@ img.q.alt-img {
   }
 }
 
-/* Véu preto da transição entre áreas e abas (swap em js/base.js) */
+/* Véu da transição entre áreas e abas (swap em js/base.js): grade de
+   quadrados pretos que acendem e apagam ao acaso */
 .veu {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: var(--veu);
-  transform: translateY(100%);
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--lado));
+  grid-auto-rows: var(--lado);
+  overflow: hidden;
   pointer-events: none;
-  will-change: transform;
+}
+
+.veu i {
+  background: var(--veu);
+  opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .veu {
-    transform: none;
+    background: var(--veu);
     opacity: 0;
   }
 }

@@ -87,7 +87,7 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 
 - Animação só com `transform` e `opacity`, curvas `--ease-out` / `--ease-in-out`. Mudança de cor é instantânea.
 - Toque com `scale(0.97)`; cartões sobem 2px no hover de mouse.
-- Troca de área e de aba (Início, Suas respostas): um véu preto (`--veu`) sobe cobrindo a tela em 420ms, a tela nova é desenhada por baixo e o véu continua subindo até sair em 460ms, curva `--ease-in-out`. Com movimento reduzido vira um fade curto.
+- Troca de área e de aba (Início, Suas respostas): a tela se desfaz em quadrados pretos (`--veu`, cerca de 1/18 da largura, mínimo 44px) que acendem ao acaso em uns 400ms; a tela nova é desenhada por baixo e os quadrados se apagam ao acaso em uns 440ms. Só `opacity`, curva `--ease-out`. Com movimento reduzido vira um fade curto do véu inteiro. Referência: vídeo enviado pelo usuário em 2026-10-25.
 - `prefers-reduced-motion` remove deslocamentos e deixa só fade.
 
 ## 7. Acessibilidade

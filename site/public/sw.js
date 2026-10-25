@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v21"; // v21: véu preto entre áreas e abas; selo de dificuldade
+const VERSION = "v22"; // v22: transição em quadrados pretos; corrige "null" no tópico
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

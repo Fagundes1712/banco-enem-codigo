@@ -758,8 +758,11 @@ async function irTopico(w, id) {
   ok("sair volta ao tópico sem salvar bloco", d2.querySelector("h1").textContent === tA.nome && !w2.localStorage.getItem("banco-enem:blocos"));
   {
     // Tópico com menos de 5 questões só deixa escolher pela lista.
-    const peq = Object.keys(TOP).find((k) => unicas(banco.filter((q) => q.topico === k)).length < 5);
+    const peq = Object.keys(TOP).find(
+      (k) => unicas(banco.filter((q) => q.topico === k)).length < 5 && !banco.some((q) => q.topico === k && q.anulada)
+    );
     await irTopico(w2, peq);
+    ok("tópico sem anuladas não escreve 'null' solto", !/null/.test(d2.getElementById("app").textContent));
     ok("tópico pequeno não oferece quantidade", !d2.querySelector(".qtd") && d2.querySelectorAll(".qcard").length > 0);
     await irTopico(w2, "LC.en." + "leitura-em-ingles");
     ok("Língua Inglesa abre direto nas questões", d2.querySelector("h1").textContent === "Leitura em Inglês" &&
