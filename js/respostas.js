@@ -196,5 +196,5 @@ function abrir(b) {
   corr();
 }
 
-document.getElementById("nav-inicio")?.addEventListener("click", () => Q.length && home());
-document.getElementById("nav-resp")?.addEventListener("click", () => Q.length && respostas());
+document.getElementById("nav-inicio")?.addEventListener("click", () => Q.length && swap(home));
+document.getElementById("nav-resp")?.addEventListener("click", () => Q.length && swap(respostas));

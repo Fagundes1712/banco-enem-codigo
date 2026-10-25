@@ -165,11 +165,11 @@ function home() {
             "data-sigla": k,
             "data-n": plural(inArea(k).length, "questão", "questões"),
             tabindex: k === S.area ? 0 : -1,
-            onclick: () => keep(() => {
+            onclick: () => k !== S.area && swap(() => keep(() => {
               S = { ...S, area: k };
               home();
               document.getElementById("tab-" + k)?.focus({ preventScroll: true });
-            }),
+            })),
           },
           n
         )

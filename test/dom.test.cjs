@@ -295,9 +295,9 @@ async function irTopico(w, id) {
     (d.querySelector(".q-year") || {}).textContent
   );
   ok(
-    "badge é o último item da linha de topo, depois da área",
+    "ano é o último item da linha de topo, depois da área, com o nível embaixo",
     !!d.querySelector(".q-top .meta") &&
-      d.querySelector(".q-top").lastElementChild.classList.contains("q-year"),
+      d.querySelector(".q-top").lastElementChild.firstElementChild.classList.contains("q-year"),
     d.querySelector(".q-top") && d.querySelector(".q-top").innerHTML.slice(0, 120)
   );
 

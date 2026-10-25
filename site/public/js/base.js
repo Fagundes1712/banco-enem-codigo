@@ -12,6 +12,8 @@ const AREAS = {
 // Situação só existe em Suas respostas, onde tudo já foi respondido.
 const SIT = { todas: "Todas", resp: "Respondidas", ok: "Acertadas", bad: "Erradas" };
 const QTDS = [5, 10, 25, 45];
+// Faixas do parâmetro b oficial do INEP (tools/microdados.py), do 1 ao 5.
+const NIVEIS = ["Leve", "Moderado", "Intenso", "Radical", "Extremo"];
 const HKEY = "banco-enem:hist";
 
 const $ = document.getElementById("app");
@@ -53,6 +55,35 @@ function keep(fn) {
   const y = scrollY;
   fn();
   scrollTo(0, y);
+}
+
+// Transição entre áreas e abas: um véu preto sobe cobrindo a tela, a tela
+// nova é desenhada por baixo e o véu continua subindo até sair. Só
+// transform; com movimento reduzido vira um fade. Sem animate(), troca direto.
+let veu = null;
+let veuFila = null;
+function swap(fn) {
+  if (!document.body.animate) return fn();
+  if (veuFila) return void (veuFila = fn);
+  veuFila = fn;
+  veu ||= document.body.appendChild(h("div", { class: "veu", "aria-hidden": "true" }));
+  const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const ease = "cubic-bezier(0.77, 0, 0.175, 1)";
+  const ida = calmo
+    ? [{ opacity: 0 }, { opacity: 1 }]
+    : [{ transform: "translateY(100%)" }, { transform: "translateY(0)" }];
+  const volta = calmo
+    ? [{ opacity: 1 }, { opacity: 0 }]
+    : [{ transform: "translateY(0)" }, { transform: "translateY(-100%)" }];
+  const dur = calmo ? 150 : 420;
+  veu.animate(ida, { duration: dur, easing: ease, fill: "forwards" });
+  // Relógio, não o fim da animação: com a aba parada a troca acontece igual.
+  setTimeout(() => {
+    const f = veuFila;
+    veuFila = null;
+    f();
+    veu.animate(volta, { duration: calmo ? 150 : 460, easing: ease, fill: "forwards" });
+  }, dur);
 }
 
 function shuffle(a) {
@@ -230,5 +261,16 @@ function sit(q) {
 }
 
 const num = (n) => n.toLocaleString("pt-BR");
+
+// Selo do nível de dificuldade; sem parâmetro oficial, nada aparece.
+const nivel = (q) =>
+  q.nivel
+    ? h(
+        "span",
+        { class: "q-nivel", "data-nivel": q.nivel, "aria-label": "Dificuldade: " + NIVEIS[q.nivel - 1] },
+        h("i", { "aria-hidden": "true" }, NIVEIS.map(() => h("b"))),
+        NIVEIS[q.nivel - 1]
+      )
+    : null;
 const plural = (n, um, varios) => num(n) + " " + (n === 1 ? um : varios);
 

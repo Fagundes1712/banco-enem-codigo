@@ -65,9 +65,10 @@ function test() {
             (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
         ),
         h(
-          "span",
-          { class: "q-year", "aria-label": "Ano da prova: ENEM " + q.ano },
-          "ENEM " + q.ano
+          "div",
+          { class: "q-tags" },
+          h("span", { class: "q-year", "aria-label": "Ano da prova: ENEM " + q.ano }, "ENEM " + q.ano),
+          nivel(q)
         )
       ),
       rich(q.enunciado),

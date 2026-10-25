@@ -192,6 +192,7 @@ function qcard(q, onclick) {
             (q.numero ? " · Questão " + q.numero : "") +
             (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
         ),
+        nivel(q),
         h(
           "span",
           { class: "tag " + (st === "ok" ? "ok" : st === "bad" ? "bad" : "nil") },

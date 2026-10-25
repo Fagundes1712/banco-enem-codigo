@@ -57,6 +57,8 @@
   --r-lg: 22px;
   --r-pill: 999px;
 
+  --veu: #000000;
+
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -718,6 +720,49 @@ label.f:has(select)::after {
   white-space: nowrap;
 }
 
+.q-tags {
+  flex: none;
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+}
+
+/* Dificuldade: cinco traços, os do nível cheios na cor da área */
+.q-nivel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.q-nivel i {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.q-nivel b {
+  width: 4px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--line-2);
+}
+
+.q-nivel[data-nivel="1"] b:nth-child(-n + 1),
+.q-nivel[data-nivel="2"] b:nth-child(-n + 2),
+.q-nivel[data-nivel="3"] b:nth-child(-n + 3),
+.q-nivel[data-nivel="4"] b:nth-child(-n + 4),
+.q-nivel[data-nivel="5"] b {
+  background: var(--acc);
+}
+
+.qcard-head .q-nivel {
+  margin-left: auto;
+}
+
 .enun {
   max-width: 70ch;
   font-family: var(--f-serif);
@@ -1375,6 +1420,24 @@ img.q.alt-img {
   }
   .skeleton span {
     animation: none;
+  }
+}
+
+/* Véu preto da transição entre áreas e abas (swap em js/base.js) */
+.veu {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--veu);
+  transform: translateY(100%);
+  pointer-events: none;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .veu {
+    transform: none;
+    opacity: 0;
   }
 }
 

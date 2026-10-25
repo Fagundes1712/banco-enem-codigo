@@ -80,12 +80,14 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 - **Resultado**: cartão central com anel (`.ring`, `--p` = acertos/total) e a nota em serifa; estatísticas em blocos afundados.
 - **Barra lateral** (`nav.side` em `index.html`): no computador, coluna fixa à esquerda com logo, "Início" e "Suas respostas"; no celular, barra fixa embaixo. A seção atual tem `aria-current="page"` e fundo tingido. Some durante a prova (`html[data-exam]`).
 - **Blocos de Suas respostas** (`.bloco`): cartão com borda esquerda na cor da área do bloco (`data-area`), quadrado da nota cheio na cor da área à esquerda, matéria pequena em cima, tema em serifa ("10 questões de Geometria") e data, acertos/total à direita.
+- **Dificuldade** (`.q-nivel`): embaixo do ano da questão, cinco traços com os do nível cheios na cor da área e o nome do nível (Leve, Moderado, Intenso, Radical, Extremo). Só aparece quando a questão tem o parâmetro oficial do INEP.
 - **Diálogo**: `<dialog>` nativo em cartão, ações lado a lado. Nunca `confirm()` ou `alert()`.
 
 ## 6. Movimento
 
 - Animação só com `transform` e `opacity`, curvas `--ease-out` / `--ease-in-out`. Mudança de cor é instantânea.
 - Toque com `scale(0.97)`; cartões sobem 2px no hover de mouse.
+- Troca de área e de aba (Início, Suas respostas): um véu preto (`--veu`) sobe cobrindo a tela em 420ms, a tela nova é desenhada por baixo e o véu continua subindo até sair em 460ms, curva `--ease-in-out`. Com movimento reduzido vira um fade curto.
 - `prefers-reduced-motion` remove deslocamentos e deixa só fade.
 
 ## 7. Acessibilidade

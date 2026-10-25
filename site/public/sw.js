@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v19"; // v19: trocar de área ou filtro não volta ao topo
+const VERSION = "v21"; // v21: véu preto entre áreas e abas; selo de dificuldade
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
