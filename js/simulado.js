@@ -146,22 +146,36 @@ function paint() {
 
 /* ============================== Nota TRI ============================= */
 
+// Mesmo cálculo do INEP, conferido com as notas reais dos microdados de
+// 2022 (diferença mediana de 0,03 ponto): EAP com priori normal padrão,
+// logística de 3 parâmetros sem o fator 1,7, e escala própria de cada área
+// (nota = k · θ + m). Questão sem parâmetro oficial usa a mediana dos itens
+// da área em 2022. Ver docs/dificuldade.md.
+const ESCALA = { CN: [113.09, 501.15], CH: [112.3, 501.49], LC: [108.08, 499.98], MT: [129.63, 500.03] };
+const PADRAO = {
+  CN: { a: 2.005, b: 1.465, c: 0.161 },
+  CH: { a: 2.073, b: 0.9, c: 0.16 },
+  LC: { a: 2.002, b: 0.669, c: 0.134 },
+  MT: { a: 1.907, b: 2.333, c: 0.162 },
+};
+
 function tri(items) {
+  const area = items[0][0].area;
   let num = 0;
   let den = 0;
-  for (let t = -4; t <= 4; t += 0.05) {
+  for (let i = -120; i <= 120; i++) {
+    const t = i / 20;
     let L = Math.exp((-t * t) / 2);
     for (const [q, ok] of items) {
-      const a = q.a || 1;
-      const b = q.b ?? 0;
-      const c = q.c ?? 0.2;
-      const p = c + (1 - c) / (1 + Math.exp(-1.7 * a * (t - b)));
+      const d = q.b == null ? PADRAO[q.area] : q;
+      const p = d.c + (1 - d.c) / (1 + Math.exp(-d.a * (t - d.b)));
       L *= ok ? p : 1 - p;
     }
     num += t * L;
     den += L;
   }
-  return Math.round(500 + 100 * (num / den));
+  const [k, m] = ESCALA[area];
+  return Math.round(k * (num / den) + m);
 }
 
 function confirmDialog(msg, txt = {}) {

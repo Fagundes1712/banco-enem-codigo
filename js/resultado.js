@@ -23,11 +23,7 @@ function result() {
           ? h("div", null, h("b", null, String(T.blank)), h("span", null, "em branco"))
           : null
       ),
-      h(
-        "p",
-        { class: "note" },
-        "Estimativa simplificada no modelo TRI de 3 parâmetros, com dificuldade média para todas as questões. A nota oficial do INEP pesa cada item pela sua dificuldade e pela coerência das respostas, então use este número só como referência."
-      ),
+      h("p", { class: "note" }, notaComo()),
       h(
         "div",
         { class: "nav spaced" },
@@ -39,6 +35,21 @@ function result() {
         )
       )
     )
+  );
+}
+
+// Explica de onde veio a nota: parâmetros oficiais em todas ou só em parte.
+function notaComo() {
+  const off = T.qs.filter((q) => q.b != null).length;
+  const n = T.qs.length;
+  const base = "Nota pela TRI de 3 parâmetros, do mesmo jeito que o INEP calcula. ";
+  const fim = " Com poucas questões ela fica perto de 500, porque a prova inteira tem 45.";
+  if (off === n) return base + "Todas estas questões têm a dificuldade oficial do INEP." + fim;
+  return (
+    base +
+    (off ? plural(off, "questão tem", "questões têm") + " dificuldade oficial; nas outras " + (n - off) : "Estas questões ainda não têm dificuldade oficial; nas " + n) +
+    " usei a média da área, então a nota é uma estimativa." +
+    fim
   );
 }
 

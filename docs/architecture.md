@@ -27,4 +27,4 @@ App estático, sem framework, sem build e sem servidor próprio.
 - **Histórico local:** `localStorage`, sem servidor. `banco-enem:hist` guarda a última resposta de cada questão; `banco-enem:blocos` guarda os simulados terminados.
 
 ## Pipeline dos dados
-`tools/extrair.py` → `tools/recortar.py` → `tools/aplicar_classificacao.py` (lê `tools/classificacao.json`). Taxonomia gerada por `tools/taxonomia.py`.
+`tools/extrair.py` → `tools/recortar.py` → `tools/aplicar_classificacao.py` (lê `tools/classificacao.json`). Taxonomia gerada por `tools/taxonomia.py`. Parâmetros TRI e nível de dificuldade por `tools/microdados.py` (`docs/dificuldade.md`).
