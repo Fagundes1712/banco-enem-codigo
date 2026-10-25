@@ -29,8 +29,13 @@ function test() {
         h("span", null, "Questão " + (T.i + 1) + " de " + n),
         h(
           "span",
-          { class: "timer", id: "tm", role: "timer", "aria-label": "Tempo decorrido" },
-          fmt(Math.floor((Date.now() - T.t0) / 1000))
+          { class: "bar-acts" },
+          h(
+            "span",
+            { class: "timer", id: "tm", role: "timer", "aria-label": "Tempo decorrido" },
+            fmt(Math.floor((Date.now() - T.t0) / 1000))
+          ),
+          h("button", { class: "btn sair", type: "button", onclick: sair }, "Sair")
         )
       ),
       h(
@@ -158,7 +163,7 @@ function tri(items) {
   return Math.round(500 + 100 * (num / den));
 }
 
-function confirmDialog(msg) {
+function confirmDialog(msg, txt = {}) {
   return new Promise((resolve) => {
     const done = (v) => {
       document.removeEventListener("keydown", onKey, true);
@@ -172,16 +177,16 @@ function confirmDialog(msg) {
         done(false);
       }
     };
-    const cancel = h("button", { class: "btn", onclick: () => done(false) }, "Continuar prova");
+    const cancel = h("button", { class: "btn", onclick: () => done(false) }, txt.cancel || "Continuar prova");
     const ok = h(
       "button",
       { class: "btn primary", onclick: () => done(true) },
-      "Finalizar mesmo assim"
+      txt.ok || "Finalizar mesmo assim"
     );
     const dlg = h(
       "dialog",
       { class: "modal", "aria-labelledby": "md-title" },
-      h("h2", { id: "md-title" }, "Ainda há questões em branco"),
+      h("h2", { id: "md-title" }, txt.title || "Ainda há questões em branco"),
       h("p", { class: "note" }, msg),
       h("div", { class: "modal-actions" }, cancel, ok)
     );
@@ -205,6 +210,19 @@ function finish() {
       : blank + " questões sem resposta. Em branco conta como erro na nota."
   ).then((yes) => {
     if (yes) closeExam();
+  });
+}
+
+// Sai sem corrigir nem salvar: volta para onde o simulado começou.
+function sair() {
+  confirmDialog("As respostas desta tentativa não serão salvas.", {
+    title: "Sair do simulado?",
+    ok: "Sair",
+  }).then((yes) => {
+    if (!yes || !T.live) return;
+    clearInterval(tick);
+    T.live = false;
+    T.back();
   });
 }
 

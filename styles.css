@@ -628,6 +628,17 @@ label.f:has(select)::after {
   font-variant-numeric: tabular-nums;
 }
 
+.bar-acts {
+  display: flex;
+  align-items: center;
+  gap: var(--s-xs);
+}
+
+.btn.sair {
+  padding: 0 16px;
+  font-size: 0.875rem;
+}
+
 .timer {
   font-family: var(--f-mono);
   font-size: 0.875rem;

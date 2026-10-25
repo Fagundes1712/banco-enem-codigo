@@ -736,6 +736,13 @@ async function irTopico(w, id) {
   click(w2, d2.querySelector(".qtd .btn.primary"));
   await tick(20);
   ok("fazer 10 questões abre simulado de 10", /de 10$/.test(d2.querySelector(".bar-row span").textContent));
+  click(w2, d2.querySelector(".btn.sair"));
+  await tick(10);
+  const dSair = d2.querySelector("dialog.modal[open]");
+  ok("sair pede confirmação", !!dSair && /Sair do simulado/.test(dSair.textContent));
+  click(w2, [...dSair.querySelectorAll(".btn")].find((b) => b.textContent === "Sair"));
+  await tick(20);
+  ok("sair volta ao tópico sem salvar bloco", d2.querySelector("h1").textContent === tA.nome && !w2.localStorage.getItem("banco-enem:blocos"));
   {
     // Tópico com menos de 5 questões só deixa escolher pela lista.
     const peq = Object.keys(TOP).find((k) => unicas(banco.filter((q) => q.topico === k)).length < 5);

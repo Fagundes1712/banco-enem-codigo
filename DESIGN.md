@@ -74,7 +74,7 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 - **Áreas**: as quatro abas (`role="tablist"`) são cartões com sigla (`data-sigla`) e contagem (`data-n`) via pseudo-elementos, para não mudar o `textContent`. A selecionada fica cheia na cor da área.
 - **Modos**: trilho afundado com a opção ativa em cartão branco.
 - **Botões**: pílula. `.primary` cheio na cor da área; `.btn` contornado; `.back` como link.
-- **Barra do simulado**: fixa, translúcida, cronômetro em pílula, progresso de 4px de ponta a ponta.
+- **Barra do simulado**: fixa, translúcida, cronômetro em pílula e botão "Sair" (pede confirmação e volta para onde o simulado começou, sem salvar), progresso de 4px de ponta a ponta.
 - **Alternativas**: linha com borda de 1,5px e bolha com a letra; marcada fica com borda e fundo da área e bolha cheia.
 - **Mapa de questões**: quadrados de 40px num trilho; respondida tingida, atual cheia.
 - **Resultado**: cartão central com anel (`.ring`, `--p` = acertos/total) e a nota em serifa; estatísticas em blocos afundados.

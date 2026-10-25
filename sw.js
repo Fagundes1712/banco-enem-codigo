@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v17"; // v17: quantidade por tópico; situação só em Suas respostas
+const VERSION = "v18"; // v18: botão Sair durante o simulado
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
