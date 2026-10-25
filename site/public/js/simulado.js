@@ -4,7 +4,7 @@
 
 // qs já vem na ordem da prova; `back` é a tela para onde o estudante volta.
 function start(qs, back = home, i = 0) {
-  T = { qs, ans: {}, i, t0: Date.now(), back, live: true };
+  T = { qs, ans: {}, i, t0: Date.now(), back, live: true, ctx: { top: S.topico } };
   clearInterval(tick);
   tick = setInterval(() => {
     const e = document.getElementById("tm");
@@ -219,6 +219,7 @@ function closeExam() {
   T.hits = T.qs.filter((q) => T.ans[q.id] === q.gab).length;
   T.blank = T.qs.length - Object.keys(T.ans).length;
   T.nota = tri(T.qs.map((q) => [q, T.ans[q.id] === q.gab]));
+  guardaBloco();
   result();
 }
 

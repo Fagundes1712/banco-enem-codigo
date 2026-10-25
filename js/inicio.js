@@ -116,6 +116,7 @@ function home() {
   ];
 
   document.documentElement.dataset.area = S.area;
+  nav("inicio");
   mount(
     h("div", { class: "top" }, h("span", { class: "brand" }, "Banco ENEM")),
     h(
@@ -205,6 +206,7 @@ function materia(id) {
   const s = IX.sub[id];
   S = { ...S, materia: id, topico: null };
   document.documentElement.dataset.area = s.area;
+  nav("inicio");
 
   mount(
     h("div", { class: "top" }, back(AREAS[s.area][0], home)),

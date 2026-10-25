@@ -752,6 +752,49 @@ const click = (w, el) =>
   await tick(20);
   ok("voltar da matéria leva à área", !!d2.querySelector(".tabs"));
 
+  console.log("\n== Suas respostas ==");
+  ok("barra lateral com Início e Suas respostas", !!d2.getElementById("nav-inicio") && !!d2.getElementById("nav-resp"));
+  click(w2, d2.getElementById("nav-resp"));
+  await tick(20);
+  ok("aba Suas respostas marcada", d2.getElementById("nav-resp").getAttribute("aria-current") === "page");
+  const blocos = d2.querySelectorAll(".bloco");
+  ok("simulado do tópico virou 1 bloco", blocos.length === 1, String(blocos.length));
+  ok("bloco na cor da área", blocos[0] && blocos[0].getAttribute("data-area") === tA.area);
+  ok(
+    "título do bloco traz matéria e tema",
+    blocos[0] &&
+      blocos[0].querySelector(".bloco-mat").textContent === SUB[tA.materia].nome &&
+      blocos[0].querySelector(".bloco-tema").textContent === uniTop.length + " questões de " + tA.nome
+  );
+  ok("bloco mostra acertos", blocos[0] && blocos[0].querySelector(".bloco-placar").textContent === "1/" + uniTop.length);
+  ok("bloco salvo no navegador", JSON.parse(w2.localStorage.getItem("banco-enem:blocos")).length === 1);
+  const setRF = async (k, v) => {
+    const s = d2.querySelector('select[data-rf="' + k + '"]');
+    s.value = v;
+    s.dispatchEvent(new w2.Event("change", { bubbles: true }));
+    await tick(20);
+  };
+  const outra = Object.keys({ CN: 1, MT: 1, CH: 1, LC: 1 }).find((a) => a !== tA.area);
+  await setRF("area", outra);
+  ok("filtro de área esconde blocos de outra área", d2.querySelectorAll(".bloco").length === 0);
+  await setRF("area", tA.area);
+  ok("filtro de matéria lista só as matérias da área", [...d2.querySelectorAll('select[data-rf="sub"] option')].length === tax.areas.find((a) => a.id === tA.area).subjects.length + 1);
+  await setRF("sub", tA.materia);
+  ok("filtro de matéria mantém o bloco", d2.querySelectorAll(".bloco").length === 1);
+  click(w2, d2.querySelector(".bloco"));
+  await tick(20);
+  ok("bloco abre as correções", d2.querySelectorAll(".cor").length === uniTop.length);
+  click(w2, [...d2.querySelectorAll(".btn")].find((b) => /Voltar ao resultado/.test(b.textContent)));
+  await tick(20);
+  const vr = [...d2.querySelectorAll(".btn")].find((b) => /Suas respostas/.test(b.textContent));
+  ok("resultado do bloco volta para Suas respostas", !!vr);
+  click(w2, vr);
+  await tick(20);
+  ok("voltou para Suas respostas", d2.querySelector("h1").textContent === "Suas respostas");
+  click(w2, d2.getElementById("nav-inicio"));
+  await tick(20);
+  ok("Início volta para a área", !!d2.querySelector(".tabs"));
+
   console.log("\n== Questões únicas ==");
   ok(
     "contagem da área ignora anuladas e equivalentes",

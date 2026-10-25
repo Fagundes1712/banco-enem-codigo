@@ -78,6 +78,8 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 - **Alternativas**: linha com borda de 1,5px e bolha com a letra; marcada fica com borda e fundo da área e bolha cheia.
 - **Mapa de questões**: quadrados de 40px num trilho; respondida tingida, atual cheia.
 - **Resultado**: cartão central com anel (`.ring`, `--p` = acertos/total) e a nota em serifa; estatísticas em blocos afundados.
+- **Barra lateral** (`nav.side` em `index.html`): no computador, coluna fixa à esquerda com logo, "Início" e "Suas respostas"; no celular, barra fixa embaixo. A seção atual tem `aria-current="page"` e fundo tingido. Some durante a prova (`html[data-exam]`).
+- **Blocos de Suas respostas** (`.bloco`): cartão com borda esquerda na cor da área do bloco (`data-area`), quadrado da nota cheio na cor da área à esquerda, matéria pequena em cima, tema em serifa ("10 questões de Geometria") e data, acertos/total à direita.
 - **Diálogo**: `<dialog>` nativo em cartão, ações lado a lado. Nunca `confirm()` ou `alert()`.
 
 ## 6. Movimento

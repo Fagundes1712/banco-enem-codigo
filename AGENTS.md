@@ -6,7 +6,7 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 
 - Instalar dependência de teste: `npm install` (só jsdom)
 - Rodar local: `npm start` e abrir http://localhost:8765 (precisa de HTTP; `file://` não carrega o JSON)
-- Testes: `npm test` (jsdom, 134 checks com o banco real)
+- Testes: `npm test` (jsdom, 148 checks com o banco real)
 - Checagem: `npm run check` (sintaxe, limite de 350 linhas, espelho em `site/public/`)
 - Tudo: `npm run verify`
 - Espelhar: `npm run mirror`

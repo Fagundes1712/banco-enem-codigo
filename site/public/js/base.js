@@ -38,6 +38,8 @@ function h(t, a, ...k) {
 
 function mount(...n) {
   $.replaceChildren(...n.flat());
+  // Durante a prova a barra lateral some, para não sair sem querer.
+  document.documentElement.toggleAttribute("data-exam", !!(T && T.live));
   $.classList.remove("in");
   void $.offsetWidth;
   $.classList.add("in");

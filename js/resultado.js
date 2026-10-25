@@ -35,7 +35,7 @@ function result() {
         h(
           "button",
           { class: "btn", onclick: () => T.back() },
-          T.back === home ? "Novo simulado" : "Voltar ao tópico"
+          T.back === home ? "Novo simulado" : T.back === respostas ? "Suas respostas" : "Voltar ao tópico"
         )
       )
     )

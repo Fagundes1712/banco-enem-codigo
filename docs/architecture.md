@@ -10,6 +10,7 @@ App estático, sem framework, sem build e sem servidor próprio.
 | `js/inicio.js` | Tela inicial e tela de matéria. |
 | `js/topico.js` | Tela de tópico e filtros. |
 | `js/simulado.js` | Simulado, cronômetro e cálculo da nota TRI. |
+| `js/respostas.js` | Aba "Suas respostas": guarda cada simulado terminado como bloco (`banco-enem:blocos`, até 100), lista com filtros de área e matéria, reabre as correções e liga a barra lateral. |
 | `js/resultado.js` | Resultado, correções, atalhos de teclado, `load()` e registro do service worker. |
 | `styles.css` | Todo o estilo (tokens em `:root`, tema claro e escuro). |
 | `sw.js` | Service worker: cache do shell (`VERSION`) e dos dados. |
@@ -23,7 +24,7 @@ App estático, sem framework, sem build e sem servidor próprio.
 ## Decisões
 - **Scripts clássicos, não módulos ES:** os arquivos de `js/` compartilham o escopo global (`const`/`let` de topo) e precisam carregar na ordem do `index.html`. O teste lê essa mesma ordem. Motivo: manter o app sem build e funcionando como antes da divisão (2026-10-24).
 - **Dados fora do código:** JSON buscado com `fetch`, cacheado pelo service worker.
-- **Histórico local:** `localStorage`, sem servidor.
+- **Histórico local:** `localStorage`, sem servidor. `banco-enem:hist` guarda a última resposta de cada questão; `banco-enem:blocos` guarda os simulados terminados.
 
 ## Pipeline dos dados
 `tools/extrair.py` → `tools/recortar.py` → `tools/aplicar_classificacao.py` (lê `tools/classificacao.json`). Taxonomia gerada por `tools/taxonomia.py`.

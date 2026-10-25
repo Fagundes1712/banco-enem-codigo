@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v13"; // v13: volta a área selecionada cheia na cor (Linguagens amarelo)
+const VERSION = "v14"; // v14: barra lateral e aba "Suas respostas"
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
@@ -23,6 +23,7 @@ const SHELL_ASSETS = [
   "js/inicio.js",
   "js/topico.js",
   "js/simulado.js",
+  "js/respostas.js",
   "js/resultado.js",
   "icon.svg",
   "manifest.json",

@@ -15,7 +15,7 @@ Precisa ser servido por HTTP; abrir o `index.html` direto não carrega as quest�
 
 ```bash
 npm install        # só jsdom, para os testes
-npm run verify     # checagem + 134 testes
+npm run verify     # checagem + 148 testes
 ```
 
 Mais em [docs/onboarding.md](docs/onboarding.md). Regras para agentes e pessoas em [AGENTS.md](AGENTS.md).
