@@ -585,8 +585,9 @@ async function irTopico(w, id) {
     "app.js registra sw.js protegido por protocolo/host",
     /serviceWorker" in navigator/.test(appJs) &&
       /location\.protocol === "https:"/.test(appJs) &&
-      /navigator\.serviceWorker\.register\("sw\.js"\)/.test(appJs)
+      /navigator\.serviceWorker\.register\("sw\.js"/.test(appJs)
   );
+  ok("versão nova do service worker recarrega a página", /controllerchange", \(\) => location\.reload\(\)/.test(appJs));
   const manifest = JSON.parse(
     fs.readFileSync(path.join(root, "manifest.json"), "utf8")
   );

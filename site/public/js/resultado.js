@@ -131,8 +131,13 @@ if (
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1")
 ) {
+  // Versão nova do service worker assumiu: recarrega uma vez para não ficar
+  // com o shell antigo do cache (só quando já havia um controlando).
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.addEventListener("controllerchange", () => location.reload(), { once: true });
+  }
   addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js").catch(() => {
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(() => {
       /* offline é opcional: falha de registro não pode quebrar o app */
     });
   });

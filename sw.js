@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v30"; // v30: lista de opções dos filtros no estilo do app
+const VERSION = "v31"; // v31: página recarrega sozinha quando sai versão nova
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
