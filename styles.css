@@ -3,7 +3,7 @@
    - Chão de papel quente, cartões brancos com filete e sombra leve.
    - Uma cor por área do conhecimento (data-area em <html> e nas
      abas): Natureza verde, Matemática azul, Humanas terracota,
-     Linguagens violeta. O acento da tela segue a área.
+     Linguagens amarelo. O acento da tela segue a área.
    - Títulos e enunciado em serifa (Source Serif 4), como a prova
      impressa; interface em Inter.
    - Alternativas como bolhas de cartão-resposta.
@@ -64,14 +64,18 @@
 [data-area="CN"] { --acc: #13795b; }
 [data-area="MT"] { --acc: #2852c8; }
 [data-area="CH"] { --acc: #b4531a; }
-[data-area="LC"] { --acc: #7a3fc9; }
+[data-area="LC"] { --acc: #f2bf1d; --on-acc: #1d1b16; }
 
 /* Derivados do acento: redeclarados onde a área muda (abas) */
 :root,
 [data-area] {
   --acc-soft: color-mix(in srgb, var(--acc) 11%, transparent);
   --acc-line: color-mix(in srgb, var(--acc) 40%, transparent);
+  --acc-ink: var(--acc);
 }
+
+/* Amarelo é claro demais para texto no papel: tinta mais escura */
+[data-area="LC"] { --acc-ink: #8a6500; }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -101,7 +105,7 @@
   [data-area="CN"] { --acc: #3fcf95; }
   [data-area="MT"] { --acc: #7aa0ff; }
   [data-area="CH"] { --acc: #f5934f; }
-  [data-area="LC"] { --acc: #b48cff; }
+  [data-area="LC"] { --acc: #ffd23f; --acc-ink: #ffd23f; --on-acc: #12110e; }
 }
 
 /* ============================ Base ============================ */
@@ -268,7 +272,7 @@ img {
 }
 
 .eyebrow {
-  color: var(--acc);
+  color: var(--acc-ink);
   font-weight: 600;
 }
 
@@ -282,7 +286,7 @@ img {
   padding: 5px 12px;
   border-radius: var(--r-pill);
   background: var(--acc-soft);
-  color: var(--acc);
+  color: var(--acc-ink);
   font-size: 0.8125rem;
   font-weight: 600;
 }
@@ -364,7 +368,7 @@ footer {
   height: 34px;
   border-radius: 10px;
   background: var(--acc-soft);
-  color: var(--acc);
+  color: var(--acc-ink);
   font: 700 0.8125rem/1 var(--f-sans);
   letter-spacing: 0.02em;
 }
@@ -593,7 +597,7 @@ label.f:has(select)::after {
   border: 0;
   background: transparent;
   padding: 0 4px;
-  color: var(--acc);
+  color: var(--acc-ink);
 }
 
 /* ====================== Barra do simulado ===================== */
@@ -629,7 +633,7 @@ label.f:has(select)::after {
   font-weight: 600;
   line-height: 1;
   font-variant-numeric: tabular-nums;
-  color: var(--acc);
+  color: var(--acc-ink);
   background: var(--acc-soft);
   padding: 7px 12px;
   border-radius: var(--r-pill);
@@ -684,7 +688,7 @@ label.f:has(select)::after {
 }
 
 .q-top .meta {
-  color: var(--acc);
+  color: var(--acc-ink);
   font-weight: 600;
 }
 
@@ -854,7 +858,7 @@ img.q.alt-img {
 .dot.on {
   background: var(--acc-soft);
   border-color: var(--acc-line);
-  color: var(--acc);
+  color: var(--acc-ink);
 }
 
 .dot[aria-current="true"] {
@@ -980,7 +984,7 @@ img.q.alt-img {
   translate: 0 -50%;
   font-size: 1.5rem;
   line-height: 1;
-  color: var(--acc);
+  color: var(--acc-ink);
 }
 
 @media (hover: hover) and (pointer: fine) {

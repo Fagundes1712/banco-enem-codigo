@@ -17,7 +17,7 @@ colors:
   CN: "#13795b / #3fcf95"
   MT: "#2852c8 / #7aa0ff"
   CH: "#b4531a / #f5934f"
-  LC: "#7a3fc9 / #b48cff"
+  LC: "#f2bf1d / #ffd23f (texto #8a6500 no claro, tinta escura sobre o amarelo)"
   # Escuro
   bg-dark: "#12110e"
   card-dark: "#1c1a16"
@@ -52,7 +52,7 @@ Ferramenta de estudo usada no celular, muitas vezes à noite. A tela lembra a pr
 
 ## 2. Cores
 
-Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunca escrever hex cru num componente. `--acc-soft` e `--acc-line` derivam de `--acc` por `color-mix` e são redeclarados em `[data-area]`, senão as abas herdariam a cor da página.
+Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunca escrever hex cru num componente. `--acc-soft` e `--acc-line` derivam de `--acc` por `color-mix` e são redeclarados em `[data-area]`, senão as abas herdariam a cor da página. Texto na cor da área usa `--acc-ink` (igual a `--acc`, exceto o amarelo de Linguagens no claro, que escurece para `#8a6500`); sobre o amarelo cheio, `--on-acc` é tinta escura.
 
 - Tags e alternativas corrigidas usam fundo tingido (`--ok-bg`, `--bad-bg`) com texto na cor cheia; a cor nunca é o único sinal ("Acertou", "Errou", "Em branco", "gabarito", "sua resposta").
 - Sem gradientes decorativos. Os únicos gradientes são o anel da nota (`conic-gradient`) e o selo do logo.
