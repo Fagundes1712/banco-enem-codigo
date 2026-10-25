@@ -10,6 +10,11 @@ abandonado pelo INEP) fica sem nada. Nada é estimado aqui: o nível de
 dificuldade é o quintil do parâmetro b oficial dentro da área, contando
 todas as questões do banco que têm parâmetro (1 = 20% mais fáceis da área,
 5 = 20% mais difíceis). Ver docs/dificuldade.md.
+
+Questão sem parâmetro (item abandonado pelo INEP) recebe o nível pela
+porcentagem real de acerto (tools/acerto/<ano>.json, gerado por
+tools/acerto_por_questao.py): a mediana do nível das 10 questões da área
+com parâmetro e acerto mais parecido. Ela fica marcada com nivel_por = "acerto".
 """
 import csv
 import json
@@ -41,6 +46,7 @@ def num(x):
 qs = json.loads((root / "questions.json").read_text(encoding="utf-8"))
 for q in qs:
     q.pop("nivel", None)
+    q.pop("nivel_por", None)
 banco = {}
 for q in qs:
     banco.setdefault((q["ano"], q["area"]), []).append(q)
@@ -97,6 +103,21 @@ for area in ("CN", "CH", "LC", "MT"):
     com = sorted((q for q in qs if q["area"] == area and "b" in q), key=lambda q: q["b"])
     for i, q in enumerate(com):
         q["nivel"] = 1 + (5 * i) // len(com)
+
+# Sem parâmetro: nível pelos vizinhos de mesma porcentagem de acerto.
+acerto = {}
+for arq in (root / "tools" / "acerto").glob("*.json"):
+    acerto.update(json.loads(arq.read_text(encoding="utf-8")))
+for q in qs:
+    if "nivel" in q or q.get("anulada") or q["id"] not in acerto:
+        continue
+    viz = sorted(
+        (x for x in qs if x["area"] == q["area"] and "b" in x and x["id"] in acerto),
+        key=lambda x: abs(acerto[x["id"]] - acerto[q["id"]]),
+    )[:10]
+    if viz:
+        q["nivel"] = sorted(x["nivel"] for x in viz)[len(viz) // 2]
+        q["nivel_por"] = "acerto"
 
 if sem:
     print("\n".join(sem), file=sys.stderr)

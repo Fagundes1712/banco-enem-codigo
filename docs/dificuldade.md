@@ -14,6 +14,8 @@ Os microdados (2 GB ou mais por ano) não entram no repositório. Hoje o banco t
 
 Leve < Moderado < Intenso < Radical < Extremo. É o quintil do parâmetro `b` dentro da área, contando todas as questões do banco que têm parâmetro: Leve são os 20% mais fáceis da área, Extremo os 20% mais difíceis. A comparação é dentro da área porque cada área tem escala própria. O selo aparece embaixo do ano; questão sem parâmetro oficial não mostra nível. Rodar o script de novo com mais anos recalcula os quintis.
 
+Questão sem parâmetro (item abandonado pelo INEP; 9 entre 2022 e 2025) recebe o nível pela porcentagem real de acerto dos participantes, contada por `tools/acerto_por_questao.py` e guardada em `tools/acerto/<ano>.json`: vale a mediana do nível das 10 questões da área com parâmetro e acerto mais parecido. Essas questões ficam com `nivel_por: "acerto"`. A porcentagem de acerto e o parâmetro b andam juntos (correlação de −0,66 a −0,87 por área em 2022 a 2025).
+
 ## Nota
 
 **Regra (decisão do usuário, 2026-10-25): toda questão vale o mesmo, de qualquer ano.** A nota é a mediana oficial das notas dos participantes que tiveram o mesmo número de acertos, em `NOTA_ACERTOS` (`js/simulado.js`). Simulado com menos de 45 questões vai à proporção (3 de 5 conta como 27 de 45) e o valor entre dois números de acertos é interpolado.
