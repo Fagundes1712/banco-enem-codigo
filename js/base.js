@@ -48,6 +48,13 @@ function mount(...n) {
   scrollTo(0, 0);
 }
 
+// Redesenha a mesma tela sem pular para o topo (troca de área, filtros).
+function keep(fn) {
+  const y = scrollY;
+  fn();
+  scrollTo(0, y);
+}
+
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

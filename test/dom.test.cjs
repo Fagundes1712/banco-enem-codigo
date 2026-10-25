@@ -150,6 +150,19 @@ async function irTopico(w, id) {
   click(w, [...d.querySelectorAll(".chip.mode")].find((b) => /aleatório/.test(b.textContent)));
   await tick(20);
   ok("chips de quantidade no aleatório", d.querySelectorAll(".chip:not(.mode)").length === 4);
+  {
+    // Trocar de área não pode jogar a tela para o topo.
+    const ys = [];
+    w.scrollTo = (x, y) => ys.push(y);
+    Object.defineProperty(w, "scrollY", { value: 420, configurable: true });
+    click(w, d.getElementById("tab-MT"));
+    await tick(10);
+    ok("trocar de área mantém a rolagem", ys[ys.length - 1] === 420, ys.join());
+    click(w, d.getElementById("tab-CN"));
+    await tick(10);
+    Object.defineProperty(w, "scrollY", { value: 0, configurable: true });
+    w.scrollTo = () => {};
+  }
 
   const availNote = () => d.querySelector(".panel .note.avail");
 

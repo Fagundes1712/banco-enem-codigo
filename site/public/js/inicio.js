@@ -24,10 +24,10 @@ function home() {
           class: "chip mode",
           type: "button",
           "aria-pressed": S.modo === k,
-          onclick: () => {
+          onclick: () => keep(() => {
             S.modo = k;
             home();
-          },
+          }),
         },
         n
       )
@@ -49,10 +49,10 @@ function home() {
               class: "chip",
               type: "button",
               "aria-pressed": S.n === n,
-              onclick: () => {
+              onclick: () => keep(() => {
                 S.n = n;
                 home();
-              },
+              }),
             },
             n
           )
@@ -165,11 +165,11 @@ function home() {
             "data-sigla": k,
             "data-n": plural(inArea(k).length, "questão", "questões"),
             tabindex: k === S.area ? 0 : -1,
-            onclick: () => {
+            onclick: () => keep(() => {
               S = { ...S, area: k };
               home();
-              document.getElementById("tab-" + k)?.focus();
-            },
+              document.getElementById("tab-" + k)?.focus({ preventScroll: true });
+            }),
           },
           n
         )

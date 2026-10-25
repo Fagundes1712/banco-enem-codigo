@@ -38,11 +38,11 @@ function topico(id) {
         "select",
         {
           "data-f": key,
-          onchange: (e) => {
+          onchange: (e) => keep(() => {
             S.f = { ...f, [key]: e.target.value };
             topico(id);
-            document.querySelector('select[data-f="' + key + '"]')?.focus();
-          },
+            document.querySelector('select[data-f="' + key + '"]')?.focus({ preventScroll: true });
+          }),
         },
         opts.map(([v, n]) => h("option", { value: v, selected: f[key] === v }, n))
       )
@@ -143,10 +143,10 @@ function topico(id) {
                   class: "chip",
                   type: "button",
                   "aria-pressed": n === qn,
-                  onclick: () => {
+                  onclick: () => keep(() => {
                     S.f = { ...f, n };
                     topico(id);
-                  },
+                  }),
                 },
                 n
               )

@@ -73,11 +73,11 @@ function respostas() {
         "select",
         {
           "data-rf": key,
-          onchange: (e) => {
+          onchange: (e) => keep(() => {
             S.rf = { ...f, [key]: e.target.value };
             respostas();
-            document.querySelector('select[data-rf="' + key + '"]')?.focus();
-          },
+            document.querySelector('select[data-rf="' + key + '"]')?.focus({ preventScroll: true });
+          }),
         },
         opts.map(([v, n]) => h("option", { value: v, selected: f[key] === v }, n))
       )
