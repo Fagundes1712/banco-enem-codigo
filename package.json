@@ -1,0 +1,15 @@
+{
+  "name": "banco-enem",
+  "private": true,
+  "description": "Simulados do ENEM com as provas oficiais 2015–2025 (HTML/CSS/JS puro).",
+  "scripts": {
+    "start": "python3 -m http.server 8765",
+    "test": "node test/dom.test.cjs",
+    "check": "node scripts/check.cjs",
+    "mirror": "node scripts/mirror.cjs",
+    "verify": "npm run check && npm test"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

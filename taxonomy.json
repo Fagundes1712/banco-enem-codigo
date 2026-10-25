@@ -1,0 +1,1083 @@
+{
+ "versao": 1,
+ "niveis": [
+  "area",
+  "materia",
+  "topico"
+ ],
+ "areas": [
+  {
+   "id": "LC",
+   "nome": "Linguagens, Códigos e suas Tecnologias",
+   "curto": "Linguagens",
+   "subjects": [
+    {
+     "id": "LC.lp",
+     "nome": "Língua Portuguesa",
+     "topics": [
+      {
+       "id": "LC.lp.interpretacao-e-compreensao-de-textos",
+       "nome": "Interpretação e Compreensão de Textos",
+       "desc": "Leitura global, inferência, tema, tese, intenção do autor, charges, tirinhas e textos multimodais quando o foco é o sentido."
+      },
+      {
+       "id": "LC.lp.generos-e-tipos-textuais",
+       "nome": "Gêneros e Tipos Textuais",
+       "desc": "Reconhecer gênero, finalidade, suporte, público e tipologia (narrar, descrever, argumentar, expor, injuntivo)."
+      },
+      {
+       "id": "LC.lp.gramatica-e-analise-linguistica",
+       "nome": "Gramática e Análise Linguística",
+       "desc": "Classes de palavras, morfologia, pontuação, concordância, regência, crase e ortografia usadas a serviço do sentido."
+      },
+      {
+       "id": "LC.lp.coesao-coerencia-e-organizacao-textual",
+       "nome": "Coesão, Coerência e Organização Textual",
+       "desc": "Conectivos, retomadas, referenciação, progressão e articulação entre partes do texto."
+      },
+      {
+       "id": "LC.lp.sintaxe-e-semantica",
+       "nome": "Sintaxe e Semântica",
+       "desc": "Relações sintáticas, sentido de palavras e expressões, polissemia, ambiguidade, sinonímia e efeitos de sentido."
+      },
+      {
+       "id": "LC.lp.variacao-linguistica",
+       "nome": "Variação Linguística",
+       "desc": "Variedades regionais, sociais, históricas e situacionais; norma-padrão, preconceito linguístico e adequação."
+      },
+      {
+       "id": "LC.lp.funcoes-da-linguagem",
+       "nome": "Funções da Linguagem",
+       "desc": "Função predominante (referencial, emotiva, conativa, poética, fática, metalinguística) e recursos expressivos."
+      }
+     ]
+    },
+    {
+     "id": "LC.lit",
+     "nome": "Literatura",
+     "topics": [
+      {
+       "id": "LC.lit.texto-literario-e-generos-literarios",
+       "nome": "Texto Literário e Gêneros Literários",
+       "desc": "Linguagem literária, figuras de linguagem, versificação, lírico, épico/narrativo e dramático, sem depender de uma escola."
+      },
+      {
+       "id": "LC.lit.literatura-colonial-quinhentismo-barroco-e-arcadismo",
+       "nome": "Literatura Colonial: Quinhentismo, Barroco e Arcadismo",
+       "desc": "Textos de informação e catequese, Barroco (Gregório de Matos, Vieira) e Arcadismo."
+      },
+      {
+       "id": "LC.lit.romantismo",
+       "nome": "Romantismo",
+       "desc": "Poesia e prosa românticas, indianismo, nacionalismo, ultrarromantismo, condoreirismo."
+      },
+      {
+       "id": "LC.lit.realismo-naturalismo-e-parnasianismo",
+       "nome": "Realismo, Naturalismo e Parnasianismo",
+       "desc": "Machado de Assis, Aluísio Azevedo, Raul Pompeia, Olavo Bilac e afins."
+      },
+      {
+       "id": "LC.lit.simbolismo-e-pre-modernismo",
+       "nome": "Simbolismo e Pré-Modernismo",
+       "desc": "Cruz e Sousa, Alphonsus de Guimaraens, Euclides da Cunha, Lima Barreto, Monteiro Lobato, Augusto dos Anjos."
+      },
+      {
+       "id": "LC.lit.modernismo",
+       "nome": "Modernismo",
+       "desc": "Semana de 22, gerações de 30 e 45: Oswald, Mário, Drummond, Bandeira, Graciliano, Rachel de Queiroz, Guimarães Rosa, Clarice, Cabral."
+      },
+      {
+       "id": "LC.lit.literatura-contemporanea",
+       "nome": "Literatura Contemporânea",
+       "desc": "Produção pós-1960: poesia marginal, concretismo, prosa urbana, autoria periférica e contemporânea."
+      },
+      {
+       "id": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas",
+       "nome": "Literaturas Africanas, Afro-Brasileiras e Indígenas",
+       "desc": "Autores africanos de língua portuguesa, literatura afro-brasileira e indígena."
+      }
+     ]
+    },
+    {
+     "id": "LC.en",
+     "nome": "Língua Inglesa",
+     "topics": [
+      {
+       "id": "LC.en.compreensao-leitora-em-ingles",
+       "nome": "Compreensão Leitora em Inglês",
+       "desc": "Ideia principal, informação específica, inferência e finalidade de textos em inglês."
+      },
+      {
+       "id": "LC.en.vocabulario-e-expressoes-em-ingles",
+       "nome": "Vocabulário e Expressões em Inglês",
+       "desc": "Sentido de palavras, expressões idiomáticas, trocadilhos e recursos linguísticos em contexto."
+      },
+      {
+       "id": "LC.en.aspectos-culturais-e-interculturais-em-ingles",
+       "nome": "Aspectos Culturais e Interculturais em Inglês",
+       "desc": "Cultura, identidade e diversidade em países de língua inglesa e relações interculturais."
+      }
+     ]
+    },
+    {
+     "id": "LC.es",
+     "nome": "Língua Espanhola",
+     "topics": [
+      {
+       "id": "LC.es.compreensao-leitora-em-espanhol",
+       "nome": "Compreensão Leitora em Espanhol",
+       "desc": "Ideia principal, informação específica, inferência e finalidade de textos em espanhol."
+      },
+      {
+       "id": "LC.es.vocabulario-e-expressoes-em-espanhol",
+       "nome": "Vocabulário e Expressões em Espanhol",
+       "desc": "Sentido de palavras, expressões, falsos cognatos e recursos linguísticos em contexto."
+      },
+      {
+       "id": "LC.es.aspectos-culturais-e-interculturais-em-espanhol",
+       "nome": "Aspectos Culturais e Interculturais em Espanhol",
+       "desc": "Cultura, identidade e diversidade no mundo hispânico e relações interculturais."
+      }
+     ]
+    },
+    {
+     "id": "LC.art",
+     "nome": "Artes",
+     "topics": [
+      {
+       "id": "LC.art.artes-visuais",
+       "nome": "Artes Visuais",
+       "desc": "Pintura, escultura, fotografia, gravura, arquitetura e design; leitura de obras e movimentos artísticos."
+      },
+      {
+       "id": "LC.art.musica",
+       "nome": "Música",
+       "desc": "Gêneros, movimentos e funções sociais da música; leitura de letras como manifestação musical."
+      },
+      {
+       "id": "LC.art.teatro-e-danca",
+       "nome": "Teatro e Dança",
+       "desc": "Artes cênicas: teatro, dança, circo e performance como linguagem artística."
+      },
+      {
+       "id": "LC.art.arte-contemporanea",
+       "nome": "Arte Contemporânea",
+       "desc": "Instalação, intervenção urbana, arte conceitual, grafite e arte digital."
+      },
+      {
+       "id": "LC.art.patrimonio-e-cultura-popular",
+       "nome": "Patrimônio e Cultura Popular",
+       "desc": "Manifestações populares, artesanato, festas e patrimônio material e imaterial."
+      }
+     ]
+    },
+    {
+     "id": "LC.ef",
+     "nome": "Educação Física",
+     "topics": [
+      {
+       "id": "LC.ef.esporte",
+       "nome": "Esporte",
+       "desc": "Esporte de rendimento e de lazer, regras, mídia esportiva e inclusão."
+      },
+      {
+       "id": "LC.ef.jogos-e-brincadeiras",
+       "nome": "Jogos e Brincadeiras",
+       "desc": "Jogos populares, tradicionais e cooperativos."
+      },
+      {
+       "id": "LC.ef.dancas-e-expressoes-corporais",
+       "nome": "Danças e Expressões Corporais",
+       "desc": "Dança como prática corporal e cultura do movimento."
+      },
+      {
+       "id": "LC.ef.ginastica-e-atividade-fisica",
+       "nome": "Ginástica e Atividade Física",
+       "desc": "Ginásticas, exercício físico e condicionamento."
+      },
+      {
+       "id": "LC.ef.lutas",
+       "nome": "Lutas",
+       "desc": "Lutas e artes marciais como prática corporal."
+      },
+      {
+       "id": "LC.ef.corpo-saude-e-estetica",
+       "nome": "Corpo, Saúde e Estética",
+       "desc": "Padrões de beleza, saúde, qualidade de vida e imagem corporal."
+      }
+     ]
+    },
+    {
+     "id": "LC.tic",
+     "nome": "Tecnologias da Informação e Comunicação",
+     "topics": [
+      {
+       "id": "LC.tic.linguagem-digital-e-hipertexto",
+       "nome": "Linguagem Digital e Hipertexto",
+       "desc": "Hipertexto, multimodalidade, memes, emojis e gêneros digitais."
+      },
+      {
+       "id": "LC.tic.redes-sociais-e-comunicacao-em-rede",
+       "nome": "Redes Sociais e Comunicação em Rede",
+       "desc": "Interação em redes, algoritmos, exposição e comunicação mediada."
+      },
+      {
+       "id": "LC.tic.midia-informacao-e-desinformacao",
+       "nome": "Mídia, Informação e Desinformação",
+       "desc": "Jornalismo, publicidade em meios digitais, fake news e checagem."
+      },
+      {
+       "id": "LC.tic.etica-cidadania-e-inclusao-digital",
+       "nome": "Ética, Cidadania e Inclusão Digital",
+       "desc": "Privacidade, direitos digitais, acesso e exclusão digital."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CH",
+   "nome": "Ciências Humanas e suas Tecnologias",
+   "curto": "Humanas",
+   "subjects": [
+    {
+     "id": "CH.his",
+     "nome": "História",
+     "topics": [
+      {
+       "id": "CH.his.historia-geral-antiguidade",
+       "nome": "História Geral — Antiguidade",
+       "desc": "Primeiras civilizações, Grécia e Roma antigas."
+      },
+      {
+       "id": "CH.his.historia-geral-idade-media",
+       "nome": "História Geral — Idade Média",
+       "desc": "Feudalismo, Igreja medieval, Império Bizantino, mundo islâmico, cruzadas, crise do século XIV."
+      },
+      {
+       "id": "CH.his.historia-geral-idade-moderna",
+       "nome": "História Geral — Idade Moderna",
+       "desc": "Renascimento, Reformas religiosas, Absolutismo, Mercantilismo e Expansão Marítima."
+      },
+      {
+       "id": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+       "nome": "História Geral — Iluminismo e Revoluções Burguesas",
+       "desc": "Iluminismo, Revoluções Inglesas, Independência dos EUA, Revolução Francesa e Era Napoleônica."
+      },
+      {
+       "id": "CH.his.historia-geral-revolucao-industrial",
+       "nome": "História Geral — Revolução Industrial",
+       "desc": "Revoluções industriais, movimento operário, socialismos e mundo do trabalho no século XIX."
+      },
+      {
+       "id": "CH.his.historia-geral-imperialismo-e-seculo-xix",
+       "nome": "História Geral — Imperialismo e Século XIX",
+       "desc": "Liberalismo, nacionalismos, unificações, neocolonialismo na África e na Ásia."
+      },
+      {
+       "id": "CH.his.historia-geral-guerras-mundiais-e-entreguerras",
+       "nome": "História Geral — Guerras Mundiais e Entreguerras",
+       "desc": "Primeira e Segunda Guerras, Revolução Russa, crise de 1929, nazifascismo, Holocausto."
+      },
+      {
+       "id": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+       "nome": "História Geral — Guerra Fria e Descolonização",
+       "desc": "Bipolaridade, corrida armamentista, descolonização afro-asiática, fim da URSS."
+      },
+      {
+       "id": "CH.his.historia-geral-mundo-contemporaneo",
+       "nome": "História Geral — Mundo Contemporâneo",
+       "desc": "Pós-Guerra Fria, conflitos atuais, terrorismo, nova ordem mundial."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-colonia",
+       "nome": "História do Brasil — Colônia",
+       "desc": "Povos indígenas no contato, economia açucareira e mineradora, escravidão, revoltas coloniais."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-imperio",
+       "nome": "História do Brasil — Império",
+       "desc": "Independência, Primeiro e Segundo Reinados, Regências, abolição, imigração."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-primeira-republica",
+       "nome": "História do Brasil — Primeira República",
+       "desc": "Coronelismo, política do café com leite, Canudos, Contestado, Revolta da Vacina, tenentismo."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-era-vargas",
+       "nome": "História do Brasil — Era Vargas",
+       "desc": "Revolução de 1930, Estado Novo, trabalhismo, CLT, propaganda."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-republica-de-1946-a-1964",
+       "nome": "História do Brasil — República de 1946 a 1964",
+       "desc": "Populismo, desenvolvimentismo, JK, crise de 1964."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-ditadura-militar",
+       "nome": "História do Brasil — Ditadura Militar",
+       "desc": "Golpe de 1964, AIs, censura, repressão, resistência, milagre econômico, abertura."
+      },
+      {
+       "id": "CH.his.historia-do-brasil-nova-republica",
+       "nome": "História do Brasil — Nova República",
+       "desc": "Redemocratização, Constituição de 1988, Brasil contemporâneo."
+      },
+      {
+       "id": "CH.his.historia-da-america-povos-pre-colombianos",
+       "nome": "História da América — Povos Pré-Colombianos",
+       "desc": "Maias, astecas, incas e outros povos originários."
+      },
+      {
+       "id": "CH.his.historia-da-america-colonizacao",
+       "nome": "História da América — Colonização",
+       "desc": "Colonização espanhola e inglesa, sistemas de trabalho e resistência indígena."
+      },
+      {
+       "id": "CH.his.historia-da-america-independencias",
+       "nome": "História da América — Independências",
+       "desc": "Independências da América espanhola e do Haiti; caudilhismo."
+      },
+      {
+       "id": "CH.his.historia-da-america-seculo-xx-e-contemporanea",
+       "nome": "História da América — Século XX e Contemporânea",
+       "desc": "Revoluções Mexicana e Cubana, ditaduras latino-americanas, populismos, EUA no século XX."
+      }
+     ]
+    },
+    {
+     "id": "CH.geo",
+     "nome": "Geografia",
+     "topics": [
+      {
+       "id": "CH.geo.cartografia",
+       "nome": "Cartografia",
+       "desc": "Escalas, projeções, coordenadas, fusos, leitura de mapas, sensoriamento e geotecnologias."
+      },
+      {
+       "id": "CH.geo.geografia-fisica",
+       "nome": "Geografia Física",
+       "desc": "Estrutura geológica, tectônica, relevo, solos, rochas e processos erosivos."
+      },
+      {
+       "id": "CH.geo.climatologia",
+       "nome": "Climatologia",
+       "desc": "Elementos e fatores do clima, massas de ar, fenômenos climáticos, aquecimento global."
+      },
+      {
+       "id": "CH.geo.hidrografia",
+       "nome": "Hidrografia",
+       "desc": "Bacias, rios, aquíferos, uso e gestão da água."
+      },
+      {
+       "id": "CH.geo.biomas",
+       "nome": "Biomas",
+       "desc": "Domínios morfoclimáticos e biomas do Brasil e do mundo, vegetação."
+      },
+      {
+       "id": "CH.geo.meio-ambiente-e-sustentabilidade",
+       "nome": "Meio Ambiente e Sustentabilidade",
+       "desc": "Problemas ambientais, conferências, desenvolvimento sustentável, impactos de atividades humanas."
+      },
+      {
+       "id": "CH.geo.populacao",
+       "nome": "População",
+       "desc": "Demografia, transição demográfica, pirâmides, IDH e indicadores."
+      },
+      {
+       "id": "CH.geo.migracoes",
+       "nome": "Migrações",
+       "desc": "Fluxos migratórios internos e internacionais, refugiados, xenofobia."
+      },
+      {
+       "id": "CH.geo.urbanizacao",
+       "nome": "Urbanização",
+       "desc": "Cidades, metropolização, rede urbana, segregação socioespacial, problemas urbanos."
+      },
+      {
+       "id": "CH.geo.geografia-agraria",
+       "nome": "Geografia Agrária",
+       "desc": "Estrutura fundiária, agronegócio, agricultura familiar, conflitos no campo, revolução verde."
+      },
+      {
+       "id": "CH.geo.industrializacao",
+       "nome": "Industrialização",
+       "desc": "Fases da industrialização, fatores locacionais, desconcentração industrial, modelos produtivos."
+      },
+      {
+       "id": "CH.geo.energia",
+       "nome": "Energia",
+       "desc": "Fontes e matrizes energéticas, impactos e geopolítica da energia."
+      },
+      {
+       "id": "CH.geo.globalizacao",
+       "nome": "Globalização",
+       "desc": "Redes, fluxos, multinacionais, blocos econômicos, meio técnico-científico-informacional."
+      },
+      {
+       "id": "CH.geo.geopolitica",
+       "nome": "Geopolítica",
+       "desc": "Conflitos territoriais, fronteiras, organismos internacionais, ordem mundial."
+      },
+      {
+       "id": "CH.geo.regionalizacao",
+       "nome": "Regionalização",
+       "desc": "Critérios de regionalização do Brasil e do mundo; regiões geoeconômicas."
+      },
+      {
+       "id": "CH.geo.geografia-do-brasil",
+       "nome": "Geografia do Brasil",
+       "desc": "Formação territorial e questões brasileiras que não cabem nos tópicos temáticos."
+      }
+     ]
+    },
+    {
+     "id": "CH.fil",
+     "nome": "Filosofia",
+     "topics": [
+      {
+       "id": "CH.fil.filosofia-antiga",
+       "nome": "Filosofia Antiga",
+       "desc": "Pré-socráticos, sofistas, Sócrates, Platão, Aristóteles e escolas helenísticas."
+      },
+      {
+       "id": "CH.fil.filosofia-medieval",
+       "nome": "Filosofia Medieval",
+       "desc": "Patrística, escolástica, relação entre fé e razão (Agostinho, Tomás de Aquino)."
+      },
+      {
+       "id": "CH.fil.filosofia-moderna",
+       "nome": "Filosofia Moderna",
+       "desc": "Racionalismo, empirismo, Kant e o pensamento moderno quando o foco é o autor/período."
+      },
+      {
+       "id": "CH.fil.filosofia-contemporanea",
+       "nome": "Filosofia Contemporânea",
+       "desc": "Hegel, Marx, Nietzsche, existencialismo, Escola de Frankfurt, pós-estruturalismo."
+      },
+      {
+       "id": "CH.fil.etica-e-moral",
+       "nome": "Ética e Moral",
+       "desc": "Virtude, dever, utilitarismo, liberdade, bioética e problemas morais."
+      },
+      {
+       "id": "CH.fil.filosofia-politica",
+       "nome": "Filosofia Política",
+       "desc": "Contratualismo, poder, Estado, justiça, democracia, Maquiavel, Hobbes, Locke, Rousseau, Arendt."
+      },
+      {
+       "id": "CH.fil.teoria-do-conhecimento",
+       "nome": "Teoria do Conhecimento",
+       "desc": "Epistemologia: verdade, ceticismo, razão, experiência, método."
+      },
+      {
+       "id": "CH.fil.filosofia-da-ciencia-e-da-tecnica",
+       "nome": "Filosofia da Ciência e da Técnica",
+       "desc": "Método científico, ciência e tecnologia, crítica à razão instrumental."
+      },
+      {
+       "id": "CH.fil.logica-e-argumentacao",
+       "nome": "Lógica e Argumentação",
+       "desc": "Argumentos, falácias, silogismo, retórica."
+      },
+      {
+       "id": "CH.fil.estetica",
+       "nome": "Estética",
+       "desc": "Belo, arte e gosto como problema filosófico."
+      }
+     ]
+    },
+    {
+     "id": "CH.soc",
+     "nome": "Sociologia",
+     "topics": [
+      {
+       "id": "CH.soc.teorias-sociologicas-classicas",
+       "nome": "Teorias Sociológicas Clássicas",
+       "desc": "Durkheim, Weber, Marx e conceitos fundantes da Sociologia."
+      },
+      {
+       "id": "CH.soc.cultura",
+       "nome": "Cultura",
+       "desc": "Cultura, identidade, etnocentrismo, relativismo e diversidade cultural."
+      },
+      {
+       "id": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+       "nome": "Indústria Cultural e Meios de Comunicação",
+       "desc": "Cultura de massa, mídia, consumo e sociedade do espetáculo."
+      },
+      {
+       "id": "CH.soc.trabalho",
+       "nome": "Trabalho",
+       "desc": "Divisão do trabalho, fordismo, toyotismo, precarização, uberização."
+      },
+      {
+       "id": "CH.soc.classes-sociais",
+       "nome": "Classes Sociais",
+       "desc": "Estratificação, mobilidade e estrutura de classes."
+      },
+      {
+       "id": "CH.soc.desigualdade",
+       "nome": "Desigualdade",
+       "desc": "Desigualdade social, pobreza, exclusão e políticas de redução."
+      },
+      {
+       "id": "CH.soc.estado",
+       "nome": "Estado",
+       "desc": "Formação e funções do Estado, burocracia, políticas públicas."
+      },
+      {
+       "id": "CH.soc.poder",
+       "nome": "Poder",
+       "desc": "Relações de poder, dominação, legitimidade, controle social."
+      },
+      {
+       "id": "CH.soc.democracia",
+       "nome": "Democracia",
+       "desc": "Regimes políticos, participação, representação, eleições."
+      },
+      {
+       "id": "CH.soc.cidadania",
+       "nome": "Cidadania",
+       "desc": "Direitos civis, políticos e sociais; direitos humanos; Constituição."
+      },
+      {
+       "id": "CH.soc.movimentos-sociais",
+       "nome": "Movimentos Sociais",
+       "desc": "Movimentos sociais urbanos e rurais, ações coletivas e reivindicações."
+      },
+      {
+       "id": "CH.soc.relacoes-etnico-raciais",
+       "nome": "Relações Étnico-Raciais",
+       "desc": "Racismo, povos indígenas e quilombolas, ações afirmativas."
+      },
+      {
+       "id": "CH.soc.genero",
+       "nome": "Gênero",
+       "desc": "Relações de gênero, feminismos, violência de gênero, diversidade sexual."
+      },
+      {
+       "id": "CH.soc.globalizacao",
+       "nome": "Globalização",
+       "desc": "Dimensão social e cultural da globalização."
+      },
+      {
+       "id": "CH.soc.instituicoes-sociais",
+       "nome": "Instituições Sociais",
+       "desc": "Família, religião, escola, socialização e controle social."
+      },
+      {
+       "id": "CH.soc.violencia",
+       "nome": "Violência",
+       "desc": "Violência urbana, segurança pública e sistema penal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CN",
+   "nome": "Ciências da Natureza e suas Tecnologias",
+   "curto": "Ciências da Natureza",
+   "subjects": [
+    {
+     "id": "CN.bio",
+     "nome": "Biologia",
+     "topics": [
+      {
+       "id": "CN.bio.citologia",
+       "nome": "Citologia",
+       "desc": "Estrutura celular, membrana, organelas, transporte celular."
+      },
+      {
+       "id": "CN.bio.bioquimica",
+       "nome": "Bioquímica",
+       "desc": "Água, sais, carboidratos, lipídios, proteínas, enzimas, vitaminas, ácidos nucleicos."
+      },
+      {
+       "id": "CN.bio.metabolismo-energetico",
+       "nome": "Metabolismo Energético",
+       "desc": "Fotossíntese, respiração celular e fermentação."
+      },
+      {
+       "id": "CN.bio.divisao-celular",
+       "nome": "Divisão Celular",
+       "desc": "Mitose, meiose e ciclo celular; câncer como falha do ciclo."
+      },
+      {
+       "id": "CN.bio.genetica",
+       "nome": "Genética",
+       "desc": "Leis de Mendel, heredogramas, grupos sanguíneos, herança ligada ao sexo, código genético, mutações."
+      },
+      {
+       "id": "CN.bio.biotecnologia",
+       "nome": "Biotecnologia",
+       "desc": "DNA recombinante, transgênicos, clonagem, células-tronco, PCR, vacinas de nova geração."
+      },
+      {
+       "id": "CN.bio.evolucao",
+       "nome": "Evolução",
+       "desc": "Lamarck, Darwin, teoria sintética, especiação, seleção natural, resistência."
+      },
+      {
+       "id": "CN.bio.ecologia",
+       "nome": "Ecologia",
+       "desc": "Conceitos de população, comunidade, ecossistema, cadeias e teias alimentares, nicho, habitat."
+      },
+      {
+       "id": "CN.bio.dinamica-ecologica",
+       "nome": "Dinâmica Ecológica",
+       "desc": "Relações ecológicas, sucessão ecológica, dinâmica de populações."
+      },
+      {
+       "id": "CN.bio.ciclos-biogeoquimicos",
+       "nome": "Ciclos Biogeoquímicos",
+       "desc": "Ciclos do carbono, nitrogênio, água, fósforo e oxigênio."
+      },
+      {
+       "id": "CN.bio.impactos-ambientais",
+       "nome": "Impactos Ambientais",
+       "desc": "Poluição, eutrofização, desmatamento, efeito estufa, espécies invasoras."
+      },
+      {
+       "id": "CN.bio.conservacao-ambiental",
+       "nome": "Conservação Ambiental",
+       "desc": "Unidades de conservação, biodiversidade, manejo e recuperação ambiental."
+      },
+      {
+       "id": "CN.bio.fisiologia-humana",
+       "nome": "Fisiologia Humana",
+       "desc": "Digestão, respiração, circulação, excreção, sistemas nervoso, endócrino e reprodutor."
+      },
+      {
+       "id": "CN.bio.homeostase",
+       "nome": "Homeostase",
+       "desc": "Regulação de temperatura, glicemia, equilíbrio hídrico e hormonal."
+      },
+      {
+       "id": "CN.bio.imunologia",
+       "nome": "Imunologia",
+       "desc": "Sistema imune, vacinas, soros, alergias, transplantes."
+      },
+      {
+       "id": "CN.bio.saude-publica",
+       "nome": "Saúde Pública",
+       "desc": "Saneamento, epidemiologia, prevenção de doenças, políticas de saúde."
+      },
+      {
+       "id": "CN.bio.microbiologia",
+       "nome": "Microbiologia",
+       "desc": "Vírus, bactérias, fungos e protozoários como organismos; antibióticos."
+      },
+      {
+       "id": "CN.bio.parasitologia",
+       "nome": "Parasitologia",
+       "desc": "Doenças parasitárias, ciclos de vida de parasitas e vetores."
+      },
+      {
+       "id": "CN.bio.botanica",
+       "nome": "Botânica",
+       "desc": "Grupos vegetais, morfologia e fisiologia das plantas, hormônios vegetais."
+      },
+      {
+       "id": "CN.bio.zoologia",
+       "nome": "Zoologia",
+       "desc": "Grupos animais, características e adaptações."
+      },
+      {
+       "id": "CN.bio.embriologia",
+       "nome": "Embriologia",
+       "desc": "Fecundação, desenvolvimento embrionário, anexos embrionários."
+      },
+      {
+       "id": "CN.bio.histologia",
+       "nome": "Histologia",
+       "desc": "Tecidos animais e vegetais."
+      },
+      {
+       "id": "CN.bio.classificacao-biologica",
+       "nome": "Classificação Biológica",
+       "desc": "Sistemática, taxonomia, cladogramas, reinos e domínios."
+      },
+      {
+       "id": "CN.bio.origem-da-vida",
+       "nome": "Origem da Vida",
+       "desc": "Abiogênese, biogênese, hipóteses sobre a origem da vida."
+      },
+      {
+       "id": "CN.bio.ecotoxicologia",
+       "nome": "Ecotoxicologia",
+       "desc": "Bioacumulação, magnificação trófica, agrotóxicos, metais pesados nos organismos."
+      }
+     ]
+    },
+    {
+     "id": "CN.qui",
+     "nome": "Química",
+     "topics": [
+      {
+       "id": "CN.qui.materia-e-propriedades",
+       "nome": "Matéria e Propriedades",
+       "desc": "Estados físicos, propriedades da matéria, densidade, substâncias e misturas."
+      },
+      {
+       "id": "CN.qui.separacao-de-misturas",
+       "nome": "Separação de Misturas",
+       "desc": "Filtração, destilação, decantação, cromatografia e outros processos."
+      },
+      {
+       "id": "CN.qui.estrutura-atomica",
+       "nome": "Estrutura Atômica",
+       "desc": "Modelos atômicos, partículas, isótopos, distribuição eletrônica."
+      },
+      {
+       "id": "CN.qui.tabela-periodica",
+       "nome": "Tabela Periódica",
+       "desc": "Organização e propriedades periódicas."
+      },
+      {
+       "id": "CN.qui.ligacoes-quimicas",
+       "nome": "Ligações Químicas",
+       "desc": "Ligações iônica, covalente e metálica."
+      },
+      {
+       "id": "CN.qui.geometria-e-polaridade-molecular",
+       "nome": "Geometria e Polaridade Molecular",
+       "desc": "Geometria molecular, polaridade de ligações e moléculas."
+      },
+      {
+       "id": "CN.qui.interacoes-intermoleculares",
+       "nome": "Interações Intermoleculares",
+       "desc": "Forças intermoleculares, solubilidade e pontos de ebulição."
+      },
+      {
+       "id": "CN.qui.funcoes-inorganicas",
+       "nome": "Funções Inorgânicas",
+       "desc": "Ácidos, bases, sais e óxidos: nomenclatura e propriedades."
+      },
+      {
+       "id": "CN.qui.reacoes-quimicas",
+       "nome": "Reações Químicas",
+       "desc": "Tipos de reação, balanceamento, oxirredução fora de pilhas."
+      },
+      {
+       "id": "CN.qui.estequiometria",
+       "nome": "Estequiometria",
+       "desc": "Mol, massa molar, cálculos estequiométricos, rendimento, pureza."
+      },
+      {
+       "id": "CN.qui.gases",
+       "nome": "Gases",
+       "desc": "Leis dos gases, equação de Clapeyron, misturas gasosas."
+      },
+      {
+       "id": "CN.qui.solucoes",
+       "nome": "Soluções",
+       "desc": "Concentração, diluição, mistura de soluções, solubilidade."
+      },
+      {
+       "id": "CN.qui.propriedades-coligativas",
+       "nome": "Propriedades Coligativas",
+       "desc": "Tonoscopia, ebulioscopia, crioscopia, osmose."
+      },
+      {
+       "id": "CN.qui.termoquimica",
+       "nome": "Termoquímica",
+       "desc": "Entalpia, lei de Hess, calor de reação, combustíveis."
+      },
+      {
+       "id": "CN.qui.cinetica-quimica",
+       "nome": "Cinética Química",
+       "desc": "Velocidade de reação, fatores, catalisadores, energia de ativação."
+      },
+      {
+       "id": "CN.qui.equilibrio-quimico",
+       "nome": "Equilíbrio Químico",
+       "desc": "Constantes de equilíbrio, deslocamento (Le Chatelier)."
+      },
+      {
+       "id": "CN.qui.equilibrio-ionico",
+       "nome": "Equilíbrio Iônico",
+       "desc": "pH, pOH, hidrólise salina, solução-tampão, Kps."
+      },
+      {
+       "id": "CN.qui.acidos-e-bases",
+       "nome": "Ácidos e Bases",
+       "desc": "Teorias ácido-base (Arrhenius, Brønsted-Lowry, Lewis), força e neutralização."
+      },
+      {
+       "id": "CN.qui.eletroquimica",
+       "nome": "Eletroquímica",
+       "desc": "Pilhas, baterias, eletrólise, corrosão, potenciais de redução."
+      },
+      {
+       "id": "CN.qui.radioatividade",
+       "nome": "Radioatividade",
+       "desc": "Emissões, meia-vida, fissão e fusão nuclear, aplicações."
+      },
+      {
+       "id": "CN.qui.quimica-organica",
+       "nome": "Química Orgânica",
+       "desc": "Cadeias carbônicas, hibridização, propriedades gerais dos compostos orgânicos."
+      },
+      {
+       "id": "CN.qui.funcoes-organicas",
+       "nome": "Funções Orgânicas",
+       "desc": "Identificação e nomenclatura de funções orgânicas."
+      },
+      {
+       "id": "CN.qui.isomeria",
+       "nome": "Isomeria",
+       "desc": "Isomeria plana e espacial."
+      },
+      {
+       "id": "CN.qui.reacoes-organicas",
+       "nome": "Reações Orgânicas",
+       "desc": "Adição, substituição, eliminação, oxidação, esterificação, saponificação."
+      },
+      {
+       "id": "CN.qui.polimeros",
+       "nome": "Polímeros",
+       "desc": "Polímeros de adição e condensação, plásticos, borrachas."
+      },
+      {
+       "id": "CN.qui.biomoleculas",
+       "nome": "Biomoléculas",
+       "desc": "Carboidratos, lipídios, proteínas e ácidos nucleicos sob o olhar químico."
+      },
+      {
+       "id": "CN.qui.quimica-ambiental",
+       "nome": "Química Ambiental",
+       "desc": "Poluição química, chuva ácida, tratamento de água e resíduos."
+      },
+      {
+       "id": "CN.qui.quimica-industrial",
+       "nome": "Química Industrial",
+       "desc": "Processos industriais, siderurgia, obtenção de substâncias em escala."
+      },
+      {
+       "id": "CN.qui.quimica-cotidiana",
+       "nome": "Química Cotidiana",
+       "desc": "Química de alimentos, cosméticos, limpeza e medicamentos sem foco em outro tópico."
+      }
+     ]
+    },
+    {
+     "id": "CN.fis",
+     "nome": "Física",
+     "topics": [
+      {
+       "id": "CN.fis.grandezas-e-medidas",
+       "nome": "Grandezas e Medidas",
+       "desc": "Unidades, notação científica, ordem de grandeza, análise dimensional."
+      },
+      {
+       "id": "CN.fis.cinematica",
+       "nome": "Cinemática",
+       "desc": "MRU, MRUV, queda livre, lançamentos, gráficos de movimento."
+      },
+      {
+       "id": "CN.fis.movimento-circular",
+       "nome": "Movimento Circular",
+       "desc": "Velocidade angular, período, frequência, transmissão por polias e engrenagens."
+      },
+      {
+       "id": "CN.fis.dinamica",
+       "nome": "Dinâmica",
+       "desc": "Leis de Newton, atrito, força resultante, plano inclinado."
+      },
+      {
+       "id": "CN.fis.forcas-e-equilibrio",
+       "nome": "Forças e Equilíbrio",
+       "desc": "Equilíbrio de ponto material, forças em sistemas, tração e normal."
+      },
+      {
+       "id": "CN.fis.gravitacao",
+       "nome": "Gravitação",
+       "desc": "Leis de Kepler, gravitação universal, satélites."
+      },
+      {
+       "id": "CN.fis.estatica",
+       "nome": "Estática",
+       "desc": "Equilíbrio de corpo extenso, torque, alavancas, centro de massa."
+      },
+      {
+       "id": "CN.fis.trabalho-e-energia",
+       "nome": "Trabalho e Energia",
+       "desc": "Trabalho, potência mecânica, rendimento, energias cinética e potencial, conservação."
+      },
+      {
+       "id": "CN.fis.quantidade-de-movimento",
+       "nome": "Quantidade de Movimento",
+       "desc": "Impulso, momento linear, colisões."
+      },
+      {
+       "id": "CN.fis.hidrostatica",
+       "nome": "Hidrostática",
+       "desc": "Pressão, densidade, Stevin, Pascal, empuxo (Arquimedes)."
+      },
+      {
+       "id": "CN.fis.termologia",
+       "nome": "Termologia",
+       "desc": "Temperatura, escalas termométricas, dilatação térmica."
+      },
+      {
+       "id": "CN.fis.calorimetria",
+       "nome": "Calorimetria",
+       "desc": "Calor sensível e latente, trocas de calor, mudanças de fase."
+      },
+      {
+       "id": "CN.fis.termodinamica",
+       "nome": "Termodinâmica",
+       "desc": "Leis da termodinâmica, máquinas térmicas, ciclos, rendimento."
+      },
+      {
+       "id": "CN.fis.transmissao-de-calor",
+       "nome": "Transmissão de Calor",
+       "desc": "Condução, convecção, irradiação, isolamento térmico."
+      },
+      {
+       "id": "CN.fis.ondulatoria",
+       "nome": "Ondulatória",
+       "desc": "Elementos de uma onda, equação fundamental, espectro eletromagnético."
+      },
+      {
+       "id": "CN.fis.fenomenos-ondulatorios",
+       "nome": "Fenômenos Ondulatórios",
+       "desc": "Reflexão, refração, difração, interferência, ressonância, polarização, efeito Doppler."
+      },
+      {
+       "id": "CN.fis.acustica",
+       "nome": "Acústica",
+       "desc": "Som, altura, intensidade, timbre, tubos e cordas sonoras."
+      },
+      {
+       "id": "CN.fis.optica",
+       "nome": "Óptica",
+       "desc": "Óptica geométrica, espelhos, lentes, visão e instrumentos ópticos."
+      },
+      {
+       "id": "CN.fis.eletrostatica",
+       "nome": "Eletrostática",
+       "desc": "Carga elétrica, eletrização, campo e potencial elétrico."
+      },
+      {
+       "id": "CN.fis.eletrodinamica",
+       "nome": "Eletrodinâmica",
+       "desc": "Corrente, Lei de Ohm, potência elétrica e consumo de energia em aparelhos."
+      },
+      {
+       "id": "CN.fis.circuitos-eletricos",
+       "nome": "Circuitos Elétricos",
+       "desc": "Associação de resistores (série e paralelo), geradores, receptores, medidores, análise de circuitos."
+      },
+      {
+       "id": "CN.fis.magnetismo",
+       "nome": "Magnetismo",
+       "desc": "Ímãs, campo magnético, força magnética."
+      },
+      {
+       "id": "CN.fis.eletromagnetismo",
+       "nome": "Eletromagnetismo",
+       "desc": "Indução eletromagnética, transformadores, motores e geradores."
+      },
+      {
+       "id": "CN.fis.fisica-moderna",
+       "nome": "Física Moderna",
+       "desc": "Efeito fotoelétrico, relatividade, física quântica e nuclear."
+      },
+      {
+       "id": "CN.fis.tecnologia-e-energia",
+       "nome": "Tecnologia e Energia",
+       "desc": "Geração e transmissão de energia elétrica, usinas, eficiência energética."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MT",
+   "nome": "Matemática e suas Tecnologias",
+   "curto": "Matemática",
+   "subjects": [
+    {
+     "id": "MT.mat",
+     "nome": "Matemática e suas Tecnologias",
+     "topics": [
+      {
+       "id": "MT.mat.aritmetica-e-conjuntos-numericos",
+       "nome": "Aritmética e Conjuntos Numéricos",
+       "desc": "Operações, frações, MMC/MDC, divisibilidade, potências, razões e proporções simples, conjuntos."
+      },
+      {
+       "id": "MT.mat.porcentagem-e-matematica-financeira",
+       "nome": "Porcentagem e Matemática Financeira",
+       "desc": "Porcentagem, acréscimos e descontos, juros simples e compostos."
+      },
+      {
+       "id": "MT.mat.algebra-e-equacoes",
+       "nome": "Álgebra e Equações",
+       "desc": "Expressões, equações, inequações e sistemas."
+      },
+      {
+       "id": "MT.mat.funcoes",
+       "nome": "Funções",
+       "desc": "Funções afim, quadrática, exponencial, logarítmica; leitura de gráficos de funções."
+      },
+      {
+       "id": "MT.mat.sequencias-e-matematica-discreta",
+       "nome": "Sequências e Matemática Discreta",
+       "desc": "PA, PG, padrões, lógica e contagem simples."
+      },
+      {
+       "id": "MT.mat.analise-combinatoria",
+       "nome": "Análise Combinatória",
+       "desc": "Princípio multiplicativo, arranjos, permutações e combinações."
+      },
+      {
+       "id": "MT.mat.geometria-plana",
+       "nome": "Geometria Plana",
+       "desc": "Áreas, perímetros, ângulos, semelhança, Teorema de Pitágoras, polígonos, círculo."
+      },
+      {
+       "id": "MT.mat.geometria-espacial",
+       "nome": "Geometria Espacial",
+       "desc": "Volumes, áreas de sólidos, planificações, vistas e projeções."
+      },
+      {
+       "id": "MT.mat.geometria-analitica",
+       "nome": "Geometria Analítica",
+       "desc": "Plano cartesiano, distância, retas, circunferência."
+      },
+      {
+       "id": "MT.mat.trigonometria",
+       "nome": "Trigonometria",
+       "desc": "Razões trigonométricas, ciclo trigonométrico, funções trigonométricas."
+      },
+      {
+       "id": "MT.mat.estatistica",
+       "nome": "Estatística",
+       "desc": "Média, moda, mediana, desvio, leitura e interpretação de gráficos e tabelas."
+      },
+      {
+       "id": "MT.mat.probabilidade",
+       "nome": "Probabilidade",
+       "desc": "Probabilidade simples, condicional e de eventos independentes."
+      },
+      {
+       "id": "MT.mat.grandezas-e-medidas",
+       "nome": "Grandezas e Medidas",
+       "desc": "Unidades de medida, conversões, escalas, regra de três e grandezas proporcionais."
+      },
+      {
+       "id": "MT.mat.matematica-aplicada",
+       "nome": "Matemática Aplicada",
+       "desc": "Problemas de contexto que combinam vários tópicos sem predomínio claro; use com parcimônia."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

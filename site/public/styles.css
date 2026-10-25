@@ -1,0 +1,1147 @@
+/* =============================================================
+   Banco ENEM — Design Apple (Human Interface Guidelines)
+   Referência: developer.apple.com/design + HIG
+   - SF Pro via stack do sistema (-apple-system); Inter como
+     substituta em dispositivos Apple-free.
+   - Chão branco/papel #f5f5f7 no claro; preto absoluto no escuro.
+   - Azul do sistema #0071e3 (claro) / #2997ff (escuro) como acento.
+   - Cartões de canto 18px, botões pílula, controle segmentado,
+     alerta iOS no modal, separadores hairline.
+   ============================================================= */
+
+:root {
+  color-scheme: light dark;
+
+  /* --- Tipografia: SF Pro (dispositivos Apple) + Inter --- */
+  --f-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "SF Pro Display", "Inter", "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --f-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+    monospace;
+
+  /* --- Chão e superfícies (claro) --- */
+  --bg: #ffffff;
+  --bg-2: #f5f5f7;          /* card apple.com */
+  --sel-bg: #ffffff;         /* item selecionado do controle segmentado */
+  --sel-ink: #1d1d1f;
+  --bar-bg: rgb(255 255 255 / 0.8);
+
+  /* --- Texto --- */
+  --label: #1d1d1f;
+  --label-2: #6e6e73;
+  --label-3: #86868b;
+
+  /* --- Separações --- */
+  --sep: #d2d2d7;
+
+  /* --- Azul do sistema --- */
+  --blue: #0071e3;
+  --blue-link: #0066cc;
+  --on-blue: #ffffff;
+
+  /* --- Preenchimentos --- */
+  --fill: rgb(0 0 0 / 0.05);
+  --fill-2: rgb(120 120 128 / 0.12);
+
+  /* --- Estado --- */
+  --ok: #34c759;
+  --ok-ink: #1c7c34;
+  --ok-bg: rgb(52 199 89 / 0.16);
+  --bad: #ff3b30;
+  --bad-ink: #b3261e;
+  --bad-bg: rgb(255 59 48 / 0.14);
+  --nil-bg: rgb(120 120 128 / 0.12);
+
+  /* --- Escada de espaçamento --- */
+  --s-xs: 8px;
+  --s-sm: 16px;
+  --s-md: 24px;
+  --s-lg: 32px;
+  --s-xl: 48px;
+  --s-2xl: 80px;
+
+  /* --- Raios (cantos contínuos Apple) --- */
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-pill: 980px;
+
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --press: transform 160ms var(--ease-out);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --bg-2: #1d1d1f;
+    --sel-bg: #636366;
+    --sel-ink: #ffffff;
+    --bar-bg: rgb(0 0 0 / 0.8);
+
+    --label: #f5f5f7;
+    --label-2: #86868b;
+    --label-3: #a1a1a6;
+
+    --sep: #424245;
+
+    --blue: #2997ff;
+    --blue-link: #2997ff;
+
+    --fill: rgb(255 255 255 / 0.1);
+    --fill-2: rgb(120 120 128 / 0.24);
+
+    --ok: #30d158;
+    --ok-ink: #30d158;
+    --ok-bg: rgb(48 209 88 / 0.18);
+    --bad: #ff453a;
+    --bad-ink: #ff453a;
+    --bad-bg: rgb(255 69 58 / 0.16);
+    --nil-bg: rgb(120 120 128 / 0.24);
+  }
+}
+
+/* ============================ Base ============================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  color: var(--label);
+  font: 400 1.0625rem/1.4714 var(--f-sans);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  touch-action: manipulation;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--f-sans);
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Headline grande · semibold, tracking apertado (apple.com) */
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+  color: var(--label);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--label);
+}
+
+/* Title 3 */
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--label);
+}
+
+p {
+  margin: 0;
+}
+
+button,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  min-height: 44px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Anel de foco Apple: 2px azul, offset 2px */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ========================= Acessibilidade ===================== */
+
+.skip {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip:focus {
+  position: fixed;
+  top: var(--s-xs);
+  left: var(--s-xs);
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip-path: none;
+  padding: 12px 24px;
+  background: var(--blue);
+  color: var(--on-blue);
+  border-radius: var(--r-pill);
+  font-size: 1rem;
+  z-index: 20;
+}
+
+#app:focus {
+  outline: none;
+}
+
+/* ============================ Layout ========================== */
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: var(--s-md) var(--s-sm) var(--s-2xl);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-sm);
+  padding-bottom: var(--s-lg);
+}
+
+/* Wordmark: nav apple.com — semibold, sem caixa alta */
+.brand {
+  font-size: 1.3125rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--label);
+}
+
+/* Rótulo/eyebrow — footnote Apple: cinza secundário, sem mono */
+.meta,
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--label-2);
+  margin: 0;
+}
+
+/* Cabeçalho da questão: área à esquerda, ano no canto superior direito */
+.q-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-sm);
+  margin-top: var(--s-lg);
+  margin-bottom: var(--s-sm);
+}
+
+.q-year {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--label-2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.note + h2 {
+  margin-top: var(--s-lg);
+}
+
+.nav.spaced {
+  margin-top: var(--s-lg);
+}
+
+/* Subhead apple.com: 21px */
+.lead {
+  font-size: 1.3125rem;
+  line-height: 1.4714;
+  color: var(--label-2);
+  max-width: 65ch;
+  margin: var(--s-sm) 0 var(--s-lg);
+}
+
+/* Footnote */
+.note {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--label-2);
+  max-width: 65ch;
+}
+
+footer {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--label-3);
+  max-width: 65ch;
+  margin-top: var(--s-lg);
+}
+
+/* =================== Controle segmentado (abas) ================= */
+
+/* Vocabulário do controle segmentado do iOS */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: 2px;
+  background: var(--fill-2);
+  border-radius: 9px;
+  margin-bottom: var(--s-md);
+}
+
+.tab {
+  border: 0;
+  background: transparent;
+  border-radius: 7px;
+  padding: var(--s-xs);
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--label);
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.tab[aria-selected="true"] {
+  background: var(--sel-bg);
+  color: var(--sel-ink);
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.12), 0 3px 1px rgb(0 0 0 / 0.04);
+}
+
+@media (max-width: 560px) {
+  .tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================== Painéis =========================== */
+
+.panel {
+  background: var(--bg-2);
+  border-radius: var(--r-md);
+  padding: var(--s-md);
+  display: grid;
+  gap: var(--s-md);
+}
+
+/* ========================= Controles ========================== */
+
+label.f {
+  display: grid;
+  gap: var(--s-xs);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--label);
+  position: relative;
+}
+
+.f input[type="file"] {
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--label-2);
+  max-width: 100%;
+}
+
+select {
+  appearance: none;
+  border: 0;
+  border-radius: var(--r-sm);
+  padding: 14px 40px 14px 16px;
+  background: var(--fill);
+  color: var(--label);
+  min-height: 48px;
+  width: 100%;
+}
+
+label.f:has(select)::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 21px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--label-2);
+  border-bottom: 2px solid var(--label-2);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-xs);
+}
+
+#nl {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--label);
+  margin-bottom: var(--s-xs);
+}
+
+/* Pílula de alternância: cinza → azul quando ativa */
+.chip {
+  border: 0;
+  background: var(--fill-2);
+  color: var(--label);
+  border-radius: var(--r-pill);
+  padding: 0 var(--s-md);
+  min-width: 64px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--blue);
+  color: var(--on-blue);
+  font-weight: 600;
+}
+
+/* ========================= Botões ============================= */
+
+/* Botão apple.com: pílula, cinza translúcido com texto azul */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-xs);
+  border: 0;
+  background: var(--fill);
+  color: var(--blue-link);
+  border-radius: var(--r-pill);
+  padding: 0 24px;
+  min-height: 44px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  transition: background-color 0.2s var(--ease), filter 0.2s var(--ease),
+    transform 160ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover:not(:disabled) {
+    filter: brightness(0.96);
+  }
+
+  .btn:hover:not(.primary):not(:disabled) {
+    background: var(--fill-2);
+  }
+}
+
+.btn.primary {
+  background: var(--blue);
+  color: var(--on-blue);
+  min-height: 48px;
+  padding: 0 28px;
+  font-size: 1.0625rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn.primary:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.btn:active:not(:disabled) {
+  filter: brightness(0.9);
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* ====================== Barra do simulado ===================== */
+
+/* Cabeçalho fixo estilo apple.com: translúcido + blur saturado */
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: 0 calc(var(--s-sm) * -1);
+  padding: var(--s-xs) var(--s-sm);
+  background: var(--bar-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--sep);
+  display: grid;
+  gap: var(--s-xs);
+}
+
+.bar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-sm);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--label);
+}
+
+.timer {
+  font-family: var(--f-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--label-2);
+}
+
+/* Barra de progresso iOS: filete arredondado */
+.prog {
+  height: 3px;
+  background: var(--fill-2);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+
+.prog i {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-in-out);
+}
+
+/* ========================= Questão ============================ */
+
+/* Corpo: 17px, leading Apple, tinta principal */
+.enun {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.4714;
+  color: var(--label);
+}
+
+.enun p {
+  text-wrap: pretty;
+  white-space: pre-line;
+}
+
+img.q.alt-img {
+  margin: 0;
+  max-height: 260px;
+  width: auto;
+  background: #fff;
+}
+
+.alt-mix {
+  display: grid;
+  gap: var(--s-xs);
+}
+
+.enun p + p {
+  margin-top: var(--s-sm);
+}
+
+img.q {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--r-sm);
+  margin: var(--s-sm) 0;
+}
+
+.alts {
+  display: grid;
+  gap: var(--s-xs);
+  margin: var(--s-lg) 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+/* Cartão de alternativa: papel, canto 18px, sem borda */
+.alt {
+  position: relative;
+  display: flex;
+  gap: var(--s-sm);
+  align-items: flex-start;
+  background: var(--bg-2);
+  border-radius: var(--r-md);
+  padding: var(--s-sm);
+  cursor: pointer;
+  transition: box-shadow 0.2s var(--ease);
+}
+
+.alt input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bub {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--sep);
+  color: var(--label-2);
+  display: grid;
+  place-items: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+
+/* Selecionada: anel azul do sistema */
+.alt:has(input:checked) {
+  box-shadow: 0 0 0 2px var(--blue);
+}
+
+.alt:has(input:checked) .bub {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--on-blue);
+}
+
+.alt:has(input:focus-visible) {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-xs);
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-xs);
+  margin-top: var(--s-lg);
+}
+
+/* Ponto de questão: vazado → invertido (respondida) → azul (atual) */
+.dot {
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border: 1px solid var(--sep);
+  background: transparent;
+  border-radius: 50%;
+  color: var(--label-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dot.on {
+  background: var(--label);
+  border-color: var(--label);
+  color: var(--bg);
+}
+
+.dot[aria-current="true"] {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--on-blue);
+}
+
+/* ========================= Resultado ========================== */
+
+/* Número grande: semibold, tabular, tracking apertado */
+.score {
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--label);
+  margin: var(--s-xs) 0 var(--s-md);
+}
+
+.stats {
+  display: flex;
+  gap: var(--s-lg);
+  flex-wrap: wrap;
+  margin-bottom: var(--s-sm);
+}
+
+.stats b {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  color: var(--label);
+}
+
+.stats span {
+  font-size: 0.75rem;
+  color: var(--label-2);
+}
+
+
+
+.row b {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================== Conteúdos: matérias e tópicos ============= */
+
+/* Lista agrupada do iOS: linhas em cartão, separador hairline */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s-xs);
+}
+
+.list.topics {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.item {
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  border: 0;
+  background: var(--bg);
+  color: var(--label);
+  border-radius: var(--r-sm);
+  padding: 12px var(--s-sm);
+  transition: background-color 0.2s var(--ease);
+}
+
+.list.topics .item {
+  background: var(--bg-2);
+  height: 100%;
+  align-content: start;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item:hover {
+    background: var(--fill-2);
+  }
+}
+
+.item-name {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.item-meta {
+  font-size: 0.8125rem;
+  color: var(--label-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.btn.back {
+  padding: 0 var(--s-sm);
+}
+
+.top + .eyebrow {
+  margin-top: calc(var(--s-md) * -1);
+  margin-bottom: var(--s-xs);
+}
+
+.learn {
+  display: grid;
+  gap: var(--s-xs);
+  margin-bottom: var(--s-md);
+}
+
+.learn .prog {
+  height: 6px;
+}
+
+.dist {
+  display: grid;
+  gap: var(--s-sm);
+  margin: var(--s-md) 0;
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  max-width: 480px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 6.5em 1fr 2.5em;
+  align-items: center;
+  gap: var(--s-sm);
+  font-size: 0.875rem;
+  color: var(--label-2);
+}
+
+.row b {
+  text-align: right;
+  color: var(--label);
+}
+
+.row-bar {
+  height: 6px;
+  background: var(--fill-2);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+
+.row-bar i {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+  transform-origin: left;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--s-sm);
+  margin: var(--s-md) 0 var(--s-sm);
+}
+
+.filters + .note {
+  margin-bottom: var(--s-sm);
+}
+
+.qlist {
+  list-style: none;
+  margin: var(--s-md) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s-xs);
+}
+
+.qcard {
+  width: 100%;
+  display: grid;
+  gap: var(--s-xs);
+  text-align: left;
+  border: 0;
+  background: var(--bg-2);
+  color: var(--label);
+  border-radius: var(--r-md);
+  padding: var(--s-sm);
+  transition: box-shadow 0.2s var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .qcard:hover {
+    box-shadow: 0 0 0 2px var(--fill-2);
+  }
+}
+
+.qcard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-xs);
+  flex-wrap: wrap;
+}
+
+.qcard-text {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--label);
+}
+
+.stats + .learn {
+  margin-top: var(--s-xs);
+}
+
+/* ========================= Correções ========================== */
+
+.cor {
+  display: grid;
+  gap: var(--s-sm);
+  padding: var(--s-lg) 0;
+  border-top: 1px solid var(--sep);
+}
+
+.cor .alts {
+  margin: 0;
+}
+
+.cor .alt {
+  cursor: default;
+}
+
+.cor-head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-xs);
+  flex-wrap: wrap;
+}
+
+/* Distintivo tintado (estilo App Store) */
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+}
+
+.tag.ok {
+  background: var(--ok-bg);
+  color: var(--ok-ink);
+}
+
+.tag.bad {
+  background: var(--bad-bg);
+  color: var(--bad-ink);
+}
+
+.tag.nil {
+  background: var(--nil-bg);
+  color: var(--label-2);
+}
+
+/* Gabarito: verde do sistema · sua resposta: vermelho do sistema */
+.alt.gab {
+  box-shadow: 0 0 0 2px var(--ok);
+}
+
+.alt.gab .bub {
+  background: var(--ok);
+  border-color: var(--ok);
+  color: #ffffff;
+}
+
+.alt.err {
+  box-shadow: 0 0 0 2px var(--bad);
+}
+
+.alt.err .bub {
+  background: var(--bad);
+  border-color: var(--bad);
+  color: #ffffff;
+}
+
+.gab-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--label-2);
+}
+
+/* ====================== Alerta iOS (modal) ==================== */
+
+/* Vocabulário do alerta do iOS: 270px, canto 14px, ações separadas
+   por hairline, texto azul, ação principal em semibold. */
+.modal {
+  border: 0;
+  border-radius: 14px;
+  padding: 20px 16px 0;
+  max-width: 270px;
+  width: calc(100% - 32px);
+  background: var(--bg-2);
+  color: var(--label);
+  display: grid;
+  gap: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal h2 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.modal .note {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--label-2);
+  max-width: none;
+  margin: 4px 0 16px;
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.modal-actions {
+  display: flex;
+  margin: 0 -16px;
+  border-top: 1px solid var(--sep);
+}
+
+/* Ações do alerta: sem moldura, filete duplo no meio */
+.modal-actions .btn {
+  flex: 1;
+  border-radius: 0;
+  background: transparent;
+  color: var(--blue-link);
+  min-height: 44px;
+  padding: 0 8px;
+  font-size: 1rem;
+}
+
+.modal-actions .btn + .btn {
+  border-left: 1px solid var(--sep);
+}
+
+.modal-actions .btn.primary {
+  background: transparent;
+  color: var(--blue-link);
+  font-weight: 600;
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .modal-actions .btn:hover {
+    background: var(--fill);
+    filter: none;
+  }
+}
+
+/* ========================= Skeleton ============================ */
+
+.skeleton {
+  display: grid;
+  gap: var(--s-sm);
+  margin-top: var(--s-md);
+}
+
+.skeleton span {
+  display: block;
+  height: 1rem;
+  border-radius: var(--r-sm);
+  background: var(--fill);
+  animation: pulse 1.4s var(--ease) infinite;
+}
+
+.skeleton span:nth-child(2) {
+  width: 82%;
+  animation-delay: 0.12s;
+}
+
+.skeleton span:nth-child(3) {
+  width: 58%;
+  animation-delay: 0.24s;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* ========================= Estados ============================ */
+
+.in {
+  animation: in 0.3s var(--ease-out);
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Feedback de toque (Emil Kowalski: scale 0.97, 160ms ease-out) */
+.item,
+.top-item,
+.alt,
+.dot,
+.qcard {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.item:active,
+.top-item:active,
+.alt:active:not(:disabled),
+.dot:active {
+  transform: scale(0.97);
+}
+
+.item,
+.top-item,
+.alt,
+.dot {
+  transition-property: background-color, color, border-color, box-shadow, transform;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 160ms;
+  transition-timing-function: var(--ease-out);
+}
+
+/* Alerta: entra de scale(0.95) + opacidade, nunca de scale(0) */
+.modal[open] {
+  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+
+@starting-style {
+  .modal[open] {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* mantém opacidade, remove movimento */
+  .in {
+    animation: fade 0.2s linear;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+  }
+  *:active,
+  .modal[open] {
+    transform: none !important;
+  }
+  .skeleton span {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}

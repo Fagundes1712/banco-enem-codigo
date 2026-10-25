@@ -1,0 +1,29 @@
+# Arquitetura
+
+App estático, sem framework, sem build e sem servidor próprio.
+
+## Arquivos
+| Caminho | Papel |
+|---|---|
+| `index.html` | Casca da página; carrega os scripts de `js/` em ordem com `defer`. |
+| `js/base.js` | Constantes, estado global, helpers de DOM, carga do JSON, histórico e índices. |
+| `js/inicio.js` | Tela inicial e tela de matéria. |
+| `js/topico.js` | Tela de tópico e filtros. |
+| `js/simulado.js` | Simulado, cronômetro e cálculo da nota TRI. |
+| `js/resultado.js` | Resultado, correções, atalhos de teclado, `load()` e registro do service worker. |
+| `styles.css` | Todo o estilo (tokens em `:root`, tema claro e escuro). |
+| `sw.js` | Service worker: cache do shell (`VERSION`) e dos dados. |
+| `questions.json`, `taxonomy.json` | Dados. Nunca embutir no HTML ou JS. |
+| `img/` | Figuras das questões. |
+| `site/public/` | Cópia publicável do app (`npm run mirror`). |
+| `tools/` | Extrator em Python das provas do INEP e aplicação da classificação. |
+| `test/dom.test.cjs` | Testes de comportamento em jsdom. |
+| `scripts/check.cjs` | Checagem sem dependências. |
+
+## Decisões
+- **Scripts clássicos, não módulos ES:** os arquivos de `js/` compartilham o escopo global (`const`/`let` de topo) e precisam carregar na ordem do `index.html`. O teste lê essa mesma ordem. Motivo: manter o app sem build e funcionando como antes da divisão (2026-10-24).
+- **Dados fora do código:** JSON buscado com `fetch`, cacheado pelo service worker.
+- **Histórico local:** `localStorage`, sem servidor.
+
+## Pipeline dos dados
+`tools/extrair.py` → `tools/recortar.py` → `tools/aplicar_classificacao.py` (lê `tools/classificacao.json`). Taxonomia gerada por `tools/taxonomia.py`.

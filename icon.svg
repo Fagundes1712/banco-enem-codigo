@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Banco ENEM">
+  <!-- Estilo ícone de app Apple: campo azul cheio, marca branca geométrica -->
+  <rect width="512" height="512" fill="#0071e3"/>
+  <g fill="#ffffff">
+    <rect x="176" y="168" width="160" height="22" rx="6"/>
+    <rect x="176" y="245" width="118" height="22" rx="6"/>
+    <rect x="176" y="322" width="160" height="22" rx="6"/>
+    <rect x="176" y="168" width="22" height="176" rx="6"/>
+  </g>
+</svg>

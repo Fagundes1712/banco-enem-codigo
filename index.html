@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Banco ENEM · Simulados por área e conteúdo</title>
+<meta name="description" content="Simulados com questões do ENEM, separadas por área, com gabarito, correção questão a questão e nota estimada por TRI.">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#app">Pular para o conteúdo</a>
+
+<div class="wrap">
+  <main id="app" tabindex="-1">
+    <div class="top">
+      <span class="brand">Banco ENEM</span>
+    </div>
+    <p class="meta">Carregando banco de questões</p>
+    <div class="skeleton" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <noscript>
+      <p class="lead">
+        Este simulado precisa de JavaScript ativado para carregar as questões
+        e registrar suas respostas.
+      </p>
+    </noscript>
+  </main>
+</div>
+
+<script src="js/base.js" defer></script>
+<script src="js/inicio.js" defer></script>
+<script src="js/topico.js" defer></script>
+<script src="js/simulado.js" defer></script>
+<script src="js/resultado.js" defer></script>
+</body>
+</html>

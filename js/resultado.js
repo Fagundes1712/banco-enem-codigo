@@ -1,0 +1,130 @@
+"use strict";
+
+/* ============================= Resultado ============================= */
+
+function result() {
+  mount(
+    h("div", { class: "top" }, h("span", { class: "brand" }, "Banco ENEM")),
+    h("p", { class: "meta" }, "Nota estimada"),
+    h("div", { class: "score" }, T.nota),
+    h(
+      "div",
+      { class: "stats" },
+      h("div", null, h("b", null, T.hits + " de " + T.qs.length), h("span", null, "acertos")),
+      h("div", null, h("b", null, fmt(T.secs)), h("span", null, "tempo total")),
+      T.blank
+        ? h("div", null, h("b", null, String(T.blank)), h("span", null, "em branco"))
+        : null
+    ),
+    h(
+      "p",
+      { class: "note" },
+      "Estimativa simplificada no modelo TRI de 3 parâmetros, com dificuldade média para todas as questões. A nota oficial do INEP pesa cada item pela sua dificuldade e pela coerência das respostas, então use este número só como referência."
+    ),
+    h(
+      "div",
+      { class: "nav spaced" },
+      h("button", { class: "btn primary", onclick: corr }, "Ver correções"),
+      h(
+        "button",
+        { class: "btn", onclick: () => T.back() },
+        T.back === home ? "Novo simulado" : "Voltar ao tópico"
+      )
+    )
+  );
+}
+
+/* ============================= Correções ============================= */
+
+function corr() {
+  mount(
+    h(
+      "div",
+      { class: "top" },
+      h("h2", { class: "brand" }, "Correções"),
+      h("button", { class: "btn", onclick: result }, "Voltar ao resultado")
+    ),
+    T.qs.map((q, j) => {
+      const u = T.ans[q.id];
+      const ok = u === q.gab;
+      return h(
+        "section",
+        { class: "cor" },
+        h(
+          "p",
+          { class: "meta" },
+          "Questão " +
+            (j + 1) +
+            (q._ok ? " · " + IX.top[q.topico].nome : "") +
+            (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
+        ),
+        h(
+          "div",
+          { class: "cor-head" },
+          h(
+            "span",
+            { class: "tag " + (u ? (ok ? "ok" : "bad") : "nil") },
+            u ? (ok ? "Acertou" : "Errou") : "Em branco"
+          )
+        ),
+        rich(q.enunciado),
+        imgs(q),
+        h(
+          "div",
+          { class: "alts" },
+          Object.entries(q.alts).map(([l, t]) =>
+            h(
+              "div",
+              { class: "alt" + (l === q.gab ? " gab" : l === u ? " err" : "") },
+              h("span", { class: "bub" }, l),
+              h(
+                "span",
+                null,
+                altc(t),
+                l === q.gab
+                  ? h("span", { class: "gab-label" }, " · gabarito")
+                  : l === u
+                    ? h("span", { class: "gab-label" }, " · sua resposta")
+                    : null
+              )
+            )
+          )
+        ),
+        q.resolucao
+          ? [h("h3", null, "Resolução"), h("div", { class: "enun" }, q.resolucao)]
+          : h("p", { class: "note" }, "Resolução ainda não cadastrada para esta questão.")
+      );
+    })
+  );
+}
+
+/* =========================== Navegação =============================== */
+
+document.addEventListener("keydown", (e) => {
+  if (!T || !T.live || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.target instanceof Element && e.target.matches("input, select, textarea")) return;
+  if (e.key === "ArrowRight" && T.i < T.qs.length - 1) {
+    T.i += 1;
+    test();
+  } else if (e.key === "ArrowLeft" && T.i > 0) {
+    T.i -= 1;
+    test();
+  }
+});
+
+load();
+
+/* =========================== Modo offline =========================== */
+
+if (
+  "serviceWorker" in navigator &&
+  (location.protocol === "https:" ||
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1")
+) {
+  addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {
+      /* offline é opcional: falha de registro não pode quebrar o app */
+    });
+  });
+}

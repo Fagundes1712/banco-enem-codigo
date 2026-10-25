@@ -1,0 +1,7641 @@
+{
+"2015-CH-01": {
+"t": "CH.geo.biomas",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2015-CH-02": {
+"t": "CH.soc.trabalho"
+},
+"2015-CH-03": {
+"t": "CH.soc.instituicoes-sociais",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2015-CH-04": {
+"t": "CH.geo.geografia-agraria"
+},
+"2015-CH-05": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2015-CH-06": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2015-CH-07": {
+"t": "CH.his.historia-geral-mundo-contemporaneo",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2015-CH-08": {
+"t": "CH.geo.globalizacao"
+},
+"2015-CH-09": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao"
+},
+"2015-CH-10": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2015-CH-11": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2015-CH-12": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.industrializacao"
+]
+},
+"2015-CH-13": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2015-CH-14": {
+"t": "CH.soc.estado",
+"tags": [
+"CH.his.historia-do-brasil-colonia"
+]
+},
+"2015-CH-15": {
+"t": "CH.geo.cartografia"
+},
+"2015-CH-16": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2015-CH-17": {
+"t": "CH.fil.filosofia-medieval",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2015-CH-18": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2015-CH-19": {
+"t": "CH.his.historia-do-brasil-ditadura-militar"
+},
+"2015-CH-20": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2015-CH-21": {
+"t": "CH.geo.geopolitica"
+},
+"2015-CH-22": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2015-CH-23": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2015-CH-24": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras"
+},
+"2015-CH-25": {
+"t": "CH.soc.movimentos-sociais",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2015-CH-26": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2015-CH-27": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2015-CH-28": {
+"t": "CH.his.historia-geral-antiguidade"
+},
+"2015-CH-29": {
+"t": "CH.geo.globalizacao"
+},
+"2015-CH-30": {
+"t": "CH.geo.geografia-fisica"
+},
+"2015-CH-31": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.hidrografia"
+]
+},
+"2015-CH-32": {
+"t": "CH.geo.hidrografia",
+"tags": [
+"CH.geo.biomas"
+]
+},
+"2015-CH-33": {
+"t": "CH.geo.geografia-agraria"
+},
+"2015-CH-34": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2015-CH-35": {
+"t": "CH.soc.cultura"
+},
+"2015-CH-36": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2015-CH-37": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2015-CH-38": {
+"t": "CH.geo.industrializacao",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2015-CH-39": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao"
+},
+"2015-CH-40": {
+"t": "CH.soc.teorias-sociologicas-classicas"
+},
+"2015-CH-41": {
+"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica"
+},
+"2015-CH-42": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2015-CH-43": {
+"t": "CH.soc.teorias-sociologicas-classicas",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2015-CH-44": {
+"t": "CH.his.historia-geral-mundo-contemporaneo",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2015-CH-45": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade"
+},
+"2015-CN-46": {
+"t": "CN.qui.equilibrio-quimico",
+"tags": [
+"CN.bio.fisiologia-humana"
+]
+},
+"2015-CN-47": {
+"t": "CN.bio.impactos-ambientais"
+},
+"2015-CN-48": {
+"t": "CN.bio.citologia"
+},
+"2015-CN-49": {
+"t": "CN.fis.trabalho-e-energia",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2015-CN-50": {
+"t": "CN.fis.ondulatoria"
+},
+"2015-CN-51": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2015-CN-52": {
+"t": "CN.qui.materia-e-propriedades"
+},
+"2015-CN-53": {
+"t": "CN.fis.fenomenos-ondulatorios"
+},
+"2015-CN-54": {
+"t": "CN.bio.embriologia"
+},
+"2015-CN-55": {
+"t": "CN.qui.solucoes",
+"tags": [
+"CN.qui.estequiometria"
+]
+},
+"2015-CN-56": {
+"t": "CN.bio.evolucao"
+},
+"2015-CN-57": {
+"t": "CN.fis.termodinamica"
+},
+"2015-CN-58": {
+"t": "CN.qui.eletroquimica"
+},
+"2015-CN-59": {
+"t": "CN.qui.funcoes-organicas"
+},
+"2015-CN-60": {
+"t": "CN.qui.reacoes-organicas"
+},
+"2015-CN-61": {
+"t": "CN.bio.ciclos-biogeoquimicos"
+},
+"2015-CN-62": {
+"t": "CN.qui.funcoes-inorganicas",
+"tags": [
+"CN.qui.acidos-e-bases"
+]
+},
+"2015-CN-63": {
+"t": "CN.fis.termodinamica"
+},
+"2015-CN-64": {
+"t": "CN.fis.trabalho-e-energia"
+},
+"2015-CN-65": {
+"t": "CN.fis.calorimetria"
+},
+"2015-CN-66": {
+"t": "CN.bio.genetica"
+},
+"2015-CN-67": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.bio.homeostase"
+]
+},
+"2015-CN-68": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2015-CN-69": {
+"t": "CN.bio.metabolismo-energetico"
+},
+"2015-CN-70": {
+"t": "CN.fis.trabalho-e-energia"
+},
+"2015-CN-71": {
+"t": "CN.qui.equilibrio-quimico"
+},
+"2015-CN-72": {
+"t": "CN.bio.imunologia",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2015-CN-73": {
+"t": "CN.qui.radioatividade",
+"tags": [
+"CN.fis.fisica-moderna"
+]
+},
+"2015-CN-74": {
+"t": "CN.bio.biotecnologia"
+},
+"2015-CN-75": {
+"t": "CN.fis.fenomenos-ondulatorios"
+},
+"2015-CN-76": {
+"t": "CN.qui.estequiometria"
+},
+"2015-CN-77": {
+"t": "CN.qui.reacoes-organicas",
+"tags": [
+"CN.qui.eletroquimica"
+]
+},
+"2015-CN-78": {
+"t": "CN.bio.saude-publica",
+"tags": [
+"CN.bio.histologia"
+]
+},
+"2015-CN-79": {
+"t": "CN.fis.calorimetria"
+},
+"2015-CN-80": {
+"t": "CN.qui.geometria-e-polaridade-molecular",
+"tags": [
+"CN.bio.ecotoxicologia"
+]
+},
+"2015-CN-81": {
+"t": "CN.qui.eletroquimica"
+},
+"2015-CN-82": {
+"t": "CN.fis.estatica"
+},
+"2015-CN-83": {
+"t": "CN.bio.zoologia"
+},
+"2015-CN-84": {
+"t": "CN.qui.termoquimica"
+},
+"2015-CN-85": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.fis.optica"
+]
+},
+"2015-CN-86": {
+"t": "CN.fis.acustica"
+},
+"2015-CN-87": {
+"t": "CN.bio.genetica",
+"tags": [
+"CN.bio.citologia"
+]
+},
+"2015-CN-88": {
+"t": "CN.fis.grandezas-e-medidas"
+},
+"2015-CN-89": {
+"t": "CN.bio.parasitologia"
+},
+"2015-CN-90": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2015-LC-91-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2015-LC-92-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2015-LC-93-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2015-LC-94-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2015-LC-95-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2015-LC-91-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2015-LC-92-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2015-LC-93-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2015-LC-94-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2015-LC-95-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2015-LC-96": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2015-LC-97": {
+"t": "LC.ef.dancas-e-expressoes-corporais"
+},
+"2015-LC-98": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2015-LC-99": {
+"t": "LC.lit.modernismo"
+},
+"2015-LC-100": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2015-LC-101": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lit.texto-literario-e-generos-literarios"
+]
+},
+"2015-LC-102": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2015-LC-103": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2015-LC-104": {
+"t": "LC.lit.literatura-contemporanea",
+"tags": [
+"LC.lit.texto-literario-e-generos-literarios"
+]
+},
+"2015-LC-105": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2015-LC-106": {
+"t": "LC.tic.linguagem-digital-e-hipertexto",
+"tags": [
+"LC.lp.variacao-linguistica"
+]
+},
+"2015-LC-107": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2015-LC-108": {
+"t": "LC.art.artes-visuais"
+},
+"2015-LC-109": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lp.variacao-linguistica"
+]
+},
+"2015-LC-110": {
+"t": "LC.art.artes-visuais"
+},
+"2015-LC-111": {
+"t": "LC.art.patrimonio-e-cultura-popular"
+},
+"2015-LC-112": {
+"t": "LC.art.arte-contemporanea"
+},
+"2015-LC-113": {
+"t": "LC.lp.gramatica-e-analise-linguistica"
+},
+"2015-LC-114": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2015-LC-115": {
+"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+},
+"2015-LC-116": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2015-LC-117": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2015-LC-118": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2015-LC-119": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2015-LC-120": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2015-LC-121": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2015-LC-122": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2015-LC-123": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2015-LC-124": {
+"t": "LC.ef.corpo-saude-e-estetica"
+},
+"2015-LC-125": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2015-LC-126": {
+"t": "LC.lit.literatura-contemporanea",
+"tags": [
+"LC.lit.literatura-colonial-quinhentismo-barroco-e-arcadismo"
+]
+},
+"2015-LC-127": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2015-LC-128": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2015-LC-129": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2015-LC-130": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2015-LC-131": {
+"t": "LC.art.artes-visuais"
+},
+"2015-LC-132": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2015-LC-133": {
+"t": "LC.ef.jogos-e-brincadeiras"
+},
+"2015-LC-134": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2015-LC-135": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2015-MT-136": {
+"t": "MT.mat.funcoes",
+"rev": "leitura de gráfico; conferir se cabe em Estatística"
+},
+"2015-MT-137": {
+"t": "MT.mat.geometria-plana"
+},
+"2015-MT-138": {
+"t": "MT.mat.funcoes"
+},
+"2015-MT-139": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2015-MT-140": {
+"t": "MT.mat.estatistica"
+},
+"2015-MT-141": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2015-MT-142": {
+"t": "MT.mat.probabilidade"
+},
+"2015-MT-143": {
+"t": "MT.mat.estatistica"
+},
+"2015-MT-144": {
+"t": "MT.mat.geometria-plana"
+},
+"2015-MT-145": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2015-MT-146": {
+"t": "MT.mat.geometria-espacial"
+},
+"2015-MT-147": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2015-MT-148": {
+"t": "MT.mat.geometria-espacial"
+},
+"2015-MT-149": {
+"t": "MT.mat.geometria-espacial"
+},
+"2015-MT-150": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2015-MT-151": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2015-MT-152": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.sequencias-e-matematica-discreta"
+]
+},
+"2015-MT-153": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2015-MT-154": {
+"t": "MT.mat.funcoes"
+},
+"2015-MT-155": {
+"t": "MT.mat.geometria-plana"
+},
+"2015-MT-156": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2015-MT-157": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2015-MT-158": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2015-MT-159": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2015-MT-160": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2015-MT-161": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2015-MT-162": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2015-MT-163": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2015-MT-164": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2015-MT-165": {
+"t": "MT.mat.geometria-plana"
+},
+"2015-MT-166": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2015-MT-167": {
+"t": "MT.mat.geometria-plana"
+},
+"2015-MT-168": {
+"t": "MT.mat.probabilidade"
+},
+"2015-MT-169": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2015-MT-170": {
+"t": "MT.mat.estatistica"
+},
+"2015-MT-171": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2015-MT-172": {
+"t": "MT.mat.geometria-analitica"
+},
+"2015-MT-173": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2015-MT-174": {
+"t": "MT.mat.funcoes"
+},
+"2015-MT-175": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2015-MT-176": {
+"t": "MT.mat.funcoes"
+},
+"2015-MT-177": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2015-MT-178": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2015-MT-179": {
+"t": "MT.mat.probabilidade"
+},
+"2015-MT-180": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2016-CH-01": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2016-CH-02": {
+"t": "CH.his.historia-do-brasil-nova-republica"
+},
+"2016-CH-03": {
+"t": "CH.geo.urbanizacao"
+},
+"2016-CH-04": {
+"t": "CH.geo.regionalizacao",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2016-CH-05": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2016-CH-06": {
+"t": "CH.fil.filosofia-contemporanea"
+},
+"2016-CH-07": {
+"t": "CH.soc.genero"
+},
+"2016-CH-08": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2016-CH-09": {
+"t": "CH.his.historia-geral-revolucao-industrial"
+},
+"2016-CH-10": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2016-CH-11": {
+"t": "CH.soc.cultura"
+},
+"2016-CH-12": {
+"t": "CH.geo.geopolitica"
+},
+"2016-CH-13": {
+"t": "CH.his.historia-da-america-seculo-xx-e-contemporanea"
+},
+"2016-CH-14": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2016-CH-15": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2016-CH-16": {
+"t": "CH.geo.globalizacao"
+},
+"2016-CH-17": {
+"t": "CH.geo.cartografia"
+},
+"2016-CH-18": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2016-CH-19": {
+"t": "CH.geo.migracoes",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2016-CH-20": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2016-CH-21": {
+"t": "CH.his.historia-geral-antiguidade"
+},
+"2016-CH-22": {
+"t": "CH.his.historia-geral-mundo-contemporaneo"
+},
+"2016-CH-23": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2016-CH-24": {
+"t": "CH.soc.democracia",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2016-CH-25": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-da-ciencia-e-da-tecnica"
+]
+},
+"2016-CH-26": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2016-CH-27": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2016-CH-28": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2016-CH-29": {
+"t": "CH.geo.urbanizacao"
+},
+"2016-CH-30": {
+"t": "CH.geo.biomas",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2016-CH-31": {
+"t": "CH.geo.migracoes"
+},
+"2016-CH-32": {
+"t": "CH.soc.teorias-sociologicas-classicas"
+},
+"2016-CH-33": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2016-CH-34": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2016-CH-35": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2016-CH-36": {
+"t": "CH.geo.hidrografia"
+},
+"2016-CH-37": {
+"t": "CH.fil.filosofia-contemporanea"
+},
+"2016-CH-38": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2016-CH-39": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade"
+},
+"2016-CH-40": {
+"t": "CH.soc.trabalho",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2016-CH-41": {
+"t": "CH.soc.teorias-sociologicas-classicas",
+"rev": "leitura de Berman sobre modernidade; poderia ir para Cultura"
+},
+"2016-CH-42": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"rev": "autor critica efeito da internet na leitura; poderia ser Filosofia (teoria do conhecimento)"
+},
+"2016-CH-43": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2016-CH-44": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2016-CH-45": {
+"t": "CH.geo.populacao"
+},
+"2016-CN-46": {
+"t": "CN.qui.interacoes-intermoleculares"
+},
+"2016-CN-47": {
+"t": "CN.fis.tecnologia-e-energia",
+"tags": [
+"CN.fis.trabalho-e-energia"
+]
+},
+"2016-CN-48": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2016-CN-49": {
+"t": "CN.fis.fenomenos-ondulatorios"
+},
+"2016-CN-50": {
+"t": "CN.qui.termoquimica"
+},
+"2016-CN-51": {
+"t": "CN.qui.reacoes-quimicas",
+"tags": [
+"CN.qui.funcoes-inorganicas"
+]
+},
+"2016-CN-52": {
+"t": "CN.qui.isomeria"
+},
+"2016-CN-53": {
+"t": "CN.qui.biomoleculas",
+"tags": [
+"CN.bio.bioquimica"
+]
+},
+"2016-CN-54": {
+"t": "CN.fis.calorimetria",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2016-CN-55": {
+"t": "CN.fis.acustica"
+},
+"2016-CN-56": {
+"t": "CN.bio.citologia"
+},
+"2016-CN-57": {
+"t": "CN.fis.fenomenos-ondulatorios",
+"tags": [
+"CN.fis.acustica"
+]
+},
+"2016-CN-58": {
+"t": "CN.qui.estequiometria"
+},
+"2016-CN-59": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2016-CN-60": {
+"t": "CN.qui.interacoes-intermoleculares"
+},
+"2016-CN-61": {
+"t": "CN.bio.dinamica-ecologica"
+},
+"2016-CN-62": {
+"t": "CN.bio.ecologia",
+"tags": [
+"CN.bio.ciclos-biogeoquimicos"
+]
+},
+"2016-CN-63": {
+"t": "CN.fis.cinematica"
+},
+"2016-CN-64": {
+"t": "CN.qui.eletroquimica"
+},
+"2016-CN-65": {
+"t": "CN.bio.zoologia",
+"tags": [
+"CN.bio.fisiologia-humana"
+]
+},
+"2016-CN-66": {
+"t": "CN.fis.movimento-circular"
+},
+"2016-CN-67": {
+"t": "CN.qui.materia-e-propriedades"
+},
+"2016-CN-68": {
+"t": "CN.qui.estequiometria",
+"tags": [
+"CN.qui.solucoes"
+]
+},
+"2016-CN-69": {
+"t": "CN.bio.botanica",
+"tags": [
+"CN.bio.bioquimica"
+]
+},
+"2016-CN-70": {
+"t": "CN.qui.radioatividade"
+},
+"2016-CN-71": {
+"t": "CN.bio.ecologia",
+"rev": "adaptações de plantas ao bioma (manguezal); também cabe em Botânica"
+},
+"2016-CN-72": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2016-CN-73": {
+"t": "CN.bio.conservacao-ambiental",
+"tags": [
+"CN.bio.dinamica-ecologica"
+]
+},
+"2016-CN-74": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2016-CN-75": {
+"t": "CN.bio.botanica"
+},
+"2016-CN-76": {
+"t": "CN.qui.reacoes-organicas",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2016-CN-77": {
+"t": "CN.fis.quantidade-de-movimento"
+},
+"2016-CN-78": {
+"t": "CN.qui.acidos-e-bases",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2016-CN-79": {
+"t": "CN.bio.imunologia",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2016-CN-80": {
+"t": "CN.bio.impactos-ambientais",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2016-CN-81": {
+"t": "CN.qui.interacoes-intermoleculares",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2016-CN-82": {
+"t": "CN.fis.forcas-e-equilibrio"
+},
+"2016-CN-83": {
+"t": "CN.bio.divisao-celular",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2016-CN-84": {
+"t": "CN.fis.transmissao-de-calor"
+},
+"2016-CN-85": {
+"t": "CN.qui.interacoes-intermoleculares"
+},
+"2016-CN-86": {
+"t": "CN.fis.ondulatoria"
+},
+"2016-CN-87": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.bio.homeostase"
+]
+},
+"2016-CN-88": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2016-CN-89": {
+"t": "CN.qui.geometria-e-polaridade-molecular",
+"tags": [
+"CN.fis.ondulatoria"
+]
+},
+"2016-CN-90": {
+"t": "CN.bio.origem-da-vida",
+"tags": [
+"CN.bio.evolucao"
+]
+},
+"2016-LC-91-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2016-LC-92-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2016-LC-93-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2016-LC-94-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2016-LC-95-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2016-LC-91-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2016-LC-92-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2016-LC-93-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2016-LC-94-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2016-LC-95-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2016-LC-96": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2016-LC-97": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2016-LC-98": {
+"t": "LC.art.artes-visuais"
+},
+"2016-LC-99": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.art.teatro-e-danca"
+]
+},
+"2016-LC-100": {
+"t": "LC.lit.literatura-colonial-quinhentismo-barroco-e-arcadismo"
+},
+"2016-LC-101": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2016-LC-102": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2016-LC-103": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2016-LC-104": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2016-LC-105": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2016-LC-106": {
+"t": "LC.tic.etica-cidadania-e-inclusao-digital"
+},
+"2016-LC-107": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2016-LC-108": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2016-LC-109": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2016-LC-110": {
+"t": "LC.lit.texto-literario-e-generos-literarios"
+},
+"2016-LC-111": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2016-LC-112": {
+"t": "LC.lit.texto-literario-e-generos-literarios"
+},
+"2016-LC-113": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2016-LC-114": {
+"t": "LC.art.arte-contemporanea"
+},
+"2016-LC-115": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2016-LC-116": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2016-LC-117": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2016-LC-118": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2016-LC-119": {
+"t": "LC.lit.modernismo"
+},
+"2016-LC-120": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2016-LC-121": {
+"t": "LC.lit.modernismo"
+},
+"2016-LC-122": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2016-LC-123": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2016-LC-124": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2016-LC-125": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lit.texto-literario-e-generos-literarios"
+]
+},
+"2016-LC-126": {
+"t": "LC.art.teatro-e-danca"
+},
+"2016-LC-127": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2016-LC-128": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2016-LC-129": {
+"t": "LC.ef.corpo-saude-e-estetica"
+},
+"2016-LC-130": {
+"t": "LC.ef.esporte"
+},
+"2016-LC-131": {
+"t": "LC.tic.midia-informacao-e-desinformacao",
+"tags": [
+"LC.lit.realismo-naturalismo-e-parnasianismo"
+]
+},
+"2016-LC-132": {
+"t": "LC.art.artes-visuais",
+"tags": [
+"LC.lit.texto-literario-e-generos-literarios"
+]
+},
+"2016-LC-133": {
+"t": "LC.art.teatro-e-danca",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2016-LC-134": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2016-LC-135": {
+"t": "LC.lp.gramatica-e-analise-linguistica"
+},
+"2016-MT-136": {
+"t": "MT.mat.geometria-espacial"
+},
+"2016-MT-137": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2016-MT-138": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2016-MT-139": {
+"t": "MT.mat.funcoes"
+},
+"2016-MT-140": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2016-MT-141": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2016-MT-142": {
+"t": "MT.mat.geometria-analitica"
+},
+"2016-MT-143": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2016-MT-144": {
+"t": "MT.mat.estatistica"
+},
+"2016-MT-145": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2016-MT-146": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2016-MT-147": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2016-MT-148": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2016-MT-149": {
+"t": "MT.mat.geometria-analitica"
+},
+"2016-MT-150": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2016-MT-151": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2016-MT-152": {
+"t": "MT.mat.probabilidade"
+},
+"2016-MT-153": {
+"t": "MT.mat.estatistica"
+},
+"2016-MT-154": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2016-MT-155": {
+"t": "MT.mat.geometria-espacial"
+},
+"2016-MT-156": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2016-MT-157": {
+"t": "MT.mat.estatistica"
+},
+"2016-MT-158": {
+"t": "MT.mat.funcoes"
+},
+"2016-MT-159": {
+"t": "MT.mat.estatistica"
+},
+"2016-MT-160": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2016-MT-161": {
+"t": "MT.mat.geometria-espacial"
+},
+"2016-MT-162": {
+"t": "MT.mat.estatistica",
+"rev": "leitura de gráfico de variações mensais; poderia ser Funções"
+},
+"2016-MT-163": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2016-MT-164": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2016-MT-165": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.sequencias-e-matematica-discreta"
+]
+},
+"2016-MT-166": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2016-MT-167": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2016-MT-168": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2016-MT-169": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2016-MT-170": {
+"t": "MT.mat.estatistica"
+},
+"2016-MT-171": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2016-MT-172": {
+"t": "MT.mat.geometria-plana"
+},
+"2016-MT-173": {
+"t": "MT.mat.funcoes",
+"rev": "leitura de gráfico periódico de níveis no sangue"
+},
+"2016-MT-174": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2016-MT-175": {
+"t": "MT.mat.geometria-espacial"
+},
+"2016-MT-176": {
+"t": "MT.mat.funcoes"
+},
+"2016-MT-177": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2016-MT-178": {
+"t": "MT.mat.geometria-espacial"
+},
+"2016-MT-179": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2016-MT-180": {
+"t": "MT.mat.funcoes"
+},
+"2017-LC-01-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2017-LC-02-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2017-LC-03-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2017-LC-04-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2017-LC-05-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2017-LC-01-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2017-LC-02-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2017-LC-03-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2017-LC-04-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2017-LC-05-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2017-LC-06": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2017-LC-07": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2017-LC-08": {
+"t": "LC.tic.linguagem-digital-e-hipertexto"
+},
+"2017-LC-09": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2017-LC-10": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2017-LC-11": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2017-LC-12": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2017-LC-13": {
+"t": "LC.lit.modernismo"
+},
+"2017-LC-14": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2017-LC-15": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2017-LC-16": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2017-LC-17": {
+"t": "LC.tic.linguagem-digital-e-hipertexto"
+},
+"2017-LC-18": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2017-LC-19": {
+"t": "LC.ef.esporte"
+},
+"2017-LC-20": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2017-LC-21": {
+"t": "LC.art.artes-visuais"
+},
+"2017-LC-22": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2017-LC-23": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2017-LC-24": {
+"t": "LC.art.teatro-e-danca",
+"tags": [
+"CH.his.historia-do-brasil-ditadura-militar"
+]
+},
+"2017-LC-25": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2017-LC-26": {
+"t": "LC.ef.corpo-saude-e-estetica"
+},
+"2017-LC-27": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2017-LC-28": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2017-LC-29": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2017-LC-30": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2017-LC-31": {
+"t": "LC.ef.esporte"
+},
+"2017-LC-32": {
+"t": "LC.art.teatro-e-danca",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2017-LC-33": {
+"t": "LC.lp.gramatica-e-analise-linguistica"
+},
+"2017-LC-34": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2017-LC-35": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2017-LC-36": {
+"t": "LC.art.artes-visuais"
+},
+"2017-LC-37": {
+"t": "LC.art.arte-contemporanea"
+},
+"2017-LC-38": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2017-LC-39": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2017-LC-40": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2017-LC-41": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2017-LC-42": {
+"t": "LC.ef.corpo-saude-e-estetica",
+"rev": "lazer e desigualdade em letra de rap; poderia ser Interpretação"
+},
+"2017-LC-43": {
+"t": "LC.art.artes-visuais"
+},
+"2017-LC-44": {
+"t": "LC.lp.gramatica-e-analise-linguistica",
+"tags": [
+"LC.lit.literatura-contemporanea"
+]
+},
+"2017-LC-45": {
+"t": "LC.art.arte-contemporanea"
+},
+"2017-CH-46": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2017-CH-47": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras"
+},
+"2017-CH-48": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2017-CH-49": {
+"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+},
+"2017-CH-50": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2017-CH-51": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2017-CH-52": {
+"t": "CH.geo.urbanizacao"
+},
+"2017-CH-53": {
+"t": "CH.geo.globalizacao"
+},
+"2017-CH-54": {
+"t": "CH.geo.hidrografia"
+},
+"2017-CH-55": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2017-CH-56": {
+"t": "CH.geo.geografia-do-brasil",
+"rev": "logística de exportação; poderia ser Agrária"
+},
+"2017-CH-57": {
+"t": "CH.geo.industrializacao"
+},
+"2017-CH-58": {
+"t": "CH.soc.democracia",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2017-CH-59": {
+"t": "CH.geo.climatologia"
+},
+"2017-CH-60": {
+"t": "CH.soc.desigualdade",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2017-CH-61": {
+"t": "CH.geo.geopolitica",
+"tags": [
+"CH.his.historia-geral-mundo-contemporaneo"
+]
+},
+"2017-CH-62": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras"
+},
+"2017-CH-63": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras",
+"rev": "Futurismo e vanguardas do início do século XX; também cabe em Artes"
+},
+"2017-CH-64": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2017-CH-65": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2017-CH-66": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2017-CH-67": {
+"t": "CH.soc.estado"
+},
+"2017-CH-68": {
+"t": "CH.geo.biomas"
+},
+"2017-CH-69": {
+"t": "CH.geo.industrializacao",
+"tags": [
+"CH.geo.energia"
+]
+},
+"2017-CH-70": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2017-CH-71": {
+"t": "CH.geo.energia"
+},
+"2017-CH-72": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade"
+},
+"2017-CH-73": {
+"t": "CH.geo.migracoes",
+"tags": [
+"CH.geo.industrializacao"
+]
+},
+"2017-CH-74": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2017-CH-75": {
+"t": "CH.geo.geopolitica"
+},
+"2017-CH-76": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2017-CH-77": {
+"t": "CH.geo.climatologia"
+},
+"2017-CH-78": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2017-CH-79": {
+"t": "CH.his.historia-geral-antiguidade"
+},
+"2017-CH-80": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.his.historia-do-brasil-imperio"
+]
+},
+"2017-CH-81": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2017-CH-82": {
+"t": "CH.his.historia-do-brasil-primeira-republica",
+"tags": [
+"CH.his.historia-do-brasil-colonia"
+]
+},
+"2017-CH-83": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2017-CH-84": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2017-CH-85": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2017-CH-86": {
+"t": "CH.geo.geografia-fisica"
+},
+"2017-CH-87": {
+"t": "CH.geo.climatologia"
+},
+"2017-CH-88": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2017-CH-89": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao"
+},
+"2017-CH-90": {
+"t": "CH.soc.cultura",
+"rev": "releitura artística de 1969 vista pela imagem; também cabe em História do Brasil — Ditadura Militar"
+},
+"2017-CN-91": {
+"t": "CN.bio.ecotoxicologia",
+"tags": [
+"CN.qui.estequiometria"
+]
+},
+"2017-CN-92": {
+"t": "CN.bio.microbiologia"
+},
+"2017-CN-93": {
+"t": "CN.fis.eletrodinamica"
+},
+"2017-CN-94": {
+"t": "CN.bio.metabolismo-energetico",
+"tags": [
+"CN.bio.botanica"
+]
+},
+"2017-CN-95": {
+"t": "CN.qui.eletroquimica"
+},
+"2017-CN-96": {
+"t": "CN.bio.ciclos-biogeoquimicos"
+},
+"2017-CN-97": {
+"t": "CN.qui.estrutura-atomica"
+},
+"2017-CN-98": {
+"t": "CN.bio.classificacao-biologica"
+},
+"2017-CN-99": {
+"t": "CN.fis.dinamica"
+},
+"2017-CN-100": {
+"t": "CN.bio.fisiologia-humana"
+},
+"2017-CN-101": {
+"t": "CN.fis.ondulatoria"
+},
+"2017-CN-102": {
+"t": "CN.qui.interacoes-intermoleculares"
+},
+"2017-CN-103": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.fis.grandezas-e-medidas"
+]
+},
+"2017-CN-104": {
+"t": "CN.qui.radioatividade"
+},
+"2017-CN-105": {
+"t": "CN.fis.tecnologia-e-energia"
+},
+"2017-CN-106": {
+"t": "CN.qui.materia-e-propriedades",
+"tags": [
+"CN.bio.botanica"
+]
+},
+"2017-CN-107": {
+"t": "CN.fis.ondulatoria"
+},
+"2017-CN-108": {
+"t": "CN.fis.trabalho-e-energia"
+},
+"2017-CN-109": {
+"t": "CN.bio.impactos-ambientais",
+"tags": [
+"CN.bio.zoologia"
+]
+},
+"2017-CN-110": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2017-CN-111": {
+"t": "CN.bio.ecotoxicologia"
+},
+"2017-CN-112": {
+"t": "CN.fis.fenomenos-ondulatorios"
+},
+"2017-CN-113": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2017-CN-114": {
+"t": "CN.qui.funcoes-organicas"
+},
+"2017-CN-115": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2017-CN-116": {
+"t": "CN.bio.citologia"
+},
+"2017-CN-117": {
+"t": "CN.bio.genetica"
+},
+"2017-CN-118": {
+"t": "CN.bio.impactos-ambientais",
+"rev": "impermeabilização do solo; tema mais de Geografia, mas a questão é de CN"
+},
+"2017-CN-119": {
+"t": "CN.qui.acidos-e-bases",
+"tags": [
+"CN.qui.separacao-de-misturas"
+]
+},
+"2017-CN-120": {
+"t": "CN.qui.propriedades-coligativas"
+},
+"2017-CN-121": {
+"t": "CN.qui.eletroquimica"
+},
+"2017-CN-122": {
+"t": "CN.qui.estequiometria"
+},
+"2017-CN-123": {
+"t": "CN.bio.botanica"
+},
+"2017-CN-124": {
+"t": "CN.qui.termoquimica"
+},
+"2017-CN-125": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.bioquimica"
+]
+},
+"2017-CN-126": {
+"t": "CN.qui.tabela-periodica"
+},
+"2017-CN-127": {
+"t": "CN.fis.calorimetria",
+"tags": [
+"CN.fis.eletrodinamica"
+]
+},
+"2017-CN-128": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.fis.optica"
+]
+},
+"2017-CN-129": {
+"t": "CN.fis.eletrodinamica"
+},
+"2017-CN-130": {
+"t": "CN.qui.separacao-de-misturas",
+"tags": [
+"CN.qui.interacoes-intermoleculares"
+]
+},
+"2017-CN-131": {
+"t": "CN.fis.cinematica"
+},
+"2017-CN-132": {
+"t": "CN.bio.citologia"
+},
+"2017-CN-133": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2017-CN-134": {
+"t": "CN.qui.reacoes-organicas"
+},
+"2017-CN-135": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2017-MT-136": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2017-MT-137": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2017-MT-138": {
+"t": "MT.mat.trigonometria"
+},
+"2017-MT-139": {
+"t": "MT.mat.funcoes"
+},
+"2017-MT-140": {
+"t": "MT.mat.geometria-plana"
+},
+"2017-MT-141": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2017-MT-142": {
+"t": "MT.mat.geometria-espacial"
+},
+"2017-MT-143": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2017-MT-144": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2017-MT-145": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2017-MT-146": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2017-MT-147": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2017-MT-148": {
+"t": "MT.mat.geometria-espacial"
+},
+"2017-MT-149": {
+"t": "MT.mat.probabilidade"
+},
+"2017-MT-150": {
+"t": "MT.mat.geometria-plana"
+},
+"2017-MT-151": {
+"t": "MT.mat.estatistica"
+},
+"2017-MT-152": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-espacial"
+]
+},
+"2017-MT-153": {
+"t": "MT.mat.geometria-plana"
+},
+"2017-MT-154": {
+"t": "MT.mat.geometria-analitica",
+"rev": "orientação em mapa; poderia ser Geometria Plana"
+},
+"2017-MT-155": {
+"t": "MT.mat.estatistica"
+},
+"2017-MT-156": {
+"t": "MT.mat.geometria-plana"
+},
+"2017-MT-157": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2017-MT-158": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.geometria-espacial"
+]
+},
+"2017-MT-159": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2017-MT-160": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2017-MT-161": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2017-MT-162": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-analitica"
+]
+},
+"2017-MT-163": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2017-MT-164": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2017-MT-165": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2017-MT-166": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2017-MT-167": {
+"t": "MT.mat.geometria-espacial"
+},
+"2017-MT-168": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2017-MT-169": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2017-MT-170": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2017-MT-171": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2017-MT-172": {
+"t": "MT.mat.funcoes"
+},
+"2017-MT-173": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2017-MT-174": {
+"t": "MT.mat.estatistica"
+},
+"2017-MT-175": {
+"t": "MT.mat.probabilidade"
+},
+"2017-MT-176": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2017-MT-177": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2017-MT-178": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2017-MT-179": {
+"t": "MT.mat.probabilidade"
+},
+"2017-MT-180": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2018-LC-01-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2018-LC-02-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2018-LC-03-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2018-LC-04-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2018-LC-05-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2018-LC-01-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2018-LC-02-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2018-LC-03-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2018-LC-04-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2018-LC-05-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2018-LC-06": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2018-LC-07": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2018-LC-08": {
+"t": "LC.lit.modernismo",
+"tags": [
+"LC.lp.variacao-linguistica"
+]
+},
+"2018-LC-09": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2018-LC-10": {
+"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+},
+"2018-LC-11": {
+"t": "LC.art.arte-contemporanea"
+},
+"2018-LC-12": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2018-LC-13": {
+"t": "LC.ef.corpo-saude-e-estetica"
+},
+"2018-LC-14": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2018-LC-15": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2018-LC-16": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2018-LC-17": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2018-LC-18": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2018-LC-19": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2018-LC-20": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2018-LC-21": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2018-LC-22": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2018-LC-23": {
+"t": "LC.lit.modernismo"
+},
+"2018-LC-24": {
+"t": "LC.lp.funcoes-da-linguagem",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2018-LC-25": {
+"t": "LC.lit.modernismo",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2018-LC-26": {
+"t": "LC.ef.esporte"
+},
+"2018-LC-27": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2018-LC-28": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2018-LC-29": {
+"t": "LC.art.artes-visuais"
+},
+"2018-LC-30": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2018-LC-31": {
+"t": "LC.ef.esporte"
+},
+"2018-LC-32": {
+"t": "LC.art.musica",
+"tags": [
+"LC.art.teatro-e-danca"
+]
+},
+"2018-LC-33": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2018-LC-34": {
+"t": "LC.art.arte-contemporanea",
+"tags": [
+"LC.art.patrimonio-e-cultura-popular"
+]
+},
+"2018-LC-35": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2018-LC-36": {
+"t": "LC.lit.literatura-contemporanea",
+"tags": [
+"LC.lp.sintaxe-e-semantica"
+]
+},
+"2018-LC-37": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2018-LC-38": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2018-LC-39": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2018-LC-40": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2018-LC-41": {
+"t": "LC.lp.gramatica-e-analise-linguistica"
+},
+"2018-LC-42": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2018-LC-43": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2018-LC-44": {
+"t": "LC.tic.linguagem-digital-e-hipertexto"
+},
+"2018-LC-45": {
+"t": "LC.art.arte-contemporanea"
+},
+"2018-CH-46": {
+"t": "CH.his.historia-geral-imperialismo-e-seculo-xix"
+},
+"2018-CH-47": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2018-CH-48": {
+"t": "CH.soc.estado",
+"tags": [
+"CH.soc.poder"
+]
+},
+"2018-CH-49": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2018-CH-50": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2018-CH-51": {
+"t": "CH.fil.filosofia-medieval"
+},
+"2018-CH-52": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2018-CH-53": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2018-CH-54": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2018-CH-55": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao"
+},
+"2018-CH-56": {
+"t": "CH.geo.cartografia"
+},
+"2018-CH-57": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2018-CH-58": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2018-CH-59": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2018-CH-60": {
+"t": "CH.geo.migracoes",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2018-CH-61": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2018-CH-62": {
+"t": "CH.geo.geopolitica"
+},
+"2018-CH-63": {
+"t": "CH.geo.climatologia"
+},
+"2018-CH-64": {
+"t": "CH.his.historia-do-brasil-colonia",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2018-CH-65": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.geo.industrializacao"
+]
+},
+"2018-CH-66": {
+"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2018-CH-67": {
+"t": "CH.geo.hidrografia",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2018-CH-68": {
+"t": "CH.his.historia-da-america-colonizacao"
+},
+"2018-CH-69": {
+"t": "CH.his.historia-do-brasil-ditadura-militar"
+},
+"2018-CH-70": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2018-CH-71": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2018-CH-72": {
+"t": "CH.geo.biomas",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2018-CH-73": {
+"t": "CH.geo.cartografia",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2018-CH-74": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2018-CH-75": {
+"t": "CH.geo.populacao"
+},
+"2018-CH-76": {
+"t": "CH.his.historia-do-brasil-primeira-republica",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2018-CH-77": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2018-CH-78": {
+"t": "CH.his.historia-do-brasil-era-vargas",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2018-CH-79": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2018-CH-80": {
+"t": "CH.soc.desigualdade",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2018-CH-81": {
+"t": "CH.geo.geopolitica",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2018-CH-82": {
+"t": "CH.geo.climatologia",
+"tags": [
+"CH.geo.hidrografia"
+]
+},
+"2018-CH-83": {
+"t": "CH.fil.filosofia-medieval"
+},
+"2018-CH-84": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2018-CH-85": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2018-CH-86": {
+"t": "CH.geo.geografia-agraria"
+},
+"2018-CH-87": {
+"t": "CH.soc.genero"
+},
+"2018-CH-88": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2018-CH-89": {
+"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica"
+},
+"2018-CH-90": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2018-CN-91": {
+"t": "CN.qui.isomeria"
+},
+"2018-CN-92": {
+"t": "CN.qui.estequiometria"
+},
+"2018-CN-93": {
+"t": "CN.qui.eletroquimica"
+},
+"2018-CN-94": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.bio.homeostase"
+]
+},
+"2018-CN-95": {
+"t": "CN.fis.hidrostatica",
+"tags": [
+"CN.qui.solucoes"
+]
+},
+"2018-CN-96": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.qui.interacoes-intermoleculares"
+]
+},
+"2018-CN-97": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2018-CN-98": {
+"t": "CN.bio.conservacao-ambiental"
+},
+"2018-CN-99": {
+"t": "CN.qui.materia-e-propriedades",
+"rev": "depende do quadro de símbolos de risco; conferir pela imagem"
+},
+"2018-CN-100": {
+"t": "CN.bio.divisao-celular"
+},
+"2018-CN-101": {
+"t": "CN.bio.zoologia"
+},
+"2018-CN-102": {
+"t": "CN.qui.cinetica-quimica"
+},
+"2018-CN-103": {
+"t": "CN.fis.ondulatoria"
+},
+"2018-CN-104": {
+"t": "CN.fis.estatica"
+},
+"2018-CN-105": {
+"t": "CN.qui.tabela-periodica"
+},
+"2018-CN-106": {
+"t": "CN.bio.evolucao"
+},
+"2018-CN-107": {
+"t": "CN.bio.botanica",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2018-CN-108": {
+"t": "CN.fis.eletrodinamica"
+},
+"2018-CN-109": {
+"t": "CN.qui.reacoes-organicas"
+},
+"2018-CN-110": {
+"t": "CN.bio.genetica"
+},
+"2018-CN-111": {
+"t": "CN.bio.botanica",
+"tags": [
+"CN.bio.evolucao"
+]
+},
+"2018-CN-112": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2018-CN-113": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2018-CN-114": {
+"t": "CN.qui.termoquimica",
+"tags": [
+"CN.bio.metabolismo-energetico"
+]
+},
+"2018-CN-115": {
+"t": "CN.fis.eletrodinamica"
+},
+"2018-CN-116": {
+"t": "CN.qui.eletroquimica"
+},
+"2018-CN-117": {
+"t": "CN.bio.citologia"
+},
+"2018-CN-118": {
+"t": "CN.fis.termologia",
+"tags": [
+"CN.qui.ligacoes-quimicas"
+]
+},
+"2018-CN-119": {
+"t": "CN.bio.parasitologia"
+},
+"2018-CN-120": {
+"t": "CN.fis.fenomenos-ondulatorios"
+},
+"2018-CN-121": {
+"t": "CN.qui.acidos-e-bases",
+"tags": [
+"CN.qui.funcoes-inorganicas"
+]
+},
+"2018-CN-122": {
+"t": "CN.fis.movimento-circular",
+"tags": [
+"CN.fis.estatica"
+]
+},
+"2018-CN-123": {
+"t": "CN.bio.metabolismo-energetico"
+},
+"2018-CN-124": {
+"t": "CN.qui.quimica-organica",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2018-CN-125": {
+"t": "CN.fis.optica"
+},
+"2018-CN-126": {
+"t": "CN.qui.funcoes-organicas",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2018-CN-127": {
+"t": "CN.bio.genetica"
+},
+"2018-CN-128": {
+"t": "CN.fis.dinamica",
+"tags": [
+"CN.fis.cinematica"
+]
+},
+"2018-CN-129": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.fis.optica"
+]
+},
+"2018-CN-130": {
+"t": "CN.qui.geometria-e-polaridade-molecular"
+},
+"2018-CN-131": {
+"t": "CN.fis.trabalho-e-energia"
+},
+"2018-CN-132": {
+"t": "CN.qui.isomeria"
+},
+"2018-CN-133": {
+"t": "CN.bio.zoologia",
+"tags": [
+"CN.bio.evolucao"
+]
+},
+"2018-CN-134": {
+"t": "CN.fis.hidrostatica"
+},
+"2018-CN-135": {
+"t": "CN.bio.ciclos-biogeoquimicos",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2018-MT-136": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2018-MT-137": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2018-MT-138": {
+"t": "MT.mat.geometria-analitica"
+},
+"2018-MT-139": {
+"t": "MT.mat.geometria-plana"
+},
+"2018-MT-140": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2018-MT-141": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2018-MT-142": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2018-MT-143": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2018-MT-144": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2018-MT-145": {
+"t": "MT.mat.estatistica"
+},
+"2018-MT-146": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2018-MT-147": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2018-MT-148": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2018-MT-149": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2018-MT-150": {
+"t": "MT.mat.probabilidade"
+},
+"2018-MT-151": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2018-MT-152": {
+"t": "MT.mat.geometria-analitica"
+},
+"2018-MT-153": {
+"t": "MT.mat.geometria-plana"
+},
+"2018-MT-154": {
+"t": "MT.mat.probabilidade"
+},
+"2018-MT-155": {
+"t": "MT.mat.geometria-plana"
+},
+"2018-MT-156": {
+"t": "MT.mat.probabilidade",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2018-MT-157": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2018-MT-158": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2018-MT-159": {
+"t": "MT.mat.geometria-espacial"
+},
+"2018-MT-160": {
+"t": "MT.mat.estatistica"
+},
+"2018-MT-161": {
+"t": "MT.mat.geometria-analitica"
+},
+"2018-MT-162": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2018-MT-163": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2018-MT-164": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"rev": "depende da figura com a sequência de andares"
+},
+"2018-MT-165": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2018-MT-166": {
+"t": "MT.mat.estatistica"
+},
+"2018-MT-167": {
+"t": "MT.mat.probabilidade"
+},
+"2018-MT-168": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2018-MT-169": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2018-MT-170": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2018-MT-171": {
+"t": "MT.mat.geometria-plana"
+},
+"2018-MT-172": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2018-MT-173": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2018-MT-174": {
+"t": "MT.mat.funcoes"
+},
+"2018-MT-175": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2018-MT-176": {
+"t": "MT.mat.probabilidade"
+},
+"2018-MT-177": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2018-MT-178": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2018-MT-179": {
+"t": "MT.mat.geometria-plana"
+},
+"2018-MT-180": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.trigonometria"
+]
+},
+"2019-LC-01-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2019-LC-02-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2019-LC-03-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2019-LC-04-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2019-LC-05-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2019-LC-01-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2019-LC-02-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2019-LC-03-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2019-LC-04-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2019-LC-05-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2019-LC-06": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2019-LC-07": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2019-LC-08": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2019-LC-09": {
+"t": "LC.ef.esporte",
+"tags": [
+"LC.tic.midia-informacao-e-desinformacao"
+]
+},
+"2019-LC-10": {
+"t": "LC.lp.sintaxe-e-semantica"
+},
+"2019-LC-11": {
+"t": "LC.ef.jogos-e-brincadeiras"
+},
+"2019-LC-12": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.tic.etica-cidadania-e-inclusao-digital"
+]
+},
+"2019-LC-13": {
+"t": "LC.lit.modernismo",
+"tags": [
+"LC.art.teatro-e-danca"
+]
+},
+"2019-LC-14": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2019-LC-15": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2019-LC-16": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2019-LC-17": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2019-LC-18": {
+"t": "LC.tic.etica-cidadania-e-inclusao-digital"
+},
+"2019-LC-19": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2019-LC-20": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2019-LC-21": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2019-LC-22": {
+"t": "LC.lit.modernismo"
+},
+"2019-LC-23": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2019-LC-24": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2019-LC-25": {
+"t": "LC.art.musica"
+},
+"2019-LC-26": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2019-LC-27": {
+"t": "LC.ef.corpo-saude-e-estetica"
+},
+"2019-LC-28": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2019-LC-29": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2019-LC-30": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2019-LC-31": {
+"t": "LC.art.artes-visuais"
+},
+"2019-LC-32": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual",
+"tags": [
+"LC.ef.corpo-saude-e-estetica"
+]
+},
+"2019-LC-33": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2019-LC-34": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2019-LC-35": {
+"t": "LC.ef.corpo-saude-e-estetica"
+},
+"2019-LC-36": {
+"t": "LC.art.arte-contemporanea"
+},
+"2019-LC-37": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2019-LC-38": {
+"t": "LC.tic.linguagem-digital-e-hipertexto"
+},
+"2019-LC-39": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2019-LC-40": {
+"t": "LC.lit.modernismo",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2019-LC-41": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2019-LC-42": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2019-LC-43": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2019-LC-44": {
+"t": "LC.lp.gramatica-e-analise-linguistica",
+"tags": [
+"LC.lit.literatura-contemporanea"
+]
+},
+"2019-LC-45": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.art.musica"
+]
+},
+"2019-CH-46": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2019-CH-47": {
+"t": "CH.geo.cartografia"
+},
+"2019-CH-48": {
+"t": "CH.fil.filosofia-moderna"
+},
+"2019-CH-49": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CN.bio.conservacao-ambiental"
+]
+},
+"2019-CH-50": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2019-CH-51": {
+"t": "CH.fil.filosofia-politica"
+},
+"2019-CH-52": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2019-CH-53": {
+"t": "CH.geo.geopolitica"
+},
+"2019-CH-54": {
+"t": "CH.his.historia-geral-revolucao-industrial"
+},
+"2019-CH-55": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2019-CH-56": {
+"t": "CH.geo.industrializacao",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2019-CH-57": {
+"t": "CH.geo.climatologia"
+},
+"2019-CH-58": {
+"t": "CH.fil.filosofia-medieval",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2019-CH-59": {
+"t": "CH.geo.geografia-fisica"
+},
+"2019-CH-60": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2019-CH-61": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2019-CH-62": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2019-CH-63": {
+"t": "CH.his.historia-geral-idade-moderna",
+"tags": [
+"CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+]
+},
+"2019-CH-64": {
+"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica"
+},
+"2019-CH-65": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2019-CH-66": {
+"t": "CH.soc.cidadania",
+"tags": [
+"CH.soc.estado"
+]
+},
+"2019-CH-67": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2019-CH-68": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2019-CH-69": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.geo.regionalizacao"
+]
+},
+"2019-CH-70": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao"
+},
+"2019-CH-71": {
+"t": "CH.soc.trabalho",
+"tags": [
+"CH.geo.industrializacao"
+]
+},
+"2019-CH-72": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2019-CH-73": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.his.historia-geral-idade-media"
+]
+},
+"2019-CH-74": {
+"t": "CH.fil.filosofia-contemporanea"
+},
+"2019-CH-75": {
+"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2019-CH-76": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2019-CH-77": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2019-CH-78": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2019-CH-79": {
+"t": "CH.his.historia-geral-antiguidade"
+},
+"2019-CH-80": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2019-CH-81": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2019-CH-82": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2019-CH-83": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.soc.desigualdade"
+]
+},
+"2019-CH-84": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2019-CH-85": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.his.historia-da-america-seculo-xx-e-contemporanea"
+]
+},
+"2019-CH-86": {
+"t": "CH.his.historia-geral-idade-moderna"
+},
+"2019-CH-87": {
+"t": "CH.soc.trabalho",
+"tags": [
+"CH.soc.estado"
+]
+},
+"2019-CH-88": {
+"t": "CH.geo.populacao"
+},
+"2019-CH-89": {
+"t": "CH.geo.cartografia",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2019-CH-90": {
+"t": "CH.geo.geopolitica",
+"tags": [
+"CH.soc.desigualdade"
+]
+},
+"2019-CN-91": {
+"t": "CN.qui.eletroquimica"
+},
+"2019-CN-92": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2019-CN-93": {
+"t": "CN.bio.parasitologia",
+"tags": [
+"CN.bio.imunologia"
+]
+},
+"2019-CN-94": {
+"t": "CN.fis.transmissao-de-calor"
+},
+"2019-CN-95": {
+"t": "CN.qui.termoquimica",
+"tags": [
+"CN.bio.metabolismo-energetico"
+]
+},
+"2019-CN-96": {
+"t": "CN.bio.dinamica-ecologica"
+},
+"2019-CN-97": {
+"t": "CN.bio.ecologia"
+},
+"2019-CN-98": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.bio.fisiologia-humana"
+]
+},
+"2019-CN-99": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.bio.ciclos-biogeoquimicos"
+]
+},
+"2019-CN-100": {
+"t": "CN.bio.ecologia",
+"tags": [
+"CN.bio.impactos-ambientais"
+]
+},
+"2019-CN-101": {
+"t": "CN.bio.fisiologia-humana"
+},
+"2019-CN-102": {
+"t": "CN.fis.transmissao-de-calor",
+"rev": "questão em imagem/alternativa A não extraída"
+},
+"2019-CN-103": {
+"t": "CN.qui.reacoes-quimicas",
+"tags": [
+"CN.qui.eletroquimica"
+]
+},
+"2019-CN-104": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.bio.impactos-ambientais"
+]
+},
+"2019-CN-105": {
+"t": "CN.qui.estrutura-atomica"
+},
+"2019-CN-106": {
+"t": "CN.fis.forcas-e-equilibrio"
+},
+"2019-CN-107": {
+"t": "CN.bio.zoologia"
+},
+"2019-CN-108": {
+"t": "CN.qui.ligacoes-quimicas"
+},
+"2019-CN-109": {
+"t": "CN.fis.movimento-circular",
+"tags": [
+"CN.fis.gravitacao"
+]
+},
+"2019-CN-110": {
+"t": "CN.bio.genetica"
+},
+"2019-CN-111": {
+"t": "CN.fis.quantidade-de-movimento"
+},
+"2019-CN-112": {
+"t": "CN.qui.interacoes-intermoleculares",
+"tags": [
+"CN.qui.quimica-organica"
+]
+},
+"2019-CN-113": {
+"t": "CN.fis.magnetismo",
+"tags": [
+"CN.fis.movimento-circular"
+]
+},
+"2019-CN-114": {
+"t": "CN.bio.microbiologia",
+"tags": [
+"CN.bio.biotecnologia"
+]
+},
+"2019-CN-115": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.bio.impactos-ambientais"
+]
+},
+"2019-CN-116": {
+"t": "CN.bio.citologia",
+"tags": [
+"CN.bio.bioquimica"
+]
+},
+"2019-CN-117": {
+"t": "CN.fis.calorimetria"
+},
+"2019-CN-118": {
+"t": "CN.qui.eletroquimica"
+},
+"2019-CN-119": {
+"t": "CN.fis.hidrostatica",
+"tags": [
+"CN.fis.termodinamica"
+]
+},
+"2019-CN-120": {
+"t": "CN.qui.funcoes-organicas",
+"tags": [
+"CN.qui.quimica-organica"
+]
+},
+"2019-CN-121": {
+"t": "CN.fis.trabalho-e-energia"
+},
+"2019-CN-122": {
+"t": "CN.qui.eletroquimica"
+},
+"2019-CN-123": {
+"t": "CN.bio.histologia",
+"tags": [
+"CN.qui.radioatividade"
+]
+},
+"2019-CN-124": {
+"t": "CN.qui.reacoes-organicas",
+"tags": [
+"CN.qui.polimeros"
+]
+},
+"2019-CN-125": {
+"t": "CN.bio.botanica",
+"tags": [
+"CN.bio.evolucao"
+]
+},
+"2019-CN-126": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2019-CN-127": {
+"t": "CN.bio.metabolismo-energetico"
+},
+"2019-CN-128": {
+"t": "CN.qui.estrutura-atomica"
+},
+"2019-CN-129": {
+"t": "CN.qui.estequiometria",
+"tags": [
+"CN.qui.solucoes"
+]
+},
+"2019-CN-130": {
+"t": "CN.bio.citologia",
+"tags": [
+"CN.qui.solucoes"
+]
+},
+"2019-CN-131": {
+"t": "CN.fis.cinematica",
+"tags": [
+"MT.mat.trigonometria"
+]
+},
+"2019-CN-132": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.fis.fenomenos-ondulatorios"
+]
+},
+"2019-CN-133": {
+"t": "CN.bio.fisiologia-humana"
+},
+"2019-CN-134": {
+"t": "CN.qui.interacoes-intermoleculares"
+},
+"2019-CN-135": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.fis.ondulatoria"
+]
+},
+"2019-MT-136": {
+"t": "MT.mat.geometria-espacial"
+},
+"2019-MT-137": {
+"t": "MT.mat.funcoes"
+},
+"2019-MT-138": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2019-MT-139": {
+"t": "MT.mat.funcoes",
+"rev": "questão em imagem; gráficos"
+},
+"2019-MT-140": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2019-MT-141": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2019-MT-142": {
+"t": "MT.mat.geometria-plana"
+},
+"2019-MT-143": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2019-MT-144": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2019-MT-145": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2019-MT-146": {
+"t": "MT.mat.estatistica"
+},
+"2019-MT-147": {
+"t": "MT.mat.geometria-plana"
+},
+"2019-MT-148": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2019-MT-149": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2019-MT-150": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2019-MT-151": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2019-MT-152": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2019-MT-153": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2019-MT-154": {
+"t": "MT.mat.funcoes"
+},
+"2019-MT-155": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2019-MT-156": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2019-MT-157": {
+"t": "MT.mat.geometria-espacial"
+},
+"2019-MT-158": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.geometria-espacial"
+]
+},
+"2019-MT-159": {
+"t": "MT.mat.probabilidade"
+},
+"2019-MT-160": {
+"t": "MT.mat.estatistica"
+},
+"2019-MT-161": {
+"t": "MT.mat.estatistica"
+},
+"2019-MT-162": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2019-MT-163": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"rev": "enunciado com expressões em imagem"
+},
+"2019-MT-164": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2019-MT-165": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2019-MT-166": {
+"t": "MT.mat.geometria-plana"
+},
+"2019-MT-167": {
+"t": "MT.mat.estatistica"
+},
+"2019-MT-168": {
+"t": "MT.mat.funcoes"
+},
+"2019-MT-169": {
+"t": "MT.mat.geometria-analitica"
+},
+"2019-MT-170": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2019-MT-171": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2019-MT-172": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.sequencias-e-matematica-discreta"
+]
+},
+"2019-MT-173": {
+"t": "MT.mat.probabilidade"
+},
+"2019-MT-174": {
+"t": "MT.mat.estatistica"
+},
+"2019-MT-175": {
+"t": "MT.mat.geometria-espacial"
+},
+"2019-MT-176": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2019-MT-177": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2019-MT-178": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2019-MT-179": {
+"t": "MT.mat.matematica-aplicada",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2019-MT-180": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2021-LC-01-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2021-LC-02-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles",
+"tags": [
+"LC.en.compreensao-leitora-em-ingles"
+]
+},
+"2021-LC-03-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2021-LC-04-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2021-LC-05-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2021-LC-01-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2021-LC-02-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2021-LC-03-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2021-LC-04-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol",
+"rev": "recurso literário (analogia) em espanhol"
+},
+"2021-LC-05-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2021-LC-06": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2021-LC-07": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lit.texto-literario-e-generos-literarios"
+]
+},
+"2021-LC-08": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2021-LC-09": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lit.modernismo"
+]
+},
+"2021-LC-10": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2021-LC-11": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.art.musica"
+]
+},
+"2021-LC-12": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2021-LC-13": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2021-LC-14": {
+"t": "LC.art.arte-contemporanea",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2021-LC-15": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lit.realismo-naturalismo-e-parnasianismo"
+]
+},
+"2021-LC-16": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2021-LC-17": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2021-LC-18": {
+"t": "LC.lit.romantismo",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2021-LC-19": {
+"t": "LC.ef.jogos-e-brincadeiras"
+},
+"2021-LC-20": {
+"t": "LC.art.teatro-e-danca",
+"tags": [
+"LC.tic.linguagem-digital-e-hipertexto"
+]
+},
+"2021-LC-21": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2021-LC-22": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2021-LC-23": {
+"t": "LC.art.teatro-e-danca"
+},
+"2021-LC-24": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2021-LC-25": {
+"t": "LC.lit.texto-literario-e-generos-literarios"
+},
+"2021-LC-26": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2021-LC-27": {
+"t": "LC.art.artes-visuais"
+},
+"2021-LC-28": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2021-LC-29": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2021-LC-30": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lit.simbolismo-e-pre-modernismo"
+]
+},
+"2021-LC-31": {
+"t": "LC.ef.esporte"
+},
+"2021-LC-32": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2021-LC-33": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2021-LC-34": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.tic.etica-cidadania-e-inclusao-digital"
+]
+},
+"2021-LC-35": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2021-LC-36": {
+"t": "LC.art.arte-contemporanea"
+},
+"2021-LC-37": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2021-LC-38": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2021-LC-39": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2021-LC-40": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2021-LC-41": {
+"t": "LC.lit.texto-literario-e-generos-literarios"
+},
+"2021-LC-42": {
+"t": "LC.ef.corpo-saude-e-estetica",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2021-LC-43": {
+"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2021-LC-44": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2021-LC-45": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2021-CH-46": {
+"t": "CH.soc.trabalho"
+},
+"2021-CH-47": {
+"t": "CH.soc.desigualdade",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2021-CH-48": {
+"t": "CH.geo.geografia-agraria"
+},
+"2021-CH-49": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.his.historia-do-brasil-ditadura-militar"
+]
+},
+"2021-CH-50": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2021-CH-51": {
+"t": "CH.geo.hidrografia",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2021-CH-52": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2021-CH-53": {
+"t": "CH.soc.cultura"
+},
+"2021-CH-54": {
+"t": "CH.soc.trabalho"
+},
+"2021-CH-55": {
+"t": "CH.geo.migracoes"
+},
+"2021-CH-56": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.his.historia-geral-imperialismo-e-seculo-xix"
+]
+},
+"2021-CH-57": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2021-CH-58": {
+"t": "CH.geo.urbanizacao"
+},
+"2021-CH-59": {
+"t": "CH.geo.climatologia",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2021-CH-60": {
+"t": "CH.soc.cidadania",
+"tags": [
+"CH.his.historia-do-brasil-ditadura-militar"
+]
+},
+"2021-CH-61": {
+"t": "CH.geo.urbanizacao"
+},
+"2021-CH-62": {
+"t": "CH.geo.industrializacao",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2021-CH-63": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2021-CH-64": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.soc.poder"
+]
+},
+"2021-CH-65": {
+"t": "CH.soc.classes-sociais",
+"tags": [
+"CH.his.historia-geral-revolucao-industrial"
+]
+},
+"2021-CH-66": {
+"t": "CH.soc.violencia",
+"tags": [
+"CH.soc.desigualdade"
+]
+},
+"2021-CH-67": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2021-CH-68": {
+"t": "CH.soc.movimentos-sociais",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2021-CH-69": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2021-CH-70": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2021-CH-71": {
+"t": "CH.geo.geografia-fisica"
+},
+"2021-CH-72": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2021-CH-73": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2021-CH-74": {
+"t": "CH.his.historia-do-brasil-colonia",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2021-CH-75": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2021-CH-76": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2021-CH-77": {
+"t": "CH.his.historia-da-america-independencias",
+"tags": [
+"CH.his.historia-do-brasil-imperio"
+]
+},
+"2021-CH-78": {
+"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+},
+"2021-CH-79": {
+"t": "CH.geo.industrializacao",
+"rev": "início do texto ilegível no PDF"
+},
+"2021-CH-80": {
+"t": "CH.soc.teorias-sociologicas-classicas",
+"tags": [
+"CH.his.historia-do-brasil-republica-de-1946-a-1964"
+]
+},
+"2021-CH-81": {
+"t": "CH.his.historia-do-brasil-era-vargas",
+"tags": [
+"CH.soc.instituicoes-sociais"
+]
+},
+"2021-CH-82": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2021-CH-83": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.his.historia-geral-imperialismo-e-seculo-xix"
+]
+},
+"2021-CH-84": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2021-CH-85": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2021-CH-86": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2021-CH-87": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2021-CH-88": {
+"t": "CH.fil.filosofia-medieval",
+"tags": [
+"CH.his.historia-geral-idade-media"
+]
+},
+"2021-CH-89": {
+"t": "CH.geo.cartografia"
+},
+"2021-CH-90": {
+"t": "CH.his.historia-do-brasil-colonia",
+"tags": [
+"CH.soc.classes-sociais"
+]
+},
+"2021-CN-91": {
+"t": "CN.qui.acidos-e-bases"
+},
+"2021-CN-92": {
+"t": "CN.fis.acustica"
+},
+"2021-CN-93": {
+"t": "CN.bio.evolucao"
+},
+"2021-CN-94": {
+"t": "CN.fis.cinematica"
+},
+"2021-CN-95": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"MT.mat.sequencias-e-matematica-discreta"
+]
+},
+"2021-CN-96": {
+"t": "CN.bio.genetica"
+},
+"2021-CN-97": {
+"t": "CN.qui.reacoes-organicas"
+},
+"2021-CN-98": {
+"t": "CN.bio.embriologia",
+"tags": [
+"CN.bio.zoologia"
+]
+},
+"2021-CN-99": {
+"t": "CN.fis.transmissao-de-calor"
+},
+"2021-CN-100": {
+"t": "CN.fis.dinamica"
+},
+"2021-CN-101": {
+"t": "CN.qui.estequiometria"
+},
+"2021-CN-102": {
+"t": "CN.fis.circuitos-eletricos",
+"tags": [
+"CN.qui.eletroquimica"
+]
+},
+"2021-CN-103": {
+"t": "CN.qui.funcoes-organicas",
+"rev": "depende das figuras dos testes"
+},
+"2021-CN-104": {
+"t": "CN.bio.ecotoxicologia"
+},
+"2021-CN-105": {
+"t": "CN.fis.magnetismo"
+},
+"2021-CN-106": {
+"t": "CN.qui.isomeria"
+},
+"2021-CN-107": {
+"t": "CN.fis.trabalho-e-energia"
+},
+"2021-CN-108": {
+"t": "CN.fis.gravitacao"
+},
+"2021-CN-109": {
+"t": "CN.fis.eletrodinamica"
+},
+"2021-CN-110": {
+"t": "CN.bio.metabolismo-energetico"
+},
+"2021-CN-111": {
+"t": "CN.bio.impactos-ambientais",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2021-CN-112": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2021-CN-113": {
+"t": "CN.qui.eletroquimica",
+"tags": [
+"CN.qui.reacoes-quimicas"
+]
+},
+"2021-CN-114": {
+"t": "CN.bio.fisiologia-humana"
+},
+"2021-CN-115": {
+"t": "CN.fis.transmissao-de-calor"
+},
+"2021-CN-116": {
+"t": "CN.qui.acidos-e-bases",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2021-CN-117": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2021-CN-118": {
+"t": "CN.bio.zoologia",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2021-CN-119": {
+"t": "CN.bio.botanica"
+},
+"2021-CN-120": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.qui.quimica-cotidiana"
+]
+},
+"2021-CN-121": {
+"t": "CN.bio.evolucao",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2021-CN-122": {
+"t": "CN.qui.separacao-de-misturas",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2021-CN-123": {
+"t": "CN.bio.botanica"
+},
+"2021-CN-124": {
+"t": "CN.qui.eletroquimica",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2021-CN-125": {
+"t": "CN.fis.termologia",
+"tags": [
+"CN.bio.homeostase"
+]
+},
+"2021-CN-126": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2021-CN-127": {
+"t": "CN.bio.dinamica-ecologica",
+"tags": [
+"CN.bio.botanica"
+]
+},
+"2021-CN-128": {
+"t": "CN.fis.eletrodinamica",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2021-CN-129": {
+"t": "CN.bio.botanica"
+},
+"2021-CN-130": {
+"t": "CN.qui.funcoes-organicas"
+},
+"2021-CN-131": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"MT.mat.matematica-aplicada"
+]
+},
+"2021-CN-132": {
+"t": "CN.bio.genetica"
+},
+"2021-CN-133": {
+"t": "CN.qui.eletroquimica"
+},
+"2021-CN-134": {
+"t": "CN.qui.materia-e-propriedades",
+"tags": [
+"CN.fis.termologia"
+]
+},
+"2021-CN-135": {
+"t": "CN.qui.polimeros",
+"rev": "alternativas são estruturas em imagem"
+},
+"2021-MT-136": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.sequencias-e-matematica-discreta"
+]
+},
+"2021-MT-137": {
+"t": "MT.mat.geometria-espacial"
+},
+"2021-MT-138": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2021-MT-139": {
+"t": "MT.mat.estatistica"
+},
+"2021-MT-140": {
+"t": "MT.mat.estatistica"
+},
+"2021-MT-141": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2021-MT-142": {
+"t": "MT.mat.probabilidade"
+},
+"2021-MT-143": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2021-MT-144": {
+"t": "MT.mat.estatistica"
+},
+"2021-MT-145": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2021-MT-146": {
+"t": "MT.mat.estatistica"
+},
+"2021-MT-147": {
+"t": "MT.mat.sequencias-e-matematica-discreta",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2021-MT-148": {
+"t": "MT.mat.estatistica"
+},
+"2021-MT-149": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2021-MT-150": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2021-MT-151": {
+"t": "MT.mat.estatistica"
+},
+"2021-MT-152": {
+"t": "MT.mat.algebra-e-equacoes",
+"rev": "operações definidas parcialmente em imagem"
+},
+"2021-MT-153": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2021-MT-154": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2021-MT-155": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2021-MT-156": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2021-MT-157": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2021-MT-158": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2021-MT-159": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2021-MT-160": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2021-MT-161": {
+"t": "MT.mat.funcoes"
+},
+"2021-MT-162": {
+"t": "MT.mat.funcoes"
+},
+"2021-MT-163": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2021-MT-164": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2021-MT-165": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2021-MT-166": {
+"t": "MT.mat.geometria-espacial"
+},
+"2021-MT-167": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2021-MT-168": {
+"t": "MT.mat.geometria-espacial"
+},
+"2021-MT-169": {
+"t": "MT.mat.geometria-plana"
+},
+"2021-MT-170": {
+"t": "MT.mat.geometria-espacial"
+},
+"2021-MT-171": {
+"t": "MT.mat.geometria-plana"
+},
+"2021-MT-172": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2021-MT-173": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2021-MT-174": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2021-MT-175": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2021-MT-176": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2021-MT-177": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2021-MT-178": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2021-MT-179": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2021-MT-180": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2022-LC-01-en": {
+"t": "LC.en.compreensao-leitora-em-ingles",
+"tags": [
+"LC.en.aspectos-culturais-e-interculturais-em-ingles"
+]
+},
+"2022-LC-02-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2022-LC-03-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2022-LC-04-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2022-LC-05-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2022-LC-01-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2022-LC-02-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2022-LC-03-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol",
+"tags": [
+"LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+]
+},
+"2022-LC-04-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2022-LC-05-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2022-LC-06": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2022-LC-07": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2022-LC-08": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.ef.jogos-e-brincadeiras"
+]
+},
+"2022-LC-09": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2022-LC-10": {
+"t": "LC.tic.etica-cidadania-e-inclusao-digital",
+"tags": [
+"LC.art.arte-contemporanea"
+]
+},
+"2022-LC-11": {
+"t": "LC.tic.linguagem-digital-e-hipertexto"
+},
+"2022-LC-12": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2022-LC-13": {
+"t": "LC.tic.etica-cidadania-e-inclusao-digital"
+},
+"2022-LC-14": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2022-LC-15": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.tic.redes-sociais-e-comunicacao-em-rede"
+]
+},
+"2022-LC-16": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2022-LC-17": {
+"t": "LC.lit.texto-literario-e-generos-literarios",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2022-LC-18": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2022-LC-19": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.violencia"
+]
+},
+"2022-LC-20": {
+"t": "LC.ef.ginastica-e-atividade-fisica"
+},
+"2022-LC-21": {
+"t": "LC.lit.romantismo"
+},
+"2022-LC-22": {
+"t": "LC.tic.etica-cidadania-e-inclusao-digital"
+},
+"2022-LC-23": {
+"t": "LC.lit.modernismo"
+},
+"2022-LC-24": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2022-LC-25": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2022-LC-26": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2022-LC-27": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2022-LC-28": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+]
+},
+"2022-LC-29": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2022-LC-30": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2022-LC-31": {
+"t": "LC.lit.modernismo"
+},
+"2022-LC-32": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.tic.etica-cidadania-e-inclusao-digital"
+]
+},
+"2022-LC-33": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"tags": [
+"LC.lp.coesao-coerencia-e-organizacao-textual"
+]
+},
+"2022-LC-34": {
+"t": "LC.ef.esporte"
+},
+"2022-LC-35": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lit.literatura-contemporanea"
+]
+},
+"2022-LC-36": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2022-LC-37": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
+},
+"2022-LC-38": {
+"t": "LC.art.artes-visuais"
+},
+"2022-LC-39": {
+"t": "LC.art.arte-contemporanea"
+},
+"2022-LC-40": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"rev": "conto regionalista (fim do séc. XIX)"
+},
+"2022-LC-41": {
+"t": "LC.lit.simbolismo-e-pre-modernismo"
+},
+"2022-LC-42": {
+"t": "LC.lit.literatura-contemporanea",
+"tags": [
+"CH.soc.desigualdade"
+]
+},
+"2022-LC-43": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2022-LC-44": {
+"t": "LC.art.arte-contemporanea"
+},
+"2022-LC-45": {
+"t": "LC.art.musica",
+"tags": [
+"LC.art.patrimonio-e-cultura-popular"
+]
+},
+"2022-CH-46": {
+"t": "CH.geo.climatologia",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2022-CH-47": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2022-CH-48": {
+"t": "CH.soc.relacoes-etnico-raciais"
+},
+"2022-CH-49": {
+"t": "CH.geo.hidrografia",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2022-CH-50": {
+"t": "CH.his.historia-do-brasil-primeira-republica",
+"tags": [
+"CH.geo.regionalizacao"
+]
+},
+"2022-CH-51": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.geo.industrializacao"
+]
+},
+"2022-CH-52": {
+"t": "CH.geo.geografia-agraria"
+},
+"2022-CH-53": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2022-CH-54": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.soc.trabalho"
+]
+},
+"2022-CH-55": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2022-CH-56": {
+"t": "CH.soc.desigualdade"
+},
+"2022-CH-57": {
+"t": "CH.soc.poder",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2022-CH-58": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.his.historia-do-brasil-primeira-republica"
+]
+},
+"2022-CH-59": {
+"t": "CH.geo.geografia-agraria"
+},
+"2022-CH-60": {
+"t": "CH.soc.instituicoes-sociais",
+"rev": "tecnologia e relações sociais"
+},
+"2022-CH-61": {
+"t": "CH.soc.trabalho"
+},
+"2022-CH-62": {
+"t": "CH.geo.geopolitica",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2022-CH-63": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2022-CH-64": {
+"t": "CH.geo.geografia-fisica"
+},
+"2022-CH-65": {
+"t": "CH.soc.violencia",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2022-CH-66": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.his.historia-do-brasil-imperio"
+]
+},
+"2022-CH-67": {
+"t": "CH.soc.movimentos-sociais",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2022-CH-68": {
+"t": "CH.geo.geopolitica"
+},
+"2022-CH-69": {
+"t": "CH.geo.geopolitica",
+"tags": [
+"CH.his.historia-geral-mundo-contemporaneo"
+]
+},
+"2022-CH-70": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2022-CH-71": {
+"t": "CH.soc.estado",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2022-CH-72": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.populacao"
+]
+},
+"2022-CH-73": {
+"t": "CH.his.historia-geral-imperialismo-e-seculo-xix",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2022-CH-74": {
+"t": "CH.geo.energia",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2022-CH-75": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.geo.hidrografia"
+]
+},
+"2022-CH-76": {
+"t": "CH.his.historia-do-brasil-primeira-republica",
+"rev": "construção de açude no sertão; período não explícito"
+},
+"2022-CH-77": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2022-CH-78": {
+"t": "CH.geo.cartografia"
+},
+"2022-CH-79": {
+"t": "CH.soc.cultura"
+},
+"2022-CH-80": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2022-CH-81": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2022-CH-82": {
+"t": "CH.geo.geografia-fisica"
+},
+"2022-CH-83": {
+"t": "CH.soc.cidadania",
+"tags": [
+"CH.geo.migracoes"
+]
+},
+"2022-CH-84": {
+"t": "CH.fil.estetica",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2022-CH-85": {
+"t": "CH.his.historia-geral-idade-moderna"
+},
+"2022-CH-86": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2022-CH-87": {
+"t": "CH.geo.urbanizacao"
+},
+"2022-CH-88": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2022-CH-89": {
+"t": "CH.his.historia-da-america-povos-pre-colombianos",
+"tags": [
+"CH.his.historia-da-america-colonizacao"
+]
+},
+"2022-CH-90": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2022-CN-91": {
+"t": "CN.qui.eletroquimica",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2022-CN-92": {
+"t": "CN.bio.saude-publica",
+"tags": [
+"CN.bio.parasitologia"
+]
+},
+"2022-CN-93": {
+"t": "CN.fis.tecnologia-e-energia"
+},
+"2022-CN-94": {
+"t": "CN.qui.reacoes-quimicas",
+"tags": [
+"CN.qui.funcoes-inorganicas"
+]
+},
+"2022-CN-95": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2022-CN-96": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2022-CN-97": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2022-CN-98": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2022-CN-99": {
+"t": "CN.bio.dinamica-ecologica",
+"tags": [
+"CN.bio.conservacao-ambiental"
+]
+},
+"2022-CN-100": {
+"t": "CN.fis.cinematica"
+},
+"2022-CN-101": {
+"t": "CN.qui.cinetica-quimica",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2022-CN-102": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2022-CN-103": {
+"t": "CN.fis.forcas-e-equilibrio"
+},
+"2022-CN-104": {
+"t": "CN.bio.fisiologia-humana"
+},
+"2022-CN-105": {
+"t": "CN.fis.quantidade-de-movimento",
+"tags": [
+"CN.fis.trabalho-e-energia"
+]
+},
+"2022-CN-106": {
+"t": "CN.qui.equilibrio-ionico",
+"tags": [
+"CN.qui.acidos-e-bases"
+]
+},
+"2022-CN-107": {
+"t": "CN.qui.cinetica-quimica",
+"tags": [
+"CN.qui.biomoleculas"
+]
+},
+"2022-CN-108": {
+"t": "CN.qui.estequiometria",
+"tags": [
+"CN.qui.solucoes"
+]
+},
+"2022-CN-109": {
+"t": "CN.qui.radioatividade"
+},
+"2022-CN-110": {
+"t": "CN.bio.evolucao",
+"tags": [
+"CN.bio.zoologia"
+]
+},
+"2022-CN-111": {
+"t": "CN.fis.gravitacao",
+"tags": [
+"CH.geo.cartografia"
+]
+},
+"2022-CN-112": {
+"t": "CN.fis.movimento-circular",
+"tags": [
+"CN.fis.dinamica"
+]
+},
+"2022-CN-113": {
+"t": "CN.qui.eletroquimica"
+},
+"2022-CN-114": {
+"t": "CN.bio.citologia"
+},
+"2022-CN-115": {
+"t": "CN.fis.calorimetria",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2022-CN-116": {
+"t": "CN.fis.eletrodinamica",
+"tags": [
+"CN.fis.calorimetria"
+]
+},
+"2022-CN-117": {
+"t": "CN.qui.reacoes-quimicas",
+"tags": [
+"CN.qui.funcoes-inorganicas"
+]
+},
+"2022-CN-118": {
+"t": "CN.bio.ecotoxicologia",
+"tags": [
+"CN.bio.fisiologia-humana"
+]
+},
+"2022-CN-119": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2022-CN-120": {
+"t": "CN.bio.bioquimica"
+},
+"2022-CN-121": {
+"t": "CN.bio.microbiologia",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2022-CN-122": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.bio.biotecnologia"
+]
+},
+"2022-CN-123": {
+"t": "CN.fis.gravitacao"
+},
+"2022-CN-124": {
+"t": "CN.qui.eletroquimica",
+"tags": [
+"CN.qui.reacoes-quimicas"
+]
+},
+"2022-CN-125": {
+"t": "CN.bio.genetica"
+},
+"2022-CN-126": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2022-CN-127": {
+"t": "CN.bio.metabolismo-energetico"
+},
+"2022-CN-128": {
+"t": "CN.fis.eletrodinamica"
+},
+"2022-CN-129": {
+"t": "CN.bio.ciclos-biogeoquimicos",
+"tags": [
+"CN.qui.equilibrio-ionico"
+]
+},
+"2022-CN-130": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.fis.optica"
+]
+},
+"2022-CN-131": {
+"t": "CN.qui.funcoes-organicas"
+},
+"2022-CN-132": {
+"t": "CN.bio.microbiologia",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2022-CN-133": {
+"t": "CN.bio.imunologia"
+},
+"2022-CN-134": {
+"t": "CN.fis.acustica",
+"tags": [
+"CN.fis.ondulatoria"
+]
+},
+"2022-CN-135": {
+"t": "CN.fis.optica"
+},
+"2022-MT-136": {
+"t": "MT.mat.funcoes"
+},
+"2022-MT-137": {
+"t": "MT.mat.probabilidade"
+},
+"2022-MT-138": {
+"t": "MT.mat.estatistica"
+},
+"2022-MT-139": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2022-MT-140": {
+"t": "MT.mat.sequencias-e-matematica-discreta",
+"rev": "torneio/calendário (raciocínio de contagem)"
+},
+"2022-MT-141": {
+"t": "MT.mat.probabilidade"
+},
+"2022-MT-142": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2022-MT-143": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-144": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2022-MT-145": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2022-MT-146": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2022-MT-147": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2022-MT-148": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2022-MT-149": {
+"t": "MT.mat.estatistica"
+},
+"2022-MT-150": {
+"t": "MT.mat.funcoes"
+},
+"2022-MT-151": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2022-MT-152": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2022-MT-153": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-154": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2022-MT-155": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2022-MT-156": {
+"t": "MT.mat.geometria-plana"
+},
+"2022-MT-157": {
+"t": "MT.mat.funcoes"
+},
+"2022-MT-158": {
+"t": "MT.mat.funcoes"
+},
+"2022-MT-159": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2022-MT-160": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-161": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2022-MT-162": {
+"t": "MT.mat.estatistica"
+},
+"2022-MT-163": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2022-MT-164": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2022-MT-165": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2022-MT-166": {
+"t": "MT.mat.funcoes"
+},
+"2022-MT-167": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2022-MT-168": {
+"t": "MT.mat.geometria-analitica"
+},
+"2022-MT-169": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-170": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2022-MT-171": {
+"t": "MT.mat.estatistica"
+},
+"2022-MT-172": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-173": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2022-MT-174": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-175": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2022-MT-176": {
+"t": "MT.mat.geometria-analitica",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2022-MT-177": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2022-MT-178": {
+"t": "MT.mat.geometria-espacial"
+},
+"2022-MT-179": {
+"t": "MT.mat.estatistica"
+},
+"2022-MT-180": {
+"t": "MT.mat.geometria-espacial"
+},
+"2023-LC-01-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2023-LC-02-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2023-LC-03-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2023-LC-04-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2023-LC-05-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2023-LC-01-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2023-LC-02-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2023-LC-03-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2023-LC-04-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2023-LC-05-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol",
+"tags": [
+"LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+]
+},
+"2023-LC-06": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.ef.esporte"
+]
+},
+"2023-LC-07": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2023-LC-08": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2023-LC-09": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2023-LC-10": {
+"t": "LC.tic.midia-informacao-e-desinformacao",
+"tags": [
+"LC.tic.redes-sociais-e-comunicacao-em-rede"
+]
+},
+"2023-LC-11": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2023-LC-12": {
+"t": "LC.lit.modernismo"
+},
+"2023-LC-13": {
+"t": "LC.lit.modernismo"
+},
+"2023-LC-14": {
+"t": "LC.lit.modernismo"
+},
+"2023-LC-15": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2023-LC-16": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2023-LC-17": {
+"t": "LC.lp.gramatica-e-analise-linguistica"
+},
+"2023-LC-18": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2023-LC-19": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2023-LC-20": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2023-LC-21": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2023-LC-22": {
+"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+},
+"2023-LC-23": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2023-LC-24": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2023-LC-25": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2023-LC-26": {
+"t": "LC.lit.simbolismo-e-pre-modernismo"
+},
+"2023-LC-27": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2023-LC-28": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2023-LC-29": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2023-LC-30": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2023-LC-31": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2023-LC-32": {
+"t": "LC.art.musica"
+},
+"2023-LC-33": {
+"t": "LC.art.artes-visuais"
+},
+"2023-LC-34": {
+"t": "LC.art.teatro-e-danca",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2023-LC-35": {
+"t": "LC.ef.jogos-e-brincadeiras",
+"tags": [
+"LC.tic.linguagem-digital-e-hipertexto"
+]
+},
+"2023-LC-36": {
+"t": "LC.art.patrimonio-e-cultura-popular"
+},
+"2023-LC-37": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2023-LC-38": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+]
+},
+"2023-LC-39": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.tic.redes-sociais-e-comunicacao-em-rede"
+]
+},
+"2023-LC-40": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2023-LC-41": {
+"t": "LC.ef.esporte"
+},
+"2023-LC-42": {
+"t": "LC.ef.ginastica-e-atividade-fisica",
+"tags": [
+"CH.soc.desigualdade"
+]
+},
+"2023-LC-43": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lp.funcoes-da-linguagem"
+]
+},
+"2023-LC-44": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2023-LC-45": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2023-CH-46": {
+"t": "CH.geo.regionalizacao",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2023-CH-47": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2023-CH-48": {
+"t": "CH.geo.geografia-agraria"
+},
+"2023-CH-49": {
+"t": "CH.geo.geopolitica",
+"tags": [
+"CH.geo.populacao"
+]
+},
+"2023-CH-50": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2023-CH-51": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2023-CH-52": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2023-CH-53": {
+"t": "CH.geo.geografia-fisica"
+},
+"2023-CH-54": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2023-CH-55": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"tags": [
+"CH.soc.trabalho"
+]
+},
+"2023-CH-56": {
+"t": "CH.soc.democracia",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2023-CH-57": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2023-CH-58": {
+"t": "CH.soc.cultura"
+},
+"2023-CH-59": {
+"t": "CH.soc.teorias-sociologicas-classicas",
+"tags": [
+"CH.his.historia-geral-idade-moderna"
+]
+},
+"2023-CH-60": {
+"t": "CH.soc.violencia",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2023-CH-61": {
+"t": "CH.soc.trabalho"
+},
+"2023-CH-62": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2023-CH-63": {
+"t": "CH.his.historia-do-brasil-colonia",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2023-CH-64": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2023-CH-65": {
+"t": "CH.soc.genero"
+},
+"2023-CH-66": {
+"t": "CH.soc.desigualdade"
+},
+"2023-CH-67": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2023-CH-68": {
+"t": "CH.geo.urbanizacao"
+},
+"2023-CH-69": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2023-CH-70": {
+"t": "CH.his.historia-do-brasil-ditadura-militar"
+},
+"2023-CH-71": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2023-CH-72": {
+"t": "CH.soc.desigualdade",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2023-CH-73": {
+"t": "CH.his.historia-geral-idade-moderna",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2023-CH-74": {
+"t": "CH.his.historia-da-america-povos-pre-colombianos"
+},
+"2023-CH-75": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"LC.ef.esporte"
+]
+},
+"2023-CH-76": {
+"t": "CH.geo.populacao",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2023-CH-77": {
+"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+"tags": [
+"CH.his.historia-do-brasil-imperio"
+]
+},
+"2023-CH-78": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2023-CH-79": {
+"t": "CH.fil.filosofia-contemporanea"
+},
+"2023-CH-80": {
+"t": "CH.his.historia-do-brasil-ditadura-militar",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2023-CH-81": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.soc.poder"
+]
+},
+"2023-CH-82": {
+"t": "CH.geo.migracoes",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2023-CH-83": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2023-CH-84": {
+"t": "CH.his.historia-do-brasil-era-vargas",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2023-CH-85": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.geo.geografia-agraria"
+]
+},
+"2023-CH-86": {
+"t": "CH.soc.genero",
+"rev": "personagem de romance; hierarquia de gênero no séc. XIX"
+},
+"2023-CH-87": {
+"t": "CH.his.historia-do-brasil-era-vargas",
+"tags": [
+"CH.geo.migracoes"
+]
+},
+"2023-CH-88": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2023-CH-89": {
+"t": "CH.geo.climatologia",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2023-CH-90": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2023-CN-91": {
+"t": "CN.bio.conservacao-ambiental",
+"tags": [
+"CN.bio.ecologia"
+]
+},
+"2023-CN-92": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.qui.quimica-cotidiana"
+]
+},
+"2023-CN-93": {
+"t": "CN.fis.fisica-moderna",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2023-CN-94": {
+"t": "CN.qui.solucoes",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2023-CN-95": {
+"t": "CN.bio.histologia",
+"tags": [
+"CN.bio.zoologia"
+]
+},
+"2023-CN-96": {
+"t": "CN.qui.estequiometria"
+},
+"2023-CN-97": {
+"t": "CN.bio.botanica"
+},
+"2023-CN-98": {
+"t": "CN.bio.metabolismo-energetico",
+"tags": [
+"CN.bio.zoologia"
+]
+},
+"2023-CN-99": {
+"t": "CN.bio.parasitologia",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2023-CN-100": {
+"t": "CN.fis.cinematica"
+},
+"2023-CN-101": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.bio.homeostase"
+]
+},
+"2023-CN-102": {
+"t": "CN.qui.reacoes-organicas",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2023-CN-103": {
+"t": "CN.bio.botanica",
+"tags": [
+"CN.bio.evolucao"
+]
+},
+"2023-CN-104": {
+"t": "CN.qui.cinetica-quimica",
+"rev": "fatores que aumentam a liberação de alumínio do vidro"
+},
+"2023-CN-105": {
+"t": "CN.bio.botanica"
+},
+"2023-CN-106": {
+"t": "CN.bio.imunologia",
+"tags": [
+"CN.bio.biotecnologia"
+]
+},
+"2023-CN-107": {
+"t": "CN.bio.embriologia"
+},
+"2023-CN-108": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2023-CN-109": {
+"t": "CN.fis.forcas-e-equilibrio"
+},
+"2023-CN-110": {
+"t": "CN.qui.estequiometria"
+},
+"2023-CN-111": {
+"t": "CN.fis.acustica",
+"tags": [
+"CN.fis.ondulatoria"
+]
+},
+"2023-CN-112": {
+"t": "CN.fis.fenomenos-ondulatorios",
+"tags": [
+"CN.fis.optica"
+]
+},
+"2023-CN-113": {
+"t": "CN.fis.ondulatoria",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2023-CN-114": {
+"t": "CN.fis.dinamica"
+},
+"2023-CN-115": {
+"t": "CN.bio.ecotoxicologia",
+"tags": [
+"CN.bio.botanica"
+]
+},
+"2023-CN-116": {
+"t": "CN.bio.ciclos-biogeoquimicos"
+},
+"2023-CN-117": {
+"t": "CN.fis.fisica-moderna",
+"tags": [
+"CN.qui.radioatividade"
+]
+},
+"2023-CN-118": {
+"t": "CN.qui.quimica-organica",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2023-CN-119": {
+"t": "CN.qui.gases"
+},
+"2023-CN-120": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2023-CN-121": {
+"t": "CN.qui.ligacoes-quimicas",
+"tags": [
+"CN.qui.tabela-periodica"
+]
+},
+"2023-CN-122": {
+"t": "CN.fis.calorimetria"
+},
+"2023-CN-123": {
+"t": "CN.qui.isomeria"
+},
+"2023-CN-124": {
+"t": "CN.fis.cinematica"
+},
+"2023-CN-125": {
+"t": "CN.bio.genetica",
+"tags": [
+"CN.bio.divisao-celular"
+]
+},
+"2023-CN-126": {
+"t": "CN.qui.funcoes-organicas",
+"tags": [
+"CN.qui.interacoes-intermoleculares"
+]
+},
+"2023-CN-127": {
+"t": "CN.bio.metabolismo-energetico"
+},
+"2023-CN-128": {
+"t": "CN.fis.ondulatoria"
+},
+"2023-CN-129": {
+"t": "CN.qui.interacoes-intermoleculares",
+"tags": [
+"CN.bio.ecotoxicologia"
+]
+},
+"2023-CN-130": {
+"t": "CN.fis.transmissao-de-calor",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2023-CN-131": {
+"t": "CN.qui.solucoes",
+"tags": [
+"CN.qui.propriedades-coligativas"
+]
+},
+"2023-CN-132": {
+"t": "CN.qui.gases",
+"tags": [
+"CN.fis.termodinamica"
+]
+},
+"2023-CN-133": {
+"t": "CN.qui.quimica-organica",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2023-CN-134": {
+"t": "CN.bio.divisao-celular",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2023-CN-135": {
+"t": "CN.fis.acustica",
+"tags": [
+"CN.fis.ondulatoria"
+]
+},
+"2023-MT-136": {
+"t": "MT.mat.geometria-espacial"
+},
+"2023-MT-137": {
+"t": "MT.mat.estatistica"
+},
+"2023-MT-138": {
+"t": "MT.mat.probabilidade"
+},
+"2023-MT-139": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2023-MT-140": {
+"t": "MT.mat.estatistica"
+},
+"2023-MT-141": {
+"t": "MT.mat.probabilidade"
+},
+"2023-MT-142": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2023-MT-143": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2023-MT-144": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2023-MT-145": {
+"t": "MT.mat.geometria-analitica",
+"tags": [
+"MT.mat.trigonometria"
+]
+},
+"2023-MT-146": {
+"t": "MT.mat.sequencias-e-matematica-discreta",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2023-MT-147": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2023-MT-148": {
+"t": "MT.mat.trigonometria"
+},
+"2023-MT-149": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2023-MT-150": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-151": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-152": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-153": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2023-MT-154": {
+"t": "MT.mat.geometria-plana"
+},
+"2023-MT-155": {
+"t": "MT.mat.geometria-plana"
+},
+"2023-MT-156": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-157": {
+"t": "MT.mat.estatistica"
+},
+"2023-MT-158": {
+"t": "MT.mat.algebra-e-equacoes",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2023-MT-159": {
+"t": "MT.mat.sequencias-e-matematica-discreta",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2023-MT-160": {
+"t": "MT.mat.analise-combinatoria",
+"tags": [
+"MT.mat.probabilidade"
+]
+},
+"2023-MT-161": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2023-MT-162": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-163": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2023-MT-164": {
+"t": "MT.mat.estatistica"
+},
+"2023-MT-165": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.geometria-espacial"
+]
+},
+"2023-MT-166": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2023-MT-167": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2023-MT-168": {
+"t": "MT.mat.probabilidade"
+},
+"2023-MT-169": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2023-MT-170": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-171": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2023-MT-172": {
+"t": "MT.mat.geometria-plana"
+},
+"2023-MT-173": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2023-MT-174": {
+"t": "MT.mat.geometria-analitica"
+},
+"2023-MT-175": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2023-MT-176": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2023-MT-177": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2023-MT-178": {
+"t": "MT.mat.funcoes"
+},
+"2023-MT-179": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2023-MT-180": {
+"t": "MT.mat.estatistica"
+},
+"2024-LC-01-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2024-LC-02-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2024-LC-03-en": {
+"t": "LC.en.compreensao-leitora-em-ingles",
+"tags": [
+"LC.en.vocabulario-e-expressoes-em-ingles"
+]
+},
+"2024-LC-04-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2024-LC-05-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2024-LC-01-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2024-LC-02-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2024-LC-03-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2024-LC-04-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2024-LC-05-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol",
+"tags": [
+"CH.his.historia-da-america-colonizacao"
+]
+},
+"2024-LC-06": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2024-LC-07": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.ef.esporte"
+]
+},
+"2024-LC-08": {
+"t": "LC.art.musica",
+"tags": [
+"LC.art.patrimonio-e-cultura-popular"
+]
+},
+"2024-LC-09": {
+"t": "LC.ef.esporte",
+"tags": [
+"LC.ef.corpo-saude-e-estetica"
+]
+},
+"2024-LC-10": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2024-LC-11": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2024-LC-12": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2024-LC-13": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2024-LC-14": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2024-LC-15": {
+"t": "LC.tic.etica-cidadania-e-inclusao-digital"
+},
+"2024-LC-16": {
+"t": "LC.art.artes-visuais",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2024-LC-17": {
+"t": "LC.tic.redes-sociais-e-comunicacao-em-rede",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2024-LC-18": {
+"t": "LC.ef.corpo-saude-e-estetica",
+"tags": [
+"LC.ef.ginastica-e-atividade-fisica"
+]
+},
+"2024-LC-19": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2024-LC-20": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2024-LC-21": {
+"t": "LC.art.artes-visuais",
+"tags": [
+"LC.art.patrimonio-e-cultura-popular"
+]
+},
+"2024-LC-22": {
+"t": "LC.art.musica",
+"tags": [
+"LC.lit.literatura-contemporanea"
+]
+},
+"2024-LC-23": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lp.coesao-coerencia-e-organizacao-textual"
+]
+},
+"2024-LC-24": {
+"t": "LC.lit.modernismo",
+"tags": [
+"LC.lp.variacao-linguistica"
+]
+},
+"2024-LC-25": {
+"t": "LC.art.artes-visuais"
+},
+"2024-LC-26": {
+"t": "LC.ef.lutas",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2024-LC-27": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.lp.funcoes-da-linguagem"
+]
+},
+"2024-LC-28": {
+"t": "LC.lit.literatura-contemporanea",
+"tags": [
+"LC.lit.realismo-naturalismo-e-parnasianismo"
+]
+},
+"2024-LC-29": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2024-LC-30": {
+"t": "LC.art.artes-visuais",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2024-LC-31": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+},
+"2024-LC-32": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2024-LC-33": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2024-LC-34": {
+"t": "LC.tic.linguagem-digital-e-hipertexto",
+"tags": [
+"LC.lp.variacao-linguistica"
+]
+},
+"2024-LC-35": {
+"t": "LC.lit.romantismo"
+},
+"2024-LC-36": {
+"t": "LC.art.artes-visuais"
+},
+"2024-LC-37": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.lp.coesao-coerencia-e-organizacao-textual"
+]
+},
+"2024-LC-38": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2024-LC-39": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2024-LC-40": {
+"t": "LC.art.patrimonio-e-cultura-popular",
+"tags": [
+"LC.ef.esporte"
+]
+},
+"2024-LC-41": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2024-LC-42": {
+"t": "LC.lit.texto-literario-e-generos-literarios"
+},
+"2024-LC-43": {
+"t": "LC.art.arte-contemporanea"
+},
+"2024-LC-44": {
+"t": "LC.ef.esporte"
+},
+"2024-LC-45": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2024-CH-46": {
+"t": "CH.geo.geografia-fisica"
+},
+"2024-CH-47": {
+"t": "CH.his.historia-do-brasil-primeira-republica",
+"tags": [
+"CH.his.historia-do-brasil-era-vargas"
+]
+},
+"2024-CH-48": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade"
+},
+"2024-CH-49": {
+"t": "CH.his.historia-do-brasil-primeira-republica"
+},
+"2024-CH-50": {
+"t": "CH.his.historia-da-america-colonizacao"
+},
+"2024-CH-51": {
+"t": "CH.his.historia-geral-idade-moderna",
+"tags": [
+"LC.art.teatro-e-danca"
+]
+},
+"2024-CH-52": {
+"t": "CH.soc.movimentos-sociais",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2024-CH-53": {
+"t": "CH.geo.hidrografia",
+"tags": [
+"CH.geo.geografia-fisica"
+]
+},
+"2024-CH-54": {
+"t": "CH.fil.teoria-do-conhecimento",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2024-CH-55": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2024-CH-56": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2024-CH-57": {
+"t": "CH.soc.democracia",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2024-CH-58": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.etica-e-moral"
+]
+},
+"2024-CH-59": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2024-CH-60": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2024-CH-61": {
+"t": "CH.fil.filosofia-contemporanea"
+},
+"2024-CH-62": {
+"t": "CH.fil.teoria-do-conhecimento",
+"tags": [
+"CH.fil.filosofia-da-ciencia-e-da-tecnica"
+]
+},
+"2024-CH-63": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao"
+},
+"2024-CH-64": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2024-CH-65": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2024-CH-66": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.his.historia-do-brasil-ditadura-militar"
+]
+},
+"2024-CH-67": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"LC.tic.redes-sociais-e-comunicacao-em-rede"
+]
+},
+"2024-CH-68": {
+"t": "CH.geo.climatologia",
+"tags": [
+"CH.geo.biomas"
+]
+},
+"2024-CH-69": {
+"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2024-CH-70": {
+"t": "CH.geo.globalizacao",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2024-CH-71": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.geo.geopolitica"
+]
+},
+"2024-CH-72": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2024-CH-73": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"rev": "cordel e técnica de impressão no início do séc. XX"
+},
+"2024-CH-74": {
+"t": "CH.soc.cultura"
+},
+"2024-CH-75": {
+"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+},
+"2024-CH-76": {
+"t": "CH.fil.filosofia-contemporanea"
+},
+"2024-CH-77": {
+"t": "CH.his.historia-do-brasil-era-vargas"
+},
+"2024-CH-78": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2024-CH-79": {
+"t": "CH.geo.migracoes"
+},
+"2024-CH-80": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2024-CH-81": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2024-CH-82": {
+"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica",
+"tags": [
+"CH.fil.logica-e-argumentacao"
+]
+},
+"2024-CH-83": {
+"t": "CH.geo.cartografia"
+},
+"2024-CH-84": {
+"t": "CH.his.historia-do-brasil-imperio",
+"tags": [
+"CH.geo.regionalizacao"
+]
+},
+"2024-CH-85": {
+"t": "CH.his.historia-da-america-seculo-xx-e-contemporanea",
+"tags": [
+"CH.soc.movimentos-sociais"
+]
+},
+"2024-CH-86": {
+"t": "CH.geo.urbanizacao",
+"rev": "depende das imagens de satélite"
+},
+"2024-CH-87": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.soc.democracia"
+]
+},
+"2024-CH-88": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2024-CH-89": {
+"t": "CH.geo.geopolitica"
+},
+"2024-CH-90": {
+"t": "CH.soc.trabalho",
+"tags": [
+"CH.soc.teorias-sociologicas-classicas"
+]
+},
+"2024-CN-91": {
+"t": "CN.fis.quantidade-de-movimento",
+"tags": [
+"CN.fis.trabalho-e-energia"
+]
+},
+"2024-CN-92": {
+"t": "CN.qui.eletroquimica"
+},
+"2024-CN-93": {
+"t": "CN.qui.quimica-organica"
+},
+"2024-CN-94": {
+"t": "CN.qui.acidos-e-bases",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2024-CN-95": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2024-CN-96": {
+"t": "CN.fis.estatica"
+},
+"2024-CN-97": {
+"t": "CN.qui.solucoes",
+"tags": [
+"CN.qui.estequiometria"
+]
+},
+"2024-CN-98": {
+"t": "CN.bio.evolucao",
+"tags": [
+"CN.bio.embriologia"
+]
+},
+"2024-CN-99": {
+"t": "CN.fis.fenomenos-ondulatorios",
+"tags": [
+"CN.fis.acustica"
+]
+},
+"2024-CN-100": {
+"t": "CN.fis.optica"
+},
+"2024-CN-101": {
+"t": "CN.fis.acustica"
+},
+"2024-CN-102": {
+"t": "CN.bio.bioquimica"
+},
+"2024-CN-103": {
+"t": "CN.fis.transmissao-de-calor"
+},
+"2024-CN-104": {
+"t": "CN.bio.saude-publica",
+"tags": [
+"CN.bio.impactos-ambientais"
+]
+},
+"2024-CN-105": {
+"t": "CN.bio.ecotoxicologia",
+"tags": [
+"CN.bio.histologia"
+]
+},
+"2024-CN-106": {
+"t": "CN.fis.fisica-moderna",
+"tags": [
+"CN.fis.ondulatoria"
+]
+},
+"2024-CN-107": {
+"t": "CN.bio.fisiologia-humana",
+"tags": [
+"CN.qui.reacoes-organicas"
+]
+},
+"2024-CN-108": {
+"t": "CN.bio.dinamica-ecologica"
+},
+"2024-CN-109": {
+"t": "CN.bio.histologia",
+"tags": [
+"CN.bio.metabolismo-energetico"
+]
+},
+"2024-CN-110": {
+"t": "CN.bio.evolucao",
+"tags": [
+"CN.bio.ecologia"
+]
+},
+"2024-CN-111": {
+"t": "CN.bio.zoologia"
+},
+"2024-CN-112": {
+"t": "CN.bio.genetica"
+},
+"2024-CN-113": {
+"t": "CN.bio.ciclos-biogeoquimicos",
+"tags": [
+"CN.qui.eletroquimica"
+]
+},
+"2024-CN-114": {
+"t": "CN.qui.quimica-ambiental",
+"tags": [
+"CN.qui.reacoes-quimicas"
+]
+},
+"2024-CN-115": {
+"t": "CN.bio.citologia"
+},
+"2024-CN-116": {
+"t": "CN.qui.separacao-de-misturas"
+},
+"2024-CN-117": {
+"t": "CN.bio.zoologia"
+},
+"2024-CN-118": {
+"t": "CN.qui.equilibrio-quimico",
+"tags": [
+"CN.qui.equilibrio-ionico"
+]
+},
+"2024-CN-119": {
+"t": "CN.fis.cinematica"
+},
+"2024-CN-120": {
+"t": "CN.bio.microbiologia",
+"tags": [
+"CN.bio.imunologia"
+]
+},
+"2024-CN-121": {
+"t": "CN.fis.dinamica",
+"rev": "questão em imagem; vetores"
+},
+"2024-CN-122": {
+"t": "CN.fis.termologia",
+"tags": [
+"CN.fis.calorimetria"
+]
+},
+"2024-CN-123": {
+"t": "CN.qui.funcoes-organicas"
+},
+"2024-CN-124": {
+"t": "CN.bio.metabolismo-energetico",
+"tags": [
+"CN.bio.microbiologia"
+]
+},
+"2024-CN-125": {
+"t": "CN.qui.estrutura-atomica"
+},
+"2024-CN-126": {
+"t": "CN.bio.imunologia"
+},
+"2024-CN-127": {
+"t": "CN.fis.eletrostatica"
+},
+"2024-CN-128": {
+"t": "CN.qui.eletroquimica",
+"tags": [
+"CN.fis.tecnologia-e-energia"
+]
+},
+"2024-CN-129": {
+"t": "CN.fis.calorimetria",
+"tags": [
+"CN.fis.eletrodinamica"
+]
+},
+"2024-CN-130": {
+"t": "CN.fis.termodinamica"
+},
+"2024-CN-131": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2024-CN-132": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2024-CN-133": {
+"t": "CN.qui.estequiometria",
+"tags": [
+"CN.qui.termoquimica"
+]
+},
+"2024-CN-134": {
+"t": "CN.bio.ecotoxicologia",
+"tags": [
+"CN.bio.botanica"
+]
+},
+"2024-CN-135": {
+"t": "CN.qui.estequiometria",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2024-MT-136": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2024-MT-137": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2024-MT-138": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2024-MT-139": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2024-MT-140": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2024-MT-141": {
+"t": "MT.mat.funcoes"
+},
+"2024-MT-142": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2024-MT-143": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2024-MT-144": {
+"t": "MT.mat.geometria-espacial"
+},
+"2024-MT-145": {
+"t": "MT.mat.geometria-plana"
+},
+"2024-MT-146": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2024-MT-147": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2024-MT-148": {
+"t": "MT.mat.funcoes"
+},
+"2024-MT-149": {
+"t": "MT.mat.geometria-espacial"
+},
+"2024-MT-150": {
+"t": "MT.mat.geometria-plana",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2024-MT-151": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2024-MT-152": {
+"t": "MT.mat.estatistica"
+},
+"2024-MT-153": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2024-MT-154": {
+"t": "MT.mat.estatistica"
+},
+"2024-MT-155": {
+"t": "MT.mat.geometria-plana"
+},
+"2024-MT-156": {
+"t": "MT.mat.funcoes"
+},
+"2024-MT-157": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2024-MT-158": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2024-MT-159": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2024-MT-160": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2024-MT-161": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.geometria-espacial"
+]
+},
+"2024-MT-162": {
+"t": "MT.mat.sequencias-e-matematica-discreta"
+},
+"2024-MT-163": {
+"t": "MT.mat.geometria-plana"
+},
+"2024-MT-164": {
+"t": "MT.mat.geometria-plana"
+},
+"2024-MT-165": {
+"t": "MT.mat.probabilidade"
+},
+"2024-MT-166": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2024-MT-167": {
+"t": "MT.mat.geometria-plana",
+"rev": "dados das telas em imagem"
+},
+"2024-MT-168": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2024-MT-169": {
+"t": "MT.mat.probabilidade"
+},
+"2024-MT-170": {
+"t": "MT.mat.funcoes"
+},
+"2024-MT-171": {
+"t": "MT.mat.geometria-plana"
+},
+"2024-MT-172": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.matematica-aplicada"
+]
+},
+"2024-MT-173": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.probabilidade"
+]
+},
+"2024-MT-174": {
+"t": "MT.mat.geometria-espacial"
+},
+"2024-MT-175": {
+"t": "MT.mat.geometria-espacial"
+},
+"2024-MT-176": {
+"t": "MT.mat.funcoes",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2024-MT-177": {
+"t": "MT.mat.funcoes"
+},
+"2024-MT-178": {
+"t": "MT.mat.estatistica"
+},
+"2024-MT-179": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2024-MT-180": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2025-LC-01-en": {
+"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+},
+"2025-LC-02-en": {
+"t": "LC.en.compreensao-leitora-em-ingles"
+},
+"2025-LC-03-en": {
+"t": "LC.en.compreensao-leitora-em-ingles",
+"tags": [
+"LC.en.aspectos-culturais-e-interculturais-em-ingles"
+]
+},
+"2025-LC-04-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+},
+"2025-LC-05-en": {
+"t": "LC.en.vocabulario-e-expressoes-em-ingles",
+"rev": "texto em imagem"
+},
+"2025-LC-01-es": {
+"t": "LC.es.compreensao-leitora-em-espanhol"
+},
+"2025-LC-02-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol",
+"tags": [
+"LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+]
+},
+"2025-LC-03-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2025-LC-04-es": {
+"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+},
+"2025-LC-05-es": {
+"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+},
+"2025-LC-06": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"LC.tic.linguagem-digital-e-hipertexto"
+]
+},
+"2025-LC-07": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2025-LC-08": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.tic.linguagem-digital-e-hipertexto"
+]
+},
+"2025-LC-09": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos"
+},
+"2025-LC-10": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual",
+"tags": [
+"LC.lp.gramatica-e-analise-linguistica"
+]
+},
+"2025-LC-11": {
+"t": "LC.lit.romantismo"
+},
+"2025-LC-12": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2025-LC-13": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lp.generos-e-tipos-textuais"
+]
+},
+"2025-LC-14": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2025-LC-15": {
+"t": "LC.art.artes-visuais",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2025-LC-16": {
+"t": "LC.lit.simbolismo-e-pre-modernismo"
+},
+"2025-LC-17": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2025-LC-18": {
+"t": "LC.ef.esporte",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2025-LC-19": {
+"t": "LC.ef.corpo-saude-e-estetica",
+"tags": [
+"LC.ef.esporte"
+]
+},
+"2025-LC-20": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"CH.soc.relacoes-etnico-raciais"
+]
+},
+"2025-LC-21": {
+"t": "LC.lit.literatura-contemporanea"
+},
+"2025-LC-22": {
+"t": "LC.art.patrimonio-e-cultura-popular",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2025-LC-23": {
+"t": "LC.art.arte-contemporanea"
+},
+"2025-LC-24": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2025-LC-25": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lp.coesao-coerencia-e-organizacao-textual"
+]
+},
+"2025-LC-26": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2025-LC-27": {
+"t": "LC.ef.lutas"
+},
+"2025-LC-28": {
+"t": "LC.lit.texto-literario-e-generos-literarios",
+"rev": "poeta do início do séc. XX; recurso sonoro"
+},
+"2025-LC-29": {
+"t": "LC.lit.literatura-contemporanea",
+"tags": [
+"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+]
+},
+"2025-LC-30": {
+"t": "LC.lp.variacao-linguistica",
+"tags": [
+"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+]
+},
+"2025-LC-31": {
+"t": "LC.lp.interpretacao-e-compreensao-de-textos",
+"tags": [
+"LC.tic.redes-sociais-e-comunicacao-em-rede"
+]
+},
+"2025-LC-32": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2025-LC-33": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2025-LC-34": {
+"t": "LC.lp.funcoes-da-linguagem"
+},
+"2025-LC-35": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2025-LC-36": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2025-LC-37": {
+"t": "LC.lit.texto-literario-e-generos-literarios",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2025-LC-38": {
+"t": "LC.lp.coesao-coerencia-e-organizacao-textual"
+},
+"2025-LC-39": {
+"t": "LC.tic.midia-informacao-e-desinformacao"
+},
+"2025-LC-40": {
+"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"rev": "romance de autora do início do séc. XX"
+},
+"2025-LC-41": {
+"t": "LC.art.patrimonio-e-cultura-popular",
+"tags": [
+"LC.art.artes-visuais"
+]
+},
+"2025-LC-42": {
+"t": "LC.lp.variacao-linguistica"
+},
+"2025-LC-43": {
+"t": "LC.lp.generos-e-tipos-textuais",
+"tags": [
+"CH.soc.genero"
+]
+},
+"2025-LC-44": {
+"t": "LC.lp.generos-e-tipos-textuais"
+},
+"2025-LC-45": {
+"t": "LC.art.artes-visuais",
+"tags": [
+"LC.lp.interpretacao-e-compreensao-de-textos"
+]
+},
+"2025-CH-46": {
+"t": "CH.geo.geopolitica"
+},
+"2025-CH-47": {
+"t": "CH.geo.climatologia",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2025-CH-48": {
+"t": "CH.fil.filosofia-moderna",
+"tags": [
+"CH.fil.teoria-do-conhecimento"
+]
+},
+"2025-CH-49": {
+"t": "CH.his.historia-geral-idade-moderna"
+},
+"2025-CH-50": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2025-CH-51": {
+"t": "CH.soc.instituicoes-sociais",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2025-CH-52": {
+"t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras"
+},
+"2025-CH-53": {
+"t": "CH.his.historia-geral-antiguidade",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2025-CH-54": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.migracoes"
+]
+},
+"2025-CH-55": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.soc.poder"
+]
+},
+"2025-CH-56": {
+"t": "CH.geo.hidrografia",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2025-CH-57": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.geo.migracoes"
+]
+},
+"2025-CH-58": {
+"t": "CH.his.historia-do-brasil-imperio"
+},
+"2025-CH-59": {
+"t": "CH.geo.energia",
+"tags": [
+"CH.geo.climatologia"
+]
+},
+"2025-CH-60": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.soc.trabalho"
+]
+},
+"2025-CH-61": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2025-CH-62": {
+"t": "CH.soc.teorias-sociologicas-classicas",
+"tags": [
+"CH.fil.filosofia-contemporanea"
+]
+},
+"2025-CH-63": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.geo.globalizacao"
+]
+},
+"2025-CH-64": {
+"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+},
+"2025-CH-65": {
+"t": "CH.fil.etica-e-moral"
+},
+"2025-CH-66": {
+"t": "CH.fil.filosofia-contemporanea",
+"tags": [
+"CH.soc.industria-cultural-e-meios-de-comunicacao"
+]
+},
+"2025-CH-67": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CH.soc.desigualdade"
+]
+},
+"2025-CH-68": {
+"t": "CH.geo.urbanizacao"
+},
+"2025-CH-69": {
+"t": "CH.his.historia-geral-idade-media"
+},
+"2025-CH-70": {
+"t": "CH.geo.geografia-fisica",
+"tags": [
+"CH.geo.urbanizacao"
+]
+},
+"2025-CH-71": {
+"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2025-CH-72": {
+"t": "CH.fil.filosofia-antiga"
+},
+"2025-CH-73": {
+"t": "CH.his.historia-do-brasil-colonia",
+"tags": [
+"CH.his.historia-da-america-povos-pre-colombianos"
+]
+},
+"2025-CH-74": {
+"t": "CH.soc.relacoes-etnico-raciais",
+"tags": [
+"CH.soc.cultura"
+]
+},
+"2025-CH-75": {
+"t": "CH.geo.geografia-agraria",
+"tags": [
+"CN.bio.impactos-ambientais"
+]
+},
+"2025-CH-76": {
+"t": "CH.fil.filosofia-politica",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2025-CH-77": {
+"t": "CH.geo.energia",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2025-CH-78": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2025-CH-79": {
+"t": "CH.fil.etica-e-moral",
+"tags": [
+"CH.fil.filosofia-moderna"
+]
+},
+"2025-CH-80": {
+"t": "CH.geo.urbanizacao",
+"tags": [
+"CH.geo.meio-ambiente-e-sustentabilidade"
+]
+},
+"2025-CH-81": {
+"t": "CH.soc.genero",
+"tags": [
+"CH.soc.estado"
+]
+},
+"2025-CH-82": {
+"t": "CH.fil.filosofia-antiga",
+"tags": [
+"CH.fil.filosofia-politica"
+]
+},
+"2025-CH-83": {
+"t": "CH.his.historia-do-brasil-colonia"
+},
+"2025-CH-84": {
+"t": "CH.geo.meio-ambiente-e-sustentabilidade",
+"tags": [
+"CH.geo.cartografia"
+]
+},
+"2025-CH-85": {
+"t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
+"rev": "cinema e sociabilidade, anos 1920"
+},
+"2025-CH-86": {
+"t": "CH.geo.energia"
+},
+"2025-CH-87": {
+"t": "CH.his.historia-geral-antiguidade"
+},
+"2025-CH-88": {
+"t": "CH.soc.cultura",
+"tags": [
+"CH.soc.cidadania"
+]
+},
+"2025-CH-89": {
+"t": "CH.his.historia-geral-antiguidade",
+"tags": [
+"CH.his.historia-geral-idade-media"
+]
+},
+"2025-CH-90": {
+"t": "CH.his.historia-geral-imperialismo-e-seculo-xix"
+},
+"2025-CN-91": {
+"t": "CN.qui.separacao-de-misturas",
+"tags": [
+"CN.qui.materia-e-propriedades"
+]
+},
+"2025-CN-92": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.genetica"
+]
+},
+"2025-CN-93": {
+"t": "CN.bio.zoologia"
+},
+"2025-CN-94": {
+"t": "CN.fis.eletrodinamica",
+"tags": [
+"CN.fis.circuitos-eletricos"
+]
+},
+"2025-CN-95": {
+"t": "CN.fis.transmissao-de-calor"
+},
+"2025-CN-96": {
+"t": "CN.bio.zoologia",
+"tags": [
+"CN.bio.ecologia"
+]
+},
+"2025-CN-97": {
+"t": "CN.bio.imunologia"
+},
+"2025-CN-98": {
+"t": "CN.bio.conservacao-ambiental",
+"tags": [
+"CN.bio.dinamica-ecologica"
+]
+},
+"2025-CN-99": {
+"t": "CN.bio.evolucao",
+"tags": [
+"CH.geo.biomas"
+]
+},
+"2025-CN-100": {
+"t": "CN.qui.separacao-de-misturas",
+"tags": [
+"CN.qui.solucoes"
+]
+},
+"2025-CN-101": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.bio.fisiologia-humana"
+]
+},
+"2025-CN-102": {
+"t": "CN.bio.zoologia",
+"tags": [
+"CN.bio.saude-publica"
+]
+},
+"2025-CN-103": {
+"t": "CN.bio.citologia"
+},
+"2025-CN-104": {
+"t": "CN.bio.ciclos-biogeoquimicos",
+"tags": [
+"CN.bio.impactos-ambientais"
+]
+},
+"2025-CN-105": {
+"t": "CN.bio.impactos-ambientais",
+"tags": [
+"CN.qui.gases"
+]
+},
+"2025-CN-106": {
+"t": "CN.qui.funcoes-inorganicas"
+},
+"2025-CN-107": {
+"t": "CN.bio.genetica"
+},
+"2025-CN-108": {
+"t": "CN.fis.forcas-e-equilibrio",
+"tags": [
+"CN.fis.dinamica"
+]
+},
+"2025-CN-109": {
+"t": "CN.qui.reacoes-organicas"
+},
+"2025-CN-110": {
+"t": "CN.qui.radioatividade"
+},
+"2025-CN-111": {
+"t": "CN.bio.impactos-ambientais",
+"tags": [
+"CN.bio.ciclos-biogeoquimicos"
+]
+},
+"2025-CN-112": {
+"t": "CN.bio.biotecnologia",
+"tags": [
+"CN.bio.fisiologia-humana"
+]
+},
+"2025-CN-113": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2025-CN-114": {
+"t": "CN.fis.ondulatoria",
+"tags": [
+"CN.fis.acustica"
+]
+},
+"2025-CN-115": {
+"t": "CN.qui.quimica-organica"
+},
+"2025-CN-116": {
+"t": "CN.bio.ecologia",
+"tags": [
+"CN.bio.evolucao"
+]
+},
+"2025-CN-117": {
+"t": "CN.qui.equilibrio-quimico"
+},
+"2025-CN-118": {
+"t": "CN.fis.hidrostatica"
+},
+"2025-CN-119": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2025-CN-120": {
+"t": "CN.fis.ondulatoria",
+"tags": [
+"CN.fis.cinematica"
+]
+},
+"2025-CN-121": {
+"t": "CN.qui.acidos-e-bases",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2025-CN-122": {
+"t": "CN.fis.eletromagnetismo"
+},
+"2025-CN-123": {
+"t": "CN.bio.metabolismo-energetico",
+"tags": [
+"CN.bio.botanica"
+]
+},
+"2025-CN-124": {
+"t": "CN.qui.eletroquimica"
+},
+"2025-CN-125": {
+"t": "CN.qui.gases",
+"tags": [
+"CN.qui.estequiometria"
+]
+},
+"2025-CN-126": {
+"t": "CN.fis.cinematica"
+},
+"2025-CN-127": {
+"t": "CN.qui.cinetica-quimica",
+"tags": [
+"CN.bio.bioquimica"
+]
+},
+"2025-CN-128": {
+"t": "CN.fis.eletrodinamica",
+"tags": [
+"CN.fis.termologia"
+]
+},
+"2025-CN-129": {
+"t": "CN.bio.saude-publica",
+"rev": "depende do quadro em imagem"
+},
+"2025-CN-130": {
+"t": "CN.fis.circuitos-eletricos"
+},
+"2025-CN-131": {
+"t": "CN.qui.estequiometria",
+"tags": [
+"CN.qui.quimica-industrial"
+]
+},
+"2025-CN-132": {
+"t": "CN.fis.acustica",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2025-CN-133": {
+"t": "CN.qui.interacoes-intermoleculares",
+"tags": [
+"CN.qui.quimica-ambiental"
+]
+},
+"2025-CN-134": {
+"t": "CN.qui.interacoes-intermoleculares",
+"tags": [
+"CN.qui.funcoes-organicas"
+]
+},
+"2025-CN-135": {
+"t": "CN.fis.optica",
+"tags": [
+"CN.fis.fisica-moderna"
+]
+},
+"2025-MT-136": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos",
+"tags": [
+"MT.mat.grandezas-e-medidas"
+]
+},
+"2025-MT-137": {
+"t": "MT.mat.probabilidade",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2025-MT-138": {
+"t": "MT.mat.geometria-espacial",
+"tags": [
+"MT.mat.geometria-analitica"
+]
+},
+"2025-MT-139": {
+"t": "MT.mat.geometria-plana"
+},
+"2025-MT-140": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2025-MT-141": {
+"t": "MT.mat.porcentagem-e-matematica-financeira"
+},
+"2025-MT-142": {
+"t": "MT.mat.estatistica"
+},
+"2025-MT-143": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2025-MT-144": {
+"t": "MT.mat.geometria-espacial"
+},
+"2025-MT-145": {
+"t": "MT.mat.funcoes"
+},
+"2025-MT-146": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2025-MT-147": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.estatistica"
+]
+},
+"2025-MT-148": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2025-MT-149": {
+"t": "MT.mat.geometria-espacial"
+},
+"2025-MT-150": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2025-MT-151": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2025-MT-152": {
+"t": "MT.mat.probabilidade",
+"tags": [
+"MT.mat.analise-combinatoria"
+]
+},
+"2025-MT-153": {
+"t": "MT.mat.geometria-analitica"
+},
+"2025-MT-154": {
+"t": "MT.mat.estatistica"
+},
+"2025-MT-155": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2025-MT-156": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.geometria-plana"
+]
+},
+"2025-MT-157": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2025-MT-158": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2025-MT-159": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2025-MT-160": {
+"t": "MT.mat.trigonometria",
+"tags": [
+"MT.mat.funcoes"
+]
+},
+"2025-MT-161": {
+"t": "MT.mat.geometria-analitica"
+},
+"2025-MT-162": {
+"t": "MT.mat.porcentagem-e-matematica-financeira",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+},
+"2025-MT-163": {
+"t": "MT.mat.estatistica",
+"tags": [
+"MT.mat.porcentagem-e-matematica-financeira"
+]
+},
+"2025-MT-164": {
+"t": "MT.mat.trigonometria"
+},
+"2025-MT-165": {
+"t": "MT.mat.estatistica"
+},
+"2025-MT-166": {
+"t": "MT.mat.grandezas-e-medidas",
+"tags": [
+"MT.mat.aritmetica-e-conjuntos-numericos"
+]
+},
+"2025-MT-167": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2025-MT-168": {
+"t": "MT.mat.aritmetica-e-conjuntos-numericos"
+},
+"2025-MT-169": {
+"t": "MT.mat.estatistica"
+},
+"2025-MT-170": {
+"t": "MT.mat.geometria-espacial"
+},
+"2025-MT-171": {
+"t": "MT.mat.geometria-plana"
+},
+"2025-MT-172": {
+"t": "MT.mat.funcoes"
+},
+"2025-MT-173": {
+"t": "MT.mat.geometria-plana"
+},
+"2025-MT-174": {
+"t": "MT.mat.algebra-e-equacoes"
+},
+"2025-MT-175": {
+"t": "MT.mat.analise-combinatoria"
+},
+"2025-MT-176": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2025-MT-177": {
+"t": "MT.mat.geometria-espacial"
+},
+"2025-MT-178": {
+"t": "MT.mat.probabilidade"
+},
+"2025-MT-179": {
+"t": "MT.mat.grandezas-e-medidas"
+},
+"2025-MT-180": {
+"t": "MT.mat.sequencias-e-matematica-discreta",
+"tags": [
+"MT.mat.algebra-e-equacoes"
+]
+}
+}

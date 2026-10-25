@@ -1,0 +1,19 @@
+{
+  "name": "Banco ENEM · Simulados por área e ano",
+  "short_name": "Banco ENEM",
+  "description": "Simulados com questões do ENEM, separadas por área, com gabarito, correção questão a questão e nota estimada por TRI.",
+  "lang": "pt-BR",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
