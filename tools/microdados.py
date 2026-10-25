@@ -125,6 +125,15 @@ for q in qs:
         q["nivel"] = sorted(x["nivel"] for x in viz)[len(viz) // 2]
         q["nivel_por"] = "acerto"
 
+# Sem parâmetro nem acerto (abandonadas de 2015 a 2021): média do nível da mesma prova.
+for q in qs:
+    if "nivel" in q or q.get("anulada"):
+        continue
+    prova = [x["nivel"] for x in banco[(q["ano"], q["area"])] if "nivel" in x]
+    if prova:
+        q["nivel"] = round(sum(prova) / len(prova))
+        q["nivel_por"] = "media"
+
 if sem:
     print("\n".join(sem), file=sys.stderr)
 (root / "questions.json").write_bytes(

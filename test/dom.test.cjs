@@ -493,8 +493,8 @@ async function irTopico(w, id) {
     const np = banco.filter((q) => q.b != null);
     ok("parâmetros oficiais só com a, b e c juntos", np.every((q) => q.a > 0 && q.c >= 0 && q.c < 1));
     ok(
-      "nível só de 1 a 5, com parâmetro oficial ou pela % real de acerto",
-      banco.every((q) => q.nivel == null || ((q.b != null || q.nivel_por === "acerto") && q.nivel >= 1 && q.nivel <= 5))
+      "nível só de 1 a 5, com parâmetro oficial, pela % real de acerto ou pela média da prova",
+      banco.every((q) => q.nivel == null || ((q.b != null || q.nivel_por === "acerto" || q.nivel_por === "media") && q.nivel >= 1 && q.nivel <= 5))
     );
     ok("toda questão de 2022 a 2025 tem nível", banco.every((q) => q.ano < 2022 || q.anulada || q.nivel));
   }
