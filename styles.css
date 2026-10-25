@@ -382,20 +382,16 @@ footer {
   font-variant-numeric: tabular-nums;
 }
 
+/* Selecionada: cartão branco como os outros, só a sigla na cor cheia
+   e um contorno na cor da área */
 .tab[aria-selected="true"] {
-  background: var(--acc);
   border-color: var(--acc);
-  color: var(--on-acc);
-  box-shadow: var(--shadow-up);
+  box-shadow: 0 0 0 1px var(--acc), var(--shadow-up);
 }
 
 .tab[aria-selected="true"]::before {
-  background: color-mix(in srgb, var(--on-acc) 22%, transparent);
+  background: var(--acc);
   color: var(--on-acc);
-}
-
-.tab[aria-selected="true"]::after {
-  color: color-mix(in srgb, var(--on-acc) 82%, transparent);
 }
 
 @media (hover: hover) and (pointer: fine) {
