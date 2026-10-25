@@ -479,19 +479,15 @@ async function irTopico(w, id) {
   ok("0 acertos < 500", notas[0] < 500, String(notas[0]));
   ok("10 acertos > 500", notas[10] > 500, String(notas[10]));
 
-  console.log("\n== TRI: confere com notas reais (microdados 2022) ==");
+  console.log("\n== TRI: mesma régua para todos os anos ==");
   {
-    // Dois participantes reais do Enem 2022, caderno azul: questões com
-    // parâmetro oficial que acertaram e a nota que o INEP deu.
-    const reais = [
-      { area: "CN", nota: 425.1, acertos: ["2022-CN-99", "2022-CN-101", "2022-CN-128", "2022-CN-135"] },
-      { area: "MT", nota: 843.8, acertos: "136 137 138 143 145 147 148 149 150 151 153 154 155 156 158 159 160 161 162 164 166 167 168 169 170 171 173 174 175 177 178 179".split(" ").map((n) => "2022-MT-" + n) },
-    ];
-    for (const r of reais) {
-      const prova = banco.filter((q) => q.ano === 2022 && q.area === r.area && q.b != null);
-      const nota = triMod(prova.map((q) => [q, r.acertos.includes(q.id)]));
-      ok("nota " + r.area + " igual à do INEP (±1)", Math.abs(nota - r.nota) <= 1, nota + " vs " + r.nota);
-    }
+    // Toda questão vale o mesmo, de qualquer ano (escolha do usuário).
+    const velha = banco.find((q) => q.ano === 2015 && q.area === "MT" && !q.anulada);
+    const nova = banco.find((q) => q.ano === 2022 && q.area === "MT" && q.b != null);
+    ok("acerto de 2015 vale o mesmo que um de 2022", triMod([[velha, true]]) === triMod([[nova, true]]));
+    const mt45 = banco.filter((q) => q.area === "MT").slice(0, 45);
+    ok("MT: 45 erros abaixo de 450 e 45 acertos acima de 900",
+      triMod(mt45.map((q) => [q, false])) < 450 && triMod(mt45.map((q) => [q, true])) > 900);
     const np = banco.filter((q) => q.b != null);
     ok("parâmetros oficiais só com a, b e c juntos", np.every((q) => q.a > 0 && q.c >= 0 && q.c < 1));
     ok("nível só de 1 a 5 e só com parâmetro", banco.every((q) => q.nivel == null || (q.b != null && q.nivel >= 1 && q.nivel <= 5)));

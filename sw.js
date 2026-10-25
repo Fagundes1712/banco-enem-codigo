@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v23"; // v23: nota igual à do INEP; nível de dificuldade de 2022
+const VERSION = "v24"; // v24: mesma régua de nota para todos os anos
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

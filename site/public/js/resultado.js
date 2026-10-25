@@ -38,19 +38,9 @@ function result() {
   );
 }
 
-// Explica de onde veio a nota: parâmetros oficiais em todas ou só em parte.
+// Explica de onde veio a nota.
 function notaComo() {
-  const off = T.qs.filter((q) => q.b != null).length;
-  const n = T.qs.length;
-  const base = "Nota pela TRI de 3 parâmetros, do mesmo jeito que o INEP calcula. ";
-  const fim = " Com poucas questões ela fica perto de 500, porque a prova inteira tem 45.";
-  if (off === n) return base + "Todas estas questões têm a dificuldade oficial do INEP." + fim;
-  return (
-    base +
-    (off ? plural(off, "questão tem", "questões têm") + " dificuldade oficial; nas outras " + (n - off) : "Estas questões ainda não têm dificuldade oficial; nas " + n) +
-    " usei a média da área, então a nota é uma estimativa." +
-    fim
-  );
+  return "Nota pela TRI de 3 parâmetros, do mesmo jeito que o INEP calcula, com a dificuldade média de cada área na prova mais recente com dados oficiais. Toda questão vale o mesmo, de qualquer ano. Com poucas questões a nota fica perto de 500, porque a prova inteira tem 45.";
 }
 
 /* ============================= Correções ============================= */

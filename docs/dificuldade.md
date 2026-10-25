@@ -29,8 +29,10 @@ Leve < Moderado < Intenso < Radical < Extremo. É o quintil do parâmetro `b` de
 | LC | 108,08 | 499,98 |
 | MT | 129,63 | 500,03 |
 
-As constantes e a ausência do 1,7 foram ajustadas com 600 participantes reais de cada área do Enem 2022 (respostas e nota oficial do arquivo `MICRODADOS_ENEM_2022.csv`): diferença mediana de 0,03 ponto e máxima de 0,17 ponto. Com o fator 1,7 a diferença mediana passava de 4 pontos. O teste confere dois participantes reais (CN 425,1 e MT 843,8).
+As constantes e a ausência do 1,7 foram ajustadas com 600 participantes reais de cada área do Enem 2022 (respostas e nota oficial do arquivo `MICRODADOS_ENEM_2022.csv`): diferença mediana de 0,03 ponto e máxima de 0,17 ponto. Com o fator 1,7 a diferença mediana passava de 4 pontos. Com os parâmetros de cada questão, a fórmula reproduziu dois participantes reais (CN 425,1 e MT 843,8).
 
-Questão sem parâmetro oficial entra no cálculo com a mediana dos itens da área em 2022 (CN a 2,005, b 1,465, c 0,161; CH 2,073, 0,900, 0,160; LC 2,002, 0,669, 0,134; MT 1,907, 2,333, 0,162). Nesse caso o resultado avisa que a nota é uma estimativa.
+**Mesma régua para todos os anos (decisão do usuário, 2026-10-25):** toda questão, de qualquer ano e mesmo as que têm parâmetro oficial, entra na nota com a mediana dos itens da área na prova mais recente com microdados (hoje 2022: CN a 2,005, b 1,465, c 0,161; CH 2,073, 0,900, 0,160; LC 2,002, 0,669, 0,134; MT 1,907, 2,333, 0,162). Assim um acerto de 2015 vale o mesmo que um de 2025, e a nota depende só de quantas questões o estudante acertou em cada área, na régua da prova recente. Os parâmetros por questão continuam no banco e definem só o nível de dificuldade. Quando chegarem microdados mais novos, atualize `PADRAO` em `js/simulado.js` com as medianas da prova mais recente.
+
+Pontos de referência (45 questões): 0, 15, 30 e 45 acertos dão CN 381, 563, 684, 858; CH 346, 513, 622, 801; LC 329, 498, 595, 773; MT 417, 639, 819, 1009.
 
 Com poucas questões a nota fica perto de 500: o EAP puxa para a média quando há pouca informação, como faria o INEP com uma prova curta.

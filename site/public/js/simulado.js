@@ -149,8 +149,10 @@ function paint() {
 // Mesmo cálculo do INEP, conferido com as notas reais dos microdados de
 // 2022 (diferença mediana de 0,03 ponto): EAP com priori normal padrão,
 // logística de 3 parâmetros sem o fator 1,7, e escala própria de cada área
-// (nota = k · θ + m). Questão sem parâmetro oficial usa a mediana dos itens
-// da área em 2022. Ver docs/dificuldade.md.
+// (nota = k · θ + m). Por escolha do usuário, toda questão, de qualquer ano,
+// entra com a mediana dos itens da área na prova mais recente com
+// microdados (2022): um acerto de 2015 vale o mesmo que um de 2025.
+// Ver docs/dificuldade.md.
 const ESCALA = { CN: [113.09, 501.15], CH: [112.3, 501.49], LC: [108.08, 499.98], MT: [129.63, 500.03] };
 const PADRAO = {
   CN: { a: 2.005, b: 1.465, c: 0.161 },
@@ -167,7 +169,7 @@ function tri(items) {
     const t = i / 20;
     let L = Math.exp((-t * t) / 2);
     for (const [q, ok] of items) {
-      const d = q.b == null ? PADRAO[q.area] : q;
+      const d = PADRAO[q.area];
       const p = d.c + (1 - d.c) / (1 + Math.exp(-d.a * (t - d.b)));
       L *= ok ? p : 1 - p;
     }
