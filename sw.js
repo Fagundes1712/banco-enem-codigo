@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v14"; // v14: barra lateral e aba "Suas respostas"
+const VERSION = "v15"; // v15: frase "Bons estudos." no início
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

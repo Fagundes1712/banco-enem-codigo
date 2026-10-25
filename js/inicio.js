@@ -128,7 +128,7 @@ function home() {
         "p",
         { class: "lead" },
         num(uniq(Q).length) +
-          " questões do ENEM, separadas por área e conteúdo. Você só vê o gabarito quando terminar."
+          " questões do ENEM, separadas por área e conteúdo. Bons estudos."
       )
     ),
     h(
