@@ -2,3 +2,6 @@
 __pycache__/
 node_modules/
 backup/
+
+ITENS_PROVA_*.csv
+itens_prova_*.csv

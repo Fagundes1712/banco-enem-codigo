@@ -65,16 +65,22 @@ for arq in sorted(pasta.glob("*.csv")):
         alvo = banco.get((ano, area), [])
         if not alvo:
             continue
-        chave = lambda q: (q["numero"], {"ingles": "0", "espanhol": "1"}.get(q.get("lang"), ""))
+        # Posição relativa: em 2016 e 2017 o CO_POSICAO não segue a numeração do caderno.
+        base = min(q["numero"] for q in alvo)
+        chave = lambda q: (q["numero"] - base, {"ingles": "0", "espanhol": "1"}.get(q.get("lang"), ""))
         gab = {chave(q): q["gab"] for q in alvo}
 
         def itens(rs):
-            out = {}
+            out, ini = {}, min(int(r["CO_POSICAO"]) for r in rs)
             for r in rs:
                 lang = r.get("TP_LINGUA", "").strip() if area == "LC" else ""
                 if lang not in ("0", "1"):
                     lang = ""
-                out[(int(r["CO_POSICAO"]), lang)] = r
+                p = int(r["CO_POSICAO"]) - ini
+                # 2017: Linguagens numerada de 1 a 50, com o espanhol em 6 a 10.
+                if len(rs) == 50 and max(int(x["CO_POSICAO"]) for x in rs) - ini == 49 and lang != "0":
+                    p -= 5
+                out[(p, lang)] = r
             return out
 
         melhor, pontos = None, -1

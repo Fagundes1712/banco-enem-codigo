@@ -8,13 +8,15 @@ Os microdados do Enem (INEP) trazem, em `DADOS/ITENS_PROVA_<ano>.csv`, os parâm
 python3 tools/microdados.py "<pasta DADOS dos microdados>"
 ```
 
-Os microdados (2 GB ou mais por ano) não entram no repositório. Hoje o banco tem os parâmetros de 2022 a 2025 (725 questões). Para outro ano, junte os `ITENS_PROVA_<ano>.csv` numa pasta e rode o script nela; só esses arquivos são lidos.
+Os microdados (2 GB ou mais por ano) não entram no repositório. Hoje o banco tem os parâmetros de todos os anos, 2015 a 2025 (1822 de 1850 questões; os `ITENS_PROVA_<ano>.csv` ficam na raiz do projeto, fora do git). Para outro ano, junte os `ITENS_PROVA_<ano>.csv` numa pasta e rode o script nela; só esses arquivos são lidos.
+
+O script casa as questões pela posição relativa dentro da área, porque em 2016 e 2017 o `CO_POSICAO` do INEP não segue a numeração do caderno (em 2016 as áreas estão com posições trocadas; em 2017 cada área começa em 1 e Linguagens vai de 1 a 50, com o espanhol em 6 a 10). O gabarito precisa conferir em 90% das posições, senão a área fica sem parâmetro.
 
 ## Nível de dificuldade
 
 Leve < Moderado < Intenso < Radical < Extremo. É o quintil do parâmetro `b` dentro da área, contando todas as questões do banco que têm parâmetro: Leve são os 20% mais fáceis da área, Extremo os 20% mais difíceis. A comparação é dentro da área porque cada área tem escala própria. O selo aparece embaixo do ano; questão sem parâmetro oficial não mostra nível. Rodar o script de novo com mais anos recalcula os quintis.
 
-Questão sem parâmetro (item abandonado pelo INEP; 9 entre 2022 e 2025) recebe o nível pela porcentagem real de acerto dos participantes, contada por `tools/acerto_por_questao.py` e guardada em `tools/acerto/<ano>.json`: vale a mediana do nível das 10 questões da área com parâmetro e acerto mais parecido. Essas questões ficam com `nivel_por: "acerto"`. A porcentagem de acerto e o parâmetro b andam juntos (correlação de −0,66 a −0,87 por área em 2022 a 2025).
+Questão sem parâmetro (item abandonado pelo INEP; 9 entre 2022 e 2025) recebe o nível pela porcentagem real de acerto dos participantes, contada por `tools/acerto_por_questao.py` e guardada em `tools/acerto/<ano>.json`: vale a mediana do nível das 10 questões da área com parâmetro e acerto mais parecido. Essas questões ficam com `nivel_por: "acerto"`. A porcentagem de acerto e o parâmetro b andam juntos (correlação de −0,66 a −0,87 por área em 2022 a 2025). De 2015 a 2021 só há o `ITENS_PROVA`, sem as respostas dos participantes, então as 11 questões abandonadas desses anos (3 de 2016, 5 de 2019, 3 de 2021) ficam sem nível.
 
 ## Nota
 

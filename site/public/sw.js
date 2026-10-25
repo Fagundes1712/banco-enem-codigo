@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v26"; // v26: nível em todas as questões de 2022 a 2025
+const VERSION = "v27"; // v27: nível com os microdados de 2015 a 2025
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
