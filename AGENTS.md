@@ -15,7 +15,7 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 ## Regras do projeto
 
 - Tudo em pt-BR: interface, documentação e commits.
-- Visual segue `DESIGN.md` (Apple HIG). Animação só com `transform` e `opacity`, curvas `--ease-out`/`--ease-in-out`, toque com `scale(0.97)`.
+- Visual segue `DESIGN.md` (Caderno de prova, cor por área). Animação só com `transform` e `opacity`, curvas `--ease-out`/`--ease-in-out`, toque com `scale(0.97)`.
 - Mudou algo do shell (HTML, CSS, `js/`, `sw.js`, ícone, manifest)? Suba `VERSION` em `sw.js`.
 - Depois de mudar arquivos do app, rode `npm run mirror`; `npm run check` acusa espelho desatualizado.
 - Nunca embutir JSON em HTML ou JS; os dados ficam em `questions.json` e `taxonomy.json`.

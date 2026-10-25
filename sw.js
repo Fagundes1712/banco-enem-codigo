@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v9"; // v9: app.js dividido em js/ por responsabilidade
+const VERSION = "v10"; // v10: redesign "Caderno de prova"
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

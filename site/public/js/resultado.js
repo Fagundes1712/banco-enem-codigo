@@ -5,30 +5,38 @@
 function result() {
   mount(
     h("div", { class: "top" }, h("span", { class: "brand" }, "Banco ENEM")),
-    h("p", { class: "meta" }, "Nota estimada"),
-    h("div", { class: "score" }, T.nota),
     h(
-      "div",
-      { class: "stats" },
-      h("div", null, h("b", null, T.hits + " de " + T.qs.length), h("span", null, "acertos")),
-      h("div", null, h("b", null, fmt(T.secs)), h("span", null, "tempo total")),
-      T.blank
-        ? h("div", null, h("b", null, String(T.blank)), h("span", null, "em branco"))
-        : null
-    ),
-    h(
-      "p",
-      { class: "note" },
-      "Estimativa simplificada no modelo TRI de 3 parâmetros, com dificuldade média para todas as questões. A nota oficial do INEP pesa cada item pela sua dificuldade e pela coerência das respostas, então use este número só como referência."
-    ),
-    h(
-      "div",
-      { class: "nav spaced" },
-      h("button", { class: "btn primary", onclick: corr }, "Ver correções"),
+      "section",
+      { class: "res" },
       h(
-        "button",
-        { class: "btn", onclick: () => T.back() },
-        T.back === home ? "Novo simulado" : "Voltar ao tópico"
+        "div",
+        { class: "ring", style: "--p:" + T.hits / T.qs.length },
+        h("p", { class: "meta" }, "Nota estimada"),
+        h("div", { class: "score" }, T.nota)
+      ),
+      h(
+        "div",
+        { class: "stats" },
+        h("div", null, h("b", null, T.hits + " de " + T.qs.length), h("span", null, "acertos")),
+        h("div", null, h("b", null, fmt(T.secs)), h("span", null, "tempo total")),
+        T.blank
+          ? h("div", null, h("b", null, String(T.blank)), h("span", null, "em branco"))
+          : null
+      ),
+      h(
+        "p",
+        { class: "note" },
+        "Estimativa simplificada no modelo TRI de 3 parâmetros, com dificuldade média para todas as questões. A nota oficial do INEP pesa cada item pela sua dificuldade e pela coerência das respostas, então use este número só como referência."
+      ),
+      h(
+        "div",
+        { class: "nav spaced" },
+        h("button", { class: "btn primary", onclick: corr }, "Ver correções"),
+        h(
+          "button",
+          { class: "btn", onclick: () => T.back() },
+          T.back === home ? "Novo simulado" : "Voltar ao tópico"
+        )
       )
     )
   );

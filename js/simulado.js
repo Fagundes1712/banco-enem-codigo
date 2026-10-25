@@ -17,6 +17,7 @@ function test() {
   const q = T.qs[T.i];
   const n = T.qs.length;
   const done = Object.keys(T.ans).length;
+  document.documentElement.dataset.area = q.area;
 
   mount(
     h(
@@ -44,44 +45,49 @@ function test() {
         },
         h("i", { style: "transform:scaleX(" + done / n + ")" })
       )
-    ),    h(
-      "div",
-      { class: "q-top" },
-      h(
-        "p",
-        { class: "meta" },
-        (AREAS[q.area] ? AREAS[q.area][0] : q.area) +
-          (q._ok ? " · " + IX.sub[IX.top[q.topico].materia].nome : "") +
-          (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
-      ),
-      h(
-        "span",
-        { class: "q-year", "aria-label": "Ano da prova: ENEM " + q.ano },
-        "ENEM " + q.ano
-      )
     ),
-    rich(q.enunciado),
-    imgs(q),
     h(
-      "fieldset",
-      { class: "alts" },
-      h("legend", { class: "skip" }, "Alternativas"),
-      Object.entries(q.alts).map(([l, t]) =>
+      "article",
+      { class: "sheet" },
+      h(
+        "div",
+        { class: "q-top" },
         h(
-          "label",
-          { class: "alt" },
-          h("input", {
-            type: "radio",
-            name: "a",
-            value: l,
-            checked: T.ans[q.id] === l,
-            onchange: () => {
-              T.ans[q.id] = l;
-              paint();
-            },
-          }),
-          h("span", { class: "bub", "aria-hidden": "true" }, l),
-          h("span", null, altc(t))
+          "p",
+          { class: "meta" },
+          (AREAS[q.area] ? AREAS[q.area][0] : q.area) +
+            (q._ok ? " · " + IX.sub[IX.top[q.topico].materia].nome : "") +
+            (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
+        ),
+        h(
+          "span",
+          { class: "q-year", "aria-label": "Ano da prova: ENEM " + q.ano },
+          "ENEM " + q.ano
+        )
+      ),
+      rich(q.enunciado),
+      imgs(q),
+      h(
+        "fieldset",
+        { class: "alts" },
+        h("legend", { class: "skip" }, "Alternativas"),
+        Object.entries(q.alts).map(([l, t]) =>
+          h(
+            "label",
+            { class: "alt" },
+            h("input", {
+              type: "radio",
+              name: "a",
+              value: l,
+              checked: T.ans[q.id] === l,
+              onchange: () => {
+                T.ans[q.id] = l;
+                paint();
+              },
+            }),
+            h("span", { class: "bub", "aria-hidden": "true" }, l),
+            h("span", null, altc(t))
+          )
         )
       )
     ),

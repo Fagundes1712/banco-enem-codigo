@@ -115,14 +115,20 @@ function home() {
       : null,
   ];
 
+  document.documentElement.dataset.area = S.area;
   mount(
     h("div", { class: "top" }, h("span", { class: "brand" }, "Banco ENEM")),
-    h("h1", null, "Treine com as provas do ENEM."),
     h(
-      "p",
-      { class: "lead" },
-      num(uniq(Q).length) +
-        " questões do ENEM, separadas por área e conteúdo. Você só vê o gabarito quando terminar."
+      "div",
+      { class: "hero" },
+      h("span", { class: "kicker" }, "Provas oficiais do INEP"),
+      h("h1", null, "Treine com as provas do ENEM."),
+      h(
+        "p",
+        { class: "lead" },
+        num(uniq(Q).length) +
+          " questões do ENEM, separadas por área e conteúdo. Você só vê o gabarito quando terminar."
+      )
     ),
     h(
       "div",
@@ -153,6 +159,9 @@ function home() {
             type: "button",
             "aria-selected": k === S.area,
             "aria-controls": "setup",
+            "data-area": k,
+            "data-sigla": k,
+            "data-n": plural(inArea(k).length, "questão", "questões"),
             tabindex: k === S.area ? 0 : -1,
             onclick: () => {
               S = { ...S, area: k };
@@ -195,6 +204,7 @@ function materia(id) {
   if (T) T.live = false;
   const s = IX.sub[id];
   S = { ...S, materia: id, topico: null };
+  document.documentElement.dataset.area = s.area;
 
   mount(
     h("div", { class: "top" }, back(AREAS[s.area][0], home)),

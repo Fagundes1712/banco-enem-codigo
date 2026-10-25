@@ -9,6 +9,7 @@ function topico(id) {
   const s = IX.sub[t.materia];
   if (S.topico !== id) S.f = {};
   S = { ...S, materia: s.id, topico: id };
+  document.documentElement.dataset.area = t.area;
 
   const all = inTop(id);
   const anul = Q.filter((q) => q._ok && q.topico === id && q.anulada).length;
