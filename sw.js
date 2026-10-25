@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v12"; // v12: área selecionada em cartão branco
+const VERSION = "v13"; // v13: volta a área selecionada cheia na cor (Linguagens amarelo)
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
