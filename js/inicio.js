@@ -42,7 +42,7 @@ function home() {
       h(
         "div",
         { class: "chips", role: "group", "aria-labelledby": "nl" },
-        [5, 10, 25, 45].map((n) =>
+        QTDS.filter((n) => n <= avail).map((n) =>
           h(
             "button",
             {

@@ -53,7 +53,7 @@ function respostas() {
   clearInterval(tick);
   if (T) T.live = false;
   nav("resp");
-  const f = { area: "", sub: "", ...S.rf };
+  const f = { area: "", sub: "", sit: "todas", ...S.rf };
   if (f.sub && f.area && (IX.sub[f.sub] || {}).area !== f.area) f.sub = "";
   document.documentElement.dataset.area = f.area || S.area;
 
@@ -61,6 +61,8 @@ function respostas() {
     (b) => (!f.area || b.area === f.area) && (!f.sub || subDe(b) === f.sub)
   );
   const subs = (f.area ? [f.area] : Object.keys(AREAS)).flatMap((a) => subsOf(a));
+  // Situação diferente de "Todas" lista as questões respondidas, da mais recente.
+  const qs = f.sit === "todas" ? [] : respondidas(f);
 
   const sel = (key, label, opts) =>
     h(
@@ -96,17 +98,46 @@ function respostas() {
         ["", "Todas as áreas"],
         ...Object.entries(AREAS).map(([k, [n]]) => [k, n]),
       ]),
-      sel("sub", "Matéria", [["", "Todas as matérias"], ...subs.map((s) => [s.id, s.nome])])
+      sel("sub", "Matéria", [["", "Todas as matérias"], ...subs.map((s) => [s.id, s.nome])]),
+      sel("sit", "Situação", Object.entries(SIT))
     ),
-    h(
-      "p",
-      { class: "note", id: "n-blocos", role: "status" },
-      R.length
-        ? plural(list.length, "bloco", "blocos") + " neste filtro."
-        : "Você ainda não terminou nenhum simulado. Os blocos aparecem aqui quando terminar."
-    ),
-    h("ul", { class: "blocos", "aria-label": "Simulados feitos" }, list.map(bloco))
+    f.sit === "todas"
+      ? [
+          h(
+            "p",
+            { class: "note", id: "n-blocos", role: "status" },
+            R.length
+              ? plural(list.length, "bloco", "blocos") + " neste filtro."
+              : "Você ainda não terminou nenhum simulado. Os blocos aparecem aqui quando terminar."
+          ),
+          h("ul", { class: "blocos", "aria-label": "Simulados feitos" }, list.map(bloco)),
+        ]
+      : [
+          h(
+            "p",
+            { class: "note", id: "n-blocos", role: "status" },
+            plural(qs.length, "questão", "questões") + " neste filtro. Toque numa para refazer."
+          ),
+          h(
+            "ol",
+            { class: "qlist", "aria-label": "Questões respondidas" },
+            qs.map((q, j) => qcard(q, () => start(qs.slice(), respostas, j)))
+          ),
+        ]
   );
+}
+
+// Última resposta de cada questão (histórico), com os filtros de área e matéria.
+function respondidas(f) {
+  const byId = new Map(Q.map((q) => [q.id, q]));
+  return Object.entries(H)
+    .filter(([, r]) => (f.sit === "resp" ? true : f.sit === "ok" ? r.ok : !r.ok))
+    .sort((a, b) => (b[1].t || 0) - (a[1].t || 0))
+    .map(([id]) => byId.get(id))
+    .filter(
+      (q) =>
+        q && (!f.area || q.area === f.area) && (!f.sub || (q._ok && IX.top[q.topico].materia === f.sub))
+    );
 }
 
 function bloco(b) {

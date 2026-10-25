@@ -14,14 +14,11 @@ function topico(id) {
 
   const all = inTop(id);
   const anul = Q.filter((q) => q._ok && q.topico === id && q.anulada).length;
-  const f = { ano: "", apl: "", sit: "todas", ...S.f };
-  const list = all.filter(
-    (q) =>
-      (!f.ano || String(q.ano) === f.ano) &&
-      (!f.apl || (q.aplicacao || "") === f.apl) &&
-      (f.sit === "todas" ||
-        (f.sit === "resp" ? sit(q) !== "nao" : sit(q) === f.sit))
-  );
+  const f = { ano: "", n: 5, ...S.f };
+  const list = all.filter((q) => !f.ano || String(q.ano) === f.ano);
+  // Quantidade na escala 5, 10, 25, 45, só até o que o filtro tem.
+  const qtds = QTDS.filter((n) => n <= list.length);
+  const qn = qtds.includes(f.n) ? f.n : qtds[qtds.length - 1];
 
   const nOk = all.filter((q) => sit(q) === "ok").length;
   const nBad = all.filter((q) => sit(q) === "bad").length;
@@ -30,7 +27,6 @@ function topico(id) {
   const anos = {};
   for (const q of all) anos[q.ano] = (anos[q.ano] || 0) + 1;
   const anosK = Object.keys(anos).sort();
-  const apls = [...new Set(all.map((q) => q.aplicacao || ""))].sort();
   const max = Math.max(1, ...Object.values(anos));
 
   const sel = (key, label, opts) =>
@@ -122,12 +118,7 @@ function topico(id) {
       ? h(
           "div",
           { class: "filters" },
-          sel("ano", "Ano", [["", "Todos os anos"], ...anosK.map((a) => [a, "ENEM " + a])]),
-          sel("apl", "Aplicação", [
-            ["", "Todas as aplicações"],
-            ...apls.filter((a) => a !== "" || apls.length > 1).map((a) => [a, APL[a] || (a ? a : "Não informada")]),
-          ]),
-          sel("sit", "Situação", Object.entries(SIT))
+          sel("ano", "Ano", [["", "Todos os anos"], ...anosK.map((a) => [a, "ENEM " + a])])
         )
       : null,
     h(
@@ -137,53 +128,77 @@ function topico(id) {
         ? plural(list.length, "questão", "questões") + " neste filtro."
         : "Ainda não há questões classificadas neste tópico."
     ),
-    list.length
+    qtds.length
       ? h(
           "div",
-          null,
+          { class: "qtd" },
+          h("div", { id: "ql" }, "Quantidade de questões"),
           h(
-            "button",
-            { class: "btn primary", onclick: () => start(shuffle(list.slice()), () => topico(id)) },
-            "Resolver " + plural(list.length, "questão", "questões")
-          )
-        )
-      : null,
-    h(
-      "ol",
-      { class: "qlist", "aria-label": "Questões do tópico" },
-      list.map((q, j) => {
-        const st = sit(q);
-        return h(
-          "li",
-          null,
+            "div",
+            { class: "chips", role: "group", "aria-labelledby": "ql" },
+            qtds.map((n) =>
+              h(
+                "button",
+                {
+                  class: "chip",
+                  type: "button",
+                  "aria-pressed": n === qn,
+                  onclick: () => {
+                    S.f = { ...f, n };
+                    topico(id);
+                  },
+                },
+                n
+              )
+            )
+          ),
           h(
             "button",
             {
-              class: "qcard",
-              type: "button",
-              onclick: () => start(list.slice(), () => topico(id), j),
+              class: "btn primary",
+              onclick: () => start(shuffle(list.slice()).slice(0, qn), () => topico(id)),
             },
-            h(
-              "span",
-              { class: "qcard-head" },
-              h(
-                "span",
-                { class: "meta" },
-                "ENEM " + q.ano +
-                  (q.aplicacao ? " · " + (APL[q.aplicacao] || q.aplicacao) : "") +
-                  (q.numero ? " · Questão " + q.numero : "") +
-                  (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
-              ),
-              h(
-                "span",
-                { class: "tag " + (st === "ok" ? "ok" : st === "bad" ? "bad" : "nil") },
-                st === "ok" ? "Acertou" : st === "bad" ? "Errou" : "Não respondida"
-              )
-            ),
-            h("span", { class: "qcard-text" }, snippet(q.enunciado))
-          )
-        );
-      })
+            "Fazer " + qn + " questões"
+          ),
+          h("p", { class: "note" }, "Ou escolha uma questão da lista para começar por ela.")
+        )
+      : list.length
+        ? h("p", { class: "note" }, "Escolha uma questão da lista para começar.")
+        : null,
+    h(
+      "ol",
+      { class: "qlist", "aria-label": "Questões do tópico" },
+      list.map((q, j) => qcard(q, () => start(list.slice(), () => topico(id), j)))
+    )
+  );
+}
+
+// Cartão de questão das listas (tópico e Suas respostas).
+function qcard(q, onclick) {
+  const st = sit(q);
+  return h(
+    "li",
+    null,
+    h(
+      "button",
+      { class: "qcard", type: "button", onclick },
+      h(
+        "span",
+        { class: "qcard-head" },
+        h(
+          "span",
+          { class: "meta" },
+          "ENEM " + q.ano +
+            (q.numero ? " · Questão " + q.numero : "") +
+            (q.lang ? " · " + (q.lang === "ingles" ? "Inglês" : "Espanhol") : "")
+        ),
+        h(
+          "span",
+          { class: "tag " + (st === "ok" ? "ok" : st === "bad" ? "bad" : "nil") },
+          st === "ok" ? "Acertou" : st === "bad" ? "Errou" : "Não respondida"
+        )
+      ),
+      h("span", { class: "qcard-text" }, snippet(q.enunciado))
     )
   );
 }

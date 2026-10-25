@@ -101,6 +101,22 @@ function boot() {
 const click = (w, el) =>
   el.dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
 
+// Vai da barra lateral até um tópico, como o estudante faria.
+async function irTopico(w, id) {
+  const d = w.document;
+  const t = TOP[id];
+  click(w, d.getElementById("nav-inicio"));
+  await tick(20);
+  click(w, d.getElementById("tab-" + t.area));
+  await tick(20);
+  const mat = [...d.querySelectorAll(".item.sub")].find((b) => b.querySelector(".item-name").textContent === SUB[t.materia].nome);
+  click(w, mat);
+  await tick(20);
+  const top = [...d.querySelectorAll(".item.top-item")].find((b) => b.querySelector(".item-name").textContent === t.nome);
+  if (top) click(w, top);
+  await tick(20);
+}
+
 (async () => {
   console.log("\n== Boot e Home ==");
   const w = boot();
@@ -705,17 +721,31 @@ const click = (w, el) =>
   );
   ok("filtro preservado após re-render", d2.querySelector('select[data-f="ano"]').value === ano0);
   await setF("ano", "");
-  const apl0 = uniTop.find((q) => q.aplicacao) ? uniTop.find((q) => q.aplicacao).aplicacao : null;
-  if (apl0) {
-    await setF("apl", apl0);
-    ok("filtro de aplicação", d2.querySelectorAll(".qcard").length === uniTop.filter((q) => q.aplicacao === apl0).length);
-    await setF("apl", "");
-  } else ok("filtro de aplicação presente", !!d2.querySelector('select[data-f="apl"]'));
-  await setF("sit", "nao");
-  ok("situação: tudo não respondido no começo", d2.querySelectorAll(".qcard").length === uniTop.length);
-  await setF("sit", "ok");
-  ok("situação: nenhuma acertada no começo", d2.querySelectorAll(".qcard").length === 0);
-  await setF("sit", "todas");
+  ok("tópico sem filtro de aplicação", !d2.querySelector('select[data-f="apl"]'));
+  ok("tópico sem filtro de situação", !d2.querySelector('select[data-f="sit"]'));
+  const escala = (n) => [5, 10, 25, 45].filter((x) => x <= n).join();
+  const chipsQtd = () => [...d2.querySelectorAll(".qtd .chip")].map((c) => c.textContent).join();
+  ok("quantidade na escala até o total do tópico", chipsQtd() === escala(uniTop.length), chipsQtd());
+  await setF("ano", ano0);
+  const nAno = uniTop.filter((q) => String(q.ano) === ano0).length;
+  ok("quantidade acompanha o filtro de ano", chipsQtd() === escala(nAno), nAno + ": " + chipsQtd());
+  await setF("ano", "");
+  click(w2, [...d2.querySelectorAll(".qtd .chip")].find((c) => c.textContent === "10"));
+  await tick(20);
+  ok("chip de 10 marcado", d2.querySelector('.qtd .chip[aria-pressed="true"]').textContent === "10");
+  click(w2, d2.querySelector(".qtd .btn.primary"));
+  await tick(20);
+  ok("fazer 10 questões abre simulado de 10", /de 10$/.test(d2.querySelector(".bar-row span").textContent));
+  {
+    // Tópico com menos de 5 questões só deixa escolher pela lista.
+    const peq = Object.keys(TOP).find((k) => unicas(banco.filter((q) => q.topico === k)).length < 5);
+    await irTopico(w2, peq);
+    ok("tópico pequeno não oferece quantidade", !d2.querySelector(".qtd") && d2.querySelectorAll(".qcard").length > 0);
+    await irTopico(w2, "LC.en." + "leitura-em-ingles");
+    ok("Língua Inglesa abre direto nas questões", d2.querySelector("h1").textContent === "Leitura em Inglês" &&
+      d2.querySelector(".btn.back").textContent.includes("Linguagens"));
+    await irTopico(w2, alvo);
+  }
 
   console.log("\n== Progresso do estudante no tópico ==");
   click(w2, d2.querySelectorAll(".qcard")[0]);
@@ -747,8 +777,6 @@ const click = (w, el) =>
   const st = [...d2.querySelectorAll(".stats b")].map((b) => b.textContent);
   ok("tópico conta 1 respondida e 1 acertada", st[1] === "1" && st[3] === "1" && st[4] === "0", st.join(","));
   ok("histórico salvo no navegador", Object.keys(JSON.parse(w2.localStorage.getItem("banco-enem:hist"))).length === 1);
-  await setF("sit", "ok");
-  ok("situação: acertada aparece no filtro", d2.querySelectorAll(".qcard").length === 1);
   ok("teclado não navega fora do simulado", (() => {
     d2.dispatchEvent(new w2.KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }));
     return !d2.querySelector(".bar");
@@ -789,6 +817,16 @@ const click = (w, el) =>
   ok("filtro de matéria lista só as matérias da área", [...d2.querySelectorAll('select[data-rf="sub"] option')].length === tax.areas.find((a) => a.id === tA.area).subjects.length + 1);
   await setRF("sub", tA.materia);
   ok("filtro de matéria mantém o bloco", d2.querySelectorAll(".bloco").length === 1);
+  ok(
+    "situação em Suas respostas sem 'não respondidas'",
+    [...d2.querySelectorAll('select[data-rf="sit"] option')].map((o) => o.textContent).join() === "Todas,Respondidas,Acertadas,Erradas"
+  );
+  await setRF("sit", "ok");
+  ok("situação acertadas lista a questão acertada", d2.querySelectorAll(".qcard").length === 1 && !d2.querySelector(".bloco"));
+  await setRF("sit", "bad");
+  ok("situação erradas vazia", d2.querySelectorAll(".qcard").length === 0);
+  await setRF("sit", "todas");
+  ok("situação todas volta aos blocos", d2.querySelectorAll(".bloco").length === 1);
   click(w2, d2.querySelector(".bloco"));
   await tick(20);
   ok("bloco abre as correções", d2.querySelectorAll(".cor").length === uniTop.length);

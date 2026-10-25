@@ -9,8 +9,9 @@ const AREAS = {
   LC: ["Linguagens", "Português, Literatura, Línguas, Artes"],
 };
 
-const APL = { regular: "Regular", ppl: "PPL", reaplicacao: "Reaplicação", digital: "Digital" };
-const SIT = { todas: "Todas", nao: "Não respondidas", resp: "Respondidas", ok: "Acertadas", bad: "Erradas" };
+// Situação só existe em Suas respostas, onde tudo já foi respondido.
+const SIT = { todas: "Todas", resp: "Respondidas", ok: "Acertadas", bad: "Erradas" };
+const QTDS = [5, 10, 25, 45];
 const HKEY = "banco-enem:hist";
 
 const $ = document.getElementById("app");

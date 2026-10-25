@@ -508,7 +508,8 @@ label.f:has(select)::after {
   background: var(--sunk);
 }
 
-#nl {
+#nl,
+#ql {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--ink-2);
@@ -1088,6 +1089,21 @@ img.q.alt-img {
 
 .filters + .note {
   margin-bottom: var(--s-sm);
+}
+
+/* Quantidade do tópico: chips na escala e o botão logo abaixo */
+.qtd {
+  display: grid;
+  justify-items: start;
+  gap: var(--s-sm);
+}
+
+.qtd #ql {
+  margin-bottom: calc(var(--s-sm) * -1 + var(--s-xs));
+}
+
+.qtd .note {
+  margin: 0;
 }
 
 .qlist {
