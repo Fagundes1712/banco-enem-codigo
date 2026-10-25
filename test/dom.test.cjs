@@ -563,7 +563,11 @@ const click = (w, el) =>
   const tops = Object.values(TOP);
   ok(
     "nenhum tópico tem filhos (sem 4º nível)",
-    tops.every((t) => Object.keys(t).every((k) => ["id", "nome", "desc", "area", "materia"].includes(k)))
+    tops.every((t) => Object.keys(t).every((k) => ["id", "nome", "desc", "antes", "area", "materia"].includes(k)))
+  );
+  ok(
+    "antes lista só ids antigos (texto), nunca filhos",
+    tops.every((t) => !t.antes || (t.antes.length && t.antes.every((v) => typeof v === "string" && v.startsWith(t.materia + "."))))
   );
   ok(
     "toda matéria tem tópicos e nada além de id/nome/topics",
@@ -580,19 +584,23 @@ const click = (w, el) =>
   );
   ok("todo tópico tem descrição", tops.every((t) => t.desc && t.desc.length > 10));
   const nomes = (sid) => SUB[sid].topics.map((t) => t.nome);
-  const exige = {
-    "CN.bio": "Citologia|Bioquímica|Metabolismo Energético|Divisão Celular|Genética|Biotecnologia|Evolução|Ecologia|Dinâmica Ecológica|Ciclos Biogeoquímicos|Impactos Ambientais|Conservação Ambiental|Fisiologia Humana|Homeostase|Imunologia|Saúde Pública|Microbiologia|Parasitologia|Botânica|Zoologia|Embriologia|Histologia|Classificação Biológica|Origem da Vida|Ecotoxicologia",
-    "CN.qui": "Matéria e Propriedades|Separação de Misturas|Estrutura Atômica|Tabela Periódica|Ligações Químicas|Geometria e Polaridade Molecular|Interações Intermoleculares|Funções Inorgânicas|Reações Químicas|Estequiometria|Gases|Soluções|Propriedades Coligativas|Termoquímica|Cinética Química|Equilíbrio Químico|Equilíbrio Iônico|Ácidos e Bases|Eletroquímica|Radioatividade|Química Orgânica|Funções Orgânicas|Isomeria|Reações Orgânicas|Polímeros|Biomoléculas|Química Ambiental|Química Industrial|Química Cotidiana",
-    "CN.fis": "Grandezas e Medidas|Cinemática|Movimento Circular|Dinâmica|Forças e Equilíbrio|Gravitação|Estática|Trabalho e Energia|Quantidade de Movimento|Hidrostática|Termologia|Calorimetria|Termodinâmica|Transmissão de Calor|Ondulatória|Fenômenos Ondulatórios|Acústica|Óptica|Eletrostática|Eletrodinâmica|Circuitos Elétricos|Magnetismo|Eletromagnetismo|Física Moderna|Tecnologia e Energia",
-    "MT.mat": "Aritmética e Conjuntos Numéricos|Porcentagem e Matemática Financeira|Álgebra e Equações|Funções|Sequências e Matemática Discreta|Análise Combinatória|Geometria Plana|Geometria Espacial|Geometria Analítica|Trigonometria|Estatística|Probabilidade|Grandezas e Medidas|Matemática Aplicada",
-    "CH.geo": "Cartografia|Geografia Física|Climatologia|Hidrografia|Biomas|População|Migrações|Urbanização|Geografia Agrária|Industrialização|Energia|Globalização|Geopolítica|Regionalização|Geografia do Brasil",
-    "CH.soc": "Cultura|Trabalho|Classes Sociais|Desigualdade|Estado|Poder|Democracia|Cidadania|Movimentos Sociais|Relações Étnico-Raciais|Gênero|Globalização|Instituições Sociais",
-    "LC.lp": "Interpretação e Compreensão de Textos|Gêneros e Tipos Textuais|Gramática e Análise Linguística|Coesão, Coerência e Organização Textual|Sintaxe e Semântica",
-  };
-  for (const [sid, lista] of Object.entries(exige)) {
-    const falta = lista.split("|").filter((n) => !nomes(sid).includes(n));
-    ok("todos os tópicos obrigatórios em " + SUB[sid].nome, falta.length === 0, falta.join(", "));
-  }
+  // Tema vazio sai; tema pequeno é reunido a outro para o filtro ter peso.
+  const nTop = {};
+  for (const q of unicas(banco)) nTop[q.topico] = (nTop[q.topico] || 0) + 1;
+  ok("nenhum tópico vazio", tops.every((t) => nTop[t.id] > 0), tops.filter((t) => !nTop[t.id]).map((t) => t.nome).join(", "));
+  ok(
+    "nenhum tópico com menos de 4 questões",
+    tops.every((t) => nTop[t.id] >= 4),
+    tops.filter((t) => nTop[t.id] < 4).map((t) => t.nome + "=" + nTop[t.id]).join(", ")
+  );
+  ok(
+    "Inglês e Espanhol têm um tópico só (sem escolha de tema)",
+    SUB["LC.en"].topics.length === 1 && SUB["LC.es"].topics.length === 1
+  );
+  ok("ids antigos não se repetem entre tópicos", (() => {
+    const v = tops.flatMap((t) => t.antes || []);
+    return new Set(v).size === v.length;
+  })());
   ok(
     "matérias obrigatórias por área",
     ["CN:Biologia,Química,Física", "MT:Matemática e suas Tecnologias",
@@ -605,13 +613,13 @@ const click = (w, el) =>
   );
   ok(
     "História tem História Geral, do Brasil e da América",
-    ["História Geral — ", "História do Brasil — ", "História da América — "].every((p) =>
+    ["História Geral — ", "História do Brasil — ", "História da América"].every((p) =>
       nomes("CH.his").some((n) => n.startsWith(p))
     )
   );
   ok(
     "Filosofia cobre períodos, ética, política e conhecimento",
-    ["Filosofia Antiga", "Filosofia Moderna", "Ética e Moral", "Filosofia Política", "Teoria do Conhecimento"]
+    ["Filosofia Antiga", "Filosofia Moderna", "Ética e Moral", "Filosofia Política", "Conhecimento, Ciência e Estética"]
       .every((n) => nomes("CH.fil").includes(n))
   );
   ok(
@@ -641,9 +649,9 @@ const click = (w, el) =>
   await tick(60);
   const d2 = w2.document;
   // Escolhe o tópico com mais questões para exercitar filtros.
-  const porTop = {};
-  for (const q of unicas(banco.filter(valida))) porTop[q.topico] = (porTop[q.topico] || 0) + 1;
-  const alvo = Object.keys(porTop).sort((a, b) => porTop[b] - porTop[a])[0];
+  const qPorTop = {};
+  for (const q of unicas(banco.filter(valida))) qPorTop[q.topico] = (qPorTop[q.topico] || 0) + 1;
+  const alvo = Object.keys(qPorTop).sort((a, b) => qPorTop[b] - qPorTop[a])[0];
   ok("há ao menos um tópico com questões", !!alvo);
   const tA = TOP[alvo];
   click(w2, d2.getElementById("tab-" + tA.area));

@@ -53,7 +53,11 @@ function topico(id) {
     );
 
   mount(
-    h("div", { class: "top" }, back(s.nome, () => materia(s.id))),
+    h(
+      "div",
+      { class: "top" },
+      s.topics.length > 1 ? back(s.nome, () => materia(s.id)) : back(AREAS[t.area][0], home)
+    ),
     h("p", { class: "eyebrow" }, AREAS[t.area][0] + " · " + s.nome),
     h("h1", null, t.nome),
     h("p", { class: "lead" }, t.desc),

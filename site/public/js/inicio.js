@@ -98,7 +98,8 @@ function home() {
                 h(
                   "span",
                   { class: "item-meta" },
-                  plural(s.topics.length, "tópico", "tópicos") + " · " + plural(n, "questão", "questões")
+                  (s.topics.length > 1 ? plural(s.topics.length, "tópico", "tópicos") + " · " : "") +
+                    plural(n, "questão", "questões")
                 )
               )
             );
@@ -204,6 +205,8 @@ function materia(id) {
   clearInterval(tick);
   if (T) T.live = false;
   const s = IX.sub[id];
+  // Matéria de um tópico só (Inglês, Espanhol) vai direto para as questões.
+  if (s.topics.length === 1) return topico(s.topics[0].id);
   S = { ...S, materia: id, topico: null };
   document.documentElement.dataset.area = s.area;
   nav("inicio");

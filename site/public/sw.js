@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v15"; // v15: frase "Bons estudos." no início
+const VERSION = "v16"; // v16: tópicos reagrupados (117), Inglês e Espanhol sem escolha de tema
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

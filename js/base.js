@@ -132,6 +132,8 @@ function boot(d, t) {
     for (const s of a.subjects) {
       IX.sub[s.id] = { ...s, area: a.id };
       for (const x of s.topics) IX.top[x.id] = { ...x, area: a.id, materia: s.id };
+      // Ids de tópicos que foram reunidos: blocos antigos ainda acham o tópico.
+      for (const x of s.topics) for (const v of x.antes || []) IX.top[v] ||= IX.top[x.id];
     }
   for (const q of Q) q._ok = !!q.topico && consistent(q);
   home();

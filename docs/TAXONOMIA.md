@@ -37,26 +37,27 @@ A questão vai para o tópico do **conhecimento necessário para resolvê-la**, 
 
 ### Fronteiras entre tópicos parecidos
 
-- **Física, Eletrodinâmica × Circuitos Elétricos:** associação de resistores, série/paralelo, geradores, medidores e análise de circuito vão para Circuitos Elétricos. Corrente, Lei de Ohm num elemento, potência e consumo de aparelhos vão para Eletrodinâmica.
-- **Física, Ondulatória × Fenômenos Ondulatórios × Acústica:** grandezas da onda e espectro vão para Ondulatória. Reflexão, refração, difração, interferência, ressonância e Doppler vão para Fenômenos Ondulatórios. Qualidades do som e instrumentos vão para Acústica.
-- **Física, Termologia × Calorimetria × Transmissão de Calor × Termodinâmica:** temperatura e dilatação vão para Termologia; quantidade de calor e mudança de fase, Calorimetria; condução, convecção e irradiação, Transmissão de Calor; máquinas e leis, Termodinâmica.
-- **Física, Dinâmica × Forças e Equilíbrio × Estática:** com aceleração, Dinâmica. Ponto material em repouso, Forças e Equilíbrio. Torque e alavancas, Estática.
-- **Física, Tecnologia e Energia:** usinas, transmissão e eficiência energética de sistemas. Contas de consumo de um aparelho ficam em Eletrodinâmica.
-- **Química, Química Orgânica × Funções Orgânicas × Reações Orgânicas:** reconhecer função ou nomenclatura vai para Funções Orgânicas; transformações, para Reações Orgânicas; cadeia, hibridização e propriedades gerais, para Química Orgânica.
-- **Química, Ácidos e Bases × Equilíbrio Iônico × Funções Inorgânicas:** pH, Kps, hidrólise e tampão vão para Equilíbrio Iônico; teorias e neutralização, Ácidos e Bases; nomenclatura e propriedades de ácidos, bases, sais e óxidos, Funções Inorgânicas.
-- **Química, Química Ambiental × Química Cotidiana × Química Industrial:** só quando nenhum tópico conceitual domina. Se a questão exige cálculo estequiométrico sobre poluição, vai para Estequiometria com tag Química Ambiental.
-- **Biologia, Ecologia × Dinâmica Ecológica × Ciclos × Impactos × Conservação × Ecotoxicologia:** conceitos e cadeias alimentares, Ecologia; relações, sucessão e populações, Dinâmica Ecológica; ciclos de elementos, Ciclos Biogeoquímicos; poluição e desmatamento, Impactos Ambientais; proteção e manejo, Conservação Ambiental; acúmulo de tóxicos nos organismos, Ecotoxicologia.
-- **Biologia, Fisiologia Humana × Homeostase:** funcionamento de sistemas, Fisiologia; regulação e feedback, Homeostase.
-- **Biologia, Microbiologia × Parasitologia × Saúde Pública × Imunologia:** o organismo em si, Microbiologia; ciclo de parasitas e vetores, Parasitologia; prevenção coletiva e saneamento, Saúde Pública; resposta imune, vacinas e soros, Imunologia.
-- **Matemática, Grandezas e Medidas × Aritmética:** conversões, escalas e proporcionalidade entre grandezas vão para Grandezas e Medidas; operações e frações sem grandeza física, Aritmética. Matemática Aplicada só quando nenhum tópico domina.
+- **Física, Eletrostática e Eletrodinâmica × Circuitos Elétricos:** associação de resistores, série/paralelo, geradores, medidores e análise de circuito vão para Circuitos Elétricos. Carga, corrente, Lei de Ohm num elemento, potência e consumo de aparelhos vão para Eletrostática e Eletrodinâmica.
+- **Física, Ondas e Fenômenos Ondulatórios × Acústica:** grandezas da onda, espectro, reflexão, refração, difração, interferência, ressonância e Doppler vão para Ondas; qualidades do som e instrumentos, Acústica.
+- **Física, Termologia e Calorimetria × Termodinâmica e Transmissão de Calor:** temperatura, dilatação, quantidade de calor e mudança de fase ficam no primeiro; máquinas, leis, condução, convecção e irradiação, no segundo.
+- **Física, Eletromagnetismo e Geração de Energia:** ímãs, indução, motores, usinas, transmissão e eficiência energética de sistemas. Contas de consumo de um aparelho ficam em Eletrostática e Eletrodinâmica.
+- **Química, Química Orgânica e Isomeria × Reações Orgânicas, Polímeros e Biomoléculas:** reconhecer cadeia, função, nomenclatura ou isômero vai para o primeiro; transformações, polímeros e biomoléculas, para o segundo.
+- **Química, Funções e Reações Inorgânicas × Equilíbrio Químico e Iônico:** pH, Kps, hidrólise e tampão vão para Equilíbrio; teorias ácido-base, neutralização, nomenclatura e tipos de reação, Funções e Reações Inorgânicas.
+- **Química, Química Ambiental e Cotidiana:** só quando nenhum tópico conceitual domina. Se a questão exige cálculo estequiométrico sobre poluição, vai para Estequiometria e Gases com tag Química Ambiental e Cotidiana.
+- **Biologia, Ecologia e Relações Ecológicas × Ciclos × Impactos Ambientais e Conservação × Ecotoxicologia:** conceitos, cadeias, relações, sucessão e populações, Ecologia; ciclos de elementos, Ciclos Biogeoquímicos; poluição, desmatamento, proteção e manejo, Impactos Ambientais e Conservação; acúmulo de tóxicos nos organismos, Ecotoxicologia.
+- **Biologia, Microbiologia, Parasitologia e Saúde Pública × Imunologia:** o organismo, o ciclo do parasita e a prevenção coletiva ficam no primeiro; resposta imune, vacinas e soros, Imunologia.
+- **Matemática, Grandezas e Medidas × Aritmética:** conversões, escalas e proporcionalidade entre grandezas vão para Grandezas e Medidas; operações e frações sem grandeza física, Aritmética.
 - **Matemática, Estatística × Funções:** ler gráfico de dados (barras, setores, linhas de séries) é Estatística; gráfico de uma lei de formação é Funções.
-- **Geografia, Geografia do Brasil:** só quando nenhum tópico temático (clima, urbanização, agrária…) domina.
-- **Geografia × Sociologia, Globalização:** fluxos, redes, blocos e território, Geografia; cultura, consumo e identidade, Sociologia.
+- **Geografia × Sociologia, Globalização:** fluxos, redes, blocos e território, Globalização (Geografia); cultura, consumo e identidade, Cultura (Sociologia).
 - **Filosofia, períodos × temas:** se a questão pede o pensamento de um autor ou período, vai para o período (Antiga, Medieval, Moderna, Contemporânea). Se pede um conceito ético, político ou do conhecimento independente do autor, vai para o tema.
-- **História:** os grandes tópicos são nomeados como `História Geral — …`, `História do Brasil — …` e `História da América — …`. O prefixo é parte do nome do tópico, não um nível.
-- **Língua Portuguesa:** Interpretação e Compreensão de Textos é o tópico de leitura global. Quando a pergunta mira gênero, coesão, sentido de palavras, gramática, variação ou função da linguagem, vai para esse tópico específico. Charges e tirinhas cuja pergunta é o efeito de humor ou crítica ficam em Interpretação.
-- **Literatura:** escola literária quando a pergunta exige reconhecê-la; Texto Literário e Gêneros Literários quando o foco é recurso expressivo ou gênero.
-- **Línguas estrangeiras:** as cinco questões de inglês e as cinco de espanhol ficam nas matérias Língua Inglesa e Língua Espanhola, mesmo que o tema seja interpretação.
+- **História:** os grandes tópicos são nomeados como `História Geral — …` e `História do Brasil — …`; História da América é um tópico só. O prefixo é parte do nome do tópico, não um nível.
+- **Língua Portuguesa:** Interpretação e Compreensão de Textos é o tópico de leitura global. Quando a pergunta mira gênero, coesão, gramática, sentido de palavras, variação ou função da linguagem, vai para esse tópico específico. Charges e tirinhas cuja pergunta é o efeito de humor ou crítica ficam em Interpretação.
+- **Literatura:** período literário quando a pergunta exige reconhecê-lo; Texto Literário e Gêneros Literários quando o foco é recurso expressivo ou gênero.
+- **Línguas estrangeiras:** as cinco questões de inglês e as cinco de espanhol de cada prova ficam em Leitura em Inglês e Leitura em Espanhol. Cada matéria tem um tópico só, então o app abre as questões direto, sem escolha de tema.
+
+## Reagrupamento de 2026-10-25
+
+A primeira versão tinha 190 tópicos, muitos com 0, 1 ou 2 questões, o que deixava o filtro sem peso. Os tópicos vazios saíram e os pequenos foram reunidos com vizinhos de conteúdo, ficando 117, todos com pelo menos 4 questões únicas. Nenhuma questão mudou de assunto: a classificação antiga foi traduzida para o tópico que a reuniu. Cada tópico novo guarda em `antes` os ids antigos que absorveu; o app usa isso para os blocos de "Suas respostas" salvos antes da mudança. O teste falha se algum tópico ficar vazio ou com menos de 4 questões.
 
 ### Casos de revisão
 

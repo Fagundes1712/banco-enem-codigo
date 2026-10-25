@@ -1,6 +1,6 @@
 {
 "2015-CH-01": {
-"t": "CH.geo.biomas",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -9,7 +9,7 @@
 "t": "CH.soc.trabalho"
 },
 "2015-CH-03": {
-"t": "CH.soc.instituicoes-sociais",
+"t": "CH.soc.instituicoes-sociais-e-violencia",
 "tags": [
 "CH.fil.filosofia-contemporanea"
 ]
@@ -24,16 +24,16 @@
 "t": "CH.his.historia-do-brasil-colonia"
 },
 "2015-CH-07": {
-"t": "CH.his.historia-geral-mundo-contemporaneo",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2015-CH-08": {
 "t": "CH.geo.globalizacao"
 },
 "2015-CH-09": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao"
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual"
 },
 "2015-CH-10": {
 "t": "CH.his.historia-do-brasil-primeira-republica"
@@ -44,7 +44,7 @@
 "2015-CH-12": {
 "t": "CH.geo.urbanizacao",
 "tags": [
-"CH.geo.industrializacao"
+"CH.geo.industria-energia-e-transportes"
 ]
 },
 "2015-CH-13": {
@@ -54,7 +54,7 @@
 ]
 },
 "2015-CH-14": {
-"t": "CH.soc.estado",
+"t": "CH.soc.estado-poder-e-democracia",
 "tags": [
 "CH.his.historia-do-brasil-colonia"
 ]
@@ -65,7 +65,7 @@
 "2015-CH-16": {
 "t": "CH.fil.filosofia-moderna",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2015-CH-17": {
@@ -78,13 +78,13 @@
 "t": "CH.his.historia-do-brasil-era-vargas"
 },
 "2015-CH-19": {
-"t": "CH.his.historia-do-brasil-ditadura-militar"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2015-CH-20": {
 "t": "CH.his.historia-do-brasil-era-vargas"
 },
 "2015-CH-21": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2015-CH-22": {
 "t": "CH.his.historia-do-brasil-primeira-republica"
@@ -96,9 +96,9 @@
 "t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras"
 },
 "2015-CH-25": {
-"t": "CH.soc.movimentos-sociais",
+"t": "CH.soc.cidadania-e-movimentos-sociais",
 "tags": [
-"CH.soc.democracia"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2015-CH-26": {
@@ -108,9 +108,9 @@
 ]
 },
 "2015-CH-27": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2015-CH-28": {
@@ -120,18 +120,15 @@
 "t": "CH.geo.globalizacao"
 },
 "2015-CH-30": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2015-CH-31": {
-"t": "CH.geo.geografia-fisica",
-"tags": [
-"CH.geo.hidrografia"
-]
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2015-CH-32": {
-"t": "CH.geo.hidrografia",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
-"CH.geo.biomas"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2015-CH-33": {
@@ -150,7 +147,7 @@
 "t": "CH.his.historia-geral-idade-media"
 },
 "2015-CH-38": {
-"t": "CH.geo.industrializacao",
+"t": "CH.geo.industria-energia-e-transportes",
 "tags": [
 "CH.geo.globalizacao"
 ]
@@ -162,12 +159,12 @@
 "t": "CH.soc.teorias-sociologicas-classicas"
 },
 "2015-CH-41": {
-"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica"
+"t": "CH.fil.conhecimento-ciencia-e-estetica"
 },
 "2015-CH-42": {
 "t": "CH.soc.genero",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2015-CH-43": {
@@ -177,7 +174,7 @@
 ]
 },
 "2015-CH-44": {
-"t": "CH.his.historia-geral-mundo-contemporaneo",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
 "CH.soc.cultura"
 ]
@@ -186,85 +183,79 @@
 "t": "CH.geo.meio-ambiente-e-sustentabilidade"
 },
 "2015-CN-46": {
-"t": "CN.qui.equilibrio-quimico",
+"t": "CN.qui.equilibrio-quimico-e-ionico",
 "tags": [
 "CN.bio.fisiologia-humana"
 ]
 },
 "2015-CN-47": {
-"t": "CN.bio.impactos-ambientais"
+"t": "CN.bio.impactos-ambientais-e-conservacao"
 },
 "2015-CN-48": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2015-CN-49": {
-"t": "CN.fis.trabalho-e-energia",
+"t": "CN.fis.energia-e-quantidade-de-movimento",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2015-CN-50": {
-"t": "CN.fis.ondulatoria"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2015-CN-51": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2015-CN-52": {
-"t": "CN.qui.materia-e-propriedades"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2015-CN-53": {
-"t": "CN.fis.fenomenos-ondulatorios"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2015-CN-54": {
-"t": "CN.bio.embriologia"
+"t": "CN.bio.embriologia-e-histologia"
 },
 "2015-CN-55": {
-"t": "CN.qui.solucoes",
+"t": "CN.qui.solucoes-e-propriedades-coligativas",
 "tags": [
-"CN.qui.estequiometria"
+"CN.qui.estequiometria-e-gases"
 ]
 },
 "2015-CN-56": {
-"t": "CN.bio.evolucao"
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao"
 },
 "2015-CN-57": {
-"t": "CN.fis.termodinamica"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2015-CN-58": {
 "t": "CN.qui.eletroquimica"
 },
 "2015-CN-59": {
-"t": "CN.qui.funcoes-organicas"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2015-CN-60": {
-"t": "CN.qui.reacoes-organicas"
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 },
 "2015-CN-61": {
 "t": "CN.bio.ciclos-biogeoquimicos"
 },
 "2015-CN-62": {
-"t": "CN.qui.funcoes-inorganicas",
-"tags": [
-"CN.qui.acidos-e-bases"
-]
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2015-CN-63": {
-"t": "CN.fis.termodinamica"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2015-CN-64": {
-"t": "CN.fis.trabalho-e-energia"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2015-CN-65": {
-"t": "CN.fis.calorimetria"
+"t": "CN.fis.termologia-e-calorimetria"
 },
 "2015-CN-66": {
 "t": "CN.bio.genetica"
 },
 "2015-CN-67": {
-"t": "CN.bio.fisiologia-humana",
-"tags": [
-"CN.bio.homeostase"
-]
+"t": "CN.bio.fisiologia-humana"
 },
 "2015-CN-68": {
 "t": "CN.fis.circuitos-eletricos"
@@ -273,49 +264,49 @@
 "t": "CN.bio.metabolismo-energetico"
 },
 "2015-CN-70": {
-"t": "CN.fis.trabalho-e-energia"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2015-CN-71": {
-"t": "CN.qui.equilibrio-quimico"
+"t": "CN.qui.equilibrio-quimico-e-ionico"
 },
 "2015-CN-72": {
 "t": "CN.bio.imunologia",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2015-CN-73": {
 "t": "CN.qui.radioatividade",
 "tags": [
-"CN.fis.fisica-moderna"
+"CN.fis.optica-e-fisica-moderna"
 ]
 },
 "2015-CN-74": {
 "t": "CN.bio.biotecnologia"
 },
 "2015-CN-75": {
-"t": "CN.fis.fenomenos-ondulatorios"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2015-CN-76": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2015-CN-77": {
-"t": "CN.qui.reacoes-organicas",
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas",
 "tags": [
 "CN.qui.eletroquimica"
 ]
 },
 "2015-CN-78": {
-"t": "CN.bio.saude-publica",
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica",
 "tags": [
-"CN.bio.histologia"
+"CN.bio.embriologia-e-histologia"
 ]
 },
 "2015-CN-79": {
-"t": "CN.fis.calorimetria"
+"t": "CN.fis.termologia-e-calorimetria"
 },
 "2015-CN-80": {
-"t": "CN.qui.geometria-e-polaridade-molecular",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
 "CN.bio.ecotoxicologia"
 ]
@@ -324,18 +315,18 @@
 "t": "CN.qui.eletroquimica"
 },
 "2015-CN-82": {
-"t": "CN.fis.estatica"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2015-CN-83": {
 "t": "CN.bio.zoologia"
 },
 "2015-CN-84": {
-"t": "CN.qui.termoquimica"
+"t": "CN.qui.termoquimica-e-cinetica-quimica"
 },
 "2015-CN-85": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.fis.optica"
+"CN.fis.optica-e-fisica-moderna"
 ]
 },
 "2015-CN-86": {
@@ -344,59 +335,56 @@
 "2015-CN-87": {
 "t": "CN.bio.genetica",
 "tags": [
-"CN.bio.citologia"
+"CN.bio.citologia-e-bioquimica-celular"
 ]
 },
 "2015-CN-88": {
-"t": "CN.fis.grandezas-e-medidas"
+"t": "CN.fis.cinematica"
 },
 "2015-CN-89": {
-"t": "CN.bio.parasitologia"
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2015-CN-90": {
-"t": "CN.qui.quimica-ambiental",
-"tags": [
-"CN.qui.quimica-industrial"
-]
+"t": "CN.qui.quimica-ambiental-e-cotidiana"
 },
 "2015-LC-91-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2015-LC-92-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2015-LC-93-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2015-LC-94-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2015-LC-95-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2015-LC-91-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2015-LC-92-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2015-LC-93-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2015-LC-94-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2015-LC-95-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2015-LC-96": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
 },
 "2015-LC-97": {
-"t": "LC.ef.dancas-e-expressoes-corporais"
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas"
 },
 "2015-LC-98": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2015-LC-99": {
 "t": "LC.lit.modernismo"
@@ -417,7 +405,7 @@
 "t": "LC.lp.generos-e-tipos-textuais"
 },
 "2015-LC-104": {
-"t": "LC.lit.literatura-contemporanea",
+"t": "LC.lit.literatura-contemporanea-e-diversidade",
 "tags": [
 "LC.lit.texto-literario-e-generos-literarios"
 ]
@@ -432,7 +420,7 @@
 ]
 },
 "2015-LC-107": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2015-LC-108": {
 "t": "LC.art.artes-visuais"
@@ -453,13 +441,13 @@
 "t": "LC.art.arte-contemporanea"
 },
 "2015-LC-113": {
-"t": "LC.lp.gramatica-e-analise-linguistica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2015-LC-114": {
 "t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
 },
 "2015-LC-115": {
-"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2015-LC-116": {
 "t": "LC.lp.variacao-linguistica"
@@ -471,7 +459,7 @@
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
 },
 "2015-LC-119": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2015-LC-120": {
 "t": "LC.lp.variacao-linguistica"
@@ -492,31 +480,31 @@
 "t": "LC.lp.generos-e-tipos-textuais"
 },
 "2015-LC-126": {
-"t": "LC.lit.literatura-contemporanea",
+"t": "LC.lit.literatura-contemporanea-e-diversidade",
 "tags": [
-"LC.lit.literatura-colonial-quinhentismo-barroco-e-arcadismo"
+"LC.lit.do-quinhentismo-ao-romantismo"
 ]
 },
 "2015-LC-127": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2015-LC-128": {
 "t": "LC.lp.generos-e-tipos-textuais"
 },
 "2015-LC-129": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2015-LC-130": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2015-LC-131": {
 "t": "LC.art.artes-visuais"
 },
 "2015-LC-132": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2015-LC-133": {
-"t": "LC.ef.jogos-e-brincadeiras"
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas"
 },
 "2015-LC-134": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -703,13 +691,13 @@
 ]
 },
 "2016-CH-02": {
-"t": "CH.his.historia-do-brasil-nova-republica"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2016-CH-03": {
 "t": "CH.geo.urbanizacao"
 },
 "2016-CH-04": {
-"t": "CH.geo.regionalizacao",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
 "CH.geo.urbanizacao"
 ]
@@ -727,7 +715,7 @@
 "t": "CH.his.historia-do-brasil-colonia"
 },
 "2016-CH-09": {
-"t": "CH.his.historia-geral-revolucao-industrial"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2016-CH-10": {
 "t": "CH.his.historia-do-brasil-colonia"
@@ -736,10 +724,10 @@
 "t": "CH.soc.cultura"
 },
 "2016-CH-12": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2016-CH-13": {
-"t": "CH.his.historia-da-america-seculo-xx-e-contemporanea"
+"t": "CH.his.historia-da-america"
 },
 "2016-CH-14": {
 "t": "CH.his.historia-do-brasil-era-vargas"
@@ -759,11 +747,11 @@
 "2016-CH-18": {
 "t": "CH.geo.meio-ambiente-e-sustentabilidade",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2016-CH-19": {
-"t": "CH.geo.migracoes",
+"t": "CH.geo.populacao-e-migracoes",
 "tags": [
 "CH.geo.globalizacao"
 ]
@@ -771,20 +759,20 @@
 "2016-CH-20": {
 "t": "CH.fil.filosofia-moderna",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2016-CH-21": {
 "t": "CH.his.historia-geral-antiguidade"
 },
 "2016-CH-22": {
-"t": "CH.his.historia-geral-mundo-contemporaneo"
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual"
 },
 "2016-CH-23": {
 "t": "CH.fil.filosofia-antiga"
 },
 "2016-CH-24": {
-"t": "CH.soc.democracia",
+"t": "CH.soc.estado-poder-e-democracia",
 "tags": [
 "CH.fil.filosofia-politica"
 ]
@@ -792,7 +780,7 @@
 "2016-CH-25": {
 "t": "CH.fil.etica-e-moral",
 "tags": [
-"CH.fil.filosofia-da-ciencia-e-da-tecnica"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2016-CH-26": {
@@ -804,26 +792,26 @@
 "2016-CH-28": {
 "t": "CH.fil.filosofia-antiga",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2016-CH-29": {
 "t": "CH.geo.urbanizacao"
 },
 "2016-CH-30": {
-"t": "CH.geo.biomas",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.geo.geografia-agraria"
 ]
 },
 "2016-CH-31": {
-"t": "CH.geo.migracoes"
+"t": "CH.geo.populacao-e-migracoes"
 },
 "2016-CH-32": {
 "t": "CH.soc.teorias-sociologicas-classicas"
 },
 "2016-CH-33": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
 "CH.soc.relacoes-etnico-raciais"
 ]
@@ -838,13 +826,13 @@
 "t": "CH.his.historia-do-brasil-primeira-republica"
 },
 "2016-CH-36": {
-"t": "CH.geo.hidrografia"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2016-CH-37": {
 "t": "CH.fil.filosofia-contemporanea"
 },
 "2016-CH-38": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2016-CH-39": {
 "t": "CH.geo.meio-ambiente-e-sustentabilidade"
@@ -873,76 +861,73 @@
 ]
 },
 "2016-CH-45": {
-"t": "CH.geo.populacao"
+"t": "CH.geo.populacao-e-migracoes"
 },
 "2016-CN-46": {
-"t": "CN.qui.interacoes-intermoleculares"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2016-CN-47": {
-"t": "CN.fis.tecnologia-e-energia",
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia",
 "tags": [
-"CN.fis.trabalho-e-energia"
+"CN.fis.energia-e-quantidade-de-movimento"
 ]
 },
 "2016-CN-48": {
-"t": "CN.qui.quimica-ambiental",
+"t": "CN.qui.quimica-ambiental-e-cotidiana",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2016-CN-49": {
-"t": "CN.fis.fenomenos-ondulatorios"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2016-CN-50": {
-"t": "CN.qui.termoquimica"
+"t": "CN.qui.termoquimica-e-cinetica-quimica"
 },
 "2016-CN-51": {
-"t": "CN.qui.reacoes-quimicas",
-"tags": [
-"CN.qui.funcoes-inorganicas"
-]
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2016-CN-52": {
-"t": "CN.qui.isomeria"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2016-CN-53": {
-"t": "CN.qui.biomoleculas",
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas",
 "tags": [
-"CN.bio.bioquimica"
+"CN.bio.citologia-e-bioquimica-celular"
 ]
 },
 "2016-CN-54": {
-"t": "CN.fis.calorimetria",
+"t": "CN.fis.termologia-e-calorimetria",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2016-CN-55": {
 "t": "CN.fis.acustica"
 },
 "2016-CN-56": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2016-CN-57": {
-"t": "CN.fis.fenomenos-ondulatorios",
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios",
 "tags": [
 "CN.fis.acustica"
 ]
 },
 "2016-CN-58": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2016-CN-59": {
 "t": "CN.fis.circuitos-eletricos"
 },
 "2016-CN-60": {
-"t": "CN.qui.interacoes-intermoleculares"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2016-CN-61": {
-"t": "CN.bio.dinamica-ecologica"
+"t": "CN.bio.ecologia-e-relacoes-ecologicas"
 },
 "2016-CN-62": {
-"t": "CN.bio.ecologia",
+"t": "CN.bio.ecologia-e-relacoes-ecologicas",
 "tags": [
 "CN.bio.ciclos-biogeoquimicos"
 ]
@@ -960,37 +945,37 @@
 ]
 },
 "2016-CN-66": {
-"t": "CN.fis.movimento-circular"
+"t": "CN.fis.cinematica"
 },
 "2016-CN-67": {
-"t": "CN.qui.materia-e-propriedades"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2016-CN-68": {
-"t": "CN.qui.estequiometria",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.qui.solucoes"
+"CN.qui.solucoes-e-propriedades-coligativas"
 ]
 },
 "2016-CN-69": {
 "t": "CN.bio.botanica",
 "tags": [
-"CN.bio.bioquimica"
+"CN.bio.citologia-e-bioquimica-celular"
 ]
 },
 "2016-CN-70": {
 "t": "CN.qui.radioatividade"
 },
 "2016-CN-71": {
-"t": "CN.bio.ecologia",
+"t": "CN.bio.ecologia-e-relacoes-ecologicas",
 "rev": "adaptações de plantas ao bioma (manguezal); também cabe em Botânica"
 },
 "2016-CN-72": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2016-CN-73": {
-"t": "CN.bio.conservacao-ambiental",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
-"CN.bio.dinamica-ecologica"
+"CN.bio.ecologia-e-relacoes-ecologicas"
 ]
 },
 "2016-CN-74": {
@@ -1000,106 +985,100 @@
 "t": "CN.bio.botanica"
 },
 "2016-CN-76": {
-"t": "CN.qui.reacoes-organicas",
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2016-CN-77": {
-"t": "CN.fis.quantidade-de-movimento"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2016-CN-78": {
-"t": "CN.qui.acidos-e-bases",
+"t": "CN.qui.funcoes-e-reacoes-inorganicas",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2016-CN-79": {
 "t": "CN.bio.imunologia",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2016-CN-80": {
-"t": "CN.bio.impactos-ambientais",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2016-CN-81": {
-"t": "CN.qui.interacoes-intermoleculares",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2016-CN-82": {
-"t": "CN.fis.forcas-e-equilibrio"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2016-CN-83": {
-"t": "CN.bio.divisao-celular",
+"t": "CN.bio.citologia-e-bioquimica-celular",
 "tags": [
 "CN.bio.genetica"
 ]
 },
 "2016-CN-84": {
-"t": "CN.fis.transmissao-de-calor"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2016-CN-85": {
-"t": "CN.qui.interacoes-intermoleculares"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2016-CN-86": {
-"t": "CN.fis.ondulatoria"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2016-CN-87": {
-"t": "CN.bio.fisiologia-humana",
-"tags": [
-"CN.bio.homeostase"
-]
+"t": "CN.bio.fisiologia-humana"
 },
 "2016-CN-88": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2016-CN-89": {
-"t": "CN.qui.geometria-e-polaridade-molecular",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
-"CN.fis.ondulatoria"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2016-CN-90": {
-"t": "CN.bio.origem-da-vida",
-"tags": [
-"CN.bio.evolucao"
-]
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao"
 },
 "2016-LC-91-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2016-LC-92-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2016-LC-93-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2016-LC-94-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2016-LC-95-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2016-LC-91-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2016-LC-92-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2016-LC-93-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2016-LC-94-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2016-LC-95-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2016-LC-96": {
 "t": "LC.lp.funcoes-da-linguagem"
@@ -1117,13 +1096,13 @@
 ]
 },
 "2016-LC-100": {
-"t": "LC.lit.literatura-colonial-quinhentismo-barroco-e-arcadismo"
+"t": "LC.lit.do-quinhentismo-ao-romantismo"
 },
 "2016-LC-101": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2016-LC-102": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2016-LC-103": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -1138,7 +1117,7 @@
 "t": "LC.tic.etica-cidadania-e-inclusao-digital"
 },
 "2016-LC-107": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2016-LC-108": {
 "t": "LC.lp.generos-e-tipos-textuais"
@@ -1156,7 +1135,7 @@
 "t": "LC.lit.texto-literario-e-generos-literarios"
 },
 "2016-LC-113": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2016-LC-114": {
 "t": "LC.art.arte-contemporanea"
@@ -1165,7 +1144,7 @@
 "t": "LC.lp.variacao-linguistica"
 },
 "2016-LC-116": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2016-LC-117": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -1177,7 +1156,7 @@
 "t": "LC.lit.modernismo"
 },
 "2016-LC-120": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2016-LC-121": {
 "t": "LC.lit.modernismo"
@@ -1218,7 +1197,7 @@
 "2016-LC-131": {
 "t": "LC.tic.midia-informacao-e-desinformacao",
 "tags": [
-"LC.lit.realismo-naturalismo-e-parnasianismo"
+"LC.lit.do-realismo-ao-pre-modernismo"
 ]
 },
 "2016-LC-132": {
@@ -1237,7 +1216,7 @@
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
 },
 "2016-LC-135": {
-"t": "LC.lp.gramatica-e-analise-linguistica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2016-MT-136": {
 "t": "MT.mat.geometria-espacial"
@@ -1419,34 +1398,34 @@
 "t": "MT.mat.funcoes"
 },
 "2017-LC-01-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2017-LC-02-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2017-LC-03-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2017-LC-04-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2017-LC-05-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2017-LC-01-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2017-LC-02-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2017-LC-03-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2017-LC-04-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2017-LC-05-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2017-LC-06": {
 "t": "LC.tic.redes-sociais-e-comunicacao-em-rede",
@@ -1455,7 +1434,7 @@
 ]
 },
 "2017-LC-07": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2017-LC-08": {
 "t": "LC.tic.linguagem-digital-e-hipertexto"
@@ -1485,13 +1464,13 @@
 "t": "LC.lp.variacao-linguistica"
 },
 "2017-LC-16": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2017-LC-17": {
 "t": "LC.tic.linguagem-digital-e-hipertexto"
 },
 "2017-LC-18": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2017-LC-19": {
 "t": "LC.ef.esporte"
@@ -1511,7 +1490,7 @@
 "2017-LC-24": {
 "t": "LC.art.teatro-e-danca",
 "tags": [
-"CH.his.historia-do-brasil-ditadura-militar"
+"CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 ]
 },
 "2017-LC-25": {
@@ -1521,7 +1500,7 @@
 "t": "LC.ef.corpo-saude-e-estetica"
 },
 "2017-LC-27": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2017-LC-28": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -1530,7 +1509,7 @@
 "t": "LC.lp.funcoes-da-linguagem"
 },
 "2017-LC-30": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2017-LC-31": {
 "t": "LC.ef.esporte"
@@ -1542,7 +1521,7 @@
 ]
 },
 "2017-LC-33": {
-"t": "LC.lp.gramatica-e-analise-linguistica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2017-LC-34": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -1563,7 +1542,7 @@
 "t": "LC.lp.variacao-linguistica"
 },
 "2017-LC-40": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2017-LC-41": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -1576,9 +1555,9 @@
 "t": "LC.art.artes-visuais"
 },
 "2017-LC-44": {
-"t": "LC.lp.gramatica-e-analise-linguistica",
+"t": "LC.lp.gramatica-sintaxe-e-semantica",
 "tags": [
-"LC.lit.literatura-contemporanea"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2017-LC-45": {
@@ -1597,7 +1576,7 @@
 ]
 },
 "2017-CH-49": {
-"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2017-CH-50": {
 "t": "CH.soc.relacoes-etnico-raciais",
@@ -1615,40 +1594,40 @@
 "t": "CH.geo.globalizacao"
 },
 "2017-CH-54": {
-"t": "CH.geo.hidrografia"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2017-CH-55": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.geografia-agraria"
 ]
 },
 "2017-CH-56": {
-"t": "CH.geo.geografia-do-brasil",
+"t": "CH.geo.industria-energia-e-transportes",
 "rev": "logística de exportação; poderia ser Agrária"
 },
 "2017-CH-57": {
-"t": "CH.geo.industrializacao"
+"t": "CH.geo.industria-energia-e-transportes"
 },
 "2017-CH-58": {
-"t": "CH.soc.democracia",
+"t": "CH.soc.estado-poder-e-democracia",
 "tags": [
 "CH.soc.relacoes-etnico-raciais"
 ]
 },
 "2017-CH-59": {
-"t": "CH.geo.climatologia"
+"t": "CH.geo.clima-e-biomas"
 },
 "2017-CH-60": {
-"t": "CH.soc.desigualdade",
+"t": "CH.soc.classes-sociais-e-desigualdade",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2017-CH-61": {
-"t": "CH.geo.geopolitica",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
-"CH.his.historia-geral-mundo-contemporaneo"
+"CH.his.historia-geral-guerra-fria-e-mundo-atual"
 ]
 },
 "2017-CH-62": {
@@ -1671,40 +1650,37 @@
 "t": "CH.fil.filosofia-antiga"
 },
 "2017-CH-67": {
-"t": "CH.soc.estado"
+"t": "CH.soc.estado-poder-e-democracia"
 },
 "2017-CH-68": {
-"t": "CH.geo.biomas"
+"t": "CH.geo.clima-e-biomas"
 },
 "2017-CH-69": {
-"t": "CH.geo.industrializacao",
-"tags": [
-"CH.geo.energia"
-]
+"t": "CH.geo.industria-energia-e-transportes"
 },
 "2017-CH-70": {
 "t": "CH.his.historia-geral-idade-media"
 },
 "2017-CH-71": {
-"t": "CH.geo.energia"
+"t": "CH.geo.industria-energia-e-transportes"
 },
 "2017-CH-72": {
 "t": "CH.geo.meio-ambiente-e-sustentabilidade"
 },
 "2017-CH-73": {
-"t": "CH.geo.migracoes",
+"t": "CH.geo.populacao-e-migracoes",
 "tags": [
-"CH.geo.industrializacao"
+"CH.geo.industria-energia-e-transportes"
 ]
 },
 "2017-CH-74": {
 "t": "CH.soc.genero",
 "tags": [
-"CH.soc.democracia"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2017-CH-75": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2017-CH-76": {
 "t": "CH.his.historia-do-brasil-imperio",
@@ -1713,7 +1689,7 @@
 ]
 },
 "2017-CH-77": {
-"t": "CH.geo.climatologia"
+"t": "CH.geo.clima-e-biomas"
 },
 "2017-CH-78": {
 "t": "CH.his.historia-do-brasil-era-vargas"
@@ -1737,12 +1713,12 @@
 ]
 },
 "2017-CH-83": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2017-CH-84": {
 "t": "CH.fil.filosofia-politica",
 "tags": [
-"CH.soc.democracia"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2017-CH-85": {
@@ -1752,10 +1728,10 @@
 ]
 },
 "2017-CH-86": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2017-CH-87": {
-"t": "CH.geo.climatologia"
+"t": "CH.geo.clima-e-biomas"
 },
 "2017-CH-88": {
 "t": "CH.fil.filosofia-antiga",
@@ -1773,14 +1749,14 @@
 "2017-CN-91": {
 "t": "CN.bio.ecotoxicologia",
 "tags": [
-"CN.qui.estequiometria"
+"CN.qui.estequiometria-e-gases"
 ]
 },
 "2017-CN-92": {
-"t": "CN.bio.microbiologia"
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2017-CN-93": {
-"t": "CN.fis.eletrodinamica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2017-CN-94": {
 "t": "CN.bio.metabolismo-energetico",
@@ -1795,49 +1771,49 @@
 "t": "CN.bio.ciclos-biogeoquimicos"
 },
 "2017-CN-97": {
-"t": "CN.qui.estrutura-atomica"
+"t": "CN.qui.estrutura-atomica-e-tabela-periodica"
 },
 "2017-CN-98": {
-"t": "CN.bio.classificacao-biologica"
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao"
 },
 "2017-CN-99": {
-"t": "CN.fis.dinamica"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2017-CN-100": {
 "t": "CN.bio.fisiologia-humana"
 },
 "2017-CN-101": {
-"t": "CN.fis.ondulatoria"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2017-CN-102": {
-"t": "CN.qui.interacoes-intermoleculares"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2017-CN-103": {
-"t": "CN.fis.optica",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
-"CN.fis.grandezas-e-medidas"
+"CN.fis.cinematica"
 ]
 },
 "2017-CN-104": {
 "t": "CN.qui.radioatividade"
 },
 "2017-CN-105": {
-"t": "CN.fis.tecnologia-e-energia"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2017-CN-106": {
-"t": "CN.qui.materia-e-propriedades",
+"t": "CN.qui.materia-e-separacao-de-misturas",
 "tags": [
 "CN.bio.botanica"
 ]
 },
 "2017-CN-107": {
-"t": "CN.fis.ondulatoria"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2017-CN-108": {
-"t": "CN.fis.trabalho-e-energia"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2017-CN-109": {
-"t": "CN.bio.impactos-ambientais",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
 "CN.bio.zoologia"
 ]
@@ -1849,94 +1825,94 @@
 "t": "CN.bio.ecotoxicologia"
 },
 "2017-CN-112": {
-"t": "CN.fis.fenomenos-ondulatorios"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2017-CN-113": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2017-CN-114": {
-"t": "CN.qui.funcoes-organicas"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2017-CN-115": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2017-CN-116": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2017-CN-117": {
 "t": "CN.bio.genetica"
 },
 "2017-CN-118": {
-"t": "CN.bio.impactos-ambientais",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "rev": "impermeabilização do solo; tema mais de Geografia, mas a questão é de CN"
 },
 "2017-CN-119": {
-"t": "CN.qui.acidos-e-bases",
+"t": "CN.qui.funcoes-e-reacoes-inorganicas",
 "tags": [
-"CN.qui.separacao-de-misturas"
+"CN.qui.materia-e-separacao-de-misturas"
 ]
 },
 "2017-CN-120": {
-"t": "CN.qui.propriedades-coligativas"
+"t": "CN.qui.solucoes-e-propriedades-coligativas"
 },
 "2017-CN-121": {
 "t": "CN.qui.eletroquimica"
 },
 "2017-CN-122": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2017-CN-123": {
 "t": "CN.bio.botanica"
 },
 "2017-CN-124": {
-"t": "CN.qui.termoquimica"
+"t": "CN.qui.termoquimica-e-cinetica-quimica"
 },
 "2017-CN-125": {
 "t": "CN.bio.biotecnologia",
 "tags": [
-"CN.bio.bioquimica"
+"CN.bio.citologia-e-bioquimica-celular"
 ]
 },
 "2017-CN-126": {
-"t": "CN.qui.tabela-periodica"
+"t": "CN.qui.estrutura-atomica-e-tabela-periodica"
 },
 "2017-CN-127": {
-"t": "CN.fis.calorimetria",
+"t": "CN.fis.termologia-e-calorimetria",
 "tags": [
-"CN.fis.eletrodinamica"
+"CN.fis.eletrostatica-e-eletrodinamica"
 ]
 },
 "2017-CN-128": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.fis.optica"
+"CN.fis.optica-e-fisica-moderna"
 ]
 },
 "2017-CN-129": {
-"t": "CN.fis.eletrodinamica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2017-CN-130": {
-"t": "CN.qui.separacao-de-misturas",
+"t": "CN.qui.materia-e-separacao-de-misturas",
 "tags": [
-"CN.qui.interacoes-intermoleculares"
+"CN.qui.ligacoes-e-interacoes-intermoleculares"
 ]
 },
 "2017-CN-131": {
 "t": "CN.fis.cinematica"
 },
 "2017-CN-132": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2017-CN-133": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2017-CN-134": {
-"t": "CN.qui.reacoes-organicas"
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 },
 "2017-CN-135": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.bio.saude-publica"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2017-MT-136": {
@@ -2121,34 +2097,34 @@
 ]
 },
 "2018-LC-01-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2018-LC-02-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2018-LC-03-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2018-LC-04-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2018-LC-05-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2018-LC-01-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2018-LC-02-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2018-LC-03-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2018-LC-04-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2018-LC-05-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2018-LC-06": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -2169,7 +2145,7 @@
 ]
 },
 "2018-LC-10": {
-"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-11": {
 "t": "LC.art.arte-contemporanea"
@@ -2187,10 +2163,10 @@
 ]
 },
 "2018-LC-15": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-16": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-17": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -2202,7 +2178,7 @@
 "t": "LC.tic.midia-informacao-e-desinformacao"
 },
 "2018-LC-20": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-21": {
 "t": "LC.lp.variacao-linguistica"
@@ -2229,7 +2205,7 @@
 "t": "LC.ef.esporte"
 },
 "2018-LC-27": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2018-LC-28": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -2238,7 +2214,7 @@
 "t": "LC.art.artes-visuais"
 },
 "2018-LC-30": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-31": {
 "t": "LC.ef.esporte"
@@ -2259,12 +2235,12 @@
 ]
 },
 "2018-LC-35": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-36": {
-"t": "LC.lit.literatura-contemporanea",
+"t": "LC.lit.literatura-contemporanea-e-diversidade",
 "tags": [
-"LC.lp.sintaxe-e-semantica"
+"LC.lp.gramatica-sintaxe-e-semantica"
 ]
 },
 "2018-LC-37": {
@@ -2283,10 +2259,10 @@
 ]
 },
 "2018-LC-41": {
-"t": "LC.lp.gramatica-e-analise-linguistica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2018-LC-42": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2018-LC-43": {
 "t": "LC.ef.esporte",
@@ -2301,27 +2277,24 @@
 "t": "LC.art.arte-contemporanea"
 },
 "2018-CH-46": {
-"t": "CH.his.historia-geral-imperialismo-e-seculo-xix"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2018-CH-47": {
 "t": "CH.his.historia-geral-idade-media"
 },
 "2018-CH-48": {
-"t": "CH.soc.estado",
-"tags": [
-"CH.soc.poder"
-]
+"t": "CH.soc.estado-poder-e-democracia"
 },
 "2018-CH-49": {
 "t": "CH.fil.filosofia-contemporanea",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2018-CH-50": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2018-CH-51": {
@@ -2343,7 +2316,7 @@
 "t": "CH.his.historia-do-brasil-colonia"
 },
 "2018-CH-55": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao"
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual"
 },
 "2018-CH-56": {
 "t": "CH.geo.cartografia"
@@ -2355,25 +2328,25 @@
 ]
 },
 "2018-CH-58": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2018-CH-59": {
 "t": "CH.his.historia-do-brasil-colonia"
 },
 "2018-CH-60": {
-"t": "CH.geo.migracoes",
+"t": "CH.geo.populacao-e-migracoes",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2018-CH-61": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2018-CH-62": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2018-CH-63": {
-"t": "CH.geo.climatologia"
+"t": "CH.geo.clima-e-biomas"
 },
 "2018-CH-64": {
 "t": "CH.his.historia-do-brasil-colonia",
@@ -2384,26 +2357,26 @@
 "2018-CH-65": {
 "t": "CH.geo.globalizacao",
 "tags": [
-"CH.geo.industrializacao"
+"CH.geo.industria-energia-e-transportes"
 ]
 },
 "2018-CH-66": {
-"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix",
 "tags": [
 "CH.fil.filosofia-moderna"
 ]
 },
 "2018-CH-67": {
-"t": "CH.geo.hidrografia",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.urbanizacao"
 ]
 },
 "2018-CH-68": {
-"t": "CH.his.historia-da-america-colonizacao"
+"t": "CH.his.historia-da-america"
 },
 "2018-CH-69": {
-"t": "CH.his.historia-do-brasil-ditadura-militar"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2018-CH-70": {
 "t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
@@ -2415,7 +2388,7 @@
 "t": "CH.his.historia-do-brasil-primeira-republica"
 },
 "2018-CH-72": {
-"t": "CH.geo.biomas",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -2423,14 +2396,14 @@
 "2018-CH-73": {
 "t": "CH.geo.cartografia",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2018-CH-74": {
 "t": "CH.his.historia-do-brasil-era-vargas"
 },
 "2018-CH-75": {
-"t": "CH.geo.populacao"
+"t": "CH.geo.populacao-e-migracoes"
 },
 "2018-CH-76": {
 "t": "CH.his.historia-do-brasil-primeira-republica",
@@ -2439,9 +2412,9 @@
 ]
 },
 "2018-CH-77": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2018-CH-78": {
@@ -2457,21 +2430,21 @@
 ]
 },
 "2018-CH-80": {
-"t": "CH.soc.desigualdade",
+"t": "CH.soc.classes-sociais-e-desigualdade",
 "tags": [
 "CH.soc.cultura"
 ]
 },
 "2018-CH-81": {
-"t": "CH.geo.geopolitica",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
 "CH.geo.globalizacao"
 ]
 },
 "2018-CH-82": {
-"t": "CH.geo.climatologia",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
-"CH.geo.hidrografia"
+"CH.geo.relevo-solos-e-hidrografia"
 ]
 },
 "2018-CH-83": {
@@ -2496,71 +2469,68 @@
 ]
 },
 "2018-CH-89": {
-"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica"
+"t": "CH.fil.conhecimento-ciencia-e-estetica"
 },
 "2018-CH-90": {
 "t": "CH.fil.filosofia-politica",
 "tags": [
-"CH.soc.democracia"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2018-CN-91": {
-"t": "CN.qui.isomeria"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2018-CN-92": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2018-CN-93": {
 "t": "CN.qui.eletroquimica"
 },
 "2018-CN-94": {
-"t": "CN.bio.fisiologia-humana",
-"tags": [
-"CN.bio.homeostase"
-]
+"t": "CN.bio.fisiologia-humana"
 },
 "2018-CN-95": {
 "t": "CN.fis.hidrostatica",
 "tags": [
-"CN.qui.solucoes"
+"CN.qui.solucoes-e-propriedades-coligativas"
 ]
 },
 "2018-CN-96": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.qui.interacoes-intermoleculares"
+"CN.qui.ligacoes-e-interacoes-intermoleculares"
 ]
 },
 "2018-CN-97": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2018-CN-98": {
-"t": "CN.bio.conservacao-ambiental"
+"t": "CN.bio.impactos-ambientais-e-conservacao"
 },
 "2018-CN-99": {
-"t": "CN.qui.materia-e-propriedades",
+"t": "CN.qui.materia-e-separacao-de-misturas",
 "rev": "depende do quadro de símbolos de risco; conferir pela imagem"
 },
 "2018-CN-100": {
-"t": "CN.bio.divisao-celular"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2018-CN-101": {
 "t": "CN.bio.zoologia"
 },
 "2018-CN-102": {
-"t": "CN.qui.cinetica-quimica"
+"t": "CN.qui.termoquimica-e-cinetica-quimica"
 },
 "2018-CN-103": {
-"t": "CN.fis.ondulatoria"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2018-CN-104": {
-"t": "CN.fis.estatica"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2018-CN-105": {
-"t": "CN.qui.tabela-periodica"
+"t": "CN.qui.estrutura-atomica-e-tabela-periodica"
 },
 "2018-CN-106": {
-"t": "CN.bio.evolucao"
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao"
 },
 "2018-CN-107": {
 "t": "CN.bio.botanica",
@@ -2569,10 +2539,10 @@
 ]
 },
 "2018-CN-108": {
-"t": "CN.fis.eletrodinamica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2018-CN-109": {
-"t": "CN.qui.reacoes-organicas"
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 },
 "2018-CN-110": {
 "t": "CN.bio.genetica"
@@ -2580,7 +2550,7 @@
 "2018-CN-111": {
 "t": "CN.bio.botanica",
 "tags": [
-"CN.bio.evolucao"
+"CN.bio.evolucao-origem-da-vida-e-classificacao"
 ]
 },
 "2018-CN-112": {
@@ -2589,71 +2559,68 @@
 "2018-CN-113": {
 "t": "CN.bio.biotecnologia",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2018-CN-114": {
-"t": "CN.qui.termoquimica",
+"t": "CN.qui.termoquimica-e-cinetica-quimica",
 "tags": [
 "CN.bio.metabolismo-energetico"
 ]
 },
 "2018-CN-115": {
-"t": "CN.fis.eletrodinamica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2018-CN-116": {
 "t": "CN.qui.eletroquimica"
 },
 "2018-CN-117": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2018-CN-118": {
-"t": "CN.fis.termologia",
+"t": "CN.fis.termologia-e-calorimetria",
 "tags": [
-"CN.qui.ligacoes-quimicas"
+"CN.qui.ligacoes-e-interacoes-intermoleculares"
 ]
 },
 "2018-CN-119": {
-"t": "CN.bio.parasitologia"
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2018-CN-120": {
-"t": "CN.fis.fenomenos-ondulatorios"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2018-CN-121": {
-"t": "CN.qui.acidos-e-bases",
-"tags": [
-"CN.qui.funcoes-inorganicas"
-]
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2018-CN-122": {
-"t": "CN.fis.movimento-circular",
+"t": "CN.fis.cinematica",
 "tags": [
-"CN.fis.estatica"
+"CN.fis.dinamica-estatica-e-gravitacao"
 ]
 },
 "2018-CN-123": {
 "t": "CN.bio.metabolismo-energetico"
 },
 "2018-CN-124": {
-"t": "CN.qui.quimica-organica",
+"t": "CN.qui.quimica-organica-e-isomeria",
 "tags": [
-"CN.qui.quimica-industrial"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2018-CN-125": {
-"t": "CN.fis.optica"
+"t": "CN.fis.optica-e-fisica-moderna"
 },
 "2018-CN-126": {
-"t": "CN.qui.funcoes-organicas",
+"t": "CN.qui.quimica-organica-e-isomeria",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2018-CN-127": {
 "t": "CN.bio.genetica"
 },
 "2018-CN-128": {
-"t": "CN.fis.dinamica",
+"t": "CN.fis.dinamica-estatica-e-gravitacao",
 "tags": [
 "CN.fis.cinematica"
 ]
@@ -2661,22 +2628,22 @@
 "2018-CN-129": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.fis.optica"
+"CN.fis.optica-e-fisica-moderna"
 ]
 },
 "2018-CN-130": {
-"t": "CN.qui.geometria-e-polaridade-molecular"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2018-CN-131": {
-"t": "CN.fis.trabalho-e-energia"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2018-CN-132": {
-"t": "CN.qui.isomeria"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2018-CN-133": {
 "t": "CN.bio.zoologia",
 "tags": [
-"CN.bio.evolucao"
+"CN.bio.evolucao-origem-da-vida-e-classificacao"
 ]
 },
 "2018-CN-134": {
@@ -2685,7 +2652,7 @@
 "2018-CN-135": {
 "t": "CN.bio.ciclos-biogeoquimicos",
 "tags": [
-"CN.qui.quimica-industrial"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2018-MT-136": {
@@ -2861,34 +2828,34 @@
 ]
 },
 "2019-LC-01-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2019-LC-02-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2019-LC-03-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2019-LC-04-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2019-LC-05-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2019-LC-01-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2019-LC-02-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2019-LC-03-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2019-LC-04-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2019-LC-05-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2019-LC-06": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos"
@@ -2909,10 +2876,10 @@
 ]
 },
 "2019-LC-10": {
-"t": "LC.lp.sintaxe-e-semantica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2019-LC-11": {
-"t": "LC.ef.jogos-e-brincadeiras"
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas"
 },
 "2019-LC-12": {
 "t": "LC.lp.generos-e-tipos-textuais",
@@ -2927,7 +2894,7 @@
 ]
 },
 "2019-LC-14": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2019-LC-15": {
 "t": "LC.lp.funcoes-da-linguagem"
@@ -2948,7 +2915,7 @@
 "t": "LC.tic.midia-informacao-e-desinformacao"
 },
 "2019-LC-21": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2019-LC-22": {
 "t": "LC.lit.modernismo"
@@ -2969,7 +2936,7 @@
 "t": "LC.ef.corpo-saude-e-estetica"
 },
 "2019-LC-28": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2019-LC-29": {
 "t": "LC.tic.redes-sociais-e-comunicacao-em-rede"
@@ -2987,7 +2954,7 @@
 ]
 },
 "2019-LC-33": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2019-LC-34": {
 "t": "LC.lp.variacao-linguistica"
@@ -3005,7 +2972,7 @@
 "t": "LC.tic.linguagem-digital-e-hipertexto"
 },
 "2019-LC-39": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2019-LC-40": {
 "t": "LC.lit.modernismo",
@@ -3014,7 +2981,7 @@
 ]
 },
 "2019-LC-41": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2019-LC-42": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -3023,9 +2990,9 @@
 "t": "LC.lp.generos-e-tipos-textuais"
 },
 "2019-LC-44": {
-"t": "LC.lp.gramatica-e-analise-linguistica",
+"t": "LC.lp.gramatica-sintaxe-e-semantica",
 "tags": [
-"LC.lit.literatura-contemporanea"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2019-LC-45": {
@@ -3035,7 +3002,7 @@
 ]
 },
 "2019-CH-46": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -3049,7 +3016,7 @@
 "2019-CH-49": {
 "t": "CH.geo.geografia-agraria",
 "tags": [
-"CN.bio.conservacao-ambiental"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2019-CH-50": {
@@ -3065,10 +3032,10 @@
 "t": "CH.his.historia-do-brasil-colonia"
 },
 "2019-CH-53": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2019-CH-54": {
-"t": "CH.his.historia-geral-revolucao-industrial"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2019-CH-55": {
 "t": "CH.his.historia-do-brasil-imperio",
@@ -3077,13 +3044,13 @@
 ]
 },
 "2019-CH-56": {
-"t": "CH.geo.industrializacao",
+"t": "CH.geo.industria-energia-e-transportes",
 "tags": [
 "CH.geo.globalizacao"
 ]
 },
 "2019-CH-57": {
-"t": "CH.geo.climatologia"
+"t": "CH.geo.clima-e-biomas"
 },
 "2019-CH-58": {
 "t": "CH.fil.filosofia-medieval",
@@ -3092,7 +3059,7 @@
 ]
 },
 "2019-CH-59": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2019-CH-60": {
 "t": "CH.his.historia-geral-idade-media"
@@ -3106,17 +3073,17 @@
 "2019-CH-62": {
 "t": "CH.soc.relacoes-etnico-raciais",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2019-CH-63": {
 "t": "CH.his.historia-geral-idade-moderna",
 "tags": [
-"CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+"CH.his.historia-geral-revolucoes-e-seculo-xix"
 ]
 },
 "2019-CH-64": {
-"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica"
+"t": "CH.fil.conhecimento-ciencia-e-estetica"
 },
 "2019-CH-65": {
 "t": "CH.fil.filosofia-politica",
@@ -3125,15 +3092,15 @@
 ]
 },
 "2019-CH-66": {
-"t": "CH.soc.cidadania",
+"t": "CH.soc.cidadania-e-movimentos-sociais",
 "tags": [
-"CH.soc.estado"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2019-CH-67": {
 "t": "CH.fil.filosofia-moderna",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2019-CH-68": {
@@ -3145,7 +3112,7 @@
 "2019-CH-69": {
 "t": "CH.geo.geografia-agraria",
 "tags": [
-"CH.geo.regionalizacao"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2019-CH-70": {
@@ -3154,7 +3121,7 @@
 "2019-CH-71": {
 "t": "CH.soc.trabalho",
 "tags": [
-"CH.geo.industrializacao"
+"CH.geo.industria-energia-e-transportes"
 ]
 },
 "2019-CH-72": {
@@ -3170,7 +3137,7 @@
 "t": "CH.fil.filosofia-contemporanea"
 },
 "2019-CH-75": {
-"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica",
+"t": "CH.fil.conhecimento-ciencia-e-estetica",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -3203,24 +3170,24 @@
 "t": "CH.his.historia-do-brasil-colonia"
 },
 "2019-CH-82": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2019-CH-83": {
 "t": "CH.geo.globalizacao",
 "tags": [
-"CH.soc.desigualdade"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2019-CH-84": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2019-CH-85": {
 "t": "CH.soc.cultura",
 "tags": [
-"CH.his.historia-da-america-seculo-xx-e-contemporanea"
+"CH.his.historia-da-america"
 ]
 },
 "2019-CH-86": {
@@ -3229,144 +3196,141 @@
 "2019-CH-87": {
 "t": "CH.soc.trabalho",
 "tags": [
-"CH.soc.estado"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2019-CH-88": {
-"t": "CH.geo.populacao"
+"t": "CH.geo.populacao-e-migracoes"
 },
 "2019-CH-89": {
 "t": "CH.geo.cartografia",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2019-CH-90": {
-"t": "CH.geo.geopolitica",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
-"CH.soc.desigualdade"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2019-CN-91": {
 "t": "CN.qui.eletroquimica"
 },
 "2019-CN-92": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2019-CN-93": {
-"t": "CN.bio.parasitologia",
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica",
 "tags": [
 "CN.bio.imunologia"
 ]
 },
 "2019-CN-94": {
-"t": "CN.fis.transmissao-de-calor"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2019-CN-95": {
-"t": "CN.qui.termoquimica",
+"t": "CN.qui.termoquimica-e-cinetica-quimica",
 "tags": [
 "CN.bio.metabolismo-energetico"
 ]
 },
 "2019-CN-96": {
-"t": "CN.bio.dinamica-ecologica"
+"t": "CN.bio.ecologia-e-relacoes-ecologicas"
 },
 "2019-CN-97": {
-"t": "CN.bio.ecologia"
+"t": "CN.bio.ecologia-e-relacoes-ecologicas"
 },
 "2019-CN-98": {
-"t": "CN.fis.optica",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
 "CN.bio.fisiologia-humana"
 ]
 },
 "2019-CN-99": {
-"t": "CN.qui.quimica-ambiental",
+"t": "CN.qui.quimica-ambiental-e-cotidiana",
 "tags": [
 "CN.bio.ciclos-biogeoquimicos"
 ]
 },
 "2019-CN-100": {
-"t": "CN.bio.ecologia",
+"t": "CN.bio.ecologia-e-relacoes-ecologicas",
 "tags": [
-"CN.bio.impactos-ambientais"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2019-CN-101": {
 "t": "CN.bio.fisiologia-humana"
 },
 "2019-CN-102": {
-"t": "CN.fis.transmissao-de-calor",
+"t": "CN.fis.termodinamica-e-transmissao-de-calor",
 "rev": "questão em imagem/alternativa A não extraída"
 },
 "2019-CN-103": {
-"t": "CN.qui.reacoes-quimicas",
+"t": "CN.qui.funcoes-e-reacoes-inorganicas",
 "tags": [
 "CN.qui.eletroquimica"
 ]
 },
 "2019-CN-104": {
-"t": "CN.qui.quimica-ambiental",
+"t": "CN.qui.quimica-ambiental-e-cotidiana",
 "tags": [
-"CN.bio.impactos-ambientais"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2019-CN-105": {
-"t": "CN.qui.estrutura-atomica"
+"t": "CN.qui.estrutura-atomica-e-tabela-periodica"
 },
 "2019-CN-106": {
-"t": "CN.fis.forcas-e-equilibrio"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2019-CN-107": {
 "t": "CN.bio.zoologia"
 },
 "2019-CN-108": {
-"t": "CN.qui.ligacoes-quimicas"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2019-CN-109": {
-"t": "CN.fis.movimento-circular",
+"t": "CN.fis.cinematica",
 "tags": [
-"CN.fis.gravitacao"
+"CN.fis.dinamica-estatica-e-gravitacao"
 ]
 },
 "2019-CN-110": {
 "t": "CN.bio.genetica"
 },
 "2019-CN-111": {
-"t": "CN.fis.quantidade-de-movimento"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2019-CN-112": {
-"t": "CN.qui.interacoes-intermoleculares",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
-"CN.qui.quimica-organica"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2019-CN-113": {
-"t": "CN.fis.magnetismo",
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia",
 "tags": [
-"CN.fis.movimento-circular"
+"CN.fis.cinematica"
 ]
 },
 "2019-CN-114": {
-"t": "CN.bio.microbiologia",
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica",
 "tags": [
 "CN.bio.biotecnologia"
 ]
 },
 "2019-CN-115": {
-"t": "CN.qui.quimica-ambiental",
+"t": "CN.qui.quimica-ambiental-e-cotidiana",
 "tags": [
-"CN.bio.impactos-ambientais"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2019-CN-116": {
-"t": "CN.bio.citologia",
-"tags": [
-"CN.bio.bioquimica"
-]
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2019-CN-117": {
-"t": "CN.fis.calorimetria"
+"t": "CN.fis.termologia-e-calorimetria"
 },
 "2019-CN-118": {
 "t": "CN.qui.eletroquimica"
@@ -3374,37 +3338,31 @@
 "2019-CN-119": {
 "t": "CN.fis.hidrostatica",
 "tags": [
-"CN.fis.termodinamica"
+"CN.fis.termodinamica-e-transmissao-de-calor"
 ]
 },
 "2019-CN-120": {
-"t": "CN.qui.funcoes-organicas",
-"tags": [
-"CN.qui.quimica-organica"
-]
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2019-CN-121": {
-"t": "CN.fis.trabalho-e-energia"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2019-CN-122": {
 "t": "CN.qui.eletroquimica"
 },
 "2019-CN-123": {
-"t": "CN.bio.histologia",
+"t": "CN.bio.embriologia-e-histologia",
 "tags": [
 "CN.qui.radioatividade"
 ]
 },
 "2019-CN-124": {
-"t": "CN.qui.reacoes-organicas",
-"tags": [
-"CN.qui.polimeros"
-]
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 },
 "2019-CN-125": {
 "t": "CN.bio.botanica",
 "tags": [
-"CN.bio.evolucao"
+"CN.bio.evolucao-origem-da-vida-e-classificacao"
 ]
 },
 "2019-CN-126": {
@@ -3414,18 +3372,18 @@
 "t": "CN.bio.metabolismo-energetico"
 },
 "2019-CN-128": {
-"t": "CN.qui.estrutura-atomica"
+"t": "CN.qui.estrutura-atomica-e-tabela-periodica"
 },
 "2019-CN-129": {
-"t": "CN.qui.estequiometria",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.qui.solucoes"
+"CN.qui.solucoes-e-propriedades-coligativas"
 ]
 },
 "2019-CN-130": {
-"t": "CN.bio.citologia",
+"t": "CN.bio.citologia-e-bioquimica-celular",
 "tags": [
-"CN.qui.solucoes"
+"CN.qui.solucoes-e-propriedades-coligativas"
 ]
 },
 "2019-CN-131": {
@@ -3435,21 +3393,21 @@
 ]
 },
 "2019-CN-132": {
-"t": "CN.fis.optica",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
-"CN.fis.fenomenos-ondulatorios"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2019-CN-133": {
 "t": "CN.bio.fisiologia-humana"
 },
 "2019-CN-134": {
-"t": "CN.qui.interacoes-intermoleculares"
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares"
 },
 "2019-CN-135": {
-"t": "CN.fis.optica",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
-"CN.fis.ondulatoria"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2019-MT-136": {
@@ -3608,47 +3566,41 @@
 "t": "MT.mat.porcentagem-e-matematica-financeira"
 },
 "2019-MT-179": {
-"t": "MT.mat.matematica-aplicada",
-"tags": [
-"MT.mat.estatistica"
-]
+"t": "MT.mat.estatistica"
 },
 "2019-MT-180": {
 "t": "MT.mat.aritmetica-e-conjuntos-numericos"
 },
 "2021-LC-01-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2021-LC-02-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles",
-"tags": [
-"LC.en.compreensao-leitora-em-ingles"
-]
+"t": "LC.en.leitura-em-ingles"
 },
 "2021-LC-03-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2021-LC-04-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2021-LC-05-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2021-LC-01-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2021-LC-02-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2021-LC-03-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2021-LC-04-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol",
+"t": "LC.es.leitura-em-espanhol",
 "rev": "recurso literário (analogia) em espanhol"
 },
 "2021-LC-05-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2021-LC-06": {
 "t": "LC.lp.generos-e-tipos-textuais",
@@ -3701,7 +3653,7 @@
 "2021-LC-15": {
 "t": "LC.art.musica",
 "tags": [
-"LC.lit.realismo-naturalismo-e-parnasianismo"
+"LC.lit.do-realismo-ao-pre-modernismo"
 ]
 },
 "2021-LC-16": {
@@ -3714,13 +3666,13 @@
 ]
 },
 "2021-LC-18": {
-"t": "LC.lit.romantismo",
+"t": "LC.lit.do-quinhentismo-ao-romantismo",
 "tags": [
 "LC.art.artes-visuais"
 ]
 },
 "2021-LC-19": {
-"t": "LC.ef.jogos-e-brincadeiras"
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas"
 },
 "2021-LC-20": {
 "t": "LC.art.teatro-e-danca",
@@ -3738,7 +3690,7 @@
 "t": "LC.art.teatro-e-danca"
 },
 "2021-LC-24": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2021-LC-25": {
 "t": "LC.lit.texto-literario-e-generos-literarios"
@@ -3758,7 +3710,7 @@
 "2021-LC-30": {
 "t": "LC.lp.variacao-linguistica",
 "tags": [
-"LC.lit.simbolismo-e-pre-modernismo"
+"LC.lit.do-realismo-ao-pre-modernismo"
 ]
 },
 "2021-LC-31": {
@@ -3777,7 +3729,7 @@
 ]
 },
 "2021-LC-35": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2021-LC-36": {
 "t": "LC.art.arte-contemporanea"
@@ -3789,13 +3741,13 @@
 ]
 },
 "2021-LC-38": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2021-LC-39": {
 "t": "LC.lp.variacao-linguistica"
 },
 "2021-LC-40": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2021-LC-41": {
 "t": "LC.lit.texto-literario-e-generos-literarios"
@@ -3807,13 +3759,13 @@
 ]
 },
 "2021-LC-43": {
-"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas",
+"t": "LC.lit.literatura-contemporanea-e-diversidade",
 "tags": [
 "LC.lp.generos-e-tipos-textuais"
 ]
 },
 "2021-LC-44": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"t": "LC.lit.do-realismo-ao-pre-modernismo",
 "tags": [
 "LC.lp.interpretacao-e-compreensao-de-textos"
 ]
@@ -3828,9 +3780,9 @@
 "t": "CH.soc.trabalho"
 },
 "2021-CH-47": {
-"t": "CH.soc.desigualdade",
+"t": "CH.soc.classes-sociais-e-desigualdade",
 "tags": [
-"CH.soc.democracia"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2021-CH-48": {
@@ -3839,7 +3791,7 @@
 "2021-CH-49": {
 "t": "CH.soc.cultura",
 "tags": [
-"CH.his.historia-do-brasil-ditadura-militar"
+"CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 ]
 },
 "2021-CH-50": {
@@ -3849,7 +3801,7 @@
 ]
 },
 "2021-CH-51": {
-"t": "CH.geo.hidrografia",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -3864,12 +3816,12 @@
 "t": "CH.soc.trabalho"
 },
 "2021-CH-55": {
-"t": "CH.geo.migracoes"
+"t": "CH.geo.populacao-e-migracoes"
 },
 "2021-CH-56": {
 "t": "CH.soc.genero",
 "tags": [
-"CH.his.historia-geral-imperialismo-e-seculo-xix"
+"CH.his.historia-geral-revolucoes-e-seculo-xix"
 ]
 },
 "2021-CH-57": {
@@ -3882,22 +3834,22 @@
 "t": "CH.geo.urbanizacao"
 },
 "2021-CH-59": {
-"t": "CH.geo.climatologia",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.soc.cultura"
 ]
 },
 "2021-CH-60": {
-"t": "CH.soc.cidadania",
+"t": "CH.soc.cidadania-e-movimentos-sociais",
 "tags": [
-"CH.his.historia-do-brasil-ditadura-militar"
+"CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 ]
 },
 "2021-CH-61": {
 "t": "CH.geo.urbanizacao"
 },
 "2021-CH-62": {
-"t": "CH.geo.industrializacao",
+"t": "CH.geo.industria-energia-e-transportes",
 "tags": [
 "CH.geo.globalizacao"
 ]
@@ -3905,32 +3857,32 @@
 "2021-CH-63": {
 "t": "CH.geo.geografia-agraria",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2021-CH-64": {
 "t": "CH.fil.filosofia-contemporanea",
 "tags": [
-"CH.soc.poder"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2021-CH-65": {
-"t": "CH.soc.classes-sociais",
+"t": "CH.soc.classes-sociais-e-desigualdade",
 "tags": [
-"CH.his.historia-geral-revolucao-industrial"
+"CH.his.historia-geral-revolucoes-e-seculo-xix"
 ]
 },
 "2021-CH-66": {
-"t": "CH.soc.violencia",
+"t": "CH.soc.instituicoes-sociais-e-violencia",
 "tags": [
-"CH.soc.desigualdade"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2021-CH-67": {
 "t": "CH.his.historia-geral-idade-media"
 },
 "2021-CH-68": {
-"t": "CH.soc.movimentos-sociais",
+"t": "CH.soc.cidadania-e-movimentos-sociais",
 "tags": [
 "CH.soc.relacoes-etnico-raciais"
 ]
@@ -3945,16 +3897,16 @@
 ]
 },
 "2021-CH-71": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2021-CH-72": {
 "t": "CH.geo.urbanizacao",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2021-CH-73": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2021-CH-74": {
 "t": "CH.his.historia-do-brasil-colonia",
@@ -3969,28 +3921,28 @@
 "t": "CH.his.historia-geral-idade-media"
 },
 "2021-CH-77": {
-"t": "CH.his.historia-da-america-independencias",
+"t": "CH.his.historia-da-america",
 "tags": [
 "CH.his.historia-do-brasil-imperio"
 ]
 },
 "2021-CH-78": {
-"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2021-CH-79": {
-"t": "CH.geo.industrializacao",
+"t": "CH.geo.industria-energia-e-transportes",
 "rev": "início do texto ilegível no PDF"
 },
 "2021-CH-80": {
 "t": "CH.soc.teorias-sociologicas-classicas",
 "tags": [
-"CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 ]
 },
 "2021-CH-81": {
 "t": "CH.his.historia-do-brasil-era-vargas",
 "tags": [
-"CH.soc.instituicoes-sociais"
+"CH.soc.instituicoes-sociais-e-violencia"
 ]
 },
 "2021-CH-82": {
@@ -3999,7 +3951,7 @@
 "2021-CH-83": {
 "t": "CH.soc.cultura",
 "tags": [
-"CH.his.historia-geral-imperialismo-e-seculo-xix"
+"CH.his.historia-geral-revolucoes-e-seculo-xix"
 ]
 },
 "2021-CH-84": {
@@ -4014,7 +3966,7 @@
 "2021-CH-86": {
 "t": "CH.fil.filosofia-moderna",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2021-CH-87": {
@@ -4035,23 +3987,23 @@
 "2021-CH-90": {
 "t": "CH.his.historia-do-brasil-colonia",
 "tags": [
-"CH.soc.classes-sociais"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2021-CN-91": {
-"t": "CN.qui.acidos-e-bases"
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2021-CN-92": {
 "t": "CN.fis.acustica"
 },
 "2021-CN-93": {
-"t": "CN.bio.evolucao"
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao"
 },
 "2021-CN-94": {
 "t": "CN.fis.cinematica"
 },
 "2021-CN-95": {
-"t": "CN.qui.quimica-ambiental",
+"t": "CN.qui.quimica-ambiental-e-cotidiana",
 "tags": [
 "MT.mat.sequencias-e-matematica-discreta"
 ]
@@ -4060,22 +4012,22 @@
 "t": "CN.bio.genetica"
 },
 "2021-CN-97": {
-"t": "CN.qui.reacoes-organicas"
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 },
 "2021-CN-98": {
-"t": "CN.bio.embriologia",
+"t": "CN.bio.embriologia-e-histologia",
 "tags": [
 "CN.bio.zoologia"
 ]
 },
 "2021-CN-99": {
-"t": "CN.fis.transmissao-de-calor"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2021-CN-100": {
-"t": "CN.fis.dinamica"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2021-CN-101": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2021-CN-102": {
 "t": "CN.fis.circuitos-eletricos",
@@ -4084,34 +4036,34 @@
 ]
 },
 "2021-CN-103": {
-"t": "CN.qui.funcoes-organicas",
+"t": "CN.qui.quimica-organica-e-isomeria",
 "rev": "depende das figuras dos testes"
 },
 "2021-CN-104": {
 "t": "CN.bio.ecotoxicologia"
 },
 "2021-CN-105": {
-"t": "CN.fis.magnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2021-CN-106": {
-"t": "CN.qui.isomeria"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2021-CN-107": {
-"t": "CN.fis.trabalho-e-energia"
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2021-CN-108": {
-"t": "CN.fis.gravitacao"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2021-CN-109": {
-"t": "CN.fis.eletrodinamica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2021-CN-110": {
 "t": "CN.bio.metabolismo-energetico"
 },
 "2021-CN-111": {
-"t": "CN.bio.impactos-ambientais",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2021-CN-112": {
@@ -4123,52 +4075,49 @@
 "2021-CN-113": {
 "t": "CN.qui.eletroquimica",
 "tags": [
-"CN.qui.reacoes-quimicas"
+"CN.qui.funcoes-e-reacoes-inorganicas"
 ]
 },
 "2021-CN-114": {
 "t": "CN.bio.fisiologia-humana"
 },
 "2021-CN-115": {
-"t": "CN.fis.transmissao-de-calor"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2021-CN-116": {
-"t": "CN.qui.acidos-e-bases",
+"t": "CN.qui.funcoes-e-reacoes-inorganicas",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2021-CN-117": {
-"t": "CN.qui.quimica-ambiental",
-"tags": [
-"CN.qui.quimica-industrial"
-]
+"t": "CN.qui.quimica-ambiental-e-cotidiana"
 },
 "2021-CN-118": {
 "t": "CN.bio.zoologia",
 "tags": [
-"CN.bio.saude-publica"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2021-CN-119": {
 "t": "CN.bio.botanica"
 },
 "2021-CN-120": {
-"t": "CN.fis.optica",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
-"CN.qui.quimica-cotidiana"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2021-CN-121": {
-"t": "CN.bio.evolucao",
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2021-CN-122": {
-"t": "CN.qui.separacao-de-misturas",
+"t": "CN.qui.materia-e-separacao-de-misturas",
 "tags": [
-"CN.bio.saude-publica"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2021-CN-123": {
@@ -4177,40 +4126,40 @@
 "2021-CN-124": {
 "t": "CN.qui.eletroquimica",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2021-CN-125": {
-"t": "CN.fis.termologia",
+"t": "CN.fis.termologia-e-calorimetria",
 "tags": [
-"CN.bio.homeostase"
+"CN.bio.fisiologia-humana"
 ]
 },
 "2021-CN-126": {
 "t": "CN.fis.circuitos-eletricos"
 },
 "2021-CN-127": {
-"t": "CN.bio.dinamica-ecologica",
+"t": "CN.bio.ecologia-e-relacoes-ecologicas",
 "tags": [
 "CN.bio.botanica"
 ]
 },
 "2021-CN-128": {
-"t": "CN.fis.eletrodinamica",
+"t": "CN.fis.eletrostatica-e-eletrodinamica",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2021-CN-129": {
 "t": "CN.bio.botanica"
 },
 "2021-CN-130": {
-"t": "CN.qui.funcoes-organicas"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2021-CN-131": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"MT.mat.matematica-aplicada"
+"MT.mat.estatistica"
 ]
 },
 "2021-CN-132": {
@@ -4220,13 +4169,13 @@
 "t": "CN.qui.eletroquimica"
 },
 "2021-CN-134": {
-"t": "CN.qui.materia-e-propriedades",
+"t": "CN.qui.materia-e-separacao-de-misturas",
 "tags": [
-"CN.fis.termologia"
+"CN.fis.termologia-e-calorimetria"
 ]
 },
 "2021-CN-135": {
-"t": "CN.qui.polimeros",
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas",
 "rev": "alternativas são estruturas em imagem"
 },
 "2021-MT-136": {
@@ -4414,40 +4363,34 @@
 ]
 },
 "2022-LC-01-en": {
-"t": "LC.en.compreensao-leitora-em-ingles",
-"tags": [
-"LC.en.aspectos-culturais-e-interculturais-em-ingles"
-]
+"t": "LC.en.leitura-em-ingles"
 },
 "2022-LC-02-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2022-LC-03-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2022-LC-04-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2022-LC-05-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2022-LC-01-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2022-LC-02-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2022-LC-03-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol",
-"tags": [
-"LC.es.aspectos-culturais-e-interculturais-em-espanhol"
-]
+"t": "LC.es.leitura-em-espanhol"
 },
 "2022-LC-04-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2022-LC-05-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2022-LC-06": {
 "t": "LC.lp.variacao-linguistica",
@@ -4464,7 +4407,7 @@
 "2022-LC-08": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos",
 "tags": [
-"LC.ef.jogos-e-brincadeiras"
+"LC.ef.jogos-dancas-ginasticas-e-lutas"
 ]
 },
 "2022-LC-09": {
@@ -4512,14 +4455,14 @@
 "2022-LC-19": {
 "t": "LC.ef.esporte",
 "tags": [
-"CH.soc.violencia"
+"CH.soc.instituicoes-sociais-e-violencia"
 ]
 },
 "2022-LC-20": {
-"t": "LC.ef.ginastica-e-atividade-fisica"
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas"
 },
 "2022-LC-21": {
-"t": "LC.lit.romantismo"
+"t": "LC.lit.do-quinhentismo-ao-romantismo"
 },
 "2022-LC-22": {
 "t": "LC.tic.etica-cidadania-e-inclusao-digital"
@@ -4548,14 +4491,14 @@
 "2022-LC-28": {
 "t": "LC.lp.variacao-linguistica",
 "tags": [
-"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2022-LC-29": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2022-LC-30": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2022-LC-31": {
 "t": "LC.lit.modernismo"
@@ -4567,7 +4510,7 @@
 ]
 },
 "2022-LC-33": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"t": "LC.lit.do-realismo-ao-pre-modernismo",
 "tags": [
 "LC.lp.coesao-coerencia-e-organizacao-textual"
 ]
@@ -4578,7 +4521,7 @@
 "2022-LC-35": {
 "t": "LC.lp.generos-e-tipos-textuais",
 "tags": [
-"LC.lit.literatura-contemporanea"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2022-LC-36": {
@@ -4594,20 +4537,20 @@
 "t": "LC.art.arte-contemporanea"
 },
 "2022-LC-40": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"t": "LC.lit.do-realismo-ao-pre-modernismo",
 "rev": "conto regionalista (fim do séc. XIX)"
 },
 "2022-LC-41": {
-"t": "LC.lit.simbolismo-e-pre-modernismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2022-LC-42": {
-"t": "LC.lit.literatura-contemporanea",
+"t": "LC.lit.literatura-contemporanea-e-diversidade",
 "tags": [
-"CH.soc.desigualdade"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2022-LC-43": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2022-LC-44": {
 "t": "LC.art.arte-contemporanea"
@@ -4619,7 +4562,7 @@
 ]
 },
 "2022-CH-46": {
-"t": "CH.geo.climatologia",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.soc.cultura"
 ]
@@ -4634,7 +4577,7 @@
 "t": "CH.soc.relacoes-etnico-raciais"
 },
 "2022-CH-49": {
-"t": "CH.geo.hidrografia",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.urbanizacao"
 ]
@@ -4642,13 +4585,13 @@
 "2022-CH-50": {
 "t": "CH.his.historia-do-brasil-primeira-republica",
 "tags": [
-"CH.geo.regionalizacao"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2022-CH-51": {
 "t": "CH.geo.globalizacao",
 "tags": [
-"CH.geo.industrializacao"
+"CH.geo.industria-energia-e-transportes"
 ]
 },
 "2022-CH-52": {
@@ -4667,16 +4610,16 @@
 ]
 },
 "2022-CH-55": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.geografia-agraria"
 ]
 },
 "2022-CH-56": {
-"t": "CH.soc.desigualdade"
+"t": "CH.soc.classes-sociais-e-desigualdade"
 },
 "2022-CH-57": {
-"t": "CH.soc.poder",
+"t": "CH.soc.estado-poder-e-democracia",
 "tags": [
 "CH.fil.filosofia-contemporanea"
 ]
@@ -4691,14 +4634,14 @@
 "t": "CH.geo.geografia-agraria"
 },
 "2022-CH-60": {
-"t": "CH.soc.instituicoes-sociais",
+"t": "CH.soc.instituicoes-sociais-e-violencia",
 "rev": "tecnologia e relações sociais"
 },
 "2022-CH-61": {
 "t": "CH.soc.trabalho"
 },
 "2022-CH-62": {
-"t": "CH.geo.geopolitica",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
 "CH.geo.globalizacao"
 ]
@@ -4707,10 +4650,10 @@
 "t": "CH.his.historia-geral-idade-media"
 },
 "2022-CH-64": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2022-CH-65": {
-"t": "CH.soc.violencia",
+"t": "CH.soc.instituicoes-sociais-e-violencia",
 "tags": [
 "CH.soc.genero"
 ]
@@ -4722,18 +4665,15 @@
 ]
 },
 "2022-CH-67": {
-"t": "CH.soc.movimentos-sociais",
-"tags": [
-"CH.soc.cidadania"
-]
+"t": "CH.soc.cidadania-e-movimentos-sociais"
 },
 "2022-CH-68": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2022-CH-69": {
-"t": "CH.geo.geopolitica",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
-"CH.his.historia-geral-mundo-contemporaneo"
+"CH.his.historia-geral-guerra-fria-e-mundo-atual"
 ]
 },
 "2022-CH-70": {
@@ -4743,33 +4683,30 @@
 ]
 },
 "2022-CH-71": {
-"t": "CH.soc.estado",
-"tags": [
-"CH.soc.democracia"
-]
+"t": "CH.soc.estado-poder-e-democracia"
 },
 "2022-CH-72": {
 "t": "CH.geo.urbanizacao",
 "tags": [
-"CH.geo.populacao"
+"CH.geo.populacao-e-migracoes"
 ]
 },
 "2022-CH-73": {
-"t": "CH.his.historia-geral-imperialismo-e-seculo-xix",
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2022-CH-74": {
-"t": "CH.geo.energia",
+"t": "CH.geo.industria-energia-e-transportes",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2022-CH-75": {
 "t": "CH.soc.cultura",
 "tags": [
-"CH.geo.hidrografia"
+"CH.geo.relevo-solos-e-hidrografia"
 ]
 },
 "2022-CH-76": {
@@ -4792,16 +4729,16 @@
 "t": "CH.his.historia-do-brasil-era-vargas"
 },
 "2022-CH-82": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2022-CH-83": {
-"t": "CH.soc.cidadania",
+"t": "CH.soc.cidadania-e-movimentos-sociais",
 "tags": [
-"CH.geo.migracoes"
+"CH.geo.populacao-e-migracoes"
 ]
 },
 "2022-CH-84": {
-"t": "CH.fil.estetica",
+"t": "CH.fil.conhecimento-ciencia-e-estetica",
 "tags": [
 "CH.fil.filosofia-contemporanea"
 ]
@@ -4822,10 +4759,7 @@
 ]
 },
 "2022-CH-89": {
-"t": "CH.his.historia-da-america-povos-pre-colombianos",
-"tags": [
-"CH.his.historia-da-america-colonizacao"
-]
+"t": "CH.his.historia-da-america"
 },
 "2022-CH-90": {
 "t": "CH.soc.cultura",
@@ -4836,32 +4770,26 @@
 "2022-CN-91": {
 "t": "CN.qui.eletroquimica",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2022-CN-92": {
-"t": "CN.bio.saude-publica",
-"tags": [
-"CN.bio.parasitologia"
-]
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2022-CN-93": {
-"t": "CN.fis.tecnologia-e-energia"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2022-CN-94": {
-"t": "CN.qui.reacoes-quimicas",
-"tags": [
-"CN.qui.funcoes-inorganicas"
-]
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2022-CN-95": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2022-CN-96": {
 "t": "CN.fis.circuitos-eletricos"
 },
 "2022-CN-97": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2022-CN-98": {
 "t": "CN.bio.biotecnologia",
@@ -4870,100 +4798,94 @@
 ]
 },
 "2022-CN-99": {
-"t": "CN.bio.dinamica-ecologica",
+"t": "CN.bio.ecologia-e-relacoes-ecologicas",
 "tags": [
-"CN.bio.conservacao-ambiental"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2022-CN-100": {
 "t": "CN.fis.cinematica"
 },
 "2022-CN-101": {
-"t": "CN.qui.cinetica-quimica",
+"t": "CN.qui.termoquimica-e-cinetica-quimica",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2022-CN-102": {
 "t": "CN.bio.biotecnologia",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2022-CN-103": {
-"t": "CN.fis.forcas-e-equilibrio"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2022-CN-104": {
 "t": "CN.bio.fisiologia-humana"
 },
 "2022-CN-105": {
-"t": "CN.fis.quantidade-de-movimento",
-"tags": [
-"CN.fis.trabalho-e-energia"
-]
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2022-CN-106": {
-"t": "CN.qui.equilibrio-ionico",
+"t": "CN.qui.equilibrio-quimico-e-ionico",
 "tags": [
-"CN.qui.acidos-e-bases"
+"CN.qui.funcoes-e-reacoes-inorganicas"
 ]
 },
 "2022-CN-107": {
-"t": "CN.qui.cinetica-quimica",
+"t": "CN.qui.termoquimica-e-cinetica-quimica",
 "tags": [
-"CN.qui.biomoleculas"
+"CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 ]
 },
 "2022-CN-108": {
-"t": "CN.qui.estequiometria",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.qui.solucoes"
+"CN.qui.solucoes-e-propriedades-coligativas"
 ]
 },
 "2022-CN-109": {
 "t": "CN.qui.radioatividade"
 },
 "2022-CN-110": {
-"t": "CN.bio.evolucao",
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao",
 "tags": [
 "CN.bio.zoologia"
 ]
 },
 "2022-CN-111": {
-"t": "CN.fis.gravitacao",
+"t": "CN.fis.dinamica-estatica-e-gravitacao",
 "tags": [
 "CH.geo.cartografia"
 ]
 },
 "2022-CN-112": {
-"t": "CN.fis.movimento-circular",
+"t": "CN.fis.cinematica",
 "tags": [
-"CN.fis.dinamica"
+"CN.fis.dinamica-estatica-e-gravitacao"
 ]
 },
 "2022-CN-113": {
 "t": "CN.qui.eletroquimica"
 },
 "2022-CN-114": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2022-CN-115": {
-"t": "CN.fis.calorimetria",
+"t": "CN.fis.termologia-e-calorimetria",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2022-CN-116": {
-"t": "CN.fis.eletrodinamica",
+"t": "CN.fis.eletrostatica-e-eletrodinamica",
 "tags": [
-"CN.fis.calorimetria"
+"CN.fis.termologia-e-calorimetria"
 ]
 },
 "2022-CN-117": {
-"t": "CN.qui.reacoes-quimicas",
-"tags": [
-"CN.qui.funcoes-inorganicas"
-]
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2022-CN-118": {
 "t": "CN.bio.ecotoxicologia",
@@ -4975,13 +4897,10 @@
 "t": "CN.fis.circuitos-eletricos"
 },
 "2022-CN-120": {
-"t": "CN.bio.bioquimica"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2022-CN-121": {
-"t": "CN.bio.microbiologia",
-"tags": [
-"CN.bio.saude-publica"
-]
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2022-CN-122": {
 "t": "CN.bio.fisiologia-humana",
@@ -4990,46 +4909,43 @@
 ]
 },
 "2022-CN-123": {
-"t": "CN.fis.gravitacao"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2022-CN-124": {
 "t": "CN.qui.eletroquimica",
 "tags": [
-"CN.qui.reacoes-quimicas"
+"CN.qui.funcoes-e-reacoes-inorganicas"
 ]
 },
 "2022-CN-125": {
 "t": "CN.bio.genetica"
 },
 "2022-CN-126": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2022-CN-127": {
 "t": "CN.bio.metabolismo-energetico"
 },
 "2022-CN-128": {
-"t": "CN.fis.eletrodinamica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2022-CN-129": {
 "t": "CN.bio.ciclos-biogeoquimicos",
 "tags": [
-"CN.qui.equilibrio-ionico"
+"CN.qui.equilibrio-quimico-e-ionico"
 ]
 },
 "2022-CN-130": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.fis.optica"
+"CN.fis.optica-e-fisica-moderna"
 ]
 },
 "2022-CN-131": {
-"t": "CN.qui.funcoes-organicas"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2022-CN-132": {
-"t": "CN.bio.microbiologia",
-"tags": [
-"CN.bio.saude-publica"
-]
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2022-CN-133": {
 "t": "CN.bio.imunologia"
@@ -5037,11 +4953,11 @@
 "2022-CN-134": {
 "t": "CN.fis.acustica",
 "tags": [
-"CN.fis.ondulatoria"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2022-CN-135": {
-"t": "CN.fis.optica"
+"t": "CN.fis.optica-e-fisica-moderna"
 },
 "2022-MT-136": {
 "t": "MT.mat.funcoes"
@@ -5189,37 +5105,34 @@
 "t": "MT.mat.geometria-espacial"
 },
 "2023-LC-01-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2023-LC-02-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2023-LC-03-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2023-LC-04-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2023-LC-05-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2023-LC-01-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2023-LC-02-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2023-LC-03-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2023-LC-04-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2023-LC-05-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol",
-"tags": [
-"LC.es.aspectos-culturais-e-interculturais-em-espanhol"
-]
+"t": "LC.es.leitura-em-espanhol"
 },
 "2023-LC-06": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos",
@@ -5228,7 +5141,7 @@
 ]
 },
 "2023-LC-07": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2023-LC-08": {
 "t": "LC.lp.variacao-linguistica"
@@ -5261,7 +5174,7 @@
 "t": "LC.lp.variacao-linguistica"
 },
 "2023-LC-17": {
-"t": "LC.lp.gramatica-e-analise-linguistica"
+"t": "LC.lp.gramatica-sintaxe-e-semantica"
 },
 "2023-LC-18": {
 "t": "LC.art.musica",
@@ -5282,7 +5195,7 @@
 "t": "LC.lp.variacao-linguistica"
 },
 "2023-LC-22": {
-"t": "LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2023-LC-23": {
 "t": "LC.lp.interpretacao-e-compreensao-de-textos",
@@ -5294,10 +5207,10 @@
 "t": "LC.lp.generos-e-tipos-textuais"
 },
 "2023-LC-25": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2023-LC-26": {
-"t": "LC.lit.simbolismo-e-pre-modernismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2023-LC-27": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -5306,13 +5219,13 @@
 "t": "LC.lp.funcoes-da-linguagem"
 },
 "2023-LC-29": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2023-LC-30": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2023-LC-31": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2023-LC-32": {
 "t": "LC.art.musica"
@@ -5327,7 +5240,7 @@
 ]
 },
 "2023-LC-35": {
-"t": "LC.ef.jogos-e-brincadeiras",
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas",
 "tags": [
 "LC.tic.linguagem-digital-e-hipertexto"
 ]
@@ -5344,7 +5257,7 @@
 "2023-LC-38": {
 "t": "LC.art.musica",
 "tags": [
-"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2023-LC-39": {
@@ -5363,9 +5276,9 @@
 "t": "LC.ef.esporte"
 },
 "2023-LC-42": {
-"t": "LC.ef.ginastica-e-atividade-fisica",
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas",
 "tags": [
-"CH.soc.desigualdade"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2023-LC-43": {
@@ -5381,7 +5294,7 @@
 "t": "LC.lp.generos-e-tipos-textuais"
 },
 "2023-CH-46": {
-"t": "CH.geo.regionalizacao",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
 "CH.soc.cultura"
 ]
@@ -5393,9 +5306,9 @@
 "t": "CH.geo.geografia-agraria"
 },
 "2023-CH-49": {
-"t": "CH.geo.geopolitica",
+"t": "CH.geo.geopolitica-e-regionalizacao",
 "tags": [
-"CH.geo.populacao"
+"CH.geo.populacao-e-migracoes"
 ]
 },
 "2023-CH-50": {
@@ -5407,17 +5320,17 @@
 "2023-CH-51": {
 "t": "CH.his.historia-geral-guerras-mundiais-e-entreguerras",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2023-CH-52": {
 "t": "CH.fil.etica-e-moral",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2023-CH-53": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2023-CH-54": {
 "t": "CH.fil.filosofia-moderna",
@@ -5432,9 +5345,9 @@
 ]
 },
 "2023-CH-56": {
-"t": "CH.soc.democracia",
+"t": "CH.soc.estado-poder-e-democracia",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2023-CH-57": {
@@ -5453,7 +5366,7 @@
 ]
 },
 "2023-CH-60": {
-"t": "CH.soc.violencia",
+"t": "CH.soc.instituicoes-sociais-e-violencia",
 "tags": [
 "CH.soc.genero"
 ]
@@ -5462,9 +5375,9 @@
 "t": "CH.soc.trabalho"
 },
 "2023-CH-62": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2023-CH-63": {
@@ -5476,14 +5389,14 @@
 "2023-CH-64": {
 "t": "CH.geo.meio-ambiente-e-sustentabilidade",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2023-CH-65": {
 "t": "CH.soc.genero"
 },
 "2023-CH-66": {
-"t": "CH.soc.desigualdade"
+"t": "CH.soc.classes-sociais-e-desigualdade"
 },
 "2023-CH-67": {
 "t": "CH.geo.geografia-agraria",
@@ -5497,11 +5410,11 @@
 "2023-CH-69": {
 "t": "CH.soc.genero",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2023-CH-70": {
-"t": "CH.his.historia-do-brasil-ditadura-militar"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2023-CH-71": {
 "t": "CH.geo.geografia-agraria",
@@ -5510,7 +5423,7 @@
 ]
 },
 "2023-CH-72": {
-"t": "CH.soc.desigualdade",
+"t": "CH.soc.classes-sociais-e-desigualdade",
 "tags": [
 "CH.geo.globalizacao"
 ]
@@ -5522,7 +5435,7 @@
 ]
 },
 "2023-CH-74": {
-"t": "CH.his.historia-da-america-povos-pre-colombianos"
+"t": "CH.his.historia-da-america"
 },
 "2023-CH-75": {
 "t": "CH.soc.relacoes-etnico-raciais",
@@ -5531,13 +5444,13 @@
 ]
 },
 "2023-CH-76": {
-"t": "CH.geo.populacao",
+"t": "CH.geo.populacao-e-migracoes",
 "tags": [
 "CH.soc.genero"
 ]
 },
 "2023-CH-77": {
-"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix",
 "tags": [
 "CH.his.historia-do-brasil-imperio"
 ]
@@ -5552,7 +5465,7 @@
 "t": "CH.fil.filosofia-contemporanea"
 },
 "2023-CH-80": {
-"t": "CH.his.historia-do-brasil-ditadura-militar",
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais",
 "tags": [
 "CH.geo.geografia-agraria"
 ]
@@ -5560,17 +5473,17 @@
 "2023-CH-81": {
 "t": "CH.fil.filosofia-contemporanea",
 "tags": [
-"CH.soc.poder"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2023-CH-82": {
-"t": "CH.geo.migracoes",
+"t": "CH.geo.populacao-e-migracoes",
 "tags": [
 "CH.soc.cultura"
 ]
 },
 "2023-CH-83": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -5594,7 +5507,7 @@
 "2023-CH-87": {
 "t": "CH.his.historia-do-brasil-era-vargas",
 "tags": [
-"CH.geo.migracoes"
+"CH.geo.populacao-e-migracoes"
 ]
 },
 "2023-CH-88": {
@@ -5604,7 +5517,7 @@
 ]
 },
 "2023-CH-89": {
-"t": "CH.geo.climatologia",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -5613,37 +5526,37 @@
 "t": "CH.fil.filosofia-antiga"
 },
 "2023-CN-91": {
-"t": "CN.bio.conservacao-ambiental",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
-"CN.bio.ecologia"
+"CN.bio.ecologia-e-relacoes-ecologicas"
 ]
 },
 "2023-CN-92": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.qui.quimica-cotidiana"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2023-CN-93": {
-"t": "CN.fis.fisica-moderna",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2023-CN-94": {
-"t": "CN.qui.solucoes",
+"t": "CN.qui.solucoes-e-propriedades-coligativas",
 "tags": [
-"CN.qui.quimica-industrial"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2023-CN-95": {
-"t": "CN.bio.histologia",
+"t": "CN.bio.embriologia-e-histologia",
 "tags": [
 "CN.bio.zoologia"
 ]
 },
 "2023-CN-96": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2023-CN-97": {
 "t": "CN.bio.botanica"
@@ -5655,34 +5568,28 @@
 ]
 },
 "2023-CN-99": {
-"t": "CN.bio.parasitologia",
-"tags": [
-"CN.bio.saude-publica"
-]
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica"
 },
 "2023-CN-100": {
 "t": "CN.fis.cinematica"
 },
 "2023-CN-101": {
-"t": "CN.bio.fisiologia-humana",
-"tags": [
-"CN.bio.homeostase"
-]
+"t": "CN.bio.fisiologia-humana"
 },
 "2023-CN-102": {
-"t": "CN.qui.reacoes-organicas",
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2023-CN-103": {
 "t": "CN.bio.botanica",
 "tags": [
-"CN.bio.evolucao"
+"CN.bio.evolucao-origem-da-vida-e-classificacao"
 ]
 },
 "2023-CN-104": {
-"t": "CN.qui.cinetica-quimica",
+"t": "CN.qui.termoquimica-e-cinetica-quimica",
 "rev": "fatores que aumentam a liberação de alumínio do vidro"
 },
 "2023-CN-105": {
@@ -5695,37 +5602,37 @@
 ]
 },
 "2023-CN-107": {
-"t": "CN.bio.embriologia"
+"t": "CN.bio.embriologia-e-histologia"
 },
 "2023-CN-108": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2023-CN-109": {
-"t": "CN.fis.forcas-e-equilibrio"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2023-CN-110": {
-"t": "CN.qui.estequiometria"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2023-CN-111": {
 "t": "CN.fis.acustica",
 "tags": [
-"CN.fis.ondulatoria"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2023-CN-112": {
-"t": "CN.fis.fenomenos-ondulatorios",
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios",
 "tags": [
-"CN.fis.optica"
+"CN.fis.optica-e-fisica-moderna"
 ]
 },
 "2023-CN-113": {
-"t": "CN.fis.ondulatoria",
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2023-CN-114": {
-"t": "CN.fis.dinamica"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2023-CN-115": {
 "t": "CN.bio.ecotoxicologia",
@@ -5737,34 +5644,34 @@
 "t": "CN.bio.ciclos-biogeoquimicos"
 },
 "2023-CN-117": {
-"t": "CN.fis.fisica-moderna",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
 "CN.qui.radioatividade"
 ]
 },
 "2023-CN-118": {
-"t": "CN.qui.quimica-organica",
+"t": "CN.qui.quimica-organica-e-isomeria",
 "tags": [
-"CN.qui.quimica-industrial"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2023-CN-119": {
-"t": "CN.qui.gases"
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2023-CN-120": {
 "t": "CN.fis.circuitos-eletricos"
 },
 "2023-CN-121": {
-"t": "CN.qui.ligacoes-quimicas",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
-"CN.qui.tabela-periodica"
+"CN.qui.estrutura-atomica-e-tabela-periodica"
 ]
 },
 "2023-CN-122": {
-"t": "CN.fis.calorimetria"
+"t": "CN.fis.termologia-e-calorimetria"
 },
 "2023-CN-123": {
-"t": "CN.qui.isomeria"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2023-CN-124": {
 "t": "CN.fis.cinematica"
@@ -5772,53 +5679,50 @@
 "2023-CN-125": {
 "t": "CN.bio.genetica",
 "tags": [
-"CN.bio.divisao-celular"
+"CN.bio.citologia-e-bioquimica-celular"
 ]
 },
 "2023-CN-126": {
-"t": "CN.qui.funcoes-organicas",
+"t": "CN.qui.quimica-organica-e-isomeria",
 "tags": [
-"CN.qui.interacoes-intermoleculares"
+"CN.qui.ligacoes-e-interacoes-intermoleculares"
 ]
 },
 "2023-CN-127": {
 "t": "CN.bio.metabolismo-energetico"
 },
 "2023-CN-128": {
-"t": "CN.fis.ondulatoria"
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios"
 },
 "2023-CN-129": {
-"t": "CN.qui.interacoes-intermoleculares",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
 "CN.bio.ecotoxicologia"
 ]
 },
 "2023-CN-130": {
-"t": "CN.fis.transmissao-de-calor",
+"t": "CN.fis.termodinamica-e-transmissao-de-calor",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2023-CN-131": {
-"t": "CN.qui.solucoes",
-"tags": [
-"CN.qui.propriedades-coligativas"
-]
+"t": "CN.qui.solucoes-e-propriedades-coligativas"
 },
 "2023-CN-132": {
-"t": "CN.qui.gases",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.fis.termodinamica"
+"CN.fis.termodinamica-e-transmissao-de-calor"
 ]
 },
 "2023-CN-133": {
-"t": "CN.qui.quimica-organica",
+"t": "CN.qui.quimica-organica-e-isomeria",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2023-CN-134": {
-"t": "CN.bio.divisao-celular",
+"t": "CN.bio.citologia-e-bioquimica-celular",
 "tags": [
 "CN.bio.genetica"
 ]
@@ -5826,7 +5730,7 @@
 "2023-CN-135": {
 "t": "CN.fis.acustica",
 "tags": [
-"CN.fis.ondulatoria"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2023-MT-136": {
@@ -5995,39 +5899,36 @@
 "t": "MT.mat.estatistica"
 },
 "2024-LC-01-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2024-LC-02-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2024-LC-03-en": {
-"t": "LC.en.compreensao-leitora-em-ingles",
-"tags": [
-"LC.en.vocabulario-e-expressoes-em-ingles"
-]
+"t": "LC.en.leitura-em-ingles"
 },
 "2024-LC-04-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2024-LC-05-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2024-LC-01-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2024-LC-02-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2024-LC-03-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2024-LC-04-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2024-LC-05-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol",
+"t": "LC.es.leitura-em-espanhol",
 "tags": [
-"CH.his.historia-da-america-colonizacao"
+"CH.his.historia-da-america"
 ]
 },
 "2024-LC-06": {
@@ -6084,11 +5985,11 @@
 "2024-LC-18": {
 "t": "LC.ef.corpo-saude-e-estetica",
 "tags": [
-"LC.ef.ginastica-e-atividade-fisica"
+"LC.ef.jogos-dancas-ginasticas-e-lutas"
 ]
 },
 "2024-LC-19": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2024-LC-20": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -6102,7 +6003,7 @@
 "2024-LC-22": {
 "t": "LC.art.musica",
 "tags": [
-"LC.lit.literatura-contemporanea"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2024-LC-23": {
@@ -6121,7 +6022,7 @@
 "t": "LC.art.artes-visuais"
 },
 "2024-LC-26": {
-"t": "LC.ef.lutas",
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas",
 "tags": [
 "CH.soc.genero"
 ]
@@ -6133,13 +6034,13 @@
 ]
 },
 "2024-LC-28": {
-"t": "LC.lit.literatura-contemporanea",
+"t": "LC.lit.literatura-contemporanea-e-diversidade",
 "tags": [
-"LC.lit.realismo-naturalismo-e-parnasianismo"
+"LC.lit.do-realismo-ao-pre-modernismo"
 ]
 },
 "2024-LC-29": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2024-LC-30": {
 "t": "LC.art.artes-visuais",
@@ -6148,10 +6049,10 @@
 ]
 },
 "2024-LC-31": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2024-LC-32": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2024-LC-33": {
 "t": "LC.lp.generos-e-tipos-textuais"
@@ -6163,7 +6064,7 @@
 ]
 },
 "2024-LC-35": {
-"t": "LC.lit.romantismo"
+"t": "LC.lit.do-quinhentismo-ao-romantismo"
 },
 "2024-LC-36": {
 "t": "LC.art.artes-visuais"
@@ -6175,7 +6076,7 @@
 ]
 },
 "2024-LC-38": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2024-LC-39": {
 "t": "LC.lp.variacao-linguistica"
@@ -6202,7 +6103,7 @@
 "t": "LC.tic.midia-informacao-e-desinformacao"
 },
 "2024-CH-46": {
-"t": "CH.geo.geografia-fisica"
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2024-CH-47": {
 "t": "CH.his.historia-do-brasil-primeira-republica",
@@ -6217,7 +6118,7 @@
 "t": "CH.his.historia-do-brasil-primeira-republica"
 },
 "2024-CH-50": {
-"t": "CH.his.historia-da-america-colonizacao"
+"t": "CH.his.historia-da-america"
 },
 "2024-CH-51": {
 "t": "CH.his.historia-geral-idade-moderna",
@@ -6226,19 +6127,16 @@
 ]
 },
 "2024-CH-52": {
-"t": "CH.soc.movimentos-sociais",
+"t": "CH.soc.cidadania-e-movimentos-sociais",
 "tags": [
 "CH.soc.relacoes-etnico-raciais"
 ]
 },
 "2024-CH-53": {
-"t": "CH.geo.hidrografia",
-"tags": [
-"CH.geo.geografia-fisica"
-]
+"t": "CH.geo.relevo-solos-e-hidrografia"
 },
 "2024-CH-54": {
-"t": "CH.fil.teoria-do-conhecimento",
+"t": "CH.fil.conhecimento-ciencia-e-estetica",
 "tags": [
 "CH.fil.filosofia-contemporanea"
 ]
@@ -6256,7 +6154,7 @@
 ]
 },
 "2024-CH-57": {
-"t": "CH.soc.democracia",
+"t": "CH.soc.estado-poder-e-democracia",
 "tags": [
 "CH.geo.urbanizacao"
 ]
@@ -6273,17 +6171,14 @@
 "2024-CH-60": {
 "t": "CH.geo.meio-ambiente-e-sustentabilidade",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2024-CH-61": {
 "t": "CH.fil.filosofia-contemporanea"
 },
 "2024-CH-62": {
-"t": "CH.fil.teoria-do-conhecimento",
-"tags": [
-"CH.fil.filosofia-da-ciencia-e-da-tecnica"
-]
+"t": "CH.fil.conhecimento-ciencia-e-estetica"
 },
 "2024-CH-63": {
 "t": "CH.soc.industria-cultural-e-meios-de-comunicacao"
@@ -6300,7 +6195,7 @@
 "2024-CH-66": {
 "t": "CH.soc.genero",
 "tags": [
-"CH.his.historia-do-brasil-ditadura-militar"
+"CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 ]
 },
 "2024-CH-67": {
@@ -6310,13 +6205,10 @@
 ]
 },
 "2024-CH-68": {
-"t": "CH.geo.climatologia",
-"tags": [
-"CH.geo.biomas"
-]
+"t": "CH.geo.clima-e-biomas"
 },
 "2024-CH-69": {
-"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas",
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix",
 "tags": [
 "CH.soc.genero"
 ]
@@ -6330,13 +6222,13 @@
 "2024-CH-71": {
 "t": "CH.geo.meio-ambiente-e-sustentabilidade",
 "tags": [
-"CH.geo.geopolitica"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2024-CH-72": {
 "t": "CH.fil.etica-e-moral",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2024-CH-73": {
@@ -6347,7 +6239,7 @@
 "t": "CH.soc.cultura"
 },
 "2024-CH-75": {
-"t": "CH.his.historia-geral-iluminismo-e-revolucoes-burguesas"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2024-CH-76": {
 "t": "CH.fil.filosofia-contemporanea"
@@ -6362,7 +6254,7 @@
 ]
 },
 "2024-CH-79": {
-"t": "CH.geo.migracoes"
+"t": "CH.geo.populacao-e-migracoes"
 },
 "2024-CH-80": {
 "t": "CH.soc.industria-cultural-e-meios-de-comunicacao",
@@ -6373,14 +6265,11 @@
 "2024-CH-81": {
 "t": "CH.soc.relacoes-etnico-raciais",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2024-CH-82": {
-"t": "CH.fil.filosofia-da-ciencia-e-da-tecnica",
-"tags": [
-"CH.fil.logica-e-argumentacao"
-]
+"t": "CH.fil.conhecimento-ciencia-e-estetica"
 },
 "2024-CH-83": {
 "t": "CH.geo.cartografia"
@@ -6388,13 +6277,13 @@
 "2024-CH-84": {
 "t": "CH.his.historia-do-brasil-imperio",
 "tags": [
-"CH.geo.regionalizacao"
+"CH.geo.geopolitica-e-regionalizacao"
 ]
 },
 "2024-CH-85": {
-"t": "CH.his.historia-da-america-seculo-xx-e-contemporanea",
+"t": "CH.his.historia-da-america",
 "tags": [
-"CH.soc.movimentos-sociais"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2024-CH-86": {
@@ -6404,17 +6293,17 @@
 "2024-CH-87": {
 "t": "CH.fil.filosofia-politica",
 "tags": [
-"CH.soc.democracia"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2024-CH-88": {
 "t": "CH.geo.urbanizacao",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2024-CH-89": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2024-CH-90": {
 "t": "CH.soc.trabalho",
@@ -6423,21 +6312,18 @@
 ]
 },
 "2024-CN-91": {
-"t": "CN.fis.quantidade-de-movimento",
-"tags": [
-"CN.fis.trabalho-e-energia"
-]
+"t": "CN.fis.energia-e-quantidade-de-movimento"
 },
 "2024-CN-92": {
 "t": "CN.qui.eletroquimica"
 },
 "2024-CN-93": {
-"t": "CN.qui.quimica-organica"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2024-CN-94": {
-"t": "CN.qui.acidos-e-bases",
+"t": "CN.qui.funcoes-e-reacoes-inorganicas",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2024-CN-95": {
@@ -6447,75 +6333,75 @@
 ]
 },
 "2024-CN-96": {
-"t": "CN.fis.estatica"
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2024-CN-97": {
-"t": "CN.qui.solucoes",
+"t": "CN.qui.solucoes-e-propriedades-coligativas",
 "tags": [
-"CN.qui.estequiometria"
+"CN.qui.estequiometria-e-gases"
 ]
 },
 "2024-CN-98": {
-"t": "CN.bio.evolucao",
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao",
 "tags": [
-"CN.bio.embriologia"
+"CN.bio.embriologia-e-histologia"
 ]
 },
 "2024-CN-99": {
-"t": "CN.fis.fenomenos-ondulatorios",
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios",
 "tags": [
 "CN.fis.acustica"
 ]
 },
 "2024-CN-100": {
-"t": "CN.fis.optica"
+"t": "CN.fis.optica-e-fisica-moderna"
 },
 "2024-CN-101": {
 "t": "CN.fis.acustica"
 },
 "2024-CN-102": {
-"t": "CN.bio.bioquimica"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2024-CN-103": {
-"t": "CN.fis.transmissao-de-calor"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2024-CN-104": {
-"t": "CN.bio.saude-publica",
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica",
 "tags": [
-"CN.bio.impactos-ambientais"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2024-CN-105": {
 "t": "CN.bio.ecotoxicologia",
 "tags": [
-"CN.bio.histologia"
+"CN.bio.embriologia-e-histologia"
 ]
 },
 "2024-CN-106": {
-"t": "CN.fis.fisica-moderna",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
-"CN.fis.ondulatoria"
+"CN.fis.ondas-e-fenomenos-ondulatorios"
 ]
 },
 "2024-CN-107": {
 "t": "CN.bio.fisiologia-humana",
 "tags": [
-"CN.qui.reacoes-organicas"
+"CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 ]
 },
 "2024-CN-108": {
-"t": "CN.bio.dinamica-ecologica"
+"t": "CN.bio.ecologia-e-relacoes-ecologicas"
 },
 "2024-CN-109": {
-"t": "CN.bio.histologia",
+"t": "CN.bio.embriologia-e-histologia",
 "tags": [
 "CN.bio.metabolismo-energetico"
 ]
 },
 "2024-CN-110": {
-"t": "CN.bio.evolucao",
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao",
 "tags": [
-"CN.bio.ecologia"
+"CN.bio.ecologia-e-relacoes-ecologicas"
 ]
 },
 "2024-CN-111": {
@@ -6531,77 +6417,71 @@
 ]
 },
 "2024-CN-114": {
-"t": "CN.qui.quimica-ambiental",
+"t": "CN.qui.quimica-ambiental-e-cotidiana",
 "tags": [
-"CN.qui.reacoes-quimicas"
+"CN.qui.funcoes-e-reacoes-inorganicas"
 ]
 },
 "2024-CN-115": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2024-CN-116": {
-"t": "CN.qui.separacao-de-misturas"
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2024-CN-117": {
 "t": "CN.bio.zoologia"
 },
 "2024-CN-118": {
-"t": "CN.qui.equilibrio-quimico",
-"tags": [
-"CN.qui.equilibrio-ionico"
-]
+"t": "CN.qui.equilibrio-quimico-e-ionico"
 },
 "2024-CN-119": {
 "t": "CN.fis.cinematica"
 },
 "2024-CN-120": {
-"t": "CN.bio.microbiologia",
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica",
 "tags": [
 "CN.bio.imunologia"
 ]
 },
 "2024-CN-121": {
-"t": "CN.fis.dinamica",
+"t": "CN.fis.dinamica-estatica-e-gravitacao",
 "rev": "questão em imagem; vetores"
 },
 "2024-CN-122": {
-"t": "CN.fis.termologia",
-"tags": [
-"CN.fis.calorimetria"
-]
+"t": "CN.fis.termologia-e-calorimetria"
 },
 "2024-CN-123": {
-"t": "CN.qui.funcoes-organicas"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2024-CN-124": {
 "t": "CN.bio.metabolismo-energetico",
 "tags": [
-"CN.bio.microbiologia"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2024-CN-125": {
-"t": "CN.qui.estrutura-atomica"
+"t": "CN.qui.estrutura-atomica-e-tabela-periodica"
 },
 "2024-CN-126": {
 "t": "CN.bio.imunologia"
 },
 "2024-CN-127": {
-"t": "CN.fis.eletrostatica"
+"t": "CN.fis.eletrostatica-e-eletrodinamica"
 },
 "2024-CN-128": {
 "t": "CN.qui.eletroquimica",
 "tags": [
-"CN.fis.tecnologia-e-energia"
+"CN.fis.eletromagnetismo-e-geracao-de-energia"
 ]
 },
 "2024-CN-129": {
-"t": "CN.fis.calorimetria",
+"t": "CN.fis.termologia-e-calorimetria",
 "tags": [
-"CN.fis.eletrodinamica"
+"CN.fis.eletrostatica-e-eletrodinamica"
 ]
 },
 "2024-CN-130": {
-"t": "CN.fis.termodinamica"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2024-CN-131": {
 "t": "CN.fis.circuitos-eletricos"
@@ -6610,9 +6490,9 @@
 "t": "CN.fis.circuitos-eletricos"
 },
 "2024-CN-133": {
-"t": "CN.qui.estequiometria",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.qui.termoquimica"
+"CN.qui.termoquimica-e-cinetica-quimica"
 ]
 },
 "2024-CN-134": {
@@ -6622,9 +6502,9 @@
 ]
 },
 "2024-CN-135": {
-"t": "CN.qui.estequiometria",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.qui.quimica-industrial"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2024-MT-136": {
@@ -6772,7 +6652,7 @@
 "2024-MT-172": {
 "t": "MT.mat.funcoes",
 "tags": [
-"MT.mat.matematica-aplicada"
+"MT.mat.estatistica"
 ]
 },
 "2024-MT-173": {
@@ -6809,41 +6689,35 @@
 "t": "MT.mat.analise-combinatoria"
 },
 "2025-LC-01-en": {
-"t": "LC.en.aspectos-culturais-e-interculturais-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2025-LC-02-en": {
-"t": "LC.en.compreensao-leitora-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2025-LC-03-en": {
-"t": "LC.en.compreensao-leitora-em-ingles",
-"tags": [
-"LC.en.aspectos-culturais-e-interculturais-em-ingles"
-]
+"t": "LC.en.leitura-em-ingles"
 },
 "2025-LC-04-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles"
+"t": "LC.en.leitura-em-ingles"
 },
 "2025-LC-05-en": {
-"t": "LC.en.vocabulario-e-expressoes-em-ingles",
+"t": "LC.en.leitura-em-ingles",
 "rev": "texto em imagem"
 },
 "2025-LC-01-es": {
-"t": "LC.es.compreensao-leitora-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2025-LC-02-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol",
-"tags": [
-"LC.es.aspectos-culturais-e-interculturais-em-espanhol"
-]
+"t": "LC.es.leitura-em-espanhol"
 },
 "2025-LC-03-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2025-LC-04-es": {
-"t": "LC.es.aspectos-culturais-e-interculturais-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2025-LC-05-es": {
-"t": "LC.es.vocabulario-e-expressoes-em-espanhol"
+"t": "LC.es.leitura-em-espanhol"
 },
 "2025-LC-06": {
 "t": "LC.lp.generos-e-tipos-textuais",
@@ -6866,16 +6740,16 @@
 "2025-LC-10": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual",
 "tags": [
-"LC.lp.gramatica-e-analise-linguistica"
+"LC.lp.gramatica-sintaxe-e-semantica"
 ]
 },
 "2025-LC-11": {
-"t": "LC.lit.romantismo"
+"t": "LC.lit.do-quinhentismo-ao-romantismo"
 },
 "2025-LC-12": {
 "t": "LC.ef.esporte",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2025-LC-13": {
@@ -6894,7 +6768,7 @@
 ]
 },
 "2025-LC-16": {
-"t": "LC.lit.simbolismo-e-pre-modernismo"
+"t": "LC.lit.do-realismo-ao-pre-modernismo"
 },
 "2025-LC-17": {
 "t": "LC.lp.coesao-coerencia-e-organizacao-textual"
@@ -6918,7 +6792,7 @@
 ]
 },
 "2025-LC-21": {
-"t": "LC.lit.literatura-contemporanea"
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2025-LC-22": {
 "t": "LC.art.patrimonio-e-cultura-popular",
@@ -6942,22 +6816,19 @@
 "t": "LC.lp.variacao-linguistica"
 },
 "2025-LC-27": {
-"t": "LC.ef.lutas"
+"t": "LC.ef.jogos-dancas-ginasticas-e-lutas"
 },
 "2025-LC-28": {
 "t": "LC.lit.texto-literario-e-generos-literarios",
 "rev": "poeta do início do séc. XX; recurso sonoro"
 },
 "2025-LC-29": {
-"t": "LC.lit.literatura-contemporanea",
-"tags": [
-"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
-]
+"t": "LC.lit.literatura-contemporanea-e-diversidade"
 },
 "2025-LC-30": {
 "t": "LC.lp.variacao-linguistica",
 "tags": [
-"LC.lit.literaturas-africanas-afro-brasileiras-e-indigenas"
+"LC.lit.literatura-contemporanea-e-diversidade"
 ]
 },
 "2025-LC-31": {
@@ -6997,7 +6868,7 @@
 "t": "LC.tic.midia-informacao-e-desinformacao"
 },
 "2025-LC-40": {
-"t": "LC.lit.realismo-naturalismo-e-parnasianismo",
+"t": "LC.lit.do-realismo-ao-pre-modernismo",
 "rev": "romance de autora do início do séc. XX"
 },
 "2025-LC-41": {
@@ -7025,10 +6896,10 @@
 ]
 },
 "2025-CH-46": {
-"t": "CH.geo.geopolitica"
+"t": "CH.geo.geopolitica-e-regionalizacao"
 },
 "2025-CH-47": {
-"t": "CH.geo.climatologia",
+"t": "CH.geo.clima-e-biomas",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -7036,7 +6907,7 @@
 "2025-CH-48": {
 "t": "CH.fil.filosofia-moderna",
 "tags": [
-"CH.fil.teoria-do-conhecimento"
+"CH.fil.conhecimento-ciencia-e-estetica"
 ]
 },
 "2025-CH-49": {
@@ -7049,7 +6920,7 @@
 ]
 },
 "2025-CH-51": {
-"t": "CH.soc.instituicoes-sociais",
+"t": "CH.soc.instituicoes-sociais-e-violencia",
 "tags": [
 "CH.geo.urbanizacao"
 ]
@@ -7066,34 +6937,34 @@
 "2025-CH-54": {
 "t": "CH.geo.urbanizacao",
 "tags": [
-"CH.geo.migracoes"
+"CH.geo.populacao-e-migracoes"
 ]
 },
 "2025-CH-55": {
 "t": "CH.fil.filosofia-contemporanea",
 "tags": [
-"CH.soc.poder"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2025-CH-56": {
-"t": "CH.geo.hidrografia",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2025-CH-57": {
 "t": "CH.soc.cultura",
 "tags": [
-"CH.geo.migracoes"
+"CH.geo.populacao-e-migracoes"
 ]
 },
 "2025-CH-58": {
 "t": "CH.his.historia-do-brasil-imperio"
 },
 "2025-CH-59": {
-"t": "CH.geo.energia",
+"t": "CH.geo.industria-energia-e-transportes",
 "tags": [
-"CH.geo.climatologia"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2025-CH-60": {
@@ -7121,7 +6992,7 @@
 ]
 },
 "2025-CH-64": {
-"t": "CH.his.historia-do-brasil-republica-de-1946-a-1964"
+"t": "CH.his.historia-do-brasil-de-1946-aos-dias-atuais"
 },
 "2025-CH-65": {
 "t": "CH.fil.etica-e-moral"
@@ -7135,7 +7006,7 @@
 "2025-CH-67": {
 "t": "CH.geo.geografia-agraria",
 "tags": [
-"CH.soc.desigualdade"
+"CH.soc.classes-sociais-e-desigualdade"
 ]
 },
 "2025-CH-68": {
@@ -7145,13 +7016,13 @@
 "t": "CH.his.historia-geral-idade-media"
 },
 "2025-CH-70": {
-"t": "CH.geo.geografia-fisica",
+"t": "CH.geo.relevo-solos-e-hidrografia",
 "tags": [
 "CH.geo.urbanizacao"
 ]
 },
 "2025-CH-71": {
-"t": "CH.his.historia-geral-guerra-fria-e-descolonizacao",
+"t": "CH.his.historia-geral-guerra-fria-e-mundo-atual",
 "tags": [
 "CH.soc.cultura"
 ]
@@ -7162,7 +7033,7 @@
 "2025-CH-73": {
 "t": "CH.his.historia-do-brasil-colonia",
 "tags": [
-"CH.his.historia-da-america-povos-pre-colombianos"
+"CH.his.historia-da-america"
 ]
 },
 "2025-CH-74": {
@@ -7174,17 +7045,17 @@
 "2025-CH-75": {
 "t": "CH.geo.geografia-agraria",
 "tags": [
-"CN.bio.impactos-ambientais"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2025-CH-76": {
 "t": "CH.fil.filosofia-politica",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2025-CH-77": {
-"t": "CH.geo.energia",
+"t": "CH.geo.industria-energia-e-transportes",
 "tags": [
 "CH.geo.meio-ambiente-e-sustentabilidade"
 ]
@@ -7207,7 +7078,7 @@
 "2025-CH-81": {
 "t": "CH.soc.genero",
 "tags": [
-"CH.soc.estado"
+"CH.soc.estado-poder-e-democracia"
 ]
 },
 "2025-CH-82": {
@@ -7230,7 +7101,7 @@
 "rev": "cinema e sociabilidade, anos 1920"
 },
 "2025-CH-86": {
-"t": "CH.geo.energia"
+"t": "CH.geo.industria-energia-e-transportes"
 },
 "2025-CH-87": {
 "t": "CH.his.historia-geral-antiguidade"
@@ -7238,7 +7109,7 @@
 "2025-CH-88": {
 "t": "CH.soc.cultura",
 "tags": [
-"CH.soc.cidadania"
+"CH.soc.cidadania-e-movimentos-sociais"
 ]
 },
 "2025-CH-89": {
@@ -7248,13 +7119,10 @@
 ]
 },
 "2025-CH-90": {
-"t": "CH.his.historia-geral-imperialismo-e-seculo-xix"
+"t": "CH.his.historia-geral-revolucoes-e-seculo-xix"
 },
 "2025-CN-91": {
-"t": "CN.qui.separacao-de-misturas",
-"tags": [
-"CN.qui.materia-e-propriedades"
-]
+"t": "CN.qui.materia-e-separacao-de-misturas"
 },
 "2025-CN-92": {
 "t": "CN.bio.biotecnologia",
@@ -7266,43 +7134,43 @@
 "t": "CN.bio.zoologia"
 },
 "2025-CN-94": {
-"t": "CN.fis.eletrodinamica",
+"t": "CN.fis.eletrostatica-e-eletrodinamica",
 "tags": [
 "CN.fis.circuitos-eletricos"
 ]
 },
 "2025-CN-95": {
-"t": "CN.fis.transmissao-de-calor"
+"t": "CN.fis.termodinamica-e-transmissao-de-calor"
 },
 "2025-CN-96": {
 "t": "CN.bio.zoologia",
 "tags": [
-"CN.bio.ecologia"
+"CN.bio.ecologia-e-relacoes-ecologicas"
 ]
 },
 "2025-CN-97": {
 "t": "CN.bio.imunologia"
 },
 "2025-CN-98": {
-"t": "CN.bio.conservacao-ambiental",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
-"CN.bio.dinamica-ecologica"
+"CN.bio.ecologia-e-relacoes-ecologicas"
 ]
 },
 "2025-CN-99": {
-"t": "CN.bio.evolucao",
+"t": "CN.bio.evolucao-origem-da-vida-e-classificacao",
 "tags": [
-"CH.geo.biomas"
+"CH.geo.clima-e-biomas"
 ]
 },
 "2025-CN-100": {
-"t": "CN.qui.separacao-de-misturas",
+"t": "CN.qui.materia-e-separacao-de-misturas",
 "tags": [
-"CN.qui.solucoes"
+"CN.qui.solucoes-e-propriedades-coligativas"
 ]
 },
 "2025-CN-101": {
-"t": "CN.fis.optica",
+"t": "CN.fis.optica-e-fisica-moderna",
 "tags": [
 "CN.bio.fisiologia-humana"
 ]
@@ -7310,44 +7178,41 @@
 "2025-CN-102": {
 "t": "CN.bio.zoologia",
 "tags": [
-"CN.bio.saude-publica"
+"CN.bio.microbiologia-parasitologia-e-saude-publica"
 ]
 },
 "2025-CN-103": {
-"t": "CN.bio.citologia"
+"t": "CN.bio.citologia-e-bioquimica-celular"
 },
 "2025-CN-104": {
 "t": "CN.bio.ciclos-biogeoquimicos",
 "tags": [
-"CN.bio.impactos-ambientais"
+"CN.bio.impactos-ambientais-e-conservacao"
 ]
 },
 "2025-CN-105": {
-"t": "CN.bio.impactos-ambientais",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
-"CN.qui.gases"
+"CN.qui.estequiometria-e-gases"
 ]
 },
 "2025-CN-106": {
-"t": "CN.qui.funcoes-inorganicas"
+"t": "CN.qui.funcoes-e-reacoes-inorganicas"
 },
 "2025-CN-107": {
 "t": "CN.bio.genetica"
 },
 "2025-CN-108": {
-"t": "CN.fis.forcas-e-equilibrio",
-"tags": [
-"CN.fis.dinamica"
-]
+"t": "CN.fis.dinamica-estatica-e-gravitacao"
 },
 "2025-CN-109": {
-"t": "CN.qui.reacoes-organicas"
+"t": "CN.qui.reacoes-organicas-polimeros-e-biomoleculas"
 },
 "2025-CN-110": {
 "t": "CN.qui.radioatividade"
 },
 "2025-CN-111": {
-"t": "CN.bio.impactos-ambientais",
+"t": "CN.bio.impactos-ambientais-e-conservacao",
 "tags": [
 "CN.bio.ciclos-biogeoquimicos"
 ]
@@ -7359,25 +7224,25 @@
 ]
 },
 "2025-CN-113": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2025-CN-114": {
-"t": "CN.fis.ondulatoria",
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios",
 "tags": [
 "CN.fis.acustica"
 ]
 },
 "2025-CN-115": {
-"t": "CN.qui.quimica-organica"
+"t": "CN.qui.quimica-organica-e-isomeria"
 },
 "2025-CN-116": {
-"t": "CN.bio.ecologia",
+"t": "CN.bio.ecologia-e-relacoes-ecologicas",
 "tags": [
-"CN.bio.evolucao"
+"CN.bio.evolucao-origem-da-vida-e-classificacao"
 ]
 },
 "2025-CN-117": {
-"t": "CN.qui.equilibrio-quimico"
+"t": "CN.qui.equilibrio-quimico-e-ionico"
 },
 "2025-CN-118": {
 "t": "CN.fis.hidrostatica"
@@ -7386,19 +7251,19 @@
 "t": "CN.fis.circuitos-eletricos"
 },
 "2025-CN-120": {
-"t": "CN.fis.ondulatoria",
+"t": "CN.fis.ondas-e-fenomenos-ondulatorios",
 "tags": [
 "CN.fis.cinematica"
 ]
 },
 "2025-CN-121": {
-"t": "CN.qui.acidos-e-bases",
+"t": "CN.qui.funcoes-e-reacoes-inorganicas",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2025-CN-122": {
-"t": "CN.fis.eletromagnetismo"
+"t": "CN.fis.eletromagnetismo-e-geracao-de-energia"
 },
 "2025-CN-123": {
 "t": "CN.bio.metabolismo-energetico",
@@ -7410,37 +7275,34 @@
 "t": "CN.qui.eletroquimica"
 },
 "2025-CN-125": {
-"t": "CN.qui.gases",
-"tags": [
-"CN.qui.estequiometria"
-]
+"t": "CN.qui.estequiometria-e-gases"
 },
 "2025-CN-126": {
 "t": "CN.fis.cinematica"
 },
 "2025-CN-127": {
-"t": "CN.qui.cinetica-quimica",
+"t": "CN.qui.termoquimica-e-cinetica-quimica",
 "tags": [
-"CN.bio.bioquimica"
+"CN.bio.citologia-e-bioquimica-celular"
 ]
 },
 "2025-CN-128": {
-"t": "CN.fis.eletrodinamica",
+"t": "CN.fis.eletrostatica-e-eletrodinamica",
 "tags": [
-"CN.fis.termologia"
+"CN.fis.termologia-e-calorimetria"
 ]
 },
 "2025-CN-129": {
-"t": "CN.bio.saude-publica",
+"t": "CN.bio.microbiologia-parasitologia-e-saude-publica",
 "rev": "depende do quadro em imagem"
 },
 "2025-CN-130": {
 "t": "CN.fis.circuitos-eletricos"
 },
 "2025-CN-131": {
-"t": "CN.qui.estequiometria",
+"t": "CN.qui.estequiometria-e-gases",
 "tags": [
-"CN.qui.quimica-industrial"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2025-CN-132": {
@@ -7450,22 +7312,19 @@
 ]
 },
 "2025-CN-133": {
-"t": "CN.qui.interacoes-intermoleculares",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
-"CN.qui.quimica-ambiental"
+"CN.qui.quimica-ambiental-e-cotidiana"
 ]
 },
 "2025-CN-134": {
-"t": "CN.qui.interacoes-intermoleculares",
+"t": "CN.qui.ligacoes-e-interacoes-intermoleculares",
 "tags": [
-"CN.qui.funcoes-organicas"
+"CN.qui.quimica-organica-e-isomeria"
 ]
 },
 "2025-CN-135": {
-"t": "CN.fis.optica",
-"tags": [
-"CN.fis.fisica-moderna"
-]
+"t": "CN.fis.optica-e-fisica-moderna"
 },
 "2025-MT-136": {
 "t": "MT.mat.aritmetica-e-conjuntos-numericos",
