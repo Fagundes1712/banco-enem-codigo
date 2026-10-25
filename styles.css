@@ -1441,13 +1441,6 @@ img.q.alt-img {
   opacity: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .veu {
-    background: var(--veu);
-    opacity: 0;
-  }
-}
-
 /* ====================== Barra lateral ========================= */
 
 .side {

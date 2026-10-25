@@ -60,8 +60,10 @@ function keep(fn) {
 
 // Transição entre áreas e abas: a tela se desfaz em quadrados pretos que
 // acendem em ordem aleatória, a tela nova é desenhada por baixo e os
-// quadrados se apagam, também ao acaso. Só opacity; com movimento reduzido
-// o véu inteiro faz um fade. Sem animate() (testes), troca direto.
+// quadrados se apagam, também ao acaso. Só opacity, sem deslocamento, então
+// roda também com movimento reduzido (o Windows com "Mostrar animações"
+// desligado avisa reduce e o efeito sumia no computador, a pedido do usuário
+// ele vale em todo aparelho). Sem animate() (testes), troca direto.
 let veu = null;
 let veuFila = null;
 const PIX = { dur: 140, ida: 260, volta: 300 };
@@ -80,10 +82,8 @@ function swap(fn) {
   if (veuFila) return void (veuFila = fn);
   veuFila = fn;
   const v = veuGrade();
-  const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const pix = calmo ? [] : [...v.children];
+  const pix = [...v.children];
   const anima = (de, ate, max) => {
-    if (calmo) return v.animate([{ opacity: de }, { opacity: ate }], { duration: 150, fill: "forwards" });
     for (const p of pix)
       p.animate([{ opacity: de }, { opacity: ate }], {
         duration: PIX.dur,
@@ -99,7 +99,7 @@ function swap(fn) {
     veuFila = null;
     f();
     anima(1, 0, PIX.volta);
-  }, calmo ? 150 : PIX.ida + PIX.dur + 40);
+  }, PIX.ida + PIX.dur + 40);
 }
 
 function shuffle(a) {
