@@ -144,40 +144,25 @@ function paint() {
   if (dot) dot.classList.add("on");
 }
 
-/* ============================== Nota TRI ============================= */
+/* ================================ Nota =============================== */
 
-// Mesmo cálculo do INEP, conferido com as notas reais dos microdados de
-// 2022 (diferença mediana de 0,03 ponto): EAP com priori normal padrão,
-// logística de 3 parâmetros sem o fator 1,7, e escala própria de cada área
-// (nota = k · θ + m). Por escolha do usuário, toda questão, de qualquer ano,
-// entra com a mediana dos itens da área na prova mais recente com
-// microdados (2022): um acerto de 2015 vale o mesmo que um de 2025.
-// Ver docs/dificuldade.md.
-const ESCALA = { CN: [113.09, 501.15], CH: [112.3, 501.49], LC: [108.08, 499.98], MT: [129.63, 500.03] };
-const PADRAO = {
-  CN: { a: 2.005, b: 1.465, c: 0.161 },
-  CH: { a: 2.073, b: 0.9, c: 0.16 },
-  LC: { a: 2.002, b: 0.669, c: 0.134 },
-  MT: { a: 1.907, b: 2.333, c: 0.162 },
+// Nota oficial mediana por número de acertos (0 a 45) em cada área, média
+// das provas de 2022 a 2025, contada com todos os participantes dos
+// microdados do INEP. Toda questão vale o mesmo, de qualquer ano (escolha do
+// usuário). Simulado menor que 45 é levado à proporção: 3 de 5 conta como
+// 27 de 45. Ver docs/dificuldade.md.
+const NOTA_ACERTOS = {
+  CN: [338,  341,  349,  364,  371,  381,  392,  405,  418,  433,  449,  467,  485,  503,  521,  538,  553,  567,  580,  592,  602,  612,  622,  631,  640,  648,  657,  665,  673,  681,  689,  698,  706,  714,  723,  732,  742,  752,  762,  773,  786,  803,  820,  841,  864,  887],
+  CH: [302,  306,  314,  323,  335,  346,  357,  370,  384,  399,  415,  430,  446,  461,  475,  489,  501,  513,  524,  534,  543,  552,  560,  569,  577,  584,  592,  600,  608,  616,  624,  632,  640,  649,  658,  668,  678,  689,  701,  714,  728,  744,  764,  784,  809,  831],
+  LC: [293,  298,  305,  316,  326,  338,  351,  365,  380,  395,  411,  425,  440,  453,  465,  476,  487,  497,  506,  515,  523,  531,  539,  547,  554,  562,  569,  577,  584,  591,  599,  607,  615,  623,  632,  641,  651,  661,  672,  684,  697,  712,  728,  746,  772,  800],
+  MT: [338,  340,  347,  355,  364,  375,  387,  400,  415,  433,  454,  477,  503,  530,  557,  581,  602,  621,  638,  653,  667,  680,  692,  704,  715,  726,  737,  747,  758,  768,  779,  789,  799,  810,  822,  833,  845,  858,  871,  886,  900,  917,  932,  949,  963,  976],
 };
 
-function tri(items) {
-  const area = items[0][0].area;
-  let num = 0;
-  let den = 0;
-  for (let i = -120; i <= 120; i++) {
-    const t = i / 20;
-    let L = Math.exp((-t * t) / 2);
-    for (const [q, ok] of items) {
-      const d = PADRAO[q.area];
-      const p = d.c + (1 - d.c) / (1 + Math.exp(-d.a * (t - d.b)));
-      L *= ok ? p : 1 - p;
-    }
-    num += t * L;
-    den += L;
-  }
-  const [k, m] = ESCALA[area];
-  return Math.round(k * (num / den) + m);
+function nota(items) {
+  const t = NOTA_ACERTOS[items[0][0].area];
+  const x = (45 * items.filter(([, ok]) => ok).length) / items.length;
+  const i = Math.min(44, Math.floor(x));
+  return Math.round(t[i] + (t[i + 1] - t[i]) * (x - i));
 }
 
 function confirmDialog(msg, txt = {}) {
@@ -253,7 +238,7 @@ function closeExam() {
   T.secs = Math.floor((Date.now() - T.t0) / 1000);
   T.hits = T.qs.filter((q) => T.ans[q.id] === q.gab).length;
   T.blank = T.qs.length - Object.keys(T.ans).length;
-  T.nota = tri(T.qs.map((q) => [q, T.ans[q.id] === q.gab]));
+  T.nota = nota(T.qs.map((q) => [q, T.ans[q.id] === q.gab]));
   guardaBloco();
   result();
 }

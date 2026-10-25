@@ -8,7 +8,7 @@ Os microdados do Enem (INEP) trazem, em `DADOS/ITENS_PROVA_<ano>.csv`, os parâm
 python3 tools/microdados.py "<pasta DADOS dos microdados>"
 ```
 
-Os microdados (cerca de 2 GB por ano) não entram no repositório. Hoje o banco tem os parâmetros de 2022 (178 questões). Para os outros anos basta rodar o script na pasta DADOS de cada ano; só o `ITENS_PROVA_<ano>.csv` é lido.
+Os microdados (2 GB ou mais por ano) não entram no repositório. Hoje o banco tem os parâmetros de 2022 a 2025 (725 questões). Para outro ano, junte os `ITENS_PROVA_<ano>.csv` numa pasta e rode o script nela; só esses arquivos são lidos.
 
 ## Nível de dificuldade
 
@@ -16,23 +16,21 @@ Leve < Moderado < Intenso < Radical < Extremo. É o quintil do parâmetro `b` de
 
 ## Nota
 
-`tri()` em `js/simulado.js` reproduz o cálculo do INEP:
+**Regra (decisão do usuário, 2026-10-25): toda questão vale o mesmo, de qualquer ano.** A nota é a mediana oficial das notas dos participantes que tiveram o mesmo número de acertos, em `NOTA_ACERTOS` (`js/simulado.js`). Simulado com menos de 45 questões vai à proporção (3 de 5 conta como 27 de 45) e o valor entre dois números de acertos é interpolado.
 
-- logística de 3 parâmetros sem o fator 1,7: `P(θ) = c + (1 − c) / (1 + e^(−a(θ − b)))`;
-- EAP com priori normal padrão, θ de −6 a 6 em passos de 0,05;
-- escala de cada área: `nota = k · θ + m`.
+Como a tabela foi feita: para cada prova de 2022, 2023, 2024 e 2025, contei os acertos de cada participante com nota (respostas `TX_RESPOSTAS_<área>` contra `TX_GABARITO_<área>`; em Linguagens, o gabarito tem 50 posições e uso as 5 da língua escolhida mais as 40 comuns) e tirei a mediana de `NU_NOTA_<área>` em cada número de acertos. Contagem com menos de 30 participantes (só nas pontas) foi trocada por extrapolação linear dos vizinhos. A tabela final é a média dos quatro anos, forçada a crescer com os acertos.
 
-| Área | k | m |
-|---|---|---|
-| CN | 113,09 | 501,15 |
-| CH | 112,30 | 501,49 |
-| LC | 108,08 | 499,98 |
-| MT | 129,63 | 500,03 |
+| Acertos de 45 | CN | CH | LC | MT |
+|---|---|---|---|---|
+| 0 | 338 | 302 | 293 | 338 |
+| 15 | 538 | 489 | 476 | 581 |
+| 30 | 689 | 624 | 599 | 779 |
+| 45 | 887 | 831 | 800 | 976 |
 
-As constantes e a ausência do 1,7 foram ajustadas com 600 participantes reais de cada área do Enem 2022 (respostas e nota oficial do arquivo `MICRODADOS_ENEM_2022.csv`): diferença mediana de 0,03 ponto e máxima de 0,17 ponto. Com o fator 1,7 a diferença mediana passava de 4 pontos. Com os parâmetros de cada questão, a fórmula reproduziu dois participantes reais (CN 425,1 e MT 843,8).
+Variação entre os anos com 30 acertos: CN 674 a 709, CH 600 a 642, LC 587 a 613, MT 756 a 827. Dentro de um ano, 80% dos participantes com 30 acertos ficaram a uns 20 a 30 pontos da mediana, porque a TRI oficial pesa quais questões foram acertadas.
 
-**Mesma régua para todos os anos (decisão do usuário, 2026-10-25):** toda questão, de qualquer ano e mesmo as que têm parâmetro oficial, entra na nota com a mediana dos itens da área na prova mais recente com microdados (hoje 2022: CN a 2,005, b 1,465, c 0,161; CH 2,073, 0,900, 0,160; LC 2,002, 0,669, 0,134; MT 1,907, 2,333, 0,162). Assim um acerto de 2015 vale o mesmo que um de 2025, e a nota depende só de quantas questões o estudante acertou em cada área, na régua da prova recente. Os parâmetros por questão continuam no banco e definem só o nível de dificuldade. Quando chegarem microdados mais novos, atualize `PADRAO` em `js/simulado.js` com as medianas da prova mais recente.
+Para atualizar com um ano novo, rode `tools/nota_por_acertos.py` nos microdados desse ano e refaça a média.
 
-Pontos de referência (45 questões): 0, 15, 30 e 45 acertos dão CN 381, 563, 684, 858; CH 346, 513, 622, 801; LC 329, 498, 595, 773; MT 417, 639, 819, 1009.
+### Cálculo exato do INEP (referência)
 
-Com poucas questões a nota fica perto de 500: o EAP puxa para a média quando há pouca informação, como faria o INEP com uma prova curta.
+Com os parâmetros de cada questão, a nota oficial se reproduz assim: logística de 3 parâmetros sem o fator 1,7, `P(θ) = c + (1 − c) / (1 + e^(−a(θ − b)))`, EAP com priori normal padrão de θ = −6 a 6 em passos de 0,05, e `nota = k · θ + m` (CN 113,09 e 501,15; CH 112,30 e 501,49; LC 108,08 e 499,98; MT 129,63 e 500,03). Conferido com 600 participantes por área de 2022 (diferença mediana de 0,03 ponto). O app não usa esse cálculo porque ele dá pesos diferentes a cada questão, e o usuário quer que todas valham o mesmo.

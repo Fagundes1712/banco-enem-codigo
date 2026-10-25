@@ -94,7 +94,7 @@ function boot() {
   }
 
   // "use strict" no app.js mantém as declarações fora do escopo global.
-  window.eval(appJs + "\n;window.__tri = tri;");
+  window.eval(appJs + "\n;window.__nota = nota;");
   return window;
 }
 
@@ -390,8 +390,8 @@ async function irTopico(w, id) {
     [...d.querySelectorAll(".stats b")].some((b) => b.textContent === "2")
   );
   ok(
-    "disclaimer do TRI presente",
-    d.querySelector(".note").textContent.includes("TRI")
+    "explicação da nota presente",
+    d.querySelector(".note").textContent.includes("INEP")
   );
   ok(
     "resultado sem desempenho por ano",
@@ -465,7 +465,7 @@ async function irTopico(w, id) {
   );
 
   console.log("\n== TRI: monotonia ==");
-  const triMod = w.__tri;
+  const triMod = w.__nota;
   const mk = (nAcertos) => {
     const qs = banco.slice(0, 10);
     return triMod(qs.map((q, i) => [q, i < nAcertos]));
@@ -485,9 +485,11 @@ async function irTopico(w, id) {
     const velha = banco.find((q) => q.ano === 2015 && q.area === "MT" && !q.anulada);
     const nova = banco.find((q) => q.ano === 2022 && q.area === "MT" && q.b != null);
     ok("acerto de 2015 vale o mesmo que um de 2022", triMod([[velha, true]]) === triMod([[nova, true]]));
+    // Mediana oficial de 2022 a 2025: 30 de 45 em MT ficou entre 756 e 827 por ano.
     const mt45 = banco.filter((q) => q.area === "MT").slice(0, 45);
-    ok("MT: 45 erros abaixo de 450 e 45 acertos acima de 900",
-      triMod(mt45.map((q) => [q, false])) < 450 && triMod(mt45.map((q) => [q, true])) > 900);
+    const n30 = triMod(mt45.map((q, i) => [q, i < 30]));
+    ok("MT: 30 de 45 dá a mediana oficial (779)", n30 === 779, String(n30));
+    ok("3 de 5 vale o mesmo que 27 de 45", triMod(mt45.slice(0, 5).map((q, i) => [q, i < 3])) === triMod(mt45.map((q, i) => [q, i < 27])));
     const np = banco.filter((q) => q.b != null);
     ok("parâmetros oficiais só com a, b e c juntos", np.every((q) => q.a > 0 && q.c >= 0 && q.c < 1));
     ok("nível só de 1 a 5 e só com parâmetro", banco.every((q) => q.nivel == null || (q.b != null && q.nivel >= 1 && q.nivel <= 5)));

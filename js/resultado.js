@@ -40,7 +40,7 @@ function result() {
 
 // Explica de onde veio a nota.
 function notaComo() {
-  return "Nota pela TRI de 3 parâmetros, do mesmo jeito que o INEP calcula, com a dificuldade média de cada área na prova mais recente com dados oficiais. Toda questão vale o mesmo, de qualquer ano. Com poucas questões a nota fica perto de 500, porque a prova inteira tem 45.";
+  return "Nota que estudantes com a mesma proporção de acertos tiraram no Enem de 2022 a 2025 (mediana oficial do INEP, base da TRI). Toda questão vale o mesmo, de qualquer ano. A nota oficial também pesa quais questões você acertou, então ela pode variar uns 30 pontos para cima ou para baixo.";
 }
 
 /* ============================= Correções ============================= */
