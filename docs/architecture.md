@@ -20,6 +20,9 @@ App estático, sem framework, sem build e sem servidor próprio.
 | `tools/` | Extrator em Python das provas do INEP e aplicação da classificação. |
 | `test/dom.test.cjs` | Testes de comportamento em jsdom. |
 | `scripts/check.cjs` | Checagem sem dependências. |
+| `scripts/pos-deploy.cjs` | Conferência do site publicado. |
+| `.github/workflows/` | CI (`verify` em PR) e deploy para o `banco-enem-app`. |
+| `.claude/` | Configuração do Claude Code: permissões e hook `guarda.cjs` (`docs/fluxo.md`). |
 
 ## Decisões
 - **Scripts clássicos, não módulos ES:** os arquivos de `js/` compartilham o escopo global (`const`/`let` de topo) e precisam carregar na ordem do `index.html`. O teste lê essa mesma ordem. Motivo: manter o app sem build e funcionando como antes da divisão (2026-10-24).

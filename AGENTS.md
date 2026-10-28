@@ -6,7 +6,7 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 
 - Instalar dependência de teste: `npm install` (só jsdom)
 - Rodar local: `npm start` e abrir http://localhost:8765 (precisa de HTTP; `file://` não carrega o JSON)
-- Testes: `npm test` (jsdom, 163 checks com o banco real)
+- Testes: `npm test` (jsdom com o banco real + hook do Claude)
 - Checagem: `npm run check` (sintaxe, limite de 350 linhas, espelho em `site/public/`)
 - Tudo: `npm run verify`
 - Espelhar: `npm run mirror`
@@ -21,7 +21,22 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 - Nunca embutir JSON em HTML ou JS; os dados ficam em `questions.json` e `taxonomy.json`.
 - Não inventar dados: resoluções, gabaritos e classificações vêm das provas oficiais ou ficam vazios.
 - A taxonomia tem exatamente 3 níveis (`docs/TAXONOMIA.md`).
-- Um commit por etapa. Nunca fazer push, deploy ou publicar sem pedido explícito.
+- Um commit por etapa.
+
+## Fluxo de toda tarefa de código
+
+Pedido de mudança no repositório já autoriza o fluxo inteiro abaixo, sem pedir licença a cada passo. Detalhes, comandos e recuperação em `docs/fluxo.md`.
+
+1. Critérios de aceite primeiro.
+2. Procurar issue existente (`gh issue list --search`); criar só se a tarefa muda o repositório e merece rastreio. Perguntas e ajustes mínimos não ganham issue; mudanças pequenas relacionadas vão juntas.
+3. Branch `<tipo>/<assunto>` a partir da `main` atualizada. Nunca commitar na `main`.
+4. Implementar preservando a arquitetura; `npm run verify` até passar; revisar o diff atrás de regressão.
+5. Commits descritivos, `git push -u origin <branch>`, PR pelo modelo (objetivo, alterações, testes, riscos, pendências). `Closes #N` só se concluir a issue; senão `Ref. #N`.
+6. Acompanhar `gh pr checks` e corrigir falhas reais; nunca contornar check ou proteção.
+7. Merge e deploy de produção só com aprovação do usuário. Depois do merge, conferir o deploy (`npm run pos-deploy`).
+8. Atualizar a documentação quando mudar comportamento ou arquitetura.
+
+Parar e perguntar só para: acesso que falta, conflito relevante, decisão de arquitetura, custo, operação destrutiva ou risco alto. Nunca expor segredos.
 
 ## Acordos de trabalho
 
@@ -45,3 +60,4 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 | Primeiros passos | `docs/onboarding.md` |
 | Verificações | `docs/quality.md` |
 | Ferramentas e setup do toolkit | `docs/setup.md` |
+| Fluxo, CI, deploy e recuperação | `docs/fluxo.md` |

@@ -4,3 +4,4 @@
 
 - Use subagentes só quando o trabalho tiver partes independentes ou precisar de contexto isolado; o modelo principal fica o da sessão.
 - A memória do projeto fica na memória nativa do Claude (índice `MEMORY.md`); veja `docs/setup.md`.
+- O fluxo de tarefa (issue, branch, PR, checks, deploy) está em `AGENTS.md` e `docs/fluxo.md`; o hook `.claude/hooks/guarda.cjs` impede commit e push na `main` e roda as checagens.
