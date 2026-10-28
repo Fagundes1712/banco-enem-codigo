@@ -81,7 +81,7 @@ function topico(id) {
               "aria-valuenow": String(nOk),
               "aria-label": "Progresso de aprendizagem: questões acertadas",
             },
-            h("i", { style: "transform:scaleX(" + nOk / all.length + ")" })
+            h("i", { style: "--v:" + nOk / all.length })
           ),
           h(
             "p",
@@ -108,7 +108,7 @@ function topico(id) {
                 "li",
                 { class: "row" },
                 h("span", null, "ENEM " + a),
-                h("span", { class: "row-bar", "aria-hidden": "true" }, h("i", { style: "transform:scaleX(" + anos[a] / max + ")" })),
+                h("span", { class: "row-bar", "aria-hidden": "true" }, h("i", { style: "--v:" + anos[a] / max })),
                 h("b", null, String(anos[a]))
               )
             )
