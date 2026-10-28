@@ -23,7 +23,7 @@ Pedir intervenção só para: acesso que falta, conflito relevante, decisão de 
 | Hook do Claude Code | `.claude/settings.json`, `.claude/hooks/guarda.cjs` | Antes de cada comando Bash/PowerShell: bloqueia commit em `main`/`master`, push para `main`/`master` e push forçado; roda `npm run check` antes de commit e `npm run verify` antes de push. Testado por `test/guarda.test.cjs`. |
 | Permissões | `.claude/settings.json` | Libera comandos de rotina (testes, git, issues, PRs); pede confirmação para `gh pr merge` e `gh workflow run`; nega push forçado, `reset --hard` e apagar repositório. |
 | CI | `.github/workflows/ci.yml` | `npm ci` + `npm run verify` em todo PR e push na `main`. Check obrigatório: `verify`. |
-| Deploy | `.github/workflows/deploy.yml` | Copia `site/public/` para `Fagundes1712/banco-enem-app` (GitHub Pages) e roda `npm run pos-deploy`. |
+| Deploy | `.github/workflows/deploy.yml` | Copia `site/public/` para `Fagundes1712/banco-enem-app` (GitHub Pages) e roda `npm run pos-deploy`. Com a variável `CLOUDFLARE_PAGES_PROJETO`, publica também no Cloudflare Pages com os cabeçalhos do `_headers` (`docs/security.md`). Actions fixadas por hash. |
 | Pós-deploy | `scripts/pos-deploy.cjs` | Espera o `sw.js` no ar ter a mesma `VERSION` do local (até 10 min) e confere `index.html`, `questions.json` e `taxonomy.json`. |
 
 ## Deploy

@@ -14,7 +14,7 @@ Estados: **validado** (há evidência), **implementado, não validado**, **pende
 | Isolamento entre clientes | não aplicável | Sem dados no servidor; cada navegador só vê o próprio `localStorage` |
 | Segredos e histórico do Git | validado | Nenhuma credencial nos arquivos nem no histórico; secret scanning e push protection ligados (`docs/security.md`) |
 | HTTPS e TLS | validado | Certificado do GitHub Pages, `https_enforced`, 301 de http para https, HSTS |
-| Cabeçalhos de segurança | implementado, validado em parte | CSP por meta testada no navegador; `frame-ancestors` e outros cabeçalhos dependem de CDN própria |
+| Cabeçalhos de segurança | CSP validada; demais pendentes de configuração | CSP por meta sem `unsafe-inline`, testada no navegador. `frame-ancestors`, `nosniff` e outros em `_headers`, publicados no Cloudflare Pages quando a conta for configurada (`docs/security.md`) |
 | Firewall e portas | não aplicável | Sem servidor próprio; servidor local só em `127.0.0.1` |
 | DDoS e abuso | não aplicável além da hospedagem | Coberto pela CDN do GitHub; sem endpoint próprio; limites em `docs/security.md` |
 | Dependências vulneráveis | validado | `npm audit`: 0; Dependabot configurado (`.github/dependabot.yml`) |
