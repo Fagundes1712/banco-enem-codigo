@@ -35,10 +35,10 @@ jobs:
       name: producao
       url: https://fagundes1712.github.io/banco-enem-app/
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.workflow_run.head_sha || inputs.ref }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
           cache: npm
@@ -46,7 +46,7 @@ jobs:
       - run: npm run verify
 
       - name: Clonar o repositório do site
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: Fagundes1712/banco-enem-app
           ssh-key: ${{ secrets.DEPLOY_KEY_SITE }}
@@ -66,3 +66,24 @@ jobs:
 
       - name: Conferir o site no ar
         run: npm run pos-deploy
+
+      # Cópia com cabeçalhos de segurança (_headers), só quando a variável CLOUDFLARE_PAGES_PROJETO existir.
+      # Versão exata do wrangler; a criação do projeto só vale na primeira vez (depois já existe).
+      - name: Publicar no Cloudflare Pages
+        if: vars.CLOUDFLARE_PAGES_PROJETO != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJETO: ${{ vars.CLOUDFLARE_PAGES_PROJETO }}
+        run: |
+          npx --yes wrangler@4.155.0 pages project list | grep -qw "$PROJETO" ||
+            npx --yes wrangler@4.155.0 pages project create "$PROJETO" --production-branch=main
+          npx --yes wrangler@4.155.0 pages deploy site/public --project-name="$PROJETO" --branch=main
+
+      - name: Conferir o Cloudflare Pages
+        if: vars.CLOUDFLARE_PAGES_PROJETO != ''
+        env:
+          SITE_URL: https://${{ vars.CLOUDFLARE_PAGES_PROJETO }}.pages.dev/
+        run: |
+          npm run pos-deploy
+          curl -sfI "$SITE_URL" | grep -i "^content-security-policy:.*frame-ancestors 'none'"
