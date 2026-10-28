@@ -20,6 +20,9 @@ process.stdin.on("end", () => {
 
   let branch = "";
   try { branch = sh("git branch --show-current"); } catch { return; }
+  // o hook roda antes do comando: uma troca de branch no mesmo comando vale para o commit que vem depois
+  for (const m of cmd.matchAll(/^(?:rtk\s+)?git\s+(?:switch|checkout)\s+(?:-\S+\s+)*(\S+)\s*$/gm))
+    if (!/\s--\s/.test(m[0])) branch = m[1];
   const principal = /^(main|master)$/;
 
   if (push && /(--force\b|\s-f\b|\+\S+)/.test(cmd) && !/--force-with-lease/.test(cmd))
