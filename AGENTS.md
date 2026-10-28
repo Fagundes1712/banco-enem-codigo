@@ -6,11 +6,14 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 
 - Instalar dependência de teste: `npm install` (só jsdom)
 - Rodar local: `npm start` e abrir http://localhost:8765 (precisa de HTTP; `file://` não carrega o JSON)
-- Testes: `npm test` (jsdom com o banco real + hook do Claude)
-- Checagem: `npm run check` (sintaxe, limite de 350 linhas, espelho em `site/public/`)
-- Tudo: `npm run verify`
+- Testes: `npm test` (unitários com `node:test`, jsdom com o banco real e hook do Claude)
+- Checagem: `npm run check` (sintaxe, limite de 350 linhas, espelho em `site/public/`, contratos de arquitetura)
+- Lint: `npm run lint` (Biome e Knip)
+- Tudo: `npm run verify` (check, lint e testes)
+- End-to-end: `npm run e2e` (Playwright no Chromium; uma vez `npx playwright install chromium`)
+- Mutação: `npm run mutacao` (Stryker, lento, sob demanda)
 - Espelhar: `npm run mirror`
-- Lint, tipos e build: não existem; o projeto é JS puro sem etapa de build.
+- Tipos e build: não existem; o projeto é JS puro sem etapa de build.
 
 ## Regras do projeto
 
@@ -59,5 +62,6 @@ Parar e perguntar só para: acesso que falta, conflito relevante, decisão de ar
 | Dificuldade e nota | `docs/dificuldade.md` |
 | Primeiros passos | `docs/onboarding.md` |
 | Verificações | `docs/quality.md` |
+| Erros em produção | `docs/observabilidade.md` |
 | Ferramentas e setup do toolkit | `docs/setup.md` |
 | Fluxo, CI, deploy e recuperação | `docs/fluxo.md` |

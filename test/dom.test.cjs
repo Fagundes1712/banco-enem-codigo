@@ -153,7 +153,7 @@ async function irTopico(w, id) {
   {
     // Trocar de área não pode jogar a tela para o topo.
     const ys = [];
-    w.scrollTo = (x, y) => ys.push(y);
+    w.scrollTo = (_x, y) => ys.push(y);
     Object.defineProperty(w, "scrollY", { value: 420, configurable: true });
     click(w, d.getElementById("tab-MT"));
     await tick(10);
@@ -365,7 +365,7 @@ async function irTopico(w, id) {
   ok("2 ações no diálogo", d.querySelectorAll("dialog.modal .modal-actions .btn").length === 2);
 
   console.log("\n== Resultado ==");
-  const voltar = [...d.querySelectorAll("dialog.modal .btn")].find((b) =>
+  const voltar = [...d.querySelectorAll("dialog.modal[open] .btn")].find((b) =>
     /Continuar prova/.test(b.textContent)
   );
   click(w, voltar);
@@ -374,7 +374,7 @@ async function irTopico(w, id) {
 
   click(w, fin);
   await new Promise((r) => setTimeout(r, 20));
-  const finalizar = [...d.querySelectorAll("dialog.modal .btn")].find((b) =>
+  const finalizar = [...d.querySelectorAll("dialog.modal[open] .btn")].find((b) =>
     /Finalizar mesmo assim/.test(b.textContent)
   );
   click(w, finalizar);
@@ -512,7 +512,7 @@ async function irTopico(w, id) {
   ok(
     "todo gabarito existe em alts (fora as anuladas)",
     banco.every(
-      (q) => q.anulada || (q.alts && Object.prototype.hasOwnProperty.call(q.alts, q.gab))
+      (q) => q.anulada || (q.alts && Object.hasOwn(q.alts, q.gab))
     )
   );
   ok(

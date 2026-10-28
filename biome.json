@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "includes": ["js/**", "sw.js", "styles.css", "scripts/**", "test/**", ".claude/hooks/**", "e2e/**", "*.config.*", "*.cjs"]
+  },
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "formatter": { "enabled": false },
+  "assist": { "enabled": false },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "style": {
+        "useTemplate": "off",
+        "noDescendingSpecificity": "off"
+      },
+      "complexity": {
+        "useOptionalChain": "off",
+        "noCommaOperator": "off",
+        "noImportantStyles": "off"
+      },
+      "suspicious": {
+        "noRedundantUseStrict": "off",
+        "noAssignInExpressions": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["js/**"],
+      "linter": {
+        "rules": {
+          "correctness": { "noUnusedVariables": "off" },
+          "style": { "useConst": "off" }
+        }
+      }
+    }
+  ]
+}

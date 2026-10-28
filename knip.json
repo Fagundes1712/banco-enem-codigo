@@ -1,0 +1,6 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["js/*.js", "sw.js", "scripts/*.cjs", "test/*.cjs", "e2e/*.cjs", ".claude/hooks/*.cjs", "*.config.cjs"],
+  "project": ["js/**/*.js", "scripts/**/*.cjs", "test/**/*.cjs", "e2e/**/*.cjs", ".claude/**/*.cjs", "*.config.cjs"],
+  "ignoreDependencies": ["@stryker-mutator/command-runner"]
+}

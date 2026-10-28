@@ -88,7 +88,13 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 - Animação só com `transform` e `opacity`, curvas `--ease-out` / `--ease-in-out`. Mudança de cor é instantânea.
 - Toque com `scale(0.97)`; cartões sobem 2px no hover de mouse.
 - Troca de área e de aba (Início, Suas respostas): a tela se desfaz em quadrados pretos (`--veu`, cerca de 1/18 da largura, mínimo 44px) que acendem ao acaso em uns 400ms; a tela nova é desenhada por baixo e os quadrados se apagam ao acaso em uns 440ms. Só `opacity`, curva `--ease-out`. Com movimento reduzido vira um fade curto do véu inteiro. Referência: vídeo enviado pelo usuário em 2026-10-25.
-- `prefers-reduced-motion` remove deslocamentos e deixa só fade.
+- Carregamento: a carga inicial mostra um skeleton com a forma da tela inicial (título, abas, cartões). Figuras das questões são preguiçosas (`loading="lazy"`, `decoding="async"`) e ocupam um bloco afundado pulsando até baixar; aí entram com fade de 240ms.
+- Entrada: a tela entra com fade e 8px de subida (300ms); listas de matérias, tópicos e Suas respostas entram em sequência de 30ms por item, até o 6º. O mapa de questões do simulado não, porque redesenha a cada questão.
+- Saída: o diálogo entra em 200ms de `scale(0.95)` e sai em 150ms para `scale(0.97)`, mais discreto que a entrada.
+- Progresso: barras (`--v` inline) crescem do zero ao aparecer; a do simulado só anima quando a resposta muda. O anel da nota preenche até o valor em 0,9s (`@property --p`), a única animação fora de `transform`/`opacity`, aceita por ser rara e pequena.
+- Blocos de Suas respostas usam `content-visibility: auto` para não desenhar o que está fora da tela.
+- Base: skill design-motion-principles (Jakub Krehel no polimento, Emil Kowalski na contenção das ações frequentes). Marcar alternativa e trocar de questão não ganham animação nova.
+- `prefers-reduced-motion` remove deslocamentos, sequência das listas, crescimento de barras e anel e o pulso dos skeletons; deixa só fade.
 
 ## 7. Acessibilidade
 

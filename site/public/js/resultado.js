@@ -10,7 +10,7 @@ function result() {
       { class: "res" },
       h(
         "div",
-        { class: "ring", style: "--p:" + T.hits / T.qs.length },
+        { class: "ring", style: "--n:" + T.hits / T.qs.length },
         h("p", { class: "meta" }, "Nota estimada"),
         h("div", { class: "score" }, T.nota)
       ),
@@ -141,4 +141,32 @@ if (
       /* offline é opcional: falha de registro não pode quebrar o app */
     });
   });
+}
+
+/* ========================== Observabilidade ========================= */
+
+// Erros do navegador vão para o Sentry (projeto banco-enem-app), só em HTTPS
+// (docs/observabilidade.md). Sem IP, cookies nem texto da tela: só a
+// mensagem e a pilha do erro. DSN vazio desliga.
+const SENTRY_DSN =
+  "https://1da0b01364b29b2a5c4cce169c478ee0@o4512336096526336.ingest.us.sentry.io/4512336160292864";
+if (SENTRY_DSN && location.protocol === "https:") {
+  const s = document.createElement("script");
+  s.src = "https://browser.sentry-cdn.com/11.10.0/bundle.min.js";
+  s.integrity = "sha384-O/8YQaGGVy/n9jIUzcOiaiJVm4t5+JMNiK/zOa0fWvlSld+FquXemEcwJxQ3x/Lr";
+  s.crossOrigin = "anonymous";
+  s.onload = () =>
+    window.Sentry.init({
+      dsn: SENTRY_DSN,
+      sendDefaultPii: false,
+      tracesSampleRate: 0,
+      defaultIntegrations: false,
+      integrations: [window.Sentry.globalHandlersIntegration(), window.Sentry.dedupeIntegration()],
+      beforeSend: (e) => {
+        delete e.user;
+        delete e.breadcrumbs;
+        return e;
+      },
+    });
+  document.head.append(s);
 }
