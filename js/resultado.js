@@ -142,3 +142,30 @@ if (
     });
   });
 }
+
+/* ========================== Observabilidade ========================= */
+
+// Erros do navegador vão para o Sentry só quando SENTRY_DSN estiver
+// preenchido (docs/observabilidade.md). Sem IP, cookies nem texto da tela:
+// só a mensagem e a pilha do erro.
+const SENTRY_DSN = "";
+if (SENTRY_DSN && location.protocol === "https:") {
+  const s = document.createElement("script");
+  s.src = "https://browser.sentry-cdn.com/11.10.0/bundle.min.js";
+  s.integrity = "sha384-O/8YQaGGVy/n9jIUzcOiaiJVm4t5+JMNiK/zOa0fWvlSld+FquXemEcwJxQ3x/Lr";
+  s.crossOrigin = "anonymous";
+  s.onload = () =>
+    window.Sentry.init({
+      dsn: SENTRY_DSN,
+      sendDefaultPii: false,
+      tracesSampleRate: 0,
+      defaultIntegrations: false,
+      integrations: [window.Sentry.globalHandlersIntegration(), window.Sentry.dedupeIntegration()],
+      beforeSend: (e) => {
+        delete e.user;
+        delete e.breadcrumbs;
+        return e;
+      },
+    });
+  document.head.append(s);
+}
