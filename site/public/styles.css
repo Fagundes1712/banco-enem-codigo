@@ -763,7 +763,17 @@ label.f:has(select)::after {
   height: 100%;
   background: var(--acc);
   transform-origin: left;
+  transform: scaleX(var(--v, 0));
   transition: transform 0.4s var(--ease-in-out);
+}
+
+/* Barras crescem do zero ao aparecer (--v vem do JS, inline). A do simulado
+   fica de fora: redesenha a cada questão e só anima quando a resposta muda. */
+@starting-style {
+  :not(.bar) > .prog i,
+  .row-bar i {
+    transform: scaleX(0);
+  }
 }
 
 /* ========================= Questão ============================ */
@@ -893,6 +903,25 @@ img.q.alt-img {
   margin: 0;
   max-height: 260px;
   width: auto;
+}
+
+/* Figura ainda baixando (foto em js/base.js): bloco afundado pulsando no
+   lugar dela, para a página não pular; ao carregar entra com fade. */
+img.q:not([data-ok]) {
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 3;
+  background: var(--sunk);
+  border-color: transparent;
+  animation: pulse 1.4s var(--ease-in-out) infinite;
+}
+
+img.q.alt-img:not([data-ok]) {
+  width: 160px;
+  aspect-ratio: 2 / 1;
+}
+
+img.q[data-ok] {
+  animation: fade 240ms var(--ease-out);
 }
 
 .alt-mix {
@@ -1044,8 +1073,17 @@ img.q.alt-img {
 }
 
 /* Anel de acertos com a nota no centro */
+@property --p {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+/* Única animação fora de transform/opacity: o arco do anel cresce até a
+   nota uma vez, na tela de resultado (evento raro, 220px). */
 .ring {
-  --p: 0;
+  --p: var(--n, 0);
+  transition: --p 0.9s var(--ease-out);
   display: grid;
   place-content: center;
   width: 220px;
@@ -1054,6 +1092,12 @@ img.q.alt-img {
   background:
     radial-gradient(closest-side, var(--card) 86%, transparent 87%),
     conic-gradient(var(--acc) calc(var(--p) * 1turn), var(--sunk) 0);
+}
+
+@starting-style {
+  .ring {
+    --p: 0;
+  }
 }
 
 .score {
@@ -1272,6 +1316,8 @@ img.q.alt-img {
   background: var(--acc);
   border-radius: var(--r-pill);
   transform-origin: left;
+  transform: scaleX(var(--v, 0));
+  transition: transform 0.4s var(--ease-out);
 }
 
 .filters {
@@ -1484,14 +1530,38 @@ img.q.alt-img {
   animation: pulse 1.4s var(--ease-in-out) infinite;
 }
 
-.skeleton span:nth-child(2) {
+/* Forma da tela inicial: título, lead, quatro abas de área e cartões */
+.skeleton .sk-h {
+  height: 2.75rem;
+  width: 62%;
+}
+
+.skeleton .sk-l {
   width: 82%;
   animation-delay: 0.12s;
 }
 
-.skeleton span:nth-child(3) {
-  width: 58%;
-  animation-delay: 0.24s;
+.skeleton .sk-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--s-xs);
+  height: auto;
+  background: none;
+  animation: none;
+}
+
+.skeleton .sk-tabs i,
+.skeleton .sk-c {
+  display: block;
+  height: 72px;
+  border-radius: var(--r-md);
+  background: var(--sunk);
+  animation: pulse 1.4s var(--ease-in-out) 0.24s infinite;
+}
+
+.skeleton .sk-c {
+  height: 88px;
+  animation-delay: 0.36s;
 }
 
 @keyframes pulse {
@@ -1513,6 +1583,24 @@ img.q.alt-img {
   }
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Listas entram em sequência curta (30ms por item, até o 6º). O mapa de
+   questões fica de fora: redesenha a cada questão. */
+.in :is(.list, .blocos) > * {
+  animation: in 0.3s var(--ease-out) backwards;
+}
+
+.in :is(.list, .blocos) > :nth-child(2) { animation-delay: 30ms; }
+.in :is(.list, .blocos) > :nth-child(3) { animation-delay: 60ms; }
+.in :is(.list, .blocos) > :nth-child(4) { animation-delay: 90ms; }
+.in :is(.list, .blocos) > :nth-child(5) { animation-delay: 120ms; }
+.in :is(.list, .blocos) > :nth-child(n + 6) { animation-delay: 150ms; }
+
 .item,
 .tab,
 .alt,
@@ -1531,8 +1619,27 @@ img.q.alt-img {
   transform: scale(0.97);
 }
 
-.modal[open] {
-  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+/* Diálogo: entra em 200ms de 0.95; sai em 150ms para 0.97, mais discreto.
+   display/overlay discretos mantêm o diálogo na camada do topo até o fim. */
+.modal,
+.modal::backdrop {
+  transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out),
+    overlay 150ms allow-discrete, display 150ms allow-discrete;
+}
+
+.modal:not([open]) {
+  display: none;
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.modal[open],
+.modal[open]::backdrop {
+  transition-duration: 200ms;
+}
+
+.modal:not([open])::backdrop {
+  opacity: 0;
 }
 
 @starting-style {
@@ -1540,23 +1647,31 @@ img.q.alt-img {
     opacity: 0;
     transform: scale(0.95);
   }
+  .modal[open]::backdrop {
+    opacity: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .in {
     animation: fade 0.2s linear;
   }
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
+  .in :is(.list, .blocos) > * {
+    animation: none;
+  }
+  .ring,
+  .prog i,
+  .row-bar i {
+    transition: none;
   }
   *:active,
   *:hover,
-  .modal[open] {
+  .modal {
     transform: none !important;
   }
-  .skeleton span {
+  .skeleton span,
+  .skeleton i,
+  img.q:not([data-ok]) {
     animation: none;
   }
 }
@@ -1710,6 +1825,8 @@ html[data-exam] .side {
 /* Bloco: nota à esquerda, matéria e tema no meio, acertos à direita.
    A cor vem da área do bloco (data-area). */
 .bloco {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 88px;
   width: 100%;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;

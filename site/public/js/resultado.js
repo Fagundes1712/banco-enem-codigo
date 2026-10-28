@@ -10,7 +10,7 @@ function result() {
       { class: "res" },
       h(
         "div",
-        { class: "ring", style: "--p:" + T.hits / T.qs.length },
+        { class: "ring", style: "--n:" + T.hits / T.qs.length },
         h("p", { class: "meta" }, "Nota estimada"),
         h("div", { class: "score" }, T.nota)
       ),
