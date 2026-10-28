@@ -1514,6 +1514,39 @@ img.q[data-ok] {
   padding: 0 12px;
 }
 
+/* Quadro de escolha do bloco (Suas respostas): opções em tinta, empilhadas
+   entre linhas pontilhadas, como um destaque do caderno de prova */
+.escolha {
+  text-align: center;
+}
+
+.escolhas {
+  display: grid;
+  gap: var(--s-xs);
+  padding: var(--s-md) 0;
+  margin-top: var(--s-xs);
+  border-block: 3px dotted var(--ink);
+}
+
+.escolhas .btn {
+  min-height: 52px;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--card);
+  font-size: 1.0625rem;
+  text-wrap: balance;
+}
+
+.escolhas .btn:disabled {
+  opacity: 0.35;
+}
+
+.escolha .fechar {
+  justify-self: center;
+  margin-top: var(--s-xs);
+  border-color: transparent;
+}
+
 /* ========================= Skeleton ============================ */
 
 .skeleton {
@@ -1931,4 +1964,4 @@ html[data-exam] .side {
   .side-link:active {
     transform: none;
   }
-}
+}
