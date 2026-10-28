@@ -1,6 +1,6 @@
 # Fluxo de desenvolvimento
 
-Como toda tarefa de código vira issue, branch, PR, checagem e deploy. As regras curtas estão em `AGENTS.md`; aqui ficam os detalhes e a configuração.
+Como toda tarefa de código vira issue, branch, PR, checagem e deploy. Código em https://github.com/Fagundes1712/banco-enem-codigo (público, branch `main`). As regras curtas estão em `AGENTS.md`; aqui ficam os detalhes e a configuração.
 
 ## Para cada tarefa
 1. Entender o pedido e escrever os critérios de aceite.
@@ -39,4 +39,5 @@ Pedir intervenção só para: acesso que falta, conflito relevante, decisão de 
 
 ## Requisitos de acesso
 - `gh` autenticado como `Fagundes1712` com escopos `repo` e `workflow`.
-- Proteção da `main` (PR obrigatório, check `verify` verde, sem push forçado) depende do repositório ser público no plano gratuito do GitHub.
+- Proteção da `main` no `banco-enem-codigo`: PR obrigatório, check `verify` verde e atualizado com a `main`, vale também para o administrador, sem push forçado nem exclusão. Funciona no plano gratuito porque o repositório é público.
+- O antigo `Fagundes1712/Banco-Enem` (privado) tem arquivos de outros projetos e não é usado.
