@@ -87,6 +87,9 @@ test("plural: singular só para 1", () => {
   assert.equal(f.plural(1200, "questão", "questões"), "1.200 questões");
 });
 
-test("Sentry: nada é carregado sem DSN", () => {
-  assert.equal(window.document.querySelector('script[src*="sentry"]'), null);
+test("Sentry: SDK do CDN com versão fixa e hash de integridade", () => {
+  const s = window.document.querySelector('script[src*="sentry-cdn"]');
+  assert.match(s.src, /\/\d+\.\d+\.\d+\/bundle\.min\.js$/);
+  assert.match(s.integrity, /^sha384-/);
+  assert.equal(s.crossOrigin, "anonymous");
 });
