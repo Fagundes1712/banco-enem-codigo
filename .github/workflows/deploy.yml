@@ -1,0 +1,68 @@
+name: Deploy
+
+# Publica site/public no repositório Fagundes1712/banco-enem-app (GitHub Pages).
+# Automático depois do CI verde na main só quando a variável DEPLOY_AUTOMATICO = true.
+# Manual (e rollback): Actions > Deploy > Run workflow, com o commit desejado em "ref".
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Commit, tag ou branch a publicar (rollback = um commit anterior da main)
+        default: main
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (vars.DEPLOY_AUTOMATICO == 'true' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: producao
+      url: https://fagundes1712.github.io/banco-enem-app/
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || inputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+
+      - name: Clonar o repositório do site
+        uses: actions/checkout@v4
+        with:
+          repository: Fagundes1712/banco-enem-app
+          ssh-key: ${{ secrets.DEPLOY_KEY_SITE }}
+          path: _site
+
+      - name: Publicar
+        run: |
+          find _site -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r site/public/. _site/
+          touch _site/.nojekyll
+          cd _site
+          git add -A
+          if git diff --cached --quiet; then echo "Nada mudou no site."; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Deploy de ${GITHUB_REPOSITORY}@$(git -C .. rev-parse --short HEAD)"
+          git push origin HEAD:main
+
+      - name: Conferir o site no ar
+        run: npm run pos-deploy

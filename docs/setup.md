@@ -34,7 +34,7 @@ Estados: **validado** (rodou aqui), **configurado** (escrito, sem execução), *
 | Vercel skills / find-skills | inaplicável | Sem React/Next; o conjunto web exige esse stack |
 | next-dev-loop, bundle optimizer | inaplicável | Não é Next.js |
 | supabase-postgres-best-practices | inaplicável | Sem banco de dados |
-| gh-fix-ci | inaplicável | Sem CI; GitHub não conectado |
+| CI (GitHub Actions) | configurado | 2026-10-27: `ci.yml` e `deploy.yml`; ver `docs/fluxo.md` |
 | differential-review / revisão de segurança | configurado | Prompt em `docs/prompts/security-review.md`; skill não instalada, fallback manual |
 | shadcn | inaplicável | Sem React; design próprio em `DESIGN.md` |
 | Sentry MCP | inaplicável | Sem backend nem conta escolhida |
@@ -42,7 +42,7 @@ Estados: **validado** (rodou aqui), **configurado** (escrito, sem execução), *
 | Browser (agent-browser / DevTools MCP) | reusado | Playwright do ambiente validou o fluxo crítico |
 | Memória em camadas | reusado | Memória nativa do projeto (índice `MEMORY.md`, um arquivo por assunto), carregada automaticamente pelo Claude. Fatos com data; aposentar quando mudarem |
 | Skills de artefato, skill-creator, plugins oficiais, aia-harness | inaplicável | Sem necessidade concreta |
-| Hooks do cliente | inaplicável | Nenhum fluxo pede hook; regras proíbem hooks de Git |
+| Hooks do cliente | validado | 2026-10-27: `.claude/hooks/guarda.cjs` (PreToolUse) barra commit/push na main e roda checagens; ver `docs/fluxo.md` |
 | Quality gates ESLint | inaplicável | JS puro sem dependências; substituído por `scripts/check.cjs`. Reavaliar com crescimento |
 | Subagentes | política | Só para partes independentes; trabalho deste setup foi sequencial e feito sem delegação |
 

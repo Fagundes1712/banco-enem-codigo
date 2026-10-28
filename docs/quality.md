@@ -5,7 +5,8 @@
 |---|---|
 | `npm run check` | Sintaxe de `js/*.js` e `sw.js` (`node --check`), no máximo 350 linhas por arquivo de código, `site/public/` igual à raiz. Sem dependências. |
 | `npm test` | 148 checks em jsdom: navegação, simulado, Suas respostas, TRI, correção, acessibilidade básica, service worker e integridade do banco real. `BANCO=<arquivo>` testa outro banco (125 checks com fixture). |
-| `npm run verify` | Os dois acima. |
+| `npm run verify` | Os dois acima. Roda também no GitHub Actions em todo PR (`.github/workflows/ci.yml`) e no hook antes de cada push (`docs/fluxo.md`). |
+| `npm run pos-deploy` | O site no ar tem a mesma `VERSION` do `sw.js` local e serve `index.html`, `questions.json` e `taxonomy.json`. |
 
 Não há lint, verificação de tipos nem build: o projeto é JS puro. ESLint não foi adotado porque exigiria dependências e configuração sem ganho medido; reavaliar se o código crescer.
 
