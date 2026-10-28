@@ -10,7 +10,7 @@ App estático, sem framework, sem build e sem servidor próprio.
 | `js/inicio.js` | Tela inicial e tela de matéria. |
 | `js/topico.js` | Tela de tópico e filtros. |
 | `js/simulado.js` | Simulado, cronômetro e cálculo da nota TRI. |
-| `js/respostas.js` | Aba "Suas respostas": guarda cada simulado terminado como bloco (`banco-enem:blocos`, até 100), lista com filtros de área e matéria, reabre as correções e liga a barra lateral. |
+| `js/respostas.js` | Aba "Suas respostas": guarda cada simulado terminado como bloco (`banco-enem:blocos`, até 100), lista com filtros de área e matéria, ao tocar num bloco oferece visualizar as correções ou refazer as questões (todas ou só as incorretas); refazer atualiza o próprio bloco e recalcula a nota. Também liga a barra lateral. |
 | `js/resultado.js` | Resultado, correções, atalhos de teclado, `load()` e registro do service worker. |
 | `styles.css` | Todo o estilo (tokens em `:root`, tema claro e escuro). |
 | `sw.js` | Service worker: cache do shell (`VERSION`) e dos dados. |

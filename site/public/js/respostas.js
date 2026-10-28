@@ -19,6 +19,7 @@ function readBlocos() {
 
 function guardaBloco() {
   const c = T.ctx || {};
+  if (c.bloco) return refazBloco(c.bloco);
   R.unshift({
     t: Date.now(),
     area: T.qs[0].area,
@@ -30,11 +31,39 @@ function guardaBloco() {
     secs: T.secs,
   });
   R = R.slice(0, RMAX);
+  salvaBlocos();
+}
+
+function salvaBlocos() {
   try {
     localStorage.setItem(RKEY, JSON.stringify(R));
   } catch {
     /* armazenamento indisponível: o bloco fica só nesta sessão */
   }
+}
+
+// Refazer atualiza o próprio bloco: as respostas novas substituem as antigas
+// e a nota é recalculada com o bloco inteiro. O resultado mostra o bloco todo.
+function refazBloco(b) {
+  for (const q of T.qs) {
+    if (T.ans[q.id]) b.ans[q.id] = T.ans[q.id];
+    else delete b.ans[q.id];
+  }
+  const qs = qsDe(b);
+  const certo = (q) => b.ans[q.id] === q.gab;
+  b.t = Date.now();
+  b.secs = T.secs;
+  b.hits = qs.filter(certo).length;
+  b.nota = nota(qs.map((q) => [q, certo(q)]));
+  R = [b, ...R.filter((x) => x !== b)];
+  salvaBlocos();
+  Object.assign(T, {
+    qs,
+    ans: b.ans,
+    nota: b.nota,
+    hits: b.hits,
+    blank: qs.filter((q) => !b.ans[q.id]).length,
+  });
 }
 
 // Marca na barra lateral a seção atual.
@@ -178,11 +207,35 @@ function bloco(b) {
   );
 }
 
-// Reabre o bloco como um simulado encerrado: resultado e correções.
-function abrir(b) {
+const qsDe = (b) => {
   const byId = new Map(Q.map((q) => [q.id, q]));
-  const qs = b.qs.map((id) => byId.get(id)).filter(Boolean);
+  return b.qs.map((id) => byId.get(id)).filter(Boolean);
+};
+
+// Tocar no bloco pergunta se é para rever as correções ou refazer questões.
+function abrir(b) {
+  const qs = qsDe(b);
   if (!qs.length) return;
+  const erradas = qs.filter((q) => b.ans[q.id] !== q.gab);
+  escolha("O que fazer com este bloco?", [
+    ["ver", "Visualizar respostas"],
+    ["refazer", "Refazer questões"],
+  ]).then((k) => {
+    if (k === "ver") ver(b, qs);
+    else if (k === "refazer")
+      escolha("Quais questões responder de novo?", [
+        ["todas", "Responder todas"],
+        ["erradas", "Responder apenas as incorretas", !erradas.length],
+      ]).then((r) => {
+        if (!r) return;
+        start(r === "todas" ? qs : erradas, respostas);
+        T.ctx = { top: b.top, bloco: b };
+      });
+  });
+}
+
+// Reabre o bloco como um simulado encerrado: resultado e correções.
+function ver(b, qs) {
   T = {
     qs,
     ans: b.ans,
@@ -194,6 +247,40 @@ function abrir(b) {
     live: false,
   };
   corr();
+}
+
+// Quadro de opções empilhadas entre linhas pontilhadas. Resolve com a chave
+// escolhida, ou null ao fechar. Opção com terceiro item verdadeiro fica desligada.
+function escolha(titulo, opts) {
+  return new Promise((resolve) => {
+    const done = (v) => {
+      dlg.close();
+      dlg.remove();
+      resolve(v);
+    };
+    const dlg = h(
+      "dialog",
+      { class: "modal escolha", "aria-labelledby": "md-title" },
+      h("h2", { id: "md-title" }, titulo),
+      h(
+        "div",
+        { class: "escolhas" },
+        opts.map(([k, txt, off]) =>
+          h("button", { class: "btn", type: "button", disabled: !!off, onclick: () => done(k) }, txt)
+        )
+      ),
+      h("button", { class: "btn fechar", type: "button", onclick: () => done(null) }, "Cancelar")
+    );
+    dlg.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      done(null);
+    });
+    // Toque fora do quadro (no fundo escurecido) fecha.
+    dlg.addEventListener("click", (e) => e.target === dlg && done(null));
+    document.body.append(dlg);
+    dlg.showModal();
+    dlg.querySelector(".escolhas .btn:not(:disabled)").focus();
+  });
 }
 
 document.getElementById("nav-inicio")?.addEventListener("click", () => Q.length && swap(home));

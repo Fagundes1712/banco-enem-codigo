@@ -880,9 +880,19 @@ async function irTopico(w, id) {
   ok("situação erradas vazia", d2.querySelectorAll(".qcard").length === 0);
   await setRF("sit", "todas");
   ok("situação todas volta aos blocos", d2.querySelectorAll(".bloco").length === 1);
+  const opcao = (re) => [...d2.querySelectorAll("dialog.escolha[open] .btn")].find((b) => re.test(b.textContent));
   click(w2, d2.querySelector(".bloco"));
   await tick(20);
-  ok("bloco abre as correções", d2.querySelectorAll(".cor").length === uniTop.length);
+  ok("bloco abre o quadro com Visualizar e Refazer", !!opcao(/Visualizar respostas/) && !!opcao(/Refazer questões/));
+  click(w2, opcao(/Cancelar/));
+  await tick(20);
+  ok("cancelar fecha o quadro e fica em Suas respostas",
+    !d2.querySelector("dialog.escolha") && d2.querySelector("h1").textContent === "Suas respostas");
+  click(w2, d2.querySelector(".bloco"));
+  await tick(20);
+  click(w2, opcao(/Visualizar respostas/));
+  await tick(20);
+  ok("visualizar abre as correções", d2.querySelectorAll(".cor").length === uniTop.length);
   click(w2, [...d2.querySelectorAll(".btn")].find((b) => /Voltar ao resultado/.test(b.textContent)));
   await tick(20);
   const vr = [...d2.querySelectorAll(".btn")].find((b) => /Suas respostas/.test(b.textContent));
@@ -890,9 +900,51 @@ async function irTopico(w, id) {
   click(w2, vr);
   await tick(20);
   ok("voltou para Suas respostas", d2.querySelector("h1").textContent === "Suas respostas");
+
+  console.log("\n== Refazer bloco ==");
+  click(w2, d2.querySelector(".bloco"));
+  await tick(20);
+  click(w2, opcao(/Refazer questões/));
+  await tick(20);
+  ok("refazer pergunta Todas ou Apenas as incorretas",
+    !!opcao(/Responder todas/) && !!opcao(/apenas as incorretas/));
+  click(w2, opcao(/apenas as incorretas/));
+  await tick(20);
+  ok("refazer só as incorretas abre o simulado sem a acertada",
+    d2.querySelectorAll(".dot").length === uniTop.length - 1, String(d2.querySelectorAll(".dot").length));
+  for (let k = 0; k < uniTop.length - 1; k++) {
+    const qk = questaoNaTela(d2, uniTop);
+    const rk = [...d2.querySelectorAll('.alt input[type="radio"]')].find((i) => i.value === qk.gab);
+    rk.checked = true;
+    rk.dispatchEvent(new w2.Event("change", { bubbles: true }));
+    await tick(5);
+    const prox = [...d2.querySelectorAll(".nav .btn")].find((b) => /Próxima|Finalizar/.test(b.textContent));
+    click(w2, prox);
+    await tick(10);
+  }
+  const notaCheia = String(w2.__nota(uniTop.map((q) => [q, true])));
+  ok("resultado do refazer mostra o bloco inteiro",
+    d2.querySelector(".score").textContent === notaCheia &&
+      d2.querySelector(".stats b").textContent === uniTop.length + " de " + uniTop.length,
+    d2.querySelector(".score") && d2.querySelector(".score").textContent + " vs " + notaCheia);
+  const salvos = JSON.parse(w2.localStorage.getItem("banco-enem:blocos"));
+  ok("refazer atualiza o bloco em vez de criar outro",
+    salvos.length === 1 && salvos[0].hits === uniTop.length && String(salvos[0].nota) === notaCheia);
+  click(w2, [...d2.querySelectorAll(".btn")].find((b) => /Suas respostas/.test(b.textContent)));
+  await tick(20);
+  ok("bloco mostra a nota nova", d2.querySelector(".bloco-placar").textContent === uniTop.length + "/" + uniTop.length);
+  click(w2, d2.querySelector(".bloco"));
+  await tick(20);
+  click(w2, opcao(/Refazer questões/));
+  await tick(20);
+  ok("sem incorretas a opção fica desligada", opcao(/apenas as incorretas/).disabled === true);
+  click(w2, opcao(/Cancelar/));
+  await tick(20);
   click(w2, d2.getElementById("nav-inicio"));
   await tick(20);
   ok("Início volta para a área", !!d2.querySelector(".tabs"));
+  ok("nota da área usa as respostas refeitas",
+    d2.querySelector("#tab-" + tA.area + " .nota-tag b").textContent === String(w2.__nota(uniTop.map((q) => [q, true]))));
 
   console.log("\n== Questões únicas ==");
   ok(
