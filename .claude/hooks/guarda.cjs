@@ -25,9 +25,10 @@ process.stdin.on("end", () => {
     if (!/\s--\s/.test(m[0])) branch = m[1];
   const principal = /^(main|master)$/;
 
-  if (push && /(--force\b|\s-f\b|\+\S+)/.test(cmd) && !/--force-with-lease/.test(cmd))
+  const pushes = cmd.split("\n").filter((s) => /^(rtk\s+)?git\s+(-\S+\s+)*push\b/.test(s)).join("\n");
+  if (/(--force\b|\s-f\b|\s\+\S+)/.test(pushes) && !/--force-with-lease/.test(pushes))
     bloquear("Push forçado bloqueado. Use --force-with-lease só na sua branch de trabalho.");
-  if (push && cmd.split(/\s+/).some((t) => /^(\S*:)?(refs\/heads\/)?(main|master)$/.test(t)))
+  if (pushes.split(/\s+/).some((t) => /^(\S*:)?(refs\/heads\/)?(main|master)$/.test(t)))
     bloquear("Push para main/master bloqueado: abra um PR a partir de uma branch.");
   if (principal.test(branch))
     bloquear(`Você está na ${branch}. Crie uma branch antes: git switch -c <tipo>/<assunto>.`);

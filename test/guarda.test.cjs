@@ -29,6 +29,7 @@ caso("commit na main bloqueia", "main", 'git commit -m "x"', /Você está na mai
 caso("commit na master bloqueia", "master", "git add -A && git commit -am x", /Você está na master/);
 caso("trocar para a main no mesmo comando bloqueia", "feat/x", "git switch -q main && git commit -m x", /Você está na main/);
 caso("criar branch no mesmo comando libera", "main", "git switch -c feat/y && git commit -m x", /check falhou/);
+caso("main na mensagem do commit não bloqueia o push", "feat/x", 'git commit -m "texto da main" && git push -u origin feat/x', /verify falhou/);
 caso("push para main bloqueia", "feat/x", "git push origin main", /Push para main/);
 caso("push HEAD:main bloqueia", "feat/x", "rtk git push origin HEAD:main", /Push para main/);
 caso("push forçado bloqueia", "feat/x", "git push --force origin feat/x", /Push forçado/);
