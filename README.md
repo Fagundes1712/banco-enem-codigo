@@ -18,4 +18,6 @@ npm install        # só jsdom, para os testes
 npm run verify     # checagem + 148 testes
 ```
 
-Mais em [docs/onboarding.md](docs/onboarding.md). Regras para agentes e pessoas em [AGENTS.md](AGENTS.md).
+Mais em [docs/onboarding.md](docs/onboarding.md). Regras para agentes e pessoas em [AGENTS.md](AGENTS.md); como contribuir em [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Produção: https://fagundes1712.github.io/banco-enem-app/ (GitHub Pages). Estado de segurança, operação e privacidade em [docs/producao.md](docs/producao.md).
