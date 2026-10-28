@@ -153,7 +153,7 @@ async function irTopico(w, id) {
   {
     // Trocar de área não pode jogar a tela para o topo.
     const ys = [];
-    w.scrollTo = (x, y) => ys.push(y);
+    w.scrollTo = (_x, y) => ys.push(y);
     Object.defineProperty(w, "scrollY", { value: 420, configurable: true });
     click(w, d.getElementById("tab-MT"));
     await tick(10);
@@ -512,7 +512,7 @@ async function irTopico(w, id) {
   ok(
     "todo gabarito existe em alts (fora as anuladas)",
     banco.every(
-      (q) => q.anulada || (q.alts && Object.prototype.hasOwnProperty.call(q.alts, q.gab))
+      (q) => q.anulada || (q.alts && Object.hasOwn(q.alts, q.gab))
     )
   );
   ok(
