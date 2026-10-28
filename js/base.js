@@ -119,7 +119,7 @@ function rich(t) {
     .forEach((x, i) => {
       if (i % 2)
         w.append(
-          h("img", { class: "q", src: x, alt: "Imagem do enunciado", loading: "lazy" })
+          foto("q", x, "Imagem do enunciado")
         );
       else
         x.split(/\n{2,}/).forEach((p) => {
@@ -129,18 +129,22 @@ function rich(t) {
   return w;
 }
 
-const imgs = (q) =>
-  (q.imagens || []).map((u) =>
-    h("img", { class: "q", src: u, alt: "Imagem da questão", loading: "lazy" })
-  );
-
-const altImg = (src) =>
+// Figura preguiçosa: placeholder (skeleton) até carregar, depois entra com
+// fade (styles.css, img.q). Erro também tira o placeholder e mostra o alt.
+const foto = (cls, src, alt) =>
   h("img", {
-    class: "q alt-img",
+    class: cls,
     src,
-    alt: "Alternativa em imagem",
+    alt,
     loading: "lazy",
+    decoding: "async",
+    onload: (e) => e.target.setAttribute("data-ok", ""),
+    onerror: (e) => e.target.setAttribute("data-ok", ""),
   });
+
+const imgs = (q) => (q.imagens || []).map((u) => foto("q", u, "Imagem da questão"));
+
+const altImg = (src) => foto("q alt-img", src, "Alternativa em imagem");
 
 // Alternativa: texto, "img:<url>" ou texto com ![alt](url) no meio.
 const altc = (t) =>

@@ -48,7 +48,7 @@ function test() {
           "aria-valuenow": String(done),
           "aria-label": "Progresso do simulado",
         },
-        h("i", { style: "transform:scaleX(" + done / n + ")" })
+        h("i", { style: "--v:" + done / n })
       )
     ),
     h(
@@ -138,7 +138,7 @@ function paint() {
   const bar = document.querySelector(".prog");
   if (bar) {
     bar.setAttribute("aria-valuenow", String(done));
-    bar.querySelector("i").style.transform = "scaleX(" + done / n + ")";
+    bar.querySelector("i").style.setProperty("--v", done / n);
   }
   const dot = document.querySelectorAll(".dot")[T.i];
   if (dot) dot.classList.add("on");
@@ -170,7 +170,8 @@ function confirmDialog(msg, txt = {}) {
     const done = (v) => {
       document.removeEventListener("keydown", onKey, true);
       dlg.close();
-      dlg.remove();
+      // Espera a animação de saída (styles.css, .modal) antes de tirar do DOM.
+      setTimeout(() => dlg.remove(), 200);
       resolve(v);
     };
     const onKey = (e) => {
