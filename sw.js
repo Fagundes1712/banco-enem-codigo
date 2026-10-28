@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v31"; // v31: página recarrega sozinha quando sai versão nova
+const VERSION = "v32"; // v32: nota simulada em cada área, matéria e tópico
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

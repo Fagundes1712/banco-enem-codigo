@@ -1122,7 +1122,7 @@ img.q.alt-img {
   background: var(--card);
   color: var(--ink);
   border-radius: var(--r-md);
-  padding: 14px 44px 14px var(--s-sm);
+  padding: 14px 104px 14px var(--s-sm);
   transition: transform 200ms var(--ease-out);
 }
 
@@ -1153,6 +1153,51 @@ img.q.alt-img {
   font-size: 0.8125rem;
   color: var(--ink-2);
   font-variant-numeric: tabular-nums;
+}
+
+/* Nota simulada do conjunto (área, matéria, tópico) */
+.nota-tag {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  position: absolute;
+  font-variant-numeric: tabular-nums;
+}
+
+.nota-tag small {
+  font: 600 0.625rem/1 var(--f-sans);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.nota-tag b {
+  font: 700 1.25rem/1 var(--f-sans);
+  color: var(--acc-ink);
+}
+
+.tab .nota-tag {
+  top: var(--s-sm);
+  right: var(--s-sm);
+}
+
+.tab[aria-selected="true"] .nota-tag small,
+.tab[aria-selected="true"] .nota-tag b {
+  color: var(--on-acc);
+}
+
+.item .nota-tag {
+  right: 40px;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.stats .nota-stat {
+  background: var(--acc-soft);
+}
+
+.stats .nota-stat b {
+  color: var(--acc-ink);
 }
 
 .list.topics .item {

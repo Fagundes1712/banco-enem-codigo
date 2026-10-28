@@ -95,6 +95,7 @@ function home() {
                 "button",
                 { class: "item sub", type: "button", onclick: () => materia(s.id) },
                 h("span", { class: "item-name" }, s.nome),
+                notaTag(notaDe(inSub(s.id))),
                 h(
                   "span",
                   { class: "item-meta" },
@@ -171,7 +172,8 @@ function home() {
               document.getElementById("tab-" + k)?.focus({ preventScroll: true });
             })),
           },
-          n
+          n,
+          notaTag(notaDe(inArea(k)))
         )
       )
     ),
@@ -235,6 +237,7 @@ function materia(id) {
             "button",
             { class: "item top-item", type: "button", onclick: () => topico(t.id) },
             h("span", { class: "item-name" }, t.nome),
+            notaTag(notaDe(qs)),
             h(
               "span",
               { class: "item-meta" },

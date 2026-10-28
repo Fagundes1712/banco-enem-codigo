@@ -33,6 +33,10 @@ Como a tabela foi feita: para cada prova de 2022, 2023, 2024 e 2025, contei os a
 
 Variação entre os anos com 30 acertos: CN 674 a 709, CH 600 a 642, LC 587 a 613, MT 756 a 827. Dentro de um ano, 80% dos participantes com 30 acertos ficaram a uns 20 a 30 pontos da mediana, porque a TRI oficial pesa quais questões foram acertadas.
 
+### Nota de cada área, matéria e tópico
+
+Cada área (cartão do Início), matéria e grande tópico mostra a própria nota, calculada do zero com o mesmo método do simulado sobre as questões respondidas daquele conjunto (vale a última resposta de cada questão). Não é média das notas dos níveis de baixo (decisão do usuário, 2026-10-28): a nota de Biologia sai de todas as questões de Biologia respondidas, e a de Ciências da Natureza, de todas as respondidas da área, inclusive as que ainda não têm tópico. Sem nenhuma resposta, aparece um traço. Função `notaDe` em `js/base.js`.
+
 Para atualizar com um ano novo, rode `tools/nota_por_acertos.py` nos microdados desse ano e refaça a média.
 
 ### Cálculo exato do INEP (referência)

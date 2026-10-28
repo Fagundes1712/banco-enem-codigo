@@ -276,6 +276,22 @@ function sit(q) {
   return r ? (r.ok ? "ok" : "bad") : "nao";
 }
 
+// Nota de um tópico, matéria ou área: o mesmo cálculo do simulado, feito
+// direto com as questões respondidas do conjunto (última resposta de cada).
+function notaDe(qs) {
+  const r = qs.filter((q) => H[canon(q)]);
+  return r.length ? nota(r.map((q) => [q, H[canon(q)].ok])) : null;
+}
+
+// Selo de nota dos cartões; sem resposta mostra traço.
+const notaTag = (n) =>
+  h(
+    "span",
+    { class: "nota-tag", "aria-label": n == null ? "Sem nota ainda" : "Nota " + n },
+    h("small", { "aria-hidden": "true" }, "nota"),
+    h("b", { "aria-hidden": "true" }, n == null ? "—" : String(n))
+  );
+
 const num = (n) => n.toLocaleString("pt-BR");
 
 // Selo do nível de dificuldade; sem parâmetro oficial, nada aparece.

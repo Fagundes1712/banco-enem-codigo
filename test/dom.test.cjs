@@ -128,7 +128,7 @@ async function irTopico(w, id) {
   ok("4 abas de área", d.querySelectorAll(".tab").length === 4);
   ok(
     "aba CN selecionada por padrão",
-    d.querySelector('.tab[aria-selected="true"]').textContent === "Ciências da Natureza"
+    d.querySelector('.tab[aria-selected="true"]').firstChild.textContent === "Ciências da Natureza"
   );
   ok("sem filtro de ano na home", !d.querySelector("label.f select"));
   ok(
@@ -819,7 +819,9 @@ async function irTopico(w, id) {
   click(w2, volta);
   await tick(20);
   const st = [...d2.querySelectorAll(".stats b")].map((b) => b.textContent);
-  ok("tópico conta 1 respondida e 1 acertada", st[1] === "1" && st[3] === "1" && st[4] === "0", st.join(","));
+  ok("tópico conta 1 respondida e 1 acertada", st[1] === "1" && st[4] === "1" && st[5] === "0", st.join(","));
+  const notaTop = String(w2.__nota([[uniTop[0], true]]));
+  ok("tópico mostra a nota de 1 acerto em 1", st[2] === notaTop, st[2] + " vs " + notaTop);
   ok("histórico salvo no navegador", Object.keys(JSON.parse(w2.localStorage.getItem("banco-enem:hist"))).length === 1);
   ok("teclado não navega fora do simulado", (() => {
     d2.dispatchEvent(new w2.KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }));
@@ -831,6 +833,13 @@ async function irTopico(w, id) {
   click(w2, d2.querySelector(".btn.back"));
   await tick(20);
   ok("voltar da matéria leva à área", !!d2.querySelector(".tabs"));
+  ok("aba da área mostra a nota das respondidas",
+    d2.querySelector("#tab-" + tA.area + " .nota-tag b").textContent === notaTop);
+  ok("matéria mostra a nota das respondidas",
+    [...d2.querySelectorAll(".item.sub")].some((b) => b.querySelector(".item-name").textContent === SUB[tA.materia].nome &&
+      b.querySelector(".nota-tag b").textContent === notaTop));
+  ok("área sem resposta mostra traço",
+    [...d2.querySelectorAll(".tab")].filter((t) => t.id !== "tab-" + tA.area).every((t) => t.querySelector(".nota-tag b").textContent === "—"));
 
   console.log("\n== Suas respostas ==");
   ok("barra lateral com Início e Suas respostas", !!d2.getElementById("nav-inicio") && !!d2.getElementById("nav-resp"));
