@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v36"; // v36: refazer questões de um bloco em Suas respostas
+const VERSION = "v37"; // v37: quadro de escolha sem linhas pontilhadas
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 

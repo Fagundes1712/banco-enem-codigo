@@ -1515,7 +1515,7 @@ img.q[data-ok] {
 }
 
 /* Quadro de escolha do bloco (Suas respostas): opções em tinta, empilhadas
-   entre linhas pontilhadas, como um destaque do caderno de prova */
+   numa coluna */
 .escolha {
   text-align: center;
 }
@@ -1523,9 +1523,8 @@ img.q[data-ok] {
 .escolhas {
   display: grid;
   gap: var(--s-xs);
-  padding: var(--s-md) 0;
+  padding: var(--s-sm) 0;
   margin-top: var(--s-xs);
-  border-block: 3px dotted var(--ink);
 }
 
 .escolhas .btn {
