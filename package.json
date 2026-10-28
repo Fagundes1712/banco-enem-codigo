@@ -3,7 +3,7 @@
   "private": true,
   "description": "Simulados do ENEM com as provas oficiais 2015–2025 (HTML/CSS/JS puro).",
   "scripts": {
-    "start": "python3 -m http.server 8765",
+    "start": "python3 -m http.server 8765 --bind 127.0.0.1",
     "test": "node test/dom.test.cjs && node test/guarda.test.cjs",
     "check": "node scripts/check.cjs",
     "mirror": "node scripts/mirror.cjs",

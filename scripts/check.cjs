@@ -28,5 +28,9 @@ for (const f of [...ESPELHO, ...js]) {
     erro(`site/public/${f} difere da raiz (rode npm run mirror)`);
 }
 
+// CSP em meta, porque o GitHub Pages não deixa configurar cabeçalhos (docs/security.md)
+if (!fs.readFileSync(path.join(root, "index.html"), "utf8").includes('http-equiv="Content-Security-Policy"'))
+  erro("index.html sem Content-Security-Policy");
+
 console.log(falhas ? `== check: ${falhas} falha(s) ==` : "== check: ok ==");
 process.exit(falhas ? 1 : 0);
