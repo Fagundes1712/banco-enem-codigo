@@ -249,7 +249,7 @@ function ver(b, qs) {
   corr();
 }
 
-// Quadro de opções empilhadas entre linhas pontilhadas. Resolve com a chave
+// Quadro de opções empilhadas. Resolve com a chave
 // escolhida, ou null ao fechar. Opção com terceiro item verdadeiro fica desligada.
 function escolha(titulo, opts) {
   return new Promise((resolve) => {
