@@ -145,10 +145,11 @@ if (
 
 /* ========================== Observabilidade ========================= */
 
-// Erros do navegador vão para o Sentry só quando SENTRY_DSN estiver
-// preenchido (docs/observabilidade.md). Sem IP, cookies nem texto da tela:
-// só a mensagem e a pilha do erro.
-const SENTRY_DSN = "";
+// Erros do navegador vão para o Sentry (projeto banco-enem-app), só em HTTPS
+// (docs/observabilidade.md). Sem IP, cookies nem texto da tela: só a
+// mensagem e a pilha do erro. DSN vazio desliga.
+const SENTRY_DSN =
+  "https://1da0b01364b29b2a5c4cce169c478ee0@o4512336096526336.ingest.us.sentry.io/4512336160292864";
 if (SENTRY_DSN && location.protocol === "https:") {
   const s = document.createElement("script");
   s.src = "https://browser.sentry-cdn.com/11.10.0/bundle.min.js";

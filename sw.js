@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v34"; // v34: captura de erros (Sentry) preparada, desligada sem DSN
+const VERSION = "v35"; // v35: captura de erros (Sentry) ligada
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
