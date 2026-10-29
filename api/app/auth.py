@@ -3,7 +3,7 @@
 from datetime import timedelta
 from typing import Annotated
 
-from fastapi import APIRouter, Cookie, Depends, HTTPException, Request, Response
+from fastapi import APIRouter, BackgroundTasks, Cookie, Depends, HTTPException, Request, Response
 from pydantic import BaseModel, EmailStr
 from sqlalchemy import select, update
 from sqlalchemy.orm import Session
@@ -81,19 +81,22 @@ def _revoga_todas(banco: Session, usuario_id: str) -> None:
     banco.execute(update(Sessao).where(Sessao.usuario_id == usuario_id).values(revogada=True))
 
 
-def _envia_link(banco: Session, usuario: Usuario, tipo: str) -> None:
+def _envia_link(banco: Session, usuario: Usuario, tipo: str, fila: BackgroundTasks) -> None:
+    # O e-mail sai depois da resposta: o tempo dela não revela se a conta existe.
     token, h = novo_token()
     banco.add(TokenEmail(usuario_id=usuario.id, tipo=tipo, token_hash=h, expira_em=agora() + PRAZO[tipo]))
     banco.commit()
     site = config().site_url
     if tipo == "confirmar":
-        servicos.envia_email(
+        fila.add_task(
+            servicos.envia_email,
             usuario.email,
             "Confirme seu e-mail no Banco ENEM",
             f"Para ativar sua conta, abra este link em até 24 horas:\n{site}/?confirmar={token}",
         )
     else:
-        servicos.envia_email(
+        fila.add_task(
+            servicos.envia_email,
             usuario.email,
             "Trocar a senha do Banco ENEM",
             f"Para criar uma senha nova, abra este link em até 30 minutos:\n{site}/?nova-senha={token}\n\n"
@@ -150,7 +153,7 @@ RESPOSTA_CADASTRO = {"mensagem": "Se o e-mail puder ser usado, enviamos um link 
 
 
 @router.post("/cadastro", status_code=202)
-def cadastro(dados: Cadastro, request: Request, banco: Banco):
+def cadastro(dados: Cadastro, request: Request, banco: Banco, fila: BackgroundTasks):
     limita(f"cadastro:{ip_do_cliente(request)}", 5, 3600)
     exige_turnstile(dados.turnstile, request)
     if not dados.aceite_termos:
@@ -158,13 +161,14 @@ def cadastro(dados: Cadastro, request: Request, banco: Banco):
     if not senha_valida(dados.senha):
         raise HTTPException(400, "A senha precisa ter de 8 a 72 caracteres (acentos contam em dobro).")
     email = dados.email.lower()
+    senha_hash = gerar_hash(dados.senha)  # antes da busca: mesmo tempo de resposta com ou sem conta
     if banco.scalar(select(Usuario).where(Usuario.email == email)):
         # Mesma resposta para não revelar quem tem conta.
         return RESPOSTA_CADASTRO
-    usuario = Usuario(email=email, senha_hash=gerar_hash(dados.senha), termos_versao=TERMOS_VERSAO)
+    usuario = Usuario(email=email, senha_hash=senha_hash, termos_versao=TERMOS_VERSAO)
     banco.add(usuario)
     banco.commit()
-    _envia_link(banco, usuario, "confirmar")
+    _envia_link(banco, usuario, "confirmar", fila)
     return RESPOSTA_CADASTRO
 
 
@@ -220,14 +224,14 @@ def logout(resposta: Response, banco: Banco, renovacao: Annotated[str | None, Co
 
 
 @router.post("/esqueci", status_code=202)
-def esqueci(dados: Esqueci, request: Request, banco: Banco):
+def esqueci(dados: Esqueci, request: Request, banco: Banco, fila: BackgroundTasks):
     email = dados.email.lower()
     limita(f"esqueci-ip:{ip_do_cliente(request)}", 5, 3600)
     limita(f"esqueci-email:{email}", 3, 3600)
     exige_turnstile(dados.turnstile, request)
     usuario = banco.scalar(select(Usuario).where(Usuario.email == email))
     if usuario:
-        _envia_link(banco, usuario, "senha")
+        _envia_link(banco, usuario, "senha", fila)
     return {"mensagem": "Se houver uma conta com esse e-mail, enviamos um link."}
 
 
@@ -240,5 +244,7 @@ def nova_senha(dados: NovaSenha, request: Request, banco: Banco):
     usuario.senha_hash = gerar_hash(dados.senha)
     usuario.confirmado = True  # quem recebeu o link prova que é dono do e-mail
     _revoga_todas(banco, usuario.id)
+    # Outros links de troca pedidos antes deixam de valer.
+    banco.execute(update(TokenEmail).where(TokenEmail.usuario_id == usuario.id, TokenEmail.tipo == "senha").values(usado=True))
     banco.commit()
     return {"mensagem": "Senha trocada. Entre com a senha nova."}

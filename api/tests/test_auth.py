@@ -113,6 +113,15 @@ def test_recuperacao_de_senha(logado, emails):
     assert logado.post("/auth/login", json={**CONTA, "senha": "senha-nova-22"}).status_code == 200
 
 
+def test_trocar_senha_invalida_links_antigos(cliente, emails):
+    cadastra(cliente)
+    for _ in range(2):
+        cliente.post("/auth/esqueci", json={"email": CONTA["email"], "turnstile": "ok"})
+    primeiro, segundo = (link(e[2], "nova-senha") for e in emails[-2:])
+    assert cliente.post("/auth/nova-senha", json={"token": segundo, "senha": "senha-nova-22"}).status_code == 200
+    assert cliente.post("/auth/nova-senha", json={"token": primeiro, "senha": "senha-do-atacante"}).status_code == 400
+
+
 def test_esqueci_nao_revela_conta(cliente, emails):
     r = cliente.post("/auth/esqueci", json={"email": "ninguem@exemplo.com", "turnstile": "ok"})
     assert r.status_code == 202 and emails == []
