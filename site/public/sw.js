@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v38"; // v38: fontes locais, sem Google Fonts (v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
+const VERSION = "v39"; // v39: telas de conta e assinatura (v38: fontes locais, sem Google Fonts; v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
@@ -24,6 +24,7 @@ const SHELL_ASSETS = [
   "js/topico.js",
   "js/simulado.js",
   "js/respostas.js",
+  "js/conta.js",
   "js/resultado.js",
   "icon.svg",
   "manifest.json",

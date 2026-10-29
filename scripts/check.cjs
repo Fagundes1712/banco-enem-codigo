@@ -35,6 +35,10 @@ if (!fs.readFileSync(path.join(root, "index.html"), "utf8").includes('http-equiv
 const cspMeta = (fs.readFileSync(path.join(root, "index.html"), "utf8").match(/Content-Security-Policy" content="([^"]+)"/) || [])[1];
 if (!fs.readFileSync(path.join(root, "_headers"), "utf8").includes(`Content-Security-Policy: ${cspMeta}; frame-ancestors 'none'`))
   erro("_headers com CSP diferente da do index.html");
+// Com a API ligada (js/conta.js), a CSP precisa deixar o site falar com ela.
+const apiUrl = (fs.readFileSync(path.join(root, "index.html"), "utf8").match(/name="api-url" content="([^"]*)"/) || [])[1];
+if (apiUrl && !/connect-src [^;]*/.exec(cspMeta)?.[0].includes(new URL(apiUrl).origin))
+  erro("CSP sem a API em connect-src (" + apiUrl + ")");
 // Contratos de arquitetura (docs/architecture.md): scripts clássicos, base.js
 // primeiro, todo js/ no index.html e no cache do service worker, dados só em JSON.
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");

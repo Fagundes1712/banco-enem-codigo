@@ -1993,4 +1993,63 @@ html[data-exam] .side {
   .side-link:active {
     transform: none;
   }
-}
+}
+
+/* ============================== Conta =============================== */
+
+.conta-form {
+  display: grid;
+  gap: var(--s-sm);
+  max-width: 420px;
+  margin: var(--s-md) 0;
+}
+
+.conta-form .f {
+  display: grid;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.conta-form input:not([type="checkbox"]) {
+  font: inherit;
+  font-weight: 500;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-sm);
+  padding: 12px 14px;
+  background: var(--card);
+  color: var(--ink);
+  min-height: 48px;
+  width: 100%;
+}
+
+.conta-form .aceite {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  font-weight: 400;
+}
+
+.conta-form .aceite input {
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+.robo {
+  min-height: 65px;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-xs);
+  margin: var(--s-sm) 0;
+}
+
+.acoes a.btn {
+  text-decoration: none;
+}
+
+.secao {
+  margin-top: var(--s-lg);
+}
