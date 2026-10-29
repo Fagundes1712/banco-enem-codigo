@@ -72,7 +72,7 @@ jobs:
       - name: Publicar no Cloudflare Pages
         if: vars.CLOUDFLARE_PAGES_PROJETO != ''
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_APITOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           PROJETO: ${{ vars.CLOUDFLARE_PAGES_PROJETO }}
         run: |

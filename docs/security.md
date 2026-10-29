@@ -21,7 +21,7 @@ Estado verificado em 2026-10-28. O app é estático: não há servidor próprio,
 - `frame-ancestors` (clickjacking), `X-Content-Type-Options`, `X-Frame-Options`, `Permissions-Policy` e `Cross-Origin-Opener-Policy` só funcionam como cabeçalho HTTP, que o GitHub Pages não deixa configurar. Eles estão em `_headers`, aplicado pela cópia no Cloudflare Pages (abaixo). `npm run check` exige que a CSP do `_headers` seja a do `<meta>` mais `frame-ancestors 'none'`.
 
 ## Cópia com cabeçalhos (Cloudflare Pages)
-- O `deploy.yml` publica `site/public/` também no Cloudflare Pages quando a variável de repositório `CLOUDFLARE_PAGES_PROJETO` existe, usando os segredos `CLOUDFLARE_API_TOKEN` (permissão Account › Cloudflare Pages › Edit, só isso) e `CLOUDFLARE_ACCOUNT_ID`. Sem a variável, o passo é pulado.
+- O `deploy.yml` publica `site/public/` também no Cloudflare Pages quando a variável de repositório `CLOUDFLARE_PAGES_PROJETO` existe, usando os segredos `CLOUDFLARE_APITOKEN` (permissão Account › Cloudflare Pages › Edit, só isso) e `CLOUDFLARE_ACCOUNT_ID`. Sem a variável, o passo é pulado.
 - Endereço: `https://<projeto>.pages.dev/`, com TLS e HSTS do domínio `.dev` (pré-carregado nos navegadores). Plano grátis, sem domínio próprio.
 - O passo confere que a `VERSION` no ar bate e que a resposta traz `frame-ancestors 'none'`.
 - O wrangler roda por `npx` em versão exata (`4.155.0`); o Dependabot não o atualiza, então suba à mão quando precisar.
