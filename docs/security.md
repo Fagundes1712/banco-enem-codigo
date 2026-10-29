@@ -16,7 +16,7 @@ Estado verificado em 2026-10-28. O app é estático: não há servidor próprio,
 ## HTTPS e cabeçalhos
 - Produção: `https://fagundes1712.github.io/banco-enem-app/`. O GitHub Pages emite e renova o certificado TLS; `https_enforced` está ligado (API do Pages) e `http://` responde 301 para `https://`. O cabeçalho `Strict-Transport-Security: max-age=31556952` vem do próprio GitHub.
 - O GitHub Pages não deixa configurar cabeçalhos. Por isso a política vai em `<meta http-equiv="Content-Security-Policy">` no `index.html`, e `npm run check` falha se ela sumir.
-- Política atual: só a própria origem para script, dados, imagens, manifesto e service worker; estilos só da origem e do Google Fonts, sem `'unsafe-inline'`; fontes do `fonts.gstatic.com`; `object-src 'none'`, `base-uri 'self'`, `form-action 'none'`.
+- Política atual: só a própria origem para script, dados, imagens, manifesto e service worker; estilos e fontes só da própria origem, sem `'unsafe-inline'`; `object-src 'none'`, `base-uri 'self'`, `form-action 'none'`.
 - Estilo dinâmico (barras, anel, véu) passa por CSSOM: `h()` em `js/base.js` grava `style` com `e.style.cssText`, que a CSP permite, em vez do atributo `style`, que ela bloqueia. Nunca usar `setAttribute("style", ...)`, `<style>` nem `style="..."` no HTML.
 - `frame-ancestors` (clickjacking), `X-Content-Type-Options`, `X-Frame-Options`, `Permissions-Policy` e `Cross-Origin-Opener-Policy` só funcionam como cabeçalho HTTP, que o GitHub Pages não deixa configurar. Eles estão em `_headers`, aplicado pela cópia no Cloudflare Pages (abaixo). `npm run check` exige que a CSP do `_headers` seja a do `<meta>` mais `frame-ancestors 'none'`.
 

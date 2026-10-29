@@ -18,7 +18,7 @@ Estados: **validado** (há evidência), **implementado, não validado**, **pende
 | Firewall e portas | não aplicável | Sem servidor próprio; servidor local só em `127.0.0.1` |
 | DDoS e abuso | não aplicável além da hospedagem | Coberto pela CDN do GitHub; sem endpoint próprio; limites em `docs/security.md` |
 | Dependências vulneráveis | validado | `npm audit`: 0; Dependabot configurado (`.github/dependabot.yml`) |
-| APIs e integrações | não aplicável | Só Google Fonts (arquivos estáticos) |
+| APIs e integrações | não aplicável | Nenhuma; fontes servidas pelo próprio site |
 | Pagamentos, webhooks, estornos | não aplicável | App gratuito, sem cobrança |
 | E-mail, SPF, DKIM, DMARC | não aplicável | O app não envia e-mail e não tem domínio próprio |
 | Nota fiscal | não aplicável | Sem receita |
