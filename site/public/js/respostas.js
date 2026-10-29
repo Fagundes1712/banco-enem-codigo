@@ -180,7 +180,7 @@ function bloco(b) {
     h(
       "button",
       { class: "bloco", type: "button", "data-area": b.area, onclick: () => abrir(b) },
-      h("span", { class: "bloco-nota" }, h("small", null, "nota"), String(b.nota)),
+      h("span", travada({ class: "bloco-nota" }), h("small", null, "nota"), valorNota(b.nota)),
       h(
         "span",
         { class: "bloco-txt" },

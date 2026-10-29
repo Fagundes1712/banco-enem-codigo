@@ -11,7 +11,8 @@ Estudantes que se preparam para o ENEM.
 2. **Simulado aleatório:** escolher área e quantidade e resolver questões sorteadas, com cronômetro.
 3. **Resultado:** acertos e nota pela mediana oficial do INEP para o mesmo número de acertos, 2022 a 2025 (`docs/dificuldade.md`) e correção questão a questão com o gabarito oficial.
 4. **Histórico:** respostas ficam salvas só neste navegador (`localStorage`); sem ele o app funciona sem progresso.
-5. **Offline:** o service worker guarda o app e o banco depois da primeira visita.
+5. **Planos:** no grátis o estudante vê só se acertou ou errou; as notas (simulado, área, matéria, tópico e blocos) são do plano Pro. Tocar onde ficaria a nota abre o convite com "Seja PRO" e "Continuar estudando". O plano vem da conta (`contaAtual`, API em `api/`); sem login, é o grátis.
+6. **Offline:** o service worker guarda o app e o banco depois da primeira visita.
 
 ## Dados
 - 1.850 questões das provas oficiais (aplicação regular, caderno azul), 8 anuladas.
@@ -22,4 +23,4 @@ Estudantes que se preparam para o ENEM.
 ## Fora do escopo hoje
 - Resoluções comentadas: o campo existe, mas está vazio. Não inventar conteúdo.
 - Prova de 2020, provas PPL e reaplicação.
-- Contas, servidor ou sincronização entre aparelhos.
+- Sincronização do histórico entre aparelhos (o login e a assinatura estão em construção em `api/`).

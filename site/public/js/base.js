@@ -24,6 +24,7 @@ let S = { area: "CN", n: 10, modo: "conteudo", materia: null, topico: null, f: {
 let T = null;
 let tick = null;
 let H = readHist();
+let PRO = false; // assinatura ativa na conta; só ela mostra as notas
 
 /* ============================== Helpers ============================== */
 
@@ -171,12 +172,22 @@ const getJSON = (u) =>
     return r.json();
   });
 
+// Plano do usuário (contaAtual vem de js/conta.js, com o login). Sem login,
+// sem rede ou sem API, fica no grátis.
+const plano = () =>
+  Promise.resolve(typeof contaAtual === "function" ? contaAtual() : null)
+    .then((c) => {
+      PRO = !!c?.assinatura_ativa;
+    })
+    .catch(() => {});
+
 function load() {
   const tx = getJSON("taxonomy.json").catch(() => null);
+  const pl = plano();
   getJSON("questions.json")
     .then((d) => {
       if (!Array.isArray(d) || !d.length) throw new Error("banco vazio");
-      return tx.then((t) => boot(d, t));
+      return Promise.all([tx, pl]).then(([t]) => boot(d, t));
     })
     .catch(() => tx.then((t) => pickFile(t)));
 }
@@ -292,9 +303,9 @@ function notaDe(qs) {
 const notaTag = (n) =>
   h(
     "span",
-    { class: "nota-tag", "aria-label": n == null ? "Sem nota ainda" : "Nota " + n },
+    travada({ class: "nota-tag", "aria-label": n == null ? "Sem nota ainda" : "Nota " + n }),
     h("small", { "aria-hidden": "true" }, "nota"),
-    h("b", { "aria-hidden": "true" }, n == null ? "—" : String(n))
+    h("b", { "aria-hidden": "true" }, valorNota(n))
   );
 
 const num = (n) => n.toLocaleString("pt-BR");

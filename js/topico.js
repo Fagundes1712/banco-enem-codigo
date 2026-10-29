@@ -62,7 +62,7 @@ function topico(id) {
       { class: "stats" },
       h("div", null, h("b", { id: "n-uni" }, String(all.length)), h("span", null, "questões únicas")),
       h("div", null, h("b", null, String(nResp)), h("span", null, "respondidas")),
-      h("div", { class: "nota-stat" }, h("b", null, String(notaDe(all) ?? "—")), h("span", null, "nota")),
+      h("div", travada({ class: "nota-stat" }), h("b", null, valorNota(notaDe(all))), h("span", null, "nota")),
       h("div", null, h("b", null, String(all.length - nResp)), h("span", null, "não respondidas")),
       h("div", null, h("b", null, String(nOk)), h("span", null, "acertadas")),
       h("div", null, h("b", null, String(nBad)), h("span", null, "erradas"))

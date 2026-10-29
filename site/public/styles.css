@@ -1274,6 +1274,15 @@ img.q[data-ok] {
   color: var(--acc-ink);
 }
 
+/* Nota travada no plano grátis: o toque abre o convite do Pro */
+.trava {
+  cursor: pointer;
+}
+
+.trava:active {
+  scale: 0.97;
+}
+
 .list.topics .item {
   box-shadow: var(--shadow);
 }
