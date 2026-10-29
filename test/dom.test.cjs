@@ -64,7 +64,8 @@ function ok(name, cond, extra) {
   }
 }
 
-function boot() {
+// pro: assinatura ativa na conta (contaAtual de js/conta.js).
+function boot(pro = true) {
   const dom = new JSDOM(html, {
     runScripts: "outside-only",
     url: "https://example.test/",
@@ -77,6 +78,7 @@ function boot() {
       json: () => Promise.resolve(String(u).includes("taxonomy") ? tax : banco),
     });
   window.alert = () => {};
+  window.contaAtual = () => Promise.resolve(pro ? { assinatura_ativa: true } : null);
   window.scrollTo = () => {};
 
   // jsdom não implementa <dialog>.showModal(); no navegador é nativo.
@@ -955,6 +957,36 @@ async function irTopico(w, id) {
       return d2.querySelector(".panel .note.avail").textContent.startsWith(n + " ");
     })()
   );
+
+  console.log("\n== Plano grátis ==");
+  {
+    const w3 = boot(false);
+    await tick(60);
+    const d3 = w3.document;
+    let assinou = false;
+    w3.abrirAssinatura = () => {
+      assinou = true;
+    };
+    const outra = [...d3.querySelectorAll(".tab")].find((t) => t.getAttribute("aria-selected") !== "true");
+    const tag = outra.querySelector(".nota-tag");
+    ok("grátis troca a nota por PRO", [...d3.querySelectorAll(".nota-tag b")].every((b) => b.textContent === "PRO"));
+    click(w3, tag);
+    await tick(10);
+    const conv = () => d3.querySelector("dialog.modal[open]");
+    ok("toque na nota abre o convite do Pro",
+      !!conv() && conv().textContent.includes("Para ter acesso aos cálculos de nota com os microdados oficiais do INEP, assine o plano Pro"));
+    ok("toque na nota não troca de área", outra.getAttribute("aria-selected") !== "true");
+    click(w3, [...conv().querySelectorAll(".btn")].find((b) => b.textContent === "Continuar estudando"));
+    await tick(10);
+    ok("Continuar estudando fecha o convite", !conv() && !assinou);
+    click(w3, tag);
+    await tick(10);
+    click(w3, [...conv().querySelectorAll(".btn")].find((b) => b.textContent === "Seja PRO"));
+    await tick(10);
+    ok("Seja PRO abre a assinatura", assinou);
+    await irTopico(w3, alvo);
+    ok("tópico no grátis esconde a nota", d3.querySelector(".nota-stat b").textContent === "PRO");
+  }
 
   console.log(
     "\n== Resultado: " + pass + " passaram, " + fail + " falharam ==\n"

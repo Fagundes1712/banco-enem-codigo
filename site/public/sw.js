@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v38"; // v38: fontes locais, sem Google Fonts (v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
+const VERSION = "v39"; // v39: notas só no plano Pro (v38: fontes locais, sem Google Fonts; v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
