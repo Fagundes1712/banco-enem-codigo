@@ -10,18 +10,20 @@ App estático, sem framework, sem build e sem servidor próprio.
 | `js/inicio.js` | Tela inicial e tela de matéria. |
 | `js/topico.js` | Tela de tópico e filtros. |
 | `js/simulado.js` | Simulado, cronômetro e cálculo da nota TRI. |
-| `js/respostas.js` | Aba "Suas respostas": guarda cada simulado terminado como bloco (`banco-enem:blocos`, até 100), lista com filtros de área e matéria, reabre as correções e liga a barra lateral. |
-| `js/resultado.js` | Resultado, correções, atalhos de teclado, `load()` e registro do service worker. |
+| `js/respostas.js` | Aba "Suas respostas": guarda cada simulado terminado como bloco (`banco-enem:blocos`, até 100), lista com filtros de área e matéria, ao tocar num bloco oferece visualizar as correções ou refazer as questões (todas ou só as incorretas); refazer atualiza o próprio bloco e recalcula a nota. Também liga a barra lateral. |
+| `js/resultado.js` | Resultado, correções, atalhos de teclado, `load()`, registro do service worker e captura de erros (Sentry, desligada sem DSN). |
 | `styles.css` | Todo o estilo (tokens em `:root`, tema claro e escuro). |
 | `sw.js` | Service worker: cache do shell (`VERSION`) e dos dados. |
 | `questions.json`, `taxonomy.json` | Dados. Nunca embutir no HTML ou JS. |
 | `img/` | Figuras das questões. |
 | `site/public/` | Cópia publicável do app (`npm run mirror`). |
 | `tools/` | Extrator em Python das provas do INEP e aplicação da classificação. |
+| `test/unidade.test.cjs` | Testes unitários das funções puras (`node:test`). |
 | `test/dom.test.cjs` | Testes de comportamento em jsdom. |
-| `scripts/check.cjs` | Checagem sem dependências. |
+| `e2e/` | Testes end-to-end com Playwright e cobertura para o Codecov. |
+| `scripts/check.cjs` | Checagem sem dependências, com os contratos de arquitetura. |
 | `scripts/pos-deploy.cjs` | Conferência do site publicado. |
-| `.github/workflows/` | CI (`verify` em PR) e deploy para o `banco-enem-app`. |
+| `.github/workflows/` | CI (`verify` e `e2e` em PR), mutação sob demanda e deploy para o `banco-enem-app`. |
 | `.github/dependabot.yml`, `.github/ISSUE_TEMPLATE/` | Atualizações mensais das actions e do jsdom; modelos de issue. |
 | `.claude/` | Configuração do Claude Code: permissões e hook `guarda.cjs` (`docs/fluxo.md`). |
 

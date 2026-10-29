@@ -5,3 +5,8 @@ backup/
 
 ITENS_PROVA_*.csv
 itens_prova_*.csv
+test-results/
+playwright-report/
+coverage/
+reports/
+.stryker-tmp/
