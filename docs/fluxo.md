@@ -30,7 +30,7 @@ Pedir intervenção só para: acesso que falta, conflito relevante, decisão de 
 - Produção: https://fagundes1712.github.io/banco-enem-app/ (Pages do repositório público `banco-enem-app`, branch `main`, raiz).
 - Automático depois do CI verde na `main` só com a variável de repositório `DEPLOY_AUTOMATICO=true`. Sem ela, só manual: Actions › Deploy › Run workflow.
 - Acesso: chave de deploy SSH com escrita só no `banco-enem-app`; a privada fica no segredo `DEPLOY_KEY_SITE` do repositório de código. Nada de token pessoal.
-- Não há ambiente de preview separado: o PR é validado pelo CI e, se precisar, localmente com `npm start`.
+- Prévia por PR: `.github/workflows/previa.yml` publica o `site/public/` do PR em `https://pr-<número>.banco-enem.pages.dev/` (link "View deployment" no PR). Não mexe no endereço principal, só roda para PR do próprio repositório e usa os mesmos segredos do Cloudflare. A prévia usa o Sentry de produção.
 
 ## Recuperação
 - Site quebrado depois de um deploy: Actions › Deploy › Run workflow com `ref` = último commit bom da `main` (ou `gh workflow run deploy.yml -f ref=<sha>`). Depois, `git revert` do commit ruim num PR.
