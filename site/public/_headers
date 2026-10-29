@@ -1,0 +1,9 @@
+# Cabeçalhos de segurança do Cloudflare Pages (no GitHub Pages ele é só um arquivo comum, sem efeito). Ver docs/security.md.
+# A CSP é a mesma do <meta> do index.html mais frame-ancestors; npm run check confere.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://browser.sentry-cdn.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://o4512336096526336.ingest.us.sentry.io; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin

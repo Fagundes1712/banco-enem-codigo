@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v37"; // v37: quadro de escolha sem linhas pontilhadas
+const VERSION = "v38"; // v38: fontes locais, sem Google Fonts (v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
@@ -27,6 +27,8 @@ const SHELL_ASSETS = [
   "js/resultado.js",
   "icon.svg",
   "manifest.json",
+  "fonts/inter-latin.woff2",
+  "fonts/source-serif-4-latin.woff2",
 ];
 
 self.addEventListener("install", (e) => {
@@ -59,7 +61,7 @@ self.addEventListener("fetch", (e) => {
 
   const url = new URL(req.url);
 
-  // Só same-origin. Fontes (Google Fonts) ficam com o cache HTTP do navegador.
+  // Só same-origin.
   if (url.origin !== self.location.origin) return;
 
   if (url.pathname.endsWith("questions.json") || url.pathname.endsWith("taxonomy.json")) {

@@ -24,6 +24,7 @@ App estático, sem framework, sem build e sem servidor próprio.
 | `scripts/check.cjs` | Checagem sem dependências, com os contratos de arquitetura. |
 | `scripts/pos-deploy.cjs` | Conferência do site publicado. |
 | `.github/workflows/` | CI (`verify` e `e2e` em PR), mutação sob demanda e deploy para o `banco-enem-app`. |
+| `.github/dependabot.yml`, `.github/ISSUE_TEMPLATE/` | Atualizações mensais das actions e do jsdom; modelos de issue. |
 | `.claude/` | Configuração do Claude Code: permissões e hook `guarda.cjs` (`docs/fluxo.md`). |
 
 ## Decisões

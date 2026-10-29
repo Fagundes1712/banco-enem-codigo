@@ -1,0 +1,27 @@
+name: Problema
+description: Algo não funciona como deveria
+labels: [bug]
+body:
+  - type: textarea
+    id: o-que
+    attributes:
+      label: O que aconteceu
+      description: E o que você esperava que acontecesse.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      placeholder: "1. Abrir a home\n2. ..."
+    validations:
+      required: true
+  - type: input
+    id: onde
+    attributes:
+      label: Navegador e aparelho
+      placeholder: Chrome 130, Android
+  - type: input
+    id: questao
+    attributes:
+      label: Questão envolvida (ano, área e número), se houver

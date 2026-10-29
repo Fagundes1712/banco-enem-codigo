@@ -32,6 +32,7 @@ function h(t, a, ...k) {
   for (const [x, v] of Object.entries(a || {})) {
     if (x.startsWith("on")) e.addEventListener(x.slice(2), v);
     else if (x === "class") e.className = v;
+    else if (x === "style") e.style.cssText = v; // CSSOM: a CSP barra o atributo style, não isto
     else if (x.startsWith("aria-") && typeof v === "boolean") e.setAttribute(x, String(v));
     else if (v !== false && v != null) e.setAttribute(x, v === true ? "" : v);
   }

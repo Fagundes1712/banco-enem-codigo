@@ -59,7 +59,7 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 
 ## 3. Tipografia
 
-- Serifa (Source Serif 4, Google Fonts) em h1, h2, enunciado, nomes das áreas, trechos das questões e nota.
+- Serifa (Source Serif 4, servida em `fonts/`) em h1, h2, enunciado, nomes das áreas, trechos das questões e nota.
 - Inter em toda a interface (botões, rótulos, metadados). Peso máximo 700, só em rótulos curtos e números.
 - Números (nota, tempo, contagens) com `tabular-nums`.
 

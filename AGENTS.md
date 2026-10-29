@@ -25,6 +25,7 @@ Simulados do ENEM com as provas oficiais do INEP (2015–2025, sem 2020). App es
 - Não inventar dados: resoluções, gabaritos e classificações vêm das provas oficiais ou ficam vazios.
 - A taxonomia tem exatamente 3 níveis (`docs/TAXONOMIA.md`).
 - Um commit por etapa.
+- Novo recurso externo (script, fonte, serviço) precisa entrar na CSP do `index.html` e do `_headers` e ser avaliado em `docs/privacidade.md`. Estilo dinâmico só por CSSOM (`h()` com `style`), nunca atributo `style` no HTML.
 
 ## Fluxo de toda tarefa de código
 
@@ -65,3 +66,7 @@ Parar e perguntar só para: acesso que falta, conflito relevante, decisão de ar
 | Erros em produção | `docs/observabilidade.md` |
 | Ferramentas e setup do toolkit | `docs/setup.md` |
 | Fluxo, CI, deploy e recuperação | `docs/fluxo.md` |
+| Segurança, CSP e segredos | `docs/security.md` |
+| Ambientes, backup, monitoramento e incidentes | `docs/operacao.md` |
+| Privacidade e LGPD | `docs/privacidade.md` |
+| O que se aplica de um SaaS e o estado de cada item | `docs/producao.md` |

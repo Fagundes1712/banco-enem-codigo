@@ -1,0 +1,22 @@
+name: Melhoria
+description: Funcionalidade nova ou mudança de comportamento
+labels: [enhancement]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Que problema do estudante isto resolve.
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- ...\n- npm run verify passa"
+    validations:
+      required: true
+  - type: textarea
+    id: riscos
+    attributes:
+      label: Riscos, custos ou dados pessoais envolvidos
