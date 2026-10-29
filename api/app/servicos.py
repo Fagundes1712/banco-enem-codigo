@@ -3,6 +3,7 @@
 import logging
 import time
 from functools import lru_cache
+from urllib.parse import urlparse
 
 import httpx
 import redis
@@ -12,18 +13,23 @@ from .config import config
 log = logging.getLogger("api")
 
 
-def verifica_turnstile(token: str, ip: str) -> bool:
+def verifica_turnstile(token: str, ip: str, acao: str) -> bool:
     if not token:
         return False
+    c = config()
     try:
         r = httpx.post(
             "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-            data={"secret": config().turnstile_secret, "response": token, "remoteip": ip},
+            data={"secret": c.turnstile_secret, "response": token, "remoteip": ip},
             timeout=10,
         )
-        return r.status_code == 200 and r.json().get("success") is True
-    except httpx.HTTPError:
+        dados = r.json() if r.status_code == 200 else {}
+    except (httpx.HTTPError, ValueError):
         return False
+    if dados.get("success") is not True:
+        return False
+    # Em produção o token tem de vir do nosso site e do formulário certo (as chaves de teste não dizem isso).
+    return not c.producao or (dados.get("hostname") == urlparse(c.site_url).hostname and dados.get("action") == acao)
 
 
 def envia_email(para: str, assunto: str, texto: str) -> None:
@@ -58,10 +64,11 @@ class _LimiteRedis:
         self.r = redis.Redis.from_url(url, socket_timeout=2)
 
     def conta(self, chave: str, janela: int) -> int:
-        n = self.r.incr(chave)
-        if n == 1:
-            self.r.expire(chave, janela)
-        return int(n)
+        # Cria a chave já com validade e só depois soma: nunca fica um contador sem prazo.
+        pipe = self.r.pipeline()
+        pipe.set(chave, 0, ex=janela, nx=True)
+        pipe.incr(chave)
+        return int(pipe.execute()[1])
 
 
 @lru_cache

@@ -55,7 +55,7 @@ class AbacateFalsa:
 def emails(monkeypatch):
     caixa = []
     monkeypatch.setattr(servicos, "envia_email", lambda para, assunto, texto: caixa.append((para, assunto, texto)))
-    monkeypatch.setattr(servicos, "verifica_turnstile", lambda token, ip: token == "ok")
+    monkeypatch.setattr(servicos, "verifica_turnstile", lambda token, ip, acao: token == "ok")
     servicos._limitador.cache_clear()
     return caixa
 
@@ -83,7 +83,7 @@ def link(texto: str, chave: str) -> str:
 def logado(cliente, emails):
     """Cria, confirma e entra numa conta; devolve o cliente com os cookies."""
     cliente.post("/auth/cadastro", json={"email": "aluno@exemplo.com", "senha": "senha-forte-1", "turnstile": "ok", "aceite_termos": True})
-    cliente.post("/auth/confirmar", json={"token": link(emails[-1][2], "confirmar")})
+    cliente.post("/auth/confirmar", json={"token": link(emails[-1][2], "confirmar"), "senha": "senha-forte-1"})
     r = cliente.post("/auth/login", json={"email": "aluno@exemplo.com", "senha": "senha-forte-1", "turnstile": "ok"})
     assert r.status_code == 200
     return cliente

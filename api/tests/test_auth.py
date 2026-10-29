@@ -21,7 +21,7 @@ def test_bcrypt_guarda_hash_e_recusa_senha_fora_do_limite():
 
 
 def test_jwt_recusa_alg_none_assinatura_errada_e_vencido():
-    assert ler_acesso(emitir_acesso("u1")) == "u1"
+    assert ler_acesso(emitir_acesso("u1"))["sub"] == "u1"
     agora = int(time.time())
     base = {"sub": "u1", "iat": agora, "exp": agora + 60, "iss": "api.bancoenem", "aud": "bancoenem"}
     assert ler_acesso(jwt.encode(base, None, algorithm="none")) is None
@@ -35,8 +35,10 @@ def test_cadastro_confirmacao_e_login(cliente, emails):
     para, _, texto = emails[-1]
     assert para == CONTA["email"]
     assert cliente.post("/auth/login", json=CONTA).status_code == 403  # e-mail ainda não confirmado
-    assert cliente.post("/auth/confirmar", json={"token": link(texto, "confirmar")}).status_code == 200
-    assert cliente.post("/auth/confirmar", json={"token": link(texto, "confirmar")}).status_code == 400  # uso único
+    token = link(texto, "confirmar")
+    assert cliente.post("/auth/confirmar", json={"token": token, "senha": "outra-senha-9"}).status_code == 401
+    assert cliente.post("/auth/confirmar", json={"token": token, "senha": CONTA["senha"]}).status_code == 200
+    assert cliente.post("/auth/confirmar", json={"token": token, "senha": CONTA["senha"]}).status_code == 400  # uso único
     r = cliente.post("/auth/login", json=CONTA)
     assert r.status_code == 200 and "token" not in r.text
     cookies = r.headers.get_list("set-cookie")
@@ -136,3 +138,25 @@ def test_sem_o_segredo_do_cloudflare_e_barrado(cliente, monkeypatch):
     monkeypatch.setattr("app.main.config", lambda: c)
     assert cliente.get("/planos").status_code == 403
     assert cliente.get("/planos", headers={"x-origem": "segredo-do-cloudflare"}).status_code == 200
+
+
+def test_quem_cadastra_email_alheio_nao_fica_com_a_conta(cliente, emails):
+    # Atacante cadastra o e-mail da vítima; a vítima clica no link com a própria senha.
+    cliente.post("/auth/cadastro", json={**CONTA, "senha": "senha-do-atacante", "aceite_termos": True})
+    token = link(emails[-1][2], "confirmar")
+    assert cliente.post("/auth/confirmar", json={"token": token, "senha": "senha-da-vitima"}).status_code == 401
+    assert cliente.post("/auth/login", json={**CONTA, "senha": "senha-do-atacante"}).status_code == 403
+
+
+def test_trocar_senha_derruba_o_token_de_acesso(logado, emails):
+    acesso = logado.cookies.get("acesso")
+    time.sleep(1.1)  # iat é em segundos
+    logado.post("/auth/esqueci", json={"email": CONTA["email"], "turnstile": "ok"})
+    logado.post("/auth/nova-senha", json={"token": link(emails[-1][2], "nova-senha"), "senha": "senha-nova-22"})
+    logado.cookies.set("acesso", acesso)
+    assert logado.get("/me").status_code == 401
+
+
+def test_post_sem_tamanho_e_recusado(cliente):
+    corpo = (b'{"email": "a@b.com"}' for _ in range(1))
+    assert cliente.post("/auth/esqueci", content=corpo, headers={"content-type": "application/json"}).status_code == 411

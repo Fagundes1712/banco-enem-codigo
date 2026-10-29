@@ -19,7 +19,7 @@ Para subir o servidor, carregue as variáveis do `.env` no terminal e rode `.ven
 | Rota | O que faz |
 | --- | --- |
 | `POST /auth/cadastro` | Cria a conta (e-mail, senha, Turnstile, aceite dos termos) e manda o link de confirmação (24 h) |
-| `POST /auth/confirmar` | Ativa a conta com o token do link |
+| `POST /auth/confirmar` | Ativa a conta com o token do link e a senha do cadastro (quem cadastrou o e-mail de outra pessoa não fica com a conta) |
 | `POST /auth/login` | Confere a senha e grava os cookies `acesso` (JWT, 15 min) e `renovacao` (30 dias) |
 | `POST /auth/refresh` | Troca o token de renovação; reuso de token velho derruba todas as sessões |
 | `POST /auth/logout` | Revoga a sessão e apaga os cookies |
@@ -36,6 +36,9 @@ Para subir o servidor, carregue as variáveis do `.env` no terminal e rode `.ven
 
 - Senha com bcrypt custo 12; acima de 72 bytes é recusada. Login de e-mail inexistente roda o bcrypt contra um hash falso.
 - JWT HS256 com `exp`, `iss` e `aud` conferidos e algoritmo fixo. Tokens só em cookie `HttpOnly; SameSite=Strict` (e `Secure` em produção).
+- Trocar a senha ou excluir a conta invalida na hora os tokens de acesso já emitidos (`senha_trocada_em`).
+- Turnstile: em produção a API confere também o domínio e o formulário (`action`) do token.
+- POST sem `Content-Length` é recusado (411) e o corpo tem limite de 64 KB.
 - Toda rota que muda algo exige o cabeçalho `Origin` igual a `SITE_URL` (CSRF), menos o webhook.
 - Limite de tentativas por IP e por e-mail no Redis; Turnstile no cadastro, login e recuperação.
 - Preço e dias vêm de `PLANOS` em `app/pagamentos.py`. O pagamento só libera quando a AbacatePay confirma o valor, e uma vez só.

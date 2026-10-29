@@ -42,8 +42,8 @@ def emitir_acesso(usuario_id: str) -> str:
     return jwt.encode(dados, config().jwt_secret, algorithm="HS256")
 
 
-def ler_acesso(token: str) -> str | None:
-    """Devolve o id do usuário ou None se o token for inválido ou vencido."""
+def ler_acesso(token: str) -> dict | None:
+    """Devolve os dados do token (sub, iat, exp) ou None se for inválido ou vencido."""
     try:
         dados = jwt.decode(
             token,
@@ -55,7 +55,7 @@ def ler_acesso(token: str) -> str | None:
         )
     except jwt.PyJWTError:
         return None
-    return dados["sub"]
+    return dados
 
 
 def hash_token(token: str) -> str:

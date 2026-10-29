@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from sqlalchemy import delete, select
 
 from .auth import Banco, _apaga_cookies, _revoga_todas, limita
-from .db import Pagamento, Sessao, TokenEmail, Usuario
+from .db import Pagamento, Sessao, TokenEmail, Usuario, agora
 from .pagamentos import Logado
 from .seguranca import confere_senha, gerar_hash
 
@@ -70,6 +70,7 @@ def excluir_conta(dados: Exclusao, usuario: Logado, banco: Banco, resposta: Resp
         usuario.email = f"excluido-{usuario.id}@invalido"
         usuario.senha_hash = gerar_hash(secrets.token_urlsafe(32))
         usuario.confirmado = False
+        usuario.senha_trocada_em = agora()
     else:
         banco.delete(usuario)
     banco.commit()

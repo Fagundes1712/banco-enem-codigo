@@ -33,6 +33,8 @@ class Usuario(Base):
     termos_versao: Mapped[str] = mapped_column(String(20))
     termos_aceitos_em: Mapped[datetime] = mapped_column(DateTime, default=agora)
     assinatura_ate: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    # Tokens de acesso emitidos antes disto deixam de valer (troca de senha, exclusão).
+    senha_trocada_em: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     criado_em: Mapped[datetime] = mapped_column(DateTime, default=agora)
 
 

@@ -93,9 +93,13 @@ function carregaTurnstile(d) {
 
   const conf = sobe("https://example.test/?confirmar=abc123");
   await tick(800);
-  const c = conf.pedidos.find((p) => p.rota === "/auth/confirmar");
-  ok("link do e-mail confirma a conta", c && c.corpo.token === "abc123");
   ok("token sai do endereço", conf.w.location.search === "");
+  ok("link do e-mail pede a senha do cadastro", conf.d.querySelector("h1").textContent === "Confirmar e-mail");
+  conf.d.querySelector('input[name="senha"]').value = "senha-forte-1";
+  conf.d.querySelector("form").dispatchEvent(new conf.w.Event("submit", { cancelable: true }));
+  await tick(800);
+  const c = conf.pedidos.find((p) => p.rota === "/auth/confirmar");
+  ok("confirma com o token e a senha", c && c.corpo.token === "abc123" && c.corpo.senha === "senha-forte-1");
   ok("mostra a confirmação", conf.d.querySelector('[role="status"]').textContent.includes("confirmado"));
 
   console.log("\n== Resultado: " + pass + " passaram, " + fail + " falharam ==\n");

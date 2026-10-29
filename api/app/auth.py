@@ -1,6 +1,6 @@
 """Rotas de conta: cadastro, confirmação, login, renovação, logout e recuperação de senha."""
 
-from datetime import timedelta
+from datetime import UTC, timedelta
 from typing import Annotated
 
 from fastapi import APIRouter, BackgroundTasks, Cookie, Depends, HTTPException, Request, Response
@@ -43,15 +43,16 @@ def limita(chave: str, maximo: int, janela: int) -> None:
         raise HTTPException(429, "Muitas tentativas. Espere alguns minutos e tente de novo.")
 
 
-def exige_turnstile(token: str, request: Request) -> None:
-    if not servicos.verifica_turnstile(token, ip_do_cliente(request)):
+def exige_turnstile(token: str, request: Request, acao: str) -> None:
+    if not servicos.verifica_turnstile(token, ip_do_cliente(request), acao):
         raise HTTPException(400, "Confirme que você não é um robô.")
 
 
 def usuario_atual(banco: Banco, acesso: Annotated[str | None, Cookie()] = None) -> Usuario:
-    usuario_id = ler_acesso(acesso) if acesso else None
-    usuario = banco.get(Usuario, usuario_id) if usuario_id else None
-    if not usuario:
+    dados = ler_acesso(acesso) if acesso else None
+    usuario = banco.get(Usuario, dados["sub"]) if dados else None
+    trocou = usuario and usuario.senha_trocada_em
+    if not usuario or (trocou and dados["iat"] < int(trocou.replace(tzinfo=UTC).timestamp())):
         raise HTTPException(401, "Entre na sua conta.")
     return usuario
 
@@ -139,6 +140,11 @@ class Token(BaseModel):
     token: str
 
 
+class Confirmacao(BaseModel):
+    token: str
+    senha: str
+
+
 class Esqueci(BaseModel):
     email: EmailStr
     turnstile: str
@@ -155,7 +161,7 @@ RESPOSTA_CADASTRO = {"mensagem": "Se o e-mail puder ser usado, enviamos um link 
 @router.post("/cadastro", status_code=202)
 def cadastro(dados: Cadastro, request: Request, banco: Banco, fila: BackgroundTasks):
     limita(f"cadastro:{ip_do_cliente(request)}", 5, 3600)
-    exige_turnstile(dados.turnstile, request)
+    exige_turnstile(dados.turnstile, request, "cadastro")
     if not dados.aceite_termos:
         raise HTTPException(400, "Aceite os termos de uso e a política de privacidade.")
     if not senha_valida(dados.senha):
@@ -173,7 +179,21 @@ def cadastro(dados: Cadastro, request: Request, banco: Banco, fila: BackgroundTa
 
 
 @router.post("/confirmar")
-def confirmar(dados: Token, banco: Banco):
+def confirmar(dados: Confirmacao, request: Request, banco: Banco):
+    limita(f"confirmar:{ip_do_cliente(request)}", 10, 3600)
+    pendente = banco.scalar(
+        select(TokenEmail).where(
+            TokenEmail.token_hash == hash_token(dados.token),
+            TokenEmail.tipo == "confirmar",
+            TokenEmail.usado.is_(False),
+            TokenEmail.expira_em > agora(),
+        )
+    )
+    if not pendente:
+        raise HTTPException(400, "Link inválido ou vencido. Peça um novo.")
+    # Pede a senha do cadastro: quem cadastrou o e-mail de outra pessoa não ganha a conta quando ela clica.
+    if not confere_senha(dados.senha, banco.get(Usuario, pendente.usuario_id).senha_hash):
+        raise HTTPException(401, "A senha não confere com a do cadastro. Se não foi você quem criou a conta, use Esqueci a senha.")
     usuario = _usa_token(banco, dados.token, "confirmar")
     usuario.confirmado = True
     banco.commit()
@@ -185,7 +205,7 @@ def login(dados: Login, request: Request, resposta: Response, banco: Banco):
     email = dados.email.lower()
     limita(f"login-ip:{ip_do_cliente(request)}", 20, 600)
     limita(f"login-email:{email}", 5, 900)
-    exige_turnstile(dados.turnstile, request)
+    exige_turnstile(dados.turnstile, request, "login")
     usuario = banco.scalar(select(Usuario).where(Usuario.email == email))
     if not confere_senha(dados.senha, usuario.senha_hash if usuario else HASH_FALSO) or not usuario:
         raise HTTPException(401, "E-mail ou senha incorretos.")
@@ -228,7 +248,7 @@ def esqueci(dados: Esqueci, request: Request, banco: Banco, fila: BackgroundTask
     email = dados.email.lower()
     limita(f"esqueci-ip:{ip_do_cliente(request)}", 5, 3600)
     limita(f"esqueci-email:{email}", 3, 3600)
-    exige_turnstile(dados.turnstile, request)
+    exige_turnstile(dados.turnstile, request, "esqueci")
     usuario = banco.scalar(select(Usuario).where(Usuario.email == email))
     if usuario:
         _envia_link(banco, usuario, "senha", fila)
@@ -243,6 +263,7 @@ def nova_senha(dados: NovaSenha, request: Request, banco: Banco):
     usuario = _usa_token(banco, dados.token, "senha")
     usuario.senha_hash = gerar_hash(dados.senha)
     usuario.confirmado = True  # quem recebeu o link prova que é dono do e-mail
+    usuario.senha_trocada_em = agora()  # tokens de acesso antigos param de valer
     _revoga_todas(banco, usuario.id)
     # Outros links de troca pedidos antes deixam de valer.
     banco.execute(update(TokenEmail).where(TokenEmail.usuario_id == usuario.id, TokenEmail.tipo == "senha").values(usado=True))

@@ -43,7 +43,8 @@ function telaDeConta(titulo, ...corpo) {
 }
 
 // Caixa do Turnstile (anti-robô do Cloudflare). Devolve o token da vez.
-function robo() {
+// acao = qual formulário; a API confere que o token veio dele.
+function robo(acao) {
   const caixa = h("div", { class: "robo" });
   let token = "";
   let id = null;
@@ -54,6 +55,7 @@ function robo() {
     .then(() => {
       id = window.turnstile.render(caixa, {
         sitekey: SITEKEY,
+        action: acao,
         callback: (t) => (token = t),
         "expired-callback": () => (token = ""),
       });
@@ -87,7 +89,7 @@ function formulario(campos, botao, enviar, extra) {
 const link = (texto, fn) => h("button", { class: "btn", type: "button", onclick: () => swap(fn) }, texto);
 
 function telaEntrar(msg) {
-  const r = robo();
+  const r = robo("login");
   telaDeConta(
     "Entrar",
     msg ? h("p", { class: "lead", role: "status" }, msg) : null,
@@ -110,7 +112,7 @@ function telaEntrar(msg) {
 }
 
 function telaCadastro() {
-  const r = robo();
+  const r = robo("cadastro");
   telaDeConta(
     "Criar conta",
     h("p", { class: "lead" }, "Com a conta você pode assinar o Banco ENEM Pro."),
@@ -140,7 +142,7 @@ function telaCadastro() {
 }
 
 function telaEsqueci() {
-  const r = robo();
+  const r = robo("esqueci");
   telaDeConta(
     "Esqueci a senha",
     formulario(
@@ -255,6 +257,22 @@ function telaExcluir(eu) {
   );
 }
 
+// A senha do cadastro prova que quem clicou no link é quem criou a conta.
+function telaConfirmar(token) {
+  telaDeConta(
+    "Confirmar e-mail",
+    h("p", { class: "lead" }, "Digite a senha que você escolheu no cadastro para ativar a conta."),
+    formulario(
+      [campo("Senha", { name: "senha", type: "password", autocomplete: "current-password" })],
+      "Ativar conta",
+      (d, aviso) =>
+        api("/auth/confirmar", { token, senha: d.senha }).then((x) =>
+          x.ok ? telaEntrar(x.d.mensagem) : void (aviso.textContent = msg(x) || "Não deu para confirmar.")
+        )
+    )
+  );
+}
+
 // Chamada por boot() (js/base.js): links do e-mail e volta da página de pagamento.
 function contaInicio() {
   if (!API) return;
@@ -264,10 +282,7 @@ function contaInicio() {
   // Tira o token do endereço antes de tudo: não fica no histórico nem vaza no Referer.
   history.replaceState(null, "", location.pathname);
   if (novaSenha) return telaNovaSenha(novaSenha);
-  if (confirmar)
-    return api("/auth/confirmar", { token: confirmar })
-      .then((x) => telaEntrar(x.ok ? x.d.mensagem : msg(x)))
-      .catch(() => telaEntrar("Sem conexão com o servidor."));
+  if (confirmar) return telaConfirmar(confirmar);
   api("/pagamentos/sincronizar", {})
     .catch(() => null)
     .then(() => contaAtual(true))

@@ -31,6 +31,9 @@ async def protecoes(request: Request, call_next):
     if segredo and not hmac.compare_digest(request.headers.get("x-origem", ""), segredo):
         return JSONResponse({"detail": "Acesso só pelo domínio do site."}, status_code=403)
     tamanho = request.headers.get("content-length")
+    # Sem Content-Length (corpo em pedaços) não dá para saber o tamanho antes de ler: recusa.
+    if request.method == "POST" and not tamanho:
+        return JSONResponse({"detail": "Envie o tamanho do pedido."}, status_code=411)
     if tamanho and (not tamanho.isdigit() or int(tamanho) > TAMANHO_MAXIMO):
         return JSONResponse({"detail": "Pedido grande demais."}, status_code=413)
     # CSRF: o navegador manda o cookie sozinho, então toda mudança precisa vir do próprio site.
