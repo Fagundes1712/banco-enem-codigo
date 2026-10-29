@@ -1,0 +1,47 @@
+name: Prévia
+
+# Cada PR ganha um endereço próprio no Cloudflare Pages: https://pr-<número>.banco-enem.pages.dev
+# O endereço principal (main) não muda. Não instala dependências do PR: só envia site/public com o wrangler.
+# PR de fork não recebe segredos e é pulado.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: previa-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  previa:
+    if: >-
+      vars.CLOUDFLARE_PAGES_PROJETO != '' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: previa
+      url: https://pr-${{ github.event.pull_request.number }}.${{ vars.CLOUDFLARE_PAGES_PROJETO }}.pages.dev/
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Publicar a prévia
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_APITOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJETO: ${{ vars.CLOUDFLARE_PAGES_PROJETO }}
+          RAMO: pr-${{ github.event.pull_request.number }}
+        run: npx --yes wrangler@4.155.0 pages deploy site/public --project-name="$PROJETO" --branch="$RAMO"
+
+      # Endereço novo pode levar uns minutos para responder (erro 522 no começo).
+      - name: Conferir a prévia
+        env:
+          ESPERA_MS: 60000
+          SITE_URL: https://pr-${{ github.event.pull_request.number }}.${{ vars.CLOUDFLARE_PAGES_PROJETO }}.pages.dev/
+        run: |
+          for i in 1 2 3 4 5 6 7 8 9 10; do node scripts/pos-deploy.cjs && exit 0; sleep 30; done
+          exit 1
