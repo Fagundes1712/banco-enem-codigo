@@ -29,6 +29,8 @@ Para subir o servidor, carregue as variáveis do `.env` no terminal e rode `.ven
 | `POST /pagamentos` | Cria o checkout Pix do plano `mensal` ou `anual` e devolve a URL de pagamento |
 | `POST /pagamentos/sincronizar` | Confere na AbacatePay os pagamentos pendentes do usuário |
 | `POST /webhooks/abacatepay?webhookSecret=...` | Aviso de pagamento da AbacatePay |
+| `GET /conta/dados` | Baixa em JSON tudo o que guardamos da pessoa |
+| `POST /conta/excluir` | Exclui a conta (pede a senha) |
 
 ## Regras de segurança
 
@@ -38,10 +40,15 @@ Para subir o servidor, carregue as variáveis do `.env` no terminal e rode `.ven
 - Limite de tentativas por IP e por e-mail no Redis; Turnstile no cadastro, login e recuperação.
 - Preço e dias vêm de `PLANOS` em `app/pagamentos.py`. O pagamento só libera quando a AbacatePay confirma o valor, e uma vez só.
 - Pagamento do Modo Teste nunca libera produção (`ABACATEPAY_DEV_MODE`).
+- Em produção todo pedido precisa do cabeçalho `X-Origem` que a Cloudflare acrescenta (`ORIGEM_SECRET`); o endereço do Cloud Run sozinho não responde.
+- E-mails saem depois da resposta, e o cadastro roda o bcrypt mesmo para e-mail já cadastrado: o tempo não revela quem tem conta.
+- `GET /conta/dados` (baixar meus dados) e `POST /conta/excluir` (com senha) atendem a LGPD; pagamento feito fica pelo prazo fiscal, sem e-mail nem senha.
+
+Passo a passo para publicar: `docs/backend-setup.md`.
 
 ## Limitações conhecidas
 
 - Tabelas criadas com `create_all`; antes da primeira mudança de schema em produção, adotar Alembic.
 - Só Pix. Parcelamento em 12x no cartão depende de confirmar o suporte na API da AbacatePay.
 - Assinatura mensal por Pix não renova sozinha: o aluno paga de novo e os dias são somados.
-- Sem estorno, exportação nem exclusão de conta (LGPD) ainda.
+- Sem estorno nem log de auditoria imutável ainda.

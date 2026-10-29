@@ -28,6 +28,9 @@ Estado verificado em 2026-10-28. O app é estático: não há servidor próprio,
 - Enquanto o endereço principal divulgado for o do GitHub Pages, os cabeçalhos só valem para quem entra pelo `pages.dev`. Trocar o endereço principal é decisão do responsável; o progresso salvo no navegador é por endereço e não passa de um para o outro.
 - Ao adicionar um serviço externo (Sentry, analytics, outra fonte), atualize a CSP no mesmo PR e teste o fluxo no navegador: o que não estiver na lista é bloqueado.
 
+## Conta e assinatura (api/)
+Ainda não publicada; passo a passo em `docs/backend-setup.md`. Senha com bcrypt custo 12; JWT HS256 de 15 min e token de renovação rotativo (reuso derruba as sessões), ambos só em cookie `HttpOnly; SameSite=Strict`; `Origin` obrigatório em todo POST (CSRF); Turnstile e limite de tentativas no Redis; preço só do servidor e pagamento confirmado na AbacatePay; em produção a API só responde com o cabeçalho `X-Origem` que a Cloudflare acrescenta. A CSP libera `challenges.cloudflare.com` (Turnstile) e, quando ligada, a origem da API em `connect-src`. Detalhes em `api/README.md`.
+
 ## DDoS e abuso
 O site é servido pela CDN do GitHub Pages (Fastly). Não há endpoint que consuma recurso próprio, então não há rate limit a implementar. Limites reais: o Pages tem cota de banda (cerca de 100 GB por mês, limite flexível) e pode suspender o site em caso de abuso; não há proteção contratada nem alerta de tráfego. Proteção total contra DDoS não existe neste plano.
 

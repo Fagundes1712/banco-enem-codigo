@@ -27,6 +27,7 @@ class Config:
     abacatepay_api_key: str
     abacatepay_webhook_secret: str
     abacatepay_dev_mode: bool
+    origem_secret: str  # cabeçalho que só o Cloudflare manda (Transform Rule)
 
     @property
     def producao(self) -> bool:
@@ -53,6 +54,7 @@ def config() -> Config:
         abacatepay_api_key=_env("ABACATEPAY_API_KEY"),
         abacatepay_webhook_secret=_env("ABACATEPAY_WEBHOOK_SECRET"),
         abacatepay_dev_mode=_env("ABACATEPAY_DEV_MODE", "true") == "true",
+        origem_secret=_env("ORIGEM_SECRET") if producao else os.environ.get("ORIGEM_SECRET", ""),
     )
     if len(c.jwt_secret) < 32 or len(c.abacatepay_webhook_secret) < 16:
         raise RuntimeError("JWT_SECRET precisa de 32+ caracteres e ABACATEPAY_WEBHOOK_SECRET de 16+")

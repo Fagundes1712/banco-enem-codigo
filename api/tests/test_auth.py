@@ -125,3 +125,14 @@ def test_trocar_senha_invalida_links_antigos(cliente, emails):
 def test_esqueci_nao_revela_conta(cliente, emails):
     r = cliente.post("/auth/esqueci", json={"email": "ninguem@exemplo.com", "turnstile": "ok"})
     assert r.status_code == 202 and emails == []
+
+
+def test_sem_o_segredo_do_cloudflare_e_barrado(cliente, monkeypatch):
+    from dataclasses import replace
+
+    from app import config as modulo
+
+    c = replace(modulo.config(), origem_secret="segredo-do-cloudflare")
+    monkeypatch.setattr("app.main.config", lambda: c)
+    assert cliente.get("/planos").status_code == 403
+    assert cliente.get("/planos", headers={"x-origem": "segredo-do-cloudflare"}).status_code == 200

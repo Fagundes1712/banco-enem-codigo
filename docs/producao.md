@@ -1,5 +1,7 @@
 # Prontidão para produção
 
+Login e assinatura por Pix estão implementados em `api/` e `js/conta.js`, mas desligados até a publicação (`docs/backend-setup.md`); as linhas abaixo marcadas como não aplicáveis para auth, banco, pagamentos e e-mail passam a valer quando a API for ao ar.
+
 Auditoria de 2026-10-28 contra a lista de requisitos de um SaaS. O produto real é um PWA estático e gratuito, sem servidor, contas ou cobrança (`PRODUCT.md`), então boa parte da lista não se aplica. Reavaliar esta página se o escopo mudar.
 
 Estados: **validado** (há evidência), **implementado, não validado**, **pendente de configuração**, **bloqueado**, **não aplicável** (com motivo).

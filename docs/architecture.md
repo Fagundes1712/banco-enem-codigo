@@ -11,6 +11,7 @@ App estático, sem framework e sem build. Login e assinatura ficam numa API em P
 | `js/topico.js` | Tela de tópico e filtros. |
 | `js/simulado.js` | Simulado, cronômetro e cálculo da nota TRI. |
 | `js/respostas.js` | Aba "Suas respostas": guarda cada simulado terminado como bloco (`banco-enem:blocos`, até 100), lista com filtros de área e matéria, ao tocar num bloco oferece visualizar as correções ou refazer as questões (todas ou só as incorretas); refazer atualiza o próprio bloco e recalcula a nota. Também liga a barra lateral. |
+| `js/conta.js` | Telas de conta: entrar, criar conta, confirmar e-mail, recuperar senha, assinar (Pix), baixar e excluir dados, sair. Só aparece com `<meta name="api-url">` preenchido. Expõe `contaAtual()` e `abrirAssinatura()` e dispara o evento `conta` na `window` a cada troca. As chamadas passam por `api()` em `js/base.js`. |
 | `js/resultado.js` | Resultado, correções, atalhos de teclado, `load()`, registro do service worker e captura de erros (Sentry, desligada sem DSN). |
 | `styles.css` | Todo o estilo (tokens em `:root`, tema claro e escuro). |
 | `sw.js` | Service worker: cache do shell (`VERSION`) e dos dados. |

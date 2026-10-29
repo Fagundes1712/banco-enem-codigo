@@ -1,5 +1,6 @@
 """API do Banco ENEM: contas e assinatura. Rodar: uvicorn app.main:app (ver api/README.md)."""
 
+import hmac
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -25,6 +26,10 @@ app = FastAPI(title="Banco ENEM API", lifespan=_inicio, docs_url=None, redoc_url
 
 @app.middleware("http")
 async def protecoes(request: Request, call_next):
+    # Quem chama o endereço do Cloud Run direto pula o Cloudflare (e forja o IP); sem o segredo, nada feito.
+    segredo = config().origem_secret
+    if segredo and not hmac.compare_digest(request.headers.get("x-origem", ""), segredo):
+        return JSONResponse({"detail": "Acesso só pelo domínio do site."}, status_code=403)
     tamanho = request.headers.get("content-length")
     if tamanho and (not tamanho.isdigit() or int(tamanho) > TAMANHO_MAXIMO):
         return JSONResponse({"detail": "Pedido grande demais."}, status_code=413)
