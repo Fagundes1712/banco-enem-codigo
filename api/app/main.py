@@ -6,7 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from . import auth, pagamentos
+from . import auth, conta, pagamentos
 from .config import config
 from .db import criar_tabelas
 
@@ -50,6 +50,7 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(pagamentos.router)
+app.include_router(conta.router)
 
 
 @app.get("/saude")

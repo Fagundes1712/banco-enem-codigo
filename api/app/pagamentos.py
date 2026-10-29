@@ -67,7 +67,7 @@ def novo_pagamento(dados: NovoPagamento, usuario: Logado, banco: Banco):
     p = PLANOS[dados.plano]
     pagamento = Pagamento(id=str(uuid.uuid4()), usuario_id=usuario.id, plano=dados.plano, valor_centavos=p["centavos"], dias=p["dias"])
     try:
-        checkout = abacatepay.cria_checkout(_produto(banco, dados.plano), pagamento.id, config().site_url)
+        checkout = abacatepay.cria_checkout(_produto(banco, dados.plano), pagamento.id, config().site_url + "/?pagamento=1")
     except abacatepay.AbacatePayErro:
         raise HTTPException(502, "O pagamento está indisponível agora. Tente de novo em instantes.") from None
     if checkout["amount"] != p["centavos"]:
