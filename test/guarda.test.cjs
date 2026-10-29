@@ -36,6 +36,15 @@ caso("push forçado bloqueia", "feat/x", "git push --force origin feat/x", /Push
 caso("branch com main no nome vai para o verify", "feat/main-menu", "git push -u origin feat/main-menu", /verify falhou/);
 caso("commit em branch roda npm run check (falha aqui: sem package.json)", "feat/x", "git commit -m x", /check falhou/);
 
+// outro clone: vale a branch da pasta do cd ou do git -C, não a do projeto
+const outro = fs.mkdtempSync(path.join(os.tmpdir(), "guarda-outro-"));
+execSync("git init -q -b feat/clone", { cwd: outro });
+caso("cd para clone em branch libera o commit", "main", `cd "${outro}" && git commit -m x`, /check falhou/);
+caso("git -C para clone em branch libera o commit", "main", `git -C "${outro}" commit -m x`, /check falhou/);
+execSync("git checkout -q -B main", { cwd: outro });
+caso("cd para clone na main bloqueia", "feat/x", `cd "${outro}" && git commit -m x`, /Você está na main/);
+
+fs.rmSync(outro, { recursive: true, force: true });
 fs.rmSync(repo, { recursive: true, force: true });
 console.log(`== guarda: ${falhas ? falhas + " falha(s)" : "ok"} ==`);
 process.exit(falhas ? 1 : 0);

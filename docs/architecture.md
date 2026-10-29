@@ -25,6 +25,7 @@ App estático, sem framework e sem build. Login e assinatura ficam numa API em P
 | `scripts/pos-deploy.cjs` | Conferência do site publicado. |
 | `.github/workflows/` | CI (`verify` e `e2e` em PR), mutação sob demanda e deploy para o `banco-enem-app`. |
 | `api/` | API em Python (FastAPI): contas com bcrypt e JWT em cookie, assinatura por Pix na AbacatePay. Testes com `pytest`; detalhes em `api/README.md`. |
+| `.github/dependabot.yml`, `.github/ISSUE_TEMPLATE/` | Atualizações mensais das actions e do jsdom; modelos de issue. |
 | `.claude/` | Configuração do Claude Code: permissões e hook `guarda.cjs` (`docs/fluxo.md`). |
 
 ## Decisões

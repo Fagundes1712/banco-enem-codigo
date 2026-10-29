@@ -9,7 +9,15 @@ process.stdin.on("end", () => {
   // só os trechos que começam com git (ou rtk git); texto dentro de heredoc ou string não conta
   const cmd = ((JSON.parse(entrada || "{}").tool_input || {}).command || "")
     .split(/[;&|\n]+/).map((s) => s.trim()).filter((s) => /^(rtk\s+)?git\s/.test(s)).join("\n");
-  const raiz = process.env.CLAUDE_PROJECT_DIR || process.cwd();
+  // o commit vale para a pasta do `cd` ou do `git -C` do próprio comando (outro clone ou worktree), não só para o projeto
+  const bruto = (JSON.parse(entrada || "{}").tool_input || {}).command || "";
+  const dir = (bruto.match(/^\s*cd\s+("[^"]+"|'[^']+'|\S+)\s*(&&|;)/) || cmd.match(/^(?:rtk\s+)?git\s+-C\s+("[^"]+"|\S+)/m) || [])[1];
+  let raiz = process.env.CLAUDE_PROJECT_DIR || process.cwd();
+  if (dir) {
+    let d = dir.replace(/^["']|["']$/g, "");
+    if (process.platform === "win32") d = d.replace(/^\/([a-z])\//i, "$1:/"); // caminho do Git Bash
+    raiz = require("node:path").resolve(raiz, d);
+  }
   const sh = (c) => execSync(c, { cwd: raiz, stdio: "pipe", encoding: "utf8" }).trim();
   const bloquear = (msg) => (process.stderr.write(msg + "\n"), process.exit(2));
 
