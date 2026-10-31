@@ -193,6 +193,8 @@ if (SENTRY_DSN && location.protocol === "https:") {
   s.onload = () =>
     window.Sentry.init({
       dsn: SENTRY_DSN,
+      // Prévias de PR (pr-<n>.banco-enem.pages.dev) usam o mesmo projeto; o ambiente separa os erros.
+      environment: /^pr-\d+\./.test(location.hostname) ? "previa" : "producao",
       sendDefaultPii: false,
       tracesSampleRate: 0,
       defaultIntegrations: false,
