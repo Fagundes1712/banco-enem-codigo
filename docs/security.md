@@ -31,6 +31,23 @@ Estado verificado em 2026-10-28. O app é estático: não há servidor próprio,
 ## Conta e assinatura (api/)
 Ainda não publicada; passo a passo em `docs/backend-setup.md`. Senha com bcrypt custo 12; JWT HS256 de 15 min e token de renovação rotativo (reuso derruba as sessões), ambos só em cookie `HttpOnly; SameSite=Strict`; `Origin` obrigatório em todo POST (CSRF); Turnstile e limite de tentativas no Redis; preço só do servidor e pagamento confirmado na AbacatePay; em produção a API só responde com o cabeçalho `X-Origem` que a Cloudflare acrescenta. A CSP libera `challenges.cloudflare.com` (Turnstile) e, quando ligada, a origem da API em `connect-src`. Detalhes em `api/README.md`.
 
+### Camadas, de fora para dentro
+| Camada | O que barra | Onde |
+|---|---|---|
+| Cloudflare (CDN, TLS, WAF grátis) | Tráfego volumétrico, HTTP sem TLS | Painel Cloudflare (`docs/backend-setup.md`) |
+| `X-Origem` | Chamada direta ao `*.run.app` sem passar pelo Cloudflare (e IP forjado) | `main.py`, `_barra` |
+| Tamanho, `Origin` e CORS | Corpo grande ou sem tamanho, POST de outro site (CSRF) | `main.py`, `_barra` |
+| Cabeçalhos da API | Resposta usada como página, embutida em outro site ou guardada em cache | `main.py`, `CABECALHOS`; HSTS em produção |
+| Turnstile + limite no Redis | Robôs, força bruta, cadastro em massa | `auth.py`, `servicos.py` |
+| Senha e sessão | Vazamento de senha (bcrypt), roubo de cookie (`HttpOnly`, `SameSite`, JWT de 15 min, renovação rotativa) | `seguranca.py`, `auth.py` |
+| Dono da conta avisado | Troca de senha e reuso de renovação mandam e-mail; o invasor não esconde a ação | `auth.py`, `_avisa` |
+| Isolamento por usuário | Toda consulta filtra pelo usuário do token, nunca por id vindo do navegador | `pagamentos.py`, `conta.py` |
+| Pagamento conferido | Preço só do servidor, liberação só após consulta à AbacatePay, uma vez | `pagamentos.py` |
+| Auditoria | Eventos de segurança em JSON nos logs; os graves (`login_falhou`, `renovacao_reusada`, `webhook_recusado`, `pagamento_divergente`) saem como WARNING para alerta | `auditoria.py` |
+| CI | Vulnerabilidade em dependência (`pip-audit`, Dependabot), padrão perigoso no código (`bandit`, CodeQL) | `.github/workflows/` |
+
+A auditoria grava só o id interno da conta, sem e-mail, senha, token ou IP. Alerta: no Cloud Logging, criar uma métrica para `severity>=WARNING` no logger `auditoria` e uma política de alerta por e-mail (grátis dentro da cota).
+
 ## DDoS e abuso
 O site é servido pela CDN do GitHub Pages (Fastly). Não há endpoint que consuma recurso próprio, então não há rate limit a implementar. Limites reais: o Pages tem cota de banda (cerca de 100 GB por mês, limite flexível) e pode suspender o site em caso de abuso; não há proteção contratada nem alerta de tráfego. Proteção total contra DDoS não existe neste plano.
 

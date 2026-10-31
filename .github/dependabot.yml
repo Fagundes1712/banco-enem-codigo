@@ -1,4 +1,4 @@
-# Atualizações de segurança e versão das actions e do jsdom; cada uma vira PR e passa pelo CI.
+# Atualizações de segurança e versão das actions, do jsdom e das dependências da API; cada uma vira PR e passa pelo CI.
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -9,4 +9,9 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    open-pull-requests-limit: 3
+  - package-ecosystem: pip
+    directory: /api
+    schedule:
+      interval: weekly
     open-pull-requests-limit: 3

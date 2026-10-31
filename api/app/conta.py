@@ -1,18 +1,17 @@
 """Direitos do titular (LGPD Art. 18): baixar meus dados e excluir minha conta."""
 
-import logging
 import secrets
 
 from fastapi import APIRouter, HTTPException, Response
 from pydantic import BaseModel
 from sqlalchemy import delete, select
 
+from .auditoria import evento
 from .auth import Banco, _apaga_cookies, _revoga_todas, limita
 from .db import Pagamento, Sessao, TokenEmail, Usuario, agora
 from .pagamentos import Logado
 from .seguranca import confere_senha, gerar_hash
 
-log = logging.getLogger("api")
 router = APIRouter(prefix="/conta")
 
 
@@ -74,6 +73,6 @@ def excluir_conta(dados: Exclusao, usuario: Logado, banco: Banco, resposta: Resp
     else:
         banco.delete(usuario)
     banco.commit()
-    log.info("conta %s excluída a pedido do titular", usuario.id)
+    evento("conta_excluida", usuario.id)
     _apaga_cookies(resposta)
     return {"mensagem": "Conta excluída."}

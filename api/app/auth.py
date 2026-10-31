@@ -4,11 +4,13 @@ from datetime import UTC, timedelta
 from typing import Annotated
 
 from fastapi import APIRouter, BackgroundTasks, Cookie, Depends, HTTPException, Request, Response
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel, EmailStr
 from sqlalchemy import select, update
 from sqlalchemy.orm import Session
 
 from . import servicos
+from .auditoria import evento
 from .config import config
 from .db import Sessao, TokenEmail, Usuario, agora, sessao
 from .seguranca import (
@@ -208,15 +210,17 @@ def login(dados: Login, request: Request, resposta: Response, banco: Banco):
     exige_turnstile(dados.turnstile, request, "login")
     usuario = banco.scalar(select(Usuario).where(Usuario.email == email))
     if not confere_senha(dados.senha, usuario.senha_hash if usuario else HASH_FALSO) or not usuario:
+        evento("login_falhou", usuario.id if usuario else None)
         raise HTTPException(401, "E-mail ou senha incorretos.")
     if not usuario.confirmado:
         raise HTTPException(403, "Confirme seu e-mail antes de entrar.")
     _abre_sessao(banco, usuario.id, resposta)
+    evento("login", usuario.id)
     return {"mensagem": "ok"}
 
 
 @router.post("/refresh")
-def refresh(resposta: Response, banco: Banco, renovacao: Annotated[str | None, Cookie()] = None):
+def refresh(resposta: Response, banco: Banco, fila: BackgroundTasks, renovacao: Annotated[str | None, Cookie()] = None):
     atual = banco.scalar(select(Sessao).where(Sessao.token_hash == hash_token(renovacao))) if renovacao else None
     if not atual or atual.expira_em <= agora():
         _apaga_cookies(resposta)
@@ -228,10 +232,23 @@ def refresh(resposta: Response, banco: Banco, renovacao: Annotated[str | None, C
     if not trocou:
         _revoga_todas(banco, atual.usuario_id)
         banco.commit()
-        _apaga_cookies(resposta)
-        raise HTTPException(401, "Sessão encerrada por segurança. Entre de novo.")
+        evento("renovacao_reusada", atual.usuario_id)
+        _avisa(banco, atual.usuario_id, fila, "Encerramos suas sessões no Banco ENEM",
+               "Um acesso antigo da sua conta foi usado de novo, o que pode indicar cópia do login. Por segurança, "
+               "saímos de todos os aparelhos. Entre de novo e, se desconfiar de algo, troque a senha.")
+        # Resposta montada à mão: com HTTPException o FastAPI descarta as tarefas em segundo plano (o aviso).
+        negado = JSONResponse({"detail": "Sessão encerrada por segurança. Entre de novo."}, status_code=401, background=fila)
+        _apaga_cookies(negado)
+        return negado
     _abre_sessao(banco, atual.usuario_id, resposta)
     return {"mensagem": "ok"}
+
+
+def _avisa(banco: Session, usuario_id: str, fila: BackgroundTasks, assunto: str, texto: str) -> None:
+    # Aviso ao dono da conta: quem invadiu não consegue esconder a troca de senha nem o roubo de sessão.
+    usuario = banco.get(Usuario, usuario_id)
+    if usuario and usuario.confirmado:
+        fila.add_task(servicos.envia_email, usuario.email, assunto, texto)
 
 
 @router.post("/logout")
@@ -256,7 +273,7 @@ def esqueci(dados: Esqueci, request: Request, banco: Banco, fila: BackgroundTask
 
 
 @router.post("/nova-senha")
-def nova_senha(dados: NovaSenha, request: Request, banco: Banco):
+def nova_senha(dados: NovaSenha, request: Request, banco: Banco, fila: BackgroundTasks):
     limita(f"nova-senha:{ip_do_cliente(request)}", 10, 3600)
     if not senha_valida(dados.senha):
         raise HTTPException(400, "A senha precisa ter de 8 a 72 caracteres (acentos contam em dobro).")
@@ -268,4 +285,8 @@ def nova_senha(dados: NovaSenha, request: Request, banco: Banco):
     # Outros links de troca pedidos antes deixam de valer.
     banco.execute(update(TokenEmail).where(TokenEmail.usuario_id == usuario.id, TokenEmail.tipo == "senha").values(usado=True))
     banco.commit()
+    evento("senha_trocada", usuario.id)
+    _avisa(banco, usuario.id, fila, "Sua senha do Banco ENEM foi trocada",
+           "A senha da sua conta acabou de ser trocada e saímos de todos os aparelhos. "
+           "Se não foi você, peça um link novo em Esqueci a senha agora mesmo.")
     return {"mensagem": "Senha trocada. Entre com a senha nova."}

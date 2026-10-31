@@ -12,6 +12,7 @@ from sqlalchemy import select, update
 from sqlalchemy.orm import Session
 
 from . import abacatepay
+from . import auditoria
 from .auth import Banco, limita, usuario_atual
 from .config import config
 from .db import Pagamento, Produto, Usuario, agora, sessao
@@ -100,11 +101,15 @@ def sincroniza(banco: Session, checkout_id: str) -> str:
     if not linha:
         banco.rollback()
         atual = banco.scalar(select(Pagamento.status).where(Pagamento.checkout_id == checkout_id))
-        return "ja_processado" if atual == "pago" else "valor_divergente"
+        if atual == "pago":
+            return "ja_processado"
+        auditoria.evento("pagamento_divergente", checkout=checkout_id, pago=pago)
+        return "valor_divergente"
     usuario = banco.scalar(select(Usuario).where(Usuario.id == linha.usuario_id).with_for_update())
     inicio = max(usuario.assinatura_ate or agora(), agora())  # renovação antes de vencer soma os dias
     usuario.assinatura_ate = inicio + timedelta(days=linha.dias)
     banco.commit()
+    auditoria.evento("assinatura_liberada", linha.usuario_id, dias=linha.dias)
     return "liberado"
 
 
@@ -133,6 +138,7 @@ async def webhook(request: Request, banco: Annotated[Session, Depends(sessao)]):
     corpo = await request.body()
     segredo = request.query_params.get("webhookSecret", "")
     if not abacatepay.webhook_autentico(segredo, request.headers.get("x-webhook-signature", ""), corpo):
+        auditoria.evento("webhook_recusado")
         raise HTTPException(401, "não autorizado")
     try:
         evento = json.loads(corpo)

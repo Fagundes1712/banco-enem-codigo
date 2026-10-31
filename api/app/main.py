@@ -24,8 +24,19 @@ async def _inicio(_app):
 app = FastAPI(title="Banco ENEM API", lifespan=_inicio, docs_url=None, redoc_url=None, openapi_url=None)
 
 
-@app.middleware("http")
-async def protecoes(request: Request, call_next):
+# A API só devolve JSON: nada dela pode virar página, ser embutido em outro site ou ficar em cache.
+CABECALHOS = {
+    "Cache-Control": "no-store",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "no-referrer",
+    "Cross-Origin-Resource-Policy": "same-site",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+}
+
+
+def _barra(request: Request) -> JSONResponse | None:
     # Quem chama o endereço do Cloud Run direto pula o Cloudflare (e forja o IP); sem o segredo, nada feito.
     segredo = config().origem_secret
     if segredo and not hmac.compare_digest(request.headers.get("x-origem", ""), segredo):
@@ -41,9 +52,15 @@ async def protecoes(request: Request, call_next):
     if request.method not in ("GET", "HEAD", "OPTIONS") and not request.url.path.startswith("/webhooks/"):
         if request.headers.get("origin") != config().site_url:
             return JSONResponse({"detail": "Origem não permitida."}, status_code=403)
-    resposta = await call_next(request)
-    resposta.headers["Cache-Control"] = "no-store"
-    resposta.headers["X-Content-Type-Options"] = "nosniff"
+    return None
+
+
+@app.middleware("http")
+async def protecoes(request: Request, call_next):
+    resposta = _barra(request) or await call_next(request)
+    resposta.headers.update(CABECALHOS)
+    if config().producao:
+        resposta.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
     return resposta
 
 
