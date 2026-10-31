@@ -18,6 +18,13 @@ from .config import config
 from .db import Pagamento, Produto, Usuario, agora, sessao
 
 log = logging.getLogger("api")
+
+
+def _linha(x) -> str:
+    """Valor vindo de fora vira uma linha só no log: ninguém forja uma entrada nova com quebra de linha."""
+    return str(x).replace("\r", " ").replace("\n", " ")
+
+
 router = APIRouter()
 
 # O preço vale daqui, nunca do navegador nem do webhook.
@@ -72,7 +79,7 @@ def novo_pagamento(dados: NovoPagamento, usuario: Logado, banco: Banco):
     except abacatepay.AbacatePayErro:
         raise HTTPException(502, "O pagamento está indisponível agora. Tente de novo em instantes.") from None
     if checkout["amount"] != p["centavos"]:
-        log.error("Preço na AbacatePay (%s) difere do plano %s (%s)", checkout["amount"], dados.plano, p["centavos"])
+        log.error("Preço na AbacatePay (%s) difere do plano %s (%s)", _linha(checkout["amount"]), _linha(dados.plano), p["centavos"])
         raise HTTPException(502, "O pagamento está indisponível agora.")
     pagamento.checkout_id = checkout["id"]
     banco.add(pagamento)
@@ -152,7 +159,7 @@ async def webhook(request: Request, banco: Annotated[Session, Depends(sessao)]):
     if dev_mode is not config().abacatepay_dev_mode:
         return {"recebido": True}
     try:
-        log.info("checkout %s: %s", checkout_id, sincroniza(banco, checkout_id))
+        log.info("checkout %s: %s", _linha(checkout_id), sincroniza(banco, checkout_id))
     except abacatepay.AbacatePayErro as e:
         # 4xx (fora 429) = a AbacatePay não conhece o checkout: repetir não ajuda.
         if e.status and 400 <= e.status < 500 and e.status != 429:

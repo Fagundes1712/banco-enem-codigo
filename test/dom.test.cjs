@@ -77,7 +77,7 @@ function boot(pro = true) {
   const me = { email: "aluno@exemplo.com", assinatura_ativa: pro, assinatura_ate: pro ? "2027-01-01T00:00:00" : null };
   window.fetch = (u) => {
     const url = String(u);
-    const corpo = url === API_TESTE + "/me" ? me : url.startsWith(API_TESTE) ? [] : url.includes("taxonomy") ? tax : banco;
+    const corpo = url === API_TESTE + "/me" ? me : new URL(url, "https://example.test/").origin === API_TESTE ? [] : url.includes("taxonomy") ? tax : banco;
     return Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(corpo) });
   };
   window.alert = () => {};

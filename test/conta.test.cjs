@@ -31,7 +31,7 @@ function sobe(url, comApi = true) {
   const responde = (status, d) => Promise.resolve({ ok: status < 400, status, json: () => Promise.resolve(d) });
   w.fetch = (u, op = {}) => {
     u = String(u);
-    if (!u.startsWith(API)) return responde(200, u.includes("taxonomy") ? tax : banco);
+    if (new URL(u, "https://example.test/").origin !== API) return responde(200, u.includes("taxonomy") ? tax : banco);
     const rota = u.slice(API.length);
     pedidos.push({ rota, corpo: op.body ? JSON.parse(op.body) : null, credentials: op.credentials });
     if (rota === "/me") return logado ? responde(200, { email: "a@b.com", assinatura_ativa: false, assinatura_ate: null }) : responde(401, {});
