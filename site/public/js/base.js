@@ -181,6 +181,11 @@ const plano = () =>
     })
     .catch(() => {});
 
+// Entrar, sair, pagar ou excluir a conta (evento de js/conta.js) atualiza o plano. Cada tela lê PRO
+// ao ser desenhada e essas ações saem da tela de conta pelo swap, então não precisa redesenhar aqui
+// (e redesenhar a cada evento daria laço com contaAtual(true), que também dispara "conta").
+addEventListener("conta", () => plano());
+
 function load() {
   const tx = getJSON("taxonomy.json").catch(() => null);
   const pl = plano();
@@ -208,6 +213,7 @@ function boot(d, t) {
     }
   for (const q of Q) q._ok = !!q.topico && consistent(q);
   home();
+  if (typeof contaInicio === "function") contaInicio(); // links do e-mail e volta do pagamento (js/conta.js)
 }
 
 function consistent(q) {
@@ -322,3 +328,22 @@ const nivel = (q) =>
     : null;
 const plural = (n, um, varios) => num(n) + " " + (n === 1 ? um : varios);
 
+/* ============================== API ================================== */
+
+// Conta e assinatura ficam na API (api/). Sem <meta name="api-url"> preenchido,
+// tudo de conta some e o app segue como antes. Só aqui se usa fetch.
+const API = (document.querySelector('meta[name="api-url"]')?.content || "").replace(/\/+$/, "");
+let renovando = null; // um refresh por vez: dois juntos contam como token roubado
+
+function api(caminho, corpo, renovou) {
+  const op = { credentials: "include" };
+  if (corpo !== undefined)
+    Object.assign(op, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) });
+  return fetch(API + caminho, op).then((r) => {
+    if (r.status === 401 && !renovou && !caminho.startsWith("/auth/")) {
+      renovando ||= fetch(API + "/auth/refresh", { method: "POST", credentials: "include" }).finally(() => (renovando = null));
+      return renovando.then((x) => (x.ok ? api(caminho, corpo, true) : { ok: false, status: 401, d: {} }));
+    }
+    return r.json().catch(() => ({})).then((d) => ({ ok: r.ok, status: r.status, d }));
+  });
+}

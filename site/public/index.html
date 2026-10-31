@@ -2,8 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://browser.sentry-cdn.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://o4512336096526336.ingest.us.sentry.io; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://browser.sentry-cdn.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://o4512336096526336.ingest.us.sentry.io; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Conta e assinatura: endereço da API e chave pública do Turnstile (docs/backend-setup.md). Vazio = sem conta. -->
+<meta name="api-url" content="">
+<meta name="turnstile-sitekey" content="">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Banco ENEM · Simulados por área e conteúdo</title>
 <meta name="description" content="Simulados com questões do ENEM, separadas por área, com gabarito, correção questão a questão e nota estimada por TRI.">
@@ -32,6 +35,10 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v4H5zM5 10h14v4H5zM5 16h14v4H5z"/></svg>
     Suas respostas
   </button>
+  <button class="side-link" id="nav-conta" type="button" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-8 8c0-3.3 3.6-6 8-6s8 2.7 8 6z"/></svg>
+    Conta
+  </button>
 </nav>
 <div class="wrap">
   <main id="app" tabindex="-1">
@@ -59,6 +66,7 @@
 <script src="js/topico.js" defer></script>
 <script src="js/simulado.js" defer></script>
 <script src="js/respostas.js" defer></script>
+<script src="js/conta.js" defer></script>
 <script src="js/resultado.js" defer></script>
 </body>
 </html>

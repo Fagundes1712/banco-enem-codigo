@@ -64,21 +64,23 @@ function ok(name, cond, extra) {
   }
 }
 
-// pro: assinatura ativa na conta (contaAtual de js/conta.js).
+// pro: assinatura ativa na conta. A API é imitada no fetch: /me responde como
+// um aluno logado, com ou sem assinatura (js/conta.js pergunta a ela).
+const API_TESTE = "https://api.example.test";
 function boot(pro = true) {
-  const dom = new JSDOM(html, {
+  const dom = new JSDOM(html.replace('<meta name="api-url" content="">', `<meta name="api-url" content="${API_TESTE}">`), {
     runScripts: "outside-only",
     url: "https://example.test/",
     pretendToBeVisual: true,
   });
   const { window } = dom;
-  window.fetch = (u) =>
-    Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve(String(u).includes("taxonomy") ? tax : banco),
-    });
+  const me = { email: "aluno@exemplo.com", assinatura_ativa: pro, assinatura_ate: pro ? "2027-01-01T00:00:00" : null };
+  window.fetch = (u) => {
+    const url = String(u);
+    const corpo = url === API_TESTE + "/me" ? me : new URL(url, "https://example.test/").origin === API_TESTE ? [] : url.includes("taxonomy") ? tax : banco;
+    return Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(corpo) });
+  };
   window.alert = () => {};
-  window.contaAtual = () => Promise.resolve(pro ? { assinatura_ativa: true } : null);
   window.scrollTo = () => {};
 
   // jsdom não implementa <dialog>.showModal(); no navegador é nativo.
@@ -963,10 +965,6 @@ async function irTopico(w, id) {
     const w3 = boot(false);
     await tick(60);
     const d3 = w3.document;
-    let assinou = false;
-    w3.abrirAssinatura = () => {
-      assinou = true;
-    };
     const outra = [...d3.querySelectorAll(".tab")].find((t) => t.getAttribute("aria-selected") !== "true");
     const tag = outra.querySelector(".nota-tag");
     ok("grátis troca a nota por PRO", [...d3.querySelectorAll(".nota-tag b")].every((b) => b.textContent === "PRO"));
@@ -978,12 +976,12 @@ async function irTopico(w, id) {
     ok("toque na nota não troca de área", outra.getAttribute("aria-selected") !== "true");
     click(w3, [...conv().querySelectorAll(".btn")].find((b) => b.textContent === "Continuar estudando"));
     await tick(10);
-    ok("Continuar estudando fecha o convite", !conv() && !assinou);
+    ok("Continuar estudando fecha o convite", !conv());
     click(w3, tag);
     await tick(10);
     click(w3, [...conv().querySelectorAll(".btn")].find((b) => b.textContent === "Seja PRO"));
-    await tick(10);
-    ok("Seja PRO abre a assinatura", assinou);
+    await tick(700); // espera a troca de tela (swap)
+    ok("Seja PRO abre a assinatura", d3.querySelector("main").textContent.includes("Você está no plano gratuito."));
     await irTopico(w3, alvo);
     ok("tópico no grátis esconde a nota", d3.querySelector(".nota-stat b").textContent === "PRO");
   }

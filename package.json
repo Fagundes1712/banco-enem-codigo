@@ -4,7 +4,7 @@
   "description": "Simulados do ENEM com as provas oficiais 2015–2025 (HTML/CSS/JS puro).",
   "scripts": {
     "start": "python3 -m http.server 8765 --bind 127.0.0.1",
-    "test": "node --test test/unidade.test.cjs && node test/dom.test.cjs && node test/guarda.test.cjs",
+    "test": "node --test test/unidade.test.cjs && node test/dom.test.cjs && node test/conta.test.cjs && node test/guarda.test.cjs",
     "check": "node scripts/check.cjs",
     "lint": "biome lint && node scripts/knip.cjs",
     "e2e": "playwright test",
