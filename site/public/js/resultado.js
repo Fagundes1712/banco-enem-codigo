@@ -10,9 +10,9 @@ function result() {
       { class: "res" },
       h(
         "div",
-        { class: "ring", style: "--n:" + T.hits / T.qs.length },
+        travada({ class: "ring", style: "--n:" + T.hits / T.qs.length }),
         h("p", { class: "meta" }, "Nota estimada"),
-        h("div", { class: "score" }, T.nota)
+        h("div", { class: "score" }, valorNota(T.nota))
       ),
       h(
         "div",
@@ -23,7 +23,7 @@ function result() {
           ? h("div", null, h("b", null, String(T.blank)), h("span", null, "em branco"))
           : null
       ),
-      h("p", { class: "note" }, notaComo()),
+      PRO ? h("p", { class: "note" }, notaComo()) : null,
       h(
         "div",
         { class: "nav spaced" },
@@ -41,6 +41,41 @@ function result() {
 // Explica de onde veio a nota.
 function notaComo() {
   return "Nota que estudantes com a mesma proporção de acertos tiraram no Enem de 2022 a 2025 (mediana oficial do INEP, base da TRI). Toda questão vale o mesmo, de qualquer ano. A nota oficial também pesa quais questões você acertou, então ela pode variar uns 30 pontos para cima ou para baixo.";
+}
+
+/* ============================ Plano Pro ============================== */
+
+// No grátis a nota vira "PRO" e o toque nela abre o convite, sem acionar o
+// cartão em volta.
+const valorNota = (n) => (!PRO ? "PRO" : n == null ? "—" : String(n));
+const travada = (a) =>
+  PRO
+    ? a
+    : {
+        ...a,
+        class: a.class + " trava",
+        "aria-label": "Nota disponível no plano Pro",
+        onclick: (e) => {
+          e.stopPropagation();
+          sejaPro();
+        },
+      };
+
+function sejaPro() {
+  confirmDialog(
+    "Para ter acesso aos cálculos de nota com os microdados oficiais do INEP, assine o plano Pro.",
+    { title: "Nota no plano Pro", ok: "Seja PRO", cancel: "Continuar estudando" }
+  ).then((sim) => sim && assinar());
+}
+
+// abrirAssinatura vem de js/conta.js (login e planos). Sem ele, avisa.
+function assinar() {
+  if (typeof abrirAssinatura === "function") return abrirAssinatura();
+  confirmDialog("O pagamento por Pix abre aqui assim que o login estiver no ar.", {
+    title: "Assinatura em breve",
+    ok: "Entendi",
+    cancel: "Voltar",
+  });
 }
 
 /* ============================= Correções ============================= */
