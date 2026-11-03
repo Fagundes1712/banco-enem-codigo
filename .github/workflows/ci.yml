@@ -82,7 +82,7 @@ jobs:
           docker compose up -d --build
       - name: API responde só com o segredo da Cloudflare
         run: |
-          curl -fsS --retry 20 --retry-connrefused --retry-delay 2 -H "X-Origem: origem-ci" http://127.0.0.1:8080/saude
+          curl -fsS --retry 20 --retry-connrefused --retry-all-errors --retry-delay 2 -H "X-Origem: origem-ci" http://127.0.0.1:8080/saude
           test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/saude)" = 403
       - name: Banco e Redis sem porta, API só em localhost, sem senha de migração
         working-directory: infra
