@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v40"; // v40: telas de conta e assinatura junto com as notas do plano Pro (v39: notas só no plano Pro; v38: fontes locais, sem Google Fonts; v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
+const VERSION = "v41"; // v41: erros das prévias de PR separados no Sentry (v40: telas de conta e assinatura junto com as notas do plano Pro; v39: notas só no plano Pro; v38: fontes locais, sem Google Fonts; v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html)
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
