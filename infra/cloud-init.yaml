@@ -7,7 +7,11 @@ package_upgrade: true
 packages:
   - docker.io
   - docker-compose-v2
+  - age
+  - curl
   - git
+  - python3
+  - rclone
   - unattended-upgrades
 
 ssh_pwauth: false
@@ -63,5 +67,9 @@ runcmd:
   - docker run -d --name tunel --restart unless-stopped --network host --env-file /etc/banco-enem/tunel.env cloudflare/cloudflared:latest tunnel --no-autoupdate run
   - git clone --depth 1 https://github.com/Fagundes1712/banco-enem-codigo.git /opt/banco-enem
   - chown -R deploy:deploy /opt/banco-enem
+  - cp /opt/banco-enem/infra/systemd/banco-enem-* /etc/systemd/system/
+  - systemctl daemon-reload
+  # Backup, atualização e alertas esperam o infra/.env: até lá só falham sem efeito.
+  - systemctl enable --now banco-enem-backup.timer banco-enem-atualiza.timer banco-enem-alerta.timer
   # Por último: se algo acima falhar, a saída é recriar a máquina, que ainda não tem dados.
   - systemctl restart ssh.socket ssh.service

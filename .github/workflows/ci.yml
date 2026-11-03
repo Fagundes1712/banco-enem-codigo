@@ -78,7 +78,8 @@ jobs:
           sed -e 's/^\(SENHA_[A-Z]*\|TURNSTILE_SECRET\|RESEND_API_KEY\|ABACATEPAY_API_KEY\)=$/\1=teste-ci-1234567890/' \
               -e 's/^JWT_SECRET=$/JWT_SECRET=teste-ci-12345678901234567890123456789012/' \
               -e 's/^ABACATEPAY_WEBHOOK_SECRET=$/ABACATEPAY_WEBHOOK_SECRET=teste-ci-1234567890/' \
-              -e 's/^ORIGEM_SECRET=$/ORIGEM_SECRET=origem-ci/' .env.example > .env
+              -e 's/^ORIGEM_SECRET=$/ORIGEM_SECRET=origem-ci/' \
+              -e 's/^ALERTA_EMAIL=$/ALERTA_EMAIL=ci@exemplo.com/' .env.example > .env
           docker compose up -d --build
       - name: API responde só com o segredo da Cloudflare
         run: |
@@ -97,6 +98,28 @@ jobs:
         run: |
           docker compose up -d
           curl -fsS --retry 20 --retry-connrefused --retry-all-errors --retry-delay 2 -H "X-Origem: origem-ci" http://127.0.0.1:8080/saude
+      - name: Alerta dispara com evento grave
+        working-directory: infra
+        run: |
+          curl -s -o /dev/null -X POST -H "X-Origem: origem-ci" -d '{}' 'http://127.0.0.1:8080/webhooks/abacatepay?webhookSecret=errado'
+          sleep 2
+          bash alerta.sh 2>&1 | tee alerta.txt
+          grep -q webhook_recusado alerta.txt
+      - name: Backup criptografado e restauração de ponta a ponta
+        working-directory: infra
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y age rclone
+          age-keygen -o "$RUNNER_TEMP/chave.txt"
+          echo "BACKUP_CHAVE_PUBLICA=$(age-keygen -y "$RUNNER_TEMP/chave.txt")" >> .env
+          echo "BACKUP_DESTINO=$RUNNER_TEMP/backups" >> .env
+          bash backup.sh
+          arquivo=$(ls "$RUNNER_TEMP"/backups/*.dump.age)
+          # O dump não pode ser legível sem a chave.
+          if grep -qa 'senha_hash' "$arquivo"; then exit 1; fi
+          bash testa-restauracao.sh "$arquivo" "$RUNNER_TEMP/chave.txt"
+      - name: Scripts sem erro comum
+        run: shellcheck -x -S warning infra/*.sh
       - name: Registros se falhar
         if: failure()
         working-directory: infra

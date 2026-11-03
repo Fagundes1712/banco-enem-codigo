@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup do banco
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=deploy
+ExecStart=/bin/bash /opt/banco-enem/infra/backup.sh
