@@ -1,3 +1,4 @@
+#!/bin/bash
 # Carregado pelos outros scripts: entra em infra/, lê o .env e define avisa.
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
