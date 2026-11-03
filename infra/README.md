@@ -39,6 +39,8 @@ curl -i https://api.<domínio>/saude                                      # 200,
 | Alertas | A cada 5 minutos | `alerta.sh`: e-mail com eventos graves da API; backup e atualização avisam se falharem |
 | Sistema | Todo dia | `unattended-upgrades`, com reinício às 04:30 UTC se preciso |
 
+Painel: crie no Cloudflare a rota `painel.<domínio>` para `http://localhost:8080` e um aplicativo do Access só para o seu e-mail, preencha `PAINEL_*` no `.env` e abra `https://painel.<domínio>/painel`.
+
 Monitor de queda: cadastre `https://api.<domínio>/saude` num serviço externo gratuito (UptimeRobot, por exemplo), a cada 5 minutos.
 
 Chave do backup: rode `age-keygen -o chave.txt` no seu PC. A linha pública vai em `BACKUP_CHAVE_PUBLICA`. Guarde `chave.txt` fora do servidor: sem ela, nenhum backup abre. Para o teste semanal, crie no GitHub os segredos `BACKUP_CHAVE_PRIVADA`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` e `R2_ENDPOINT`, e a variável `BACKUP_ATIVO=true`.

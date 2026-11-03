@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light dark;
+  --tinta: light-dark(#1c1b18, #ecebe6);
+  --fundo: light-dark(#faf9f5, #1c1b18);
+  --linha: light-dark(#d9d6cc, #3a3833);
+  --barra: light-dark(#2c6e8f, #6fb1d1);
+  --suave: light-dark(#66635a, #a8a59b);
+}
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  margin: 32px 0 8px;
+  font-size: 18px;
+}
+label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--suave);
+  font-size: 14px;
+}
+input,
+select,
+button {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+.resumo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-variant-numeric: tabular-nums;
+}
+.resumo strong {
+  display: block;
+  font-size: 24px;
+}
+.linha {
+  display: grid;
+  grid-template-columns: 92px 1fr minmax(72px, auto);
+  gap: 8px;
+  align-items: center;
+  padding: 2px 0;
+  font-variant-numeric: tabular-nums;
+}
+.trilho {
+  height: 14px;
+  border-radius: 2px;
+  background: var(--linha);
+}
+.barra {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--barra);
+}
+.valor {
+  text-align: right;
+}
+.vazio,
+#erro {
+  color: var(--suave);
+}

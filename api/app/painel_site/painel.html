@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Painel do Banco ENEM</title>
+    <link rel="stylesheet" href="/painel/painel.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Painel do Banco ENEM</h1>
+      <form id="entrada" hidden>
+        <label for="codigo">Código do autenticador</label>
+        <input id="codigo" inputmode="numeric" autocomplete="one-time-code" pattern="\d{6}" maxlength="6" required autofocus />
+        <button>Entrar</button>
+        <p id="erro" role="alert"></p>
+      </form>
+      <div id="dados" hidden>
+        <label for="periodo">Agrupar por</label>
+        <select id="periodo">
+          <option value="semana">Semana</option>
+          <option value="mes" selected>Mês</option>
+          <option value="ano">Ano</option>
+        </select>
+        <div id="graficos"></div>
+      </div>
+    </main>
+    <script src="/painel/painel.js"></script>
+  </body>
+</html>

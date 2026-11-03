@@ -229,6 +229,12 @@ function sair() {
   });
 }
 
+// Estatística de uso do painel: só duas somas, sem dizer quais questões nem as respostas. Falha não atrapalha o resultado.
+function avisaUso() {
+  const questoes = T.qs.length - T.blank;
+  if (API && questoes) api("/uso", { questoes, minutos: Math.round(T.secs / 60) }).catch(() => {});
+}
+
 function closeExam() {
   clearInterval(tick);
   T.live = false;
@@ -241,6 +247,7 @@ function closeExam() {
   T.blank = T.qs.length - Object.keys(T.ans).length;
   T.nota = nota(T.qs.map((q) => [q, T.ans[q.id] === q.gab]));
   guardaBloco();
+  avisaUso();
   result();
 }
 

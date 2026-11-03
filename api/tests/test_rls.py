@@ -1,11 +1,13 @@
 """Só no PostgreSQL com papéis e migrações (CI): prova que uma conta não enxerga dados de outra."""
 
+import os
 import uuid
 from datetime import timedelta
 
 import pytest
-from sqlalchemy import select, text, update
+from sqlalchemy import create_engine, select, text, update
 from sqlalchemy.exc import DBAPIError
+from sqlalchemy.pool import NullPool
 
 from app.db import (
     Movimento,
@@ -18,6 +20,7 @@ from app.db import (
     assume_dono,
     define_usuario,
     motor,
+    soma_uso,
 )
 
 pytestmark = pytest.mark.skipif(motor().dialect.name != "postgresql", reason="RLS só existe no PostgreSQL")
@@ -164,3 +167,52 @@ def test_login_de_ponta_a_ponta_com_duas_contas(cliente, emails):
     entra("b@exemplo.com")
     dados = cliente.get("/conta/dados").json()
     assert dados["conta"]["email"] == "b@exemplo.com" and len(dados["sessoes"]) == 1
+
+
+@pytest.fixture
+def leitura():
+    motor_painel = create_engine(os.environ["TESTE_PAINEL_DATABASE_URL"], poolclass=NullPool)
+    with motor_painel.connect() as c:
+        yield c
+
+
+@pytest.mark.parametrize("tabela", ["usuarios", "pagamentos", "sessoes", "tokens_email", "movimentos", "produtos", "uso_diario"])
+def test_painel_nao_le_tabela_nenhuma(banco_limpo, leitura, tabela):
+    with pytest.raises(DBAPIError, match="permission denied"):
+        leitura.execute(text(f"SELECT * FROM {tabela}"))  # noqa: S608
+
+
+@pytest.mark.parametrize("funcao", ["conta_por_email('a@exemplo.com')", "dono_sessao('x')", "soma_uso('pro', 1, 1)"])
+def test_painel_nao_chama_funcoes_da_api(banco_limpo, leitura, funcao):
+    with pytest.raises(DBAPIError, match="permission denied"):
+        leitura.execute(text(f"SELECT {funcao}"))
+
+
+def test_painel_ve_so_totais(contas, leitura):
+    a, _b = contas
+    with _fabrica()() as s:
+        define_usuario(s, a)
+        s.execute(update(Usuario).values(confirmado=True))
+        s.execute(update(Pagamento).values(status="pago", pago_em=agora()))
+        s.commit()
+    assert leitura.execute(text("SELECT total FROM painel_contas('month')")).scalar() == 1
+    assert leitura.execute(text("SELECT pagamentos, centavos FROM painel_faturamento('year')")).one() == (1, 2499)
+    assert tuple(leitura.execute(text("SELECT * FROM painel_conversao()")).one()) == (1, 1)
+    assert tuple(leitura.execute(text("SELECT plano, nao_renovaram FROM painel_assinantes()")).one()) == ("mensal", 1)
+    with pytest.raises(DBAPIError):
+        leitura.execute(text("SELECT email FROM painel_contas('month')"))
+
+
+def test_uso_soma_pela_funcao_e_api_nao_le(banco_limpo, leitura):
+    with _fabrica()() as s:
+        soma_uso(s, "gratis", 10, 20)
+        soma_uso(s, "gratis", 5, 7)
+        s.commit()
+        with pytest.raises(DBAPIError, match="permission denied"):
+            s.execute(text("SELECT * FROM uso_diario"))
+    assert tuple(leitura.execute(text("SELECT plano, questoes, minutos FROM painel_uso('year')")).one()) == ("gratis", 15, 27)
+
+
+def test_rota_de_uso_grava_no_banco(cliente, leitura):
+    assert cliente.post("/uso", json={"questoes": 3, "minutos": 4}).status_code == 204
+    assert tuple(leitura.execute(text("SELECT plano, questoes FROM painel_uso('year')")).one()) == ("gratis", 3)

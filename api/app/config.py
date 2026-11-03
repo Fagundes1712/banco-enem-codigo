@@ -28,10 +28,23 @@ class Config:
     abacatepay_webhook_secret: str
     abacatepay_dev_mode: bool
     origem_secret: str  # cabeçalho que só o Cloudflare manda (Transform Rule)
+    painel_email: str  # vazio = painel desligado
+    painel_url: str
+    painel_access_time: str
+    painel_access_aud: str
+    painel_totp: str
+    painel_database_url: str
 
     @property
     def producao(self) -> bool:
         return self.ambiente == "producao"
+
+
+def _painel() -> dict[str, str]:
+    # Painel é opcional, mas pela metade não sobe: sem as outras variáveis, ninguém confere o Access.
+    ligado = bool(os.environ.get("PAINEL_EMAIL"))
+    nomes = ("PAINEL_EMAIL", "PAINEL_URL", "PAINEL_ACCESS_TIME", "PAINEL_ACCESS_AUD", "PAINEL_TOTP", "PAINEL_DATABASE_URL")
+    return {n.lower(): _env(n) if ligado else "" for n in nomes}
 
 
 @lru_cache
@@ -55,6 +68,7 @@ def config() -> Config:
         abacatepay_webhook_secret=_env("ABACATEPAY_WEBHOOK_SECRET"),
         abacatepay_dev_mode=_env("ABACATEPAY_DEV_MODE", "true") == "true",
         origem_secret=_env("ORIGEM_SECRET") if producao else os.environ.get("ORIGEM_SECRET", ""),
+        **_painel(),
     )
     if len(c.jwt_secret) < 32 or len(c.abacatepay_webhook_secret) < 16:
         raise RuntimeError("JWT_SECRET precisa de 32+ caracteres e ABACATEPAY_WEBHOOK_SECRET de 16+")

@@ -13,7 +13,7 @@ for _ in $(seq 60); do
 done
 
 # As políticas de RLS citam os papéis: eles precisam existir antes.
-docker exec -i "$copia" psql -q -U postgres -d bancoenem -v ON_ERROR_STOP=1 -v senha_app=descartavel -v senha_migracao=descartavel <"$raiz/api/migracoes/papeis.sql"
+docker exec -i "$copia" psql -q -U postgres -d bancoenem -v ON_ERROR_STOP=1 -v senha_app=descartavel -v senha_migracao=descartavel -v senha_painel=descartavel <"$raiz/api/migracoes/papeis.sql"
 age -d -i "$2" "$1" | docker exec -i "$copia" pg_restore -U postgres -d bancoenem --exit-on-error
 
 consulta() { docker exec "$copia" psql -U postgres -d bancoenem -Atc "$1"; }

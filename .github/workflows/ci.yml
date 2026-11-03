@@ -146,6 +146,7 @@ jobs:
       TESTE_DATABASE_URL: postgresql+psycopg://api_app:senha-app@localhost:5432/bancoenem
       TESTE_ADMIN_DATABASE_URL: postgresql+psycopg://postgres:teste@localhost:5432/bancoenem
       MIGRACAO_DATABASE_URL: postgresql+psycopg://api_migracao:senha-migracao@localhost:5432/bancoenem
+      TESTE_PAINEL_DATABASE_URL: postgresql+psycopg://painel_leitura:senha-painel@localhost:5432/bancoenem
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
@@ -157,7 +158,7 @@ jobs:
       - name: Papéis do banco
         env:
           PGPASSWORD: teste
-        run: psql -h localhost -U postgres -d bancoenem -v ON_ERROR_STOP=1 -v senha_app=senha-app -v senha_migracao=senha-migracao -f migracoes/papeis.sql
+        run: psql -h localhost -U postgres -d bancoenem -v ON_ERROR_STOP=1 -v senha_app=senha-app -v senha_migracao=senha-migracao -v senha_painel=senha-painel -f migracoes/papeis.sql
       - name: Migrações sobem, descem, sobem e batem com os modelos
         run: |
           python -m alembic upgrade head
