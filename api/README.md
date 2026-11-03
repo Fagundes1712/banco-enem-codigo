@@ -12,7 +12,7 @@ cp .env.example .env                                 # preencha; precisa de um P
 .venv/Scripts/python -m pytest                       # testes (SQLite e serviços simulados)
 ```
 
-Para subir o servidor, carregue as variáveis do `.env` no terminal e rode `.venv/Scripts/uvicorn app.main:app --reload`.
+Para subir o servidor, carregue as variáveis do `.env` no terminal, crie os papéis e as tabelas (ver "Banco de dados") e rode `.venv/Scripts/uvicorn app.main:app --reload`.
 
 ## Rotas
 
@@ -49,9 +49,25 @@ Para subir o servidor, carregue as variáveis do `.env` no terminal e rode `.ven
 
 Passo a passo para publicar: `docs/backend-setup.md`.
 
+## Banco de dados
+
+Três papéis, criados uma vez por `migracoes/papeis.sql`:
+
+| Papel | Para quê | Limite |
+| --- | --- | --- |
+| `api_app` | A API, em `DATABASE_URL` | Sujeito ao RLS; não cria nem altera tabela |
+| `api_migracao` | O Alembic no deploy, em `MIGRACAO_DATABASE_URL` | A API nunca recebe esta variável |
+| `api_busca` | Dono das funções de busca | Sem login; só lê as colunas de id e de busca |
+
+- RLS forçado em todas as tabelas (`migracoes/versions/0002_rls.py`). `define_usuario` fixa `app.usuario_id` na transação e `_reaplica_usuario` repete isso depois de cada commit. Sem usuário definido, as consultas voltam vazias.
+- Antes de haver usuário logado (login, links do e-mail, renovação, webhook), `assume_dono` chama uma função do banco que devolve só o id do dono de um e-mail, token ou checkout, e o resto da rota segue sob o RLS. Tabela nova precisa de RLS na migração: `test_toda_tabela_tem_rls_forcado` quebra se faltar.
+- `movimentos` é a trilha de pagamentos: o `api_app` só tem `SELECT` e `INSERT` nela.
+- O RLS é a segunda linha de defesa contra um bug de consulta. Não segura quem tomar controle da API, que pode escolher o `app.usuario_id`; para isso servem as outras camadas.
+
+Mudou um modelo em `app/db.py`? Gere a migração (`alembic revision --autogenerate -m "..."`), revise e rode `alembic upgrade head` com `MIGRACAO_DATABASE_URL`. O CI roda subida, descida e `alembic check`, e toda a suíte como `api_app` num PostgreSQL migrado. O SQLite dos testes locais não tem RLS, então `test_rls.py` só roda no CI.
+
 ## Limitações conhecidas
 
-- Tabelas criadas com `create_all`; antes da primeira mudança de schema em produção, adotar Alembic.
 - Só Pix. Parcelamento em 12x no cartão depende de confirmar o suporte na API da AbacatePay.
 - Assinatura mensal por Pix não renova sozinha: o aluno paga de novo e os dias são somados.
-- Sem estorno nem log de auditoria imutável ainda.
+- Sem estorno ainda.

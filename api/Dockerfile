@@ -3,6 +3,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
+COPY alembic.ini .
+COPY migracoes ./migracoes
 RUN useradd --create-home api
 USER api
 # Cloud Run informa a porta em $PORT.

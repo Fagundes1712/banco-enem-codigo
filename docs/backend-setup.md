@@ -25,7 +25,9 @@ Por que é obrigatório: os cookies de login só passam entre o site e a API se 
 ## 3. Banco de dados (Neon, grátis)
 1. Crie a conta em https://neon.com e um projeto "banco-enem" na região mais próxima de São Paulo que aparecer.
 2. Em **Connect**, ligue **Connection pooling** e copie o endereço (tem `-pooler` no nome).
-3. Troque o começo `postgresql://` por `postgresql+psycopg://`. Esse é o `DATABASE_URL`.
+3. Gere duas senhas longas (`python -c "import secrets; print(secrets.token_urlsafe(32))"`) e, da pasta `api/`, com o endereço **sem** `-pooler` do administrador, crie os papéis: `psql "$ADMIN_URL" -v ON_ERROR_STOP=1 -v senha_app="$SENHA_APP" -v senha_migracao="$SENHA_MIGRACAO" -f migracoes/papeis.sql`.
+4. Crie as tabelas e o RLS: `MIGRACAO_DATABASE_URL=postgresql+psycopg://api_migracao:<senha>@<endereço sem -pooler>/<banco> alembic upgrade head`. Repita este comando antes de cada deploy que traga migração nova.
+5. O `DATABASE_URL` da API é o endereço **com** `-pooler`, usando `api_app` e começando por `postgresql+psycopg://`. Nunca dê à API o usuário administrador nem o `api_migracao`: com eles o RLS não protege do mesmo jeito.
 
 ## 4. Redis (Upstash, grátis)
 1. Crie a conta em https://upstash.com e um banco **Redis** na região mais próxima.

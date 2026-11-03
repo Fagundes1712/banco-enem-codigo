@@ -2,7 +2,7 @@ import time
 
 import jwt
 
-from app.db import Usuario, _fabrica
+from app.db import Usuario, _fabrica, assume_dono
 from app.seguranca import confere_senha, emitir_acesso, gerar_hash, ler_acesso
 from conftest import link
 
@@ -49,6 +49,7 @@ def test_cadastro_confirmacao_e_login(cliente, emails):
 def test_senha_nunca_fica_no_banco(cliente):
     cadastra(cliente)
     with _fabrica()() as s:
+        assume_dono(s, "email", CONTA["email"])
         usuario = s.query(Usuario).one()
     assert CONTA["senha"] not in usuario.senha_hash
 
