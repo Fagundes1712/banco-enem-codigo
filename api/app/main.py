@@ -7,7 +7,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from . import auth, conta, pagamentos
+from . import auth, conta, pagamentos, painel
 from .config import config
 from .db import criar_tabelas
 
@@ -36,6 +36,10 @@ CABECALHOS = {
 }
 
 
+SEM_ORIGEM_DO_SITE = ("/webhooks/", "/painel")
+CSP_PAINEL = "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+
+
 def _barra(request: Request) -> JSONResponse | None:
     # Quem chama o endereço do Cloud Run direto pula o Cloudflare (e forja o IP); sem o segredo, nada feito.
     segredo = config().origem_secret
@@ -48,8 +52,8 @@ def _barra(request: Request) -> JSONResponse | None:
     if tamanho and (not tamanho.isdigit() or int(tamanho) > TAMANHO_MAXIMO):
         return JSONResponse({"detail": "Pedido grande demais."}, status_code=413)
     # CSRF: o navegador manda o cookie sozinho, então toda mudança precisa vir do próprio site.
-    # O webhook vem da AbacatePay e tem verificação própria.
-    if request.method not in ("GET", "HEAD", "OPTIONS") and not request.url.path.startswith("/webhooks/"):
+    # O webhook vem da AbacatePay e tem verificação própria; o painel tem outro endereço e confere depois do Access.
+    if request.method not in ("GET", "HEAD", "OPTIONS") and not request.url.path.startswith(SEM_ORIGEM_DO_SITE):
         if request.headers.get("origin") != config().site_url:
             return JSONResponse({"detail": "Origem não permitida."}, status_code=403)
     return None
@@ -59,6 +63,8 @@ def _barra(request: Request) -> JSONResponse | None:
 async def protecoes(request: Request, call_next):
     resposta = _barra(request) or await call_next(request)
     resposta.headers.update(CABECALHOS)
+    if request.url.path.startswith("/painel"):
+        resposta.headers["Content-Security-Policy"] = CSP_PAINEL
     if config().producao:
         resposta.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
     return resposta
@@ -76,6 +82,8 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(pagamentos.router)
 app.include_router(conta.router)
+app.include_router(painel.router)
+app.include_router(painel.uso)
 
 
 @app.get("/saude")

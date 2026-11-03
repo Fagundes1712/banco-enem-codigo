@@ -2,10 +2,10 @@
 
 import uuid
 from collections.abc import Iterator
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from functools import lru_cache
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, create_engine, event, func, select
+from sqlalchemy import Boolean, Date, DateTime, ForeignKey, Integer, String, create_engine, event, func, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
 
 from .config import config
@@ -99,6 +99,16 @@ class Movimento(Base):
     em: Mapped[datetime] = mapped_column(DateTime, default=agora)
 
 
+class UsoDiario(Base):
+    """Só somas por dia e plano: sem conta, questão nem resposta. A API grava por soma_uso e não lê."""
+
+    __tablename__ = "uso_diario"
+    dia: Mapped[date] = mapped_column(Date, primary_key=True)
+    plano: Mapped[str] = mapped_column(String(10), primary_key=True)  # gratis | pro
+    questoes: Mapped[int] = mapped_column(Integer)
+    minutos: Mapped[int] = mapped_column(Integer)
+
+
 @lru_cache
 def motor():
     url = config().database_url
@@ -151,6 +161,17 @@ def assume_dono(banco: Session, tipo: str, valor: str) -> str | None:
     if usuario_id:
         define_usuario(banco, usuario_id)
     return usuario_id
+
+
+def soma_uso(banco: Session, plano: str, questoes: int, minutos: int) -> None:
+    if motor().dialect.name == "postgresql":
+        banco.execute(select(func.soma_uso(plano, questoes, minutos)))
+        return
+    chave = (agora().date(), plano)
+    linha = banco.get(UsoDiario, chave) or UsoDiario(dia=chave[0], plano=plano, questoes=0, minutos=0)
+    linha.questoes += questoes
+    linha.minutos += minutos
+    banco.add(linha)
 
 
 def sessao() -> Iterator[Session]:

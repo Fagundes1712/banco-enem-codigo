@@ -57,6 +57,7 @@ services:
       - --set=ON_ERROR_STOP=1
       - --set=senha_app=${SENHA_APP:?}
       - --set=senha_migracao=${SENHA_MIGRACAO:?}
+      - --set=senha_painel=${SENHA_PAINEL:?}
       - --file=/papeis.sql
     volumes:
       - ../api/migracoes/papeis.sql:/papeis.sql:ro
@@ -96,6 +97,13 @@ services:
       ABACATEPAY_DEV_MODE: ${ABACATEPAY_DEV_MODE:?}
       ABACATEPAY_WEBHOOK_SECRET: ${ABACATEPAY_WEBHOOK_SECRET:?}
       ORIGEM_SECRET: ${ORIGEM_SECRET:?}
+      # Painel: PAINEL_EMAIL vazio deixa desligado.
+      PAINEL_EMAIL: ${PAINEL_EMAIL:-}
+      PAINEL_URL: ${PAINEL_URL:-}
+      PAINEL_ACCESS_TIME: ${PAINEL_ACCESS_TIME:-}
+      PAINEL_ACCESS_AUD: ${PAINEL_ACCESS_AUD:-}
+      PAINEL_TOTP: ${PAINEL_TOTP:-}
+      PAINEL_DATABASE_URL: postgresql+psycopg://painel_leitura:${SENHA_PAINEL:?}@postgres:5432/bancoenem
     ports:
       - "127.0.0.1:8080:8080"
     read_only: true
