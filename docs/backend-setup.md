@@ -1,5 +1,7 @@
 # Ligar login e assinatura em produção
 
+Este passo a passo usa Cloud Run e Neon (Fase 2). Para o servidor grátis da Fase 1, veja `infra/README.md`; contas, chaves e Pix continuam iguais.
+
 Passo a passo do que só o responsável pode fazer (contas, chaves, pagamento). O código já está pronto em `api/` (API) e `js/conta.js` (telas); enquanto `<meta name="api-url">` estiver vazio no `index.html`, o site segue sem conta.
 
 Regras durante todo o processo:

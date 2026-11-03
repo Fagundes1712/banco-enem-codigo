@@ -1,0 +1,128 @@
+# Fase 1: API, PostgreSQL e Redis numa máquina só. Subir: docker compose up -d --build (ver infra/README.md).
+# Só a API tem porta, e só em 127.0.0.1: quem chega nela é o Cloudflare Tunnel.
+
+x-imagem-api: &imagem-api
+  build: ../api
+  image: banco-enem-api
+
+x-sem-privilegio: &sem-privilegio
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+
+services:
+  postgres:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bancoenem
+      POSTGRES_PASSWORD: ${SENHA_POSTGRES:?}
+    volumes:
+      - dados:/var/lib/postgresql/data
+    networks: [interna]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "bancoenem"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    # Sem capacidades o entrypoint não consegue trocar de usuário: já começa como redis.
+    user: redis
+    # Só contadores de tentativas: nada vai para o disco.
+    command: ["redis-server", "--requirepass", "${SENHA_REDIS:?}", "--save", "", "--appendonly", "no"]
+    networks: [interna]
+    <<: *sem-privilegio
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$$SENHA_REDIS\" --no-auth-warning ping | grep -q PONG"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    environment:
+      SENHA_REDIS: ${SENHA_REDIS:?}
+
+  # Roda a cada subida: cria os papéis e confirma as senhas do .env.
+  papeis:
+    image: postgres:17
+    restart: "no"
+    environment:
+      PGPASSWORD: ${SENHA_POSTGRES:?}
+    command:
+      - psql
+      - --host=postgres
+      - --username=postgres
+      - --dbname=bancoenem
+      - --set=ON_ERROR_STOP=1
+      - --set=senha_app=${SENHA_APP:?}
+      - --set=senha_migracao=${SENHA_MIGRACAO:?}
+      - --file=/papeis.sql
+    volumes:
+      - ../api/migracoes/papeis.sql:/papeis.sql:ro
+    networks: [interna]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  migracao:
+    <<: [*imagem-api, *sem-privilegio]
+    restart: "no"
+    command: ["python", "-m", "alembic", "upgrade", "head"]
+    environment:
+      MIGRACAO_DATABASE_URL: postgresql+psycopg://api_migracao:${SENHA_MIGRACAO:?}@postgres:5432/bancoenem
+    read_only: true
+    tmpfs: [/tmp]
+    networks: [interna]
+    depends_on:
+      papeis:
+        condition: service_completed_successfully
+
+  api:
+    <<: [*imagem-api, *sem-privilegio]
+    restart: unless-stopped
+    # Lista fechada: a API não recebe as senhas do administrador nem do api_migracao.
+    environment:
+      AMBIENTE: producao
+      DATABASE_URL: postgresql+psycopg://api_app:${SENHA_APP:?}@postgres:5432/bancoenem
+      REDIS_URL: redis://:${SENHA_REDIS:?}@redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:?}
+      SITE_URL: ${SITE_URL:?}
+      COOKIE_DOMAIN: ${COOKIE_DOMAIN:?}
+      TURNSTILE_SECRET: ${TURNSTILE_SECRET:?}
+      RESEND_API_KEY: ${RESEND_API_KEY:?}
+      EMAIL_REMETENTE: ${EMAIL_REMETENTE:?}
+      ABACATEPAY_API_KEY: ${ABACATEPAY_API_KEY:?}
+      ABACATEPAY_DEV_MODE: ${ABACATEPAY_DEV_MODE:?}
+      ABACATEPAY_WEBHOOK_SECRET: ${ABACATEPAY_WEBHOOK_SECRET:?}
+      ORIGEM_SECRET: ${ORIGEM_SECRET:?}
+    ports:
+      - "127.0.0.1:8080:8080"
+    read_only: true
+    tmpfs: [/tmp]
+    networks: [interna, saida]
+    depends_on:
+      migracao:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import os, urllib.request as u; u.urlopen(u.Request('http://127.0.0.1:8080/saude', headers={'X-Origem': os.environ['ORIGEM_SECRET']}), timeout=3)"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+networks:
+  # Sem saída para a internet: banco e Redis não falam com fora.
+  interna:
+    internal: true
+  # A API precisa chamar Resend, AbacatePay e Turnstile.
+  saida:
+
+volumes:
+  dados:

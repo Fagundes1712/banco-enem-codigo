@@ -1,0 +1,67 @@
+#cloud-config
+# Ubuntu 24.04 na Oracle. Troque __CHAVE_SSH__ e __TUNNEL_TOKEN__ antes de colar em "user data" (ver infra/README.md).
+# O user data fica legível na máquina: aqui entra só o token do Tunnel; os outros segredos vão no infra/.env.
+
+package_update: true
+package_upgrade: true
+packages:
+  - docker.io
+  - docker-compose-v2
+  - git
+  - unattended-upgrades
+
+ssh_pwauth: false
+users:
+  - name: deploy
+    # Grupo docker equivale a root na máquina: por isso só esta chave entra, e só pelo Tunnel.
+    groups: [docker]
+    shell: /bin/bash
+    lock_passwd: true
+    ssh_authorized_keys:
+      - __CHAVE_SSH__
+
+write_files:
+  # SSH só escuta dentro da máquina: de fora, só pelo Tunnel. As imagens da Oracle têm iptables próprio; não usamos ufw.
+  - path: /etc/ssh/sshd_config.d/10-banco-enem.conf
+    permissions: "0644"
+    content: |
+      ListenAddress 127.0.0.1
+      PasswordAuthentication no
+      PermitRootLogin no
+      AllowUsers deploy
+  - path: /etc/apt/apt.conf.d/52banco-enem
+    permissions: "0644"
+    content: |
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+      Unattended-Upgrade::Automatic-Reboot "true";
+      Unattended-Upgrade::Automatic-Reboot-Time "04:30";
+  - path: /etc/banco-enem/tunel.env
+    permissions: "0600"
+    content: |
+      TUNNEL_TOKEN=__TUNNEL_TOKEN__
+  # Um contêiner invadido não pode ler o metadata da Oracle (user data, credenciais da máquina).
+  - path: /etc/systemd/system/bloqueia-metadata.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Contêineres sem acesso ao metadata da nuvem
+      After=docker.service
+      Requires=docker.service
+      [Service]
+      Type=oneshot
+      RemainAfterExit=true
+      ExecStart=/bin/sh -c 'iptables -C DOCKER-USER -d 169.254.0.0/16 -j DROP || iptables -I DOCKER-USER -d 169.254.0.0/16 -j DROP'
+      [Install]
+      WantedBy=multi-user.target
+
+runcmd:
+  - systemctl enable --now docker
+  - systemctl daemon-reload
+  - systemctl enable --now bloqueia-metadata.service
+  # Rede do host para alcançar o SSH e a API em localhost. Fora do Compose: o acesso à máquina não depende da aplicação.
+  - docker run -d --name tunel --restart unless-stopped --network host --env-file /etc/banco-enem/tunel.env cloudflare/cloudflared:latest tunnel --no-autoupdate run
+  - git clone --depth 1 https://github.com/Fagundes1712/banco-enem-codigo.git /opt/banco-enem
+  - chown -R deploy:deploy /opt/banco-enem
+  # Por último: se algo acima falhar, a saída é recriar a máquina, que ainda não tem dados.
+  - systemctl restart ssh.socket ssh.service

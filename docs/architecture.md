@@ -5,6 +5,7 @@ App estático, sem framework e sem build. Login e assinatura ficam numa API em P
 ## Arquivos
 | Caminho | Papel |
 |---|---|
+| `infra/` | Servidor da Fase 1: Docker Compose (API, PostgreSQL, Redis) e cloud-init com Tunnel. |
 | `index.html` | Casca da página; carrega os scripts de `js/` em ordem com `defer`. |
 | `js/base.js` | Constantes, estado global, helpers de DOM, carga do JSON, histórico e índices. |
 | `js/inicio.js` | Tela inicial e tela de matéria. |
