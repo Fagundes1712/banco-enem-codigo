@@ -28,9 +28,25 @@ docker run --rm alpine wget -T3 -qO- http://169.254.169.254/ ; echo $?   # difer
 curl -i https://api.<domínio>/saude                                      # 200, passando pelo Cloudflare
 ```
 
+## O que roda sozinho
+
+| Tarefa | Quando | Como |
+| --- | --- | --- |
+| Publicar | Até 5 minutos depois do CI verde na `main` | `api-producao.yml` move o branch `api-producao`; `atualiza.sh` busca e sobe |
+| Voltar versão | Quando pedir | Actions > API em produção > Run workflow, com o commit anterior. Migração não volta sozinha |
+| Backup | Todo dia, 03:30 UTC | `backup.sh`: `pg_dump` criptografado com `age` para o R2, guarda 30 dias |
+| Teste de restauração | Toda semana | `restauracao.yml` restaura o último backup numa cópia descartável |
+| Alertas | A cada 5 minutos | `alerta.sh`: e-mail com eventos graves da API; backup e atualização avisam se falharem |
+| Sistema | Todo dia | `unattended-upgrades`, com reinício às 04:30 UTC se preciso |
+
+Monitor de queda: cadastre `https://api.<domínio>/saude` num serviço externo gratuito (UptimeRobot, por exemplo), a cada 5 minutos.
+
+Chave do backup: rode `age-keygen -o chave.txt` no seu PC. A linha pública vai em `BACKUP_CHAVE_PUBLICA`. Guarde `chave.txt` fora do servidor: sem ela, nenhum backup abre. Para o teste semanal, crie no GitHub os segredos `BACKUP_CHAVE_PRIVADA`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` e `R2_ENDPOINT`, e a variável `BACKUP_ATIVO=true`.
+
 ## Limitações
 
 - O CI sobe a pilha e valida o formato do `cloud-init.yaml`, mas a instalação em si só roda na máquina real, sem teste automático.
 - Imagens seguem as tags `postgres:17`, `redis:7-alpine` e `cloudflared:latest`, sem hash. Elas só mudam num `pull` feito de propósito.
-- Publicação automática, backup e alertas ainda não existem aqui: a próxima etapa cobre isso. Até lá, atualizar é `git pull` e `docker compose up -d --build`.
-- Máquina única e banco no mesmo disco: sem backup, perder a máquina é perder os dados. Não receba pagamento real antes do backup diário existir.
+- Máquina única e banco no mesmo disco: se o backup parar, perder a máquina é perder dados. Não receba pagamento real sem um teste de restauração verde.
+- Alertas e backup avisam por e-mail, via Resend: se o Resend cair, o aviso fica só no `journalctl`.
+- `atualiza.sh` não volta sozinho se a versão nova falhar: ele avisa, e a volta é manual.

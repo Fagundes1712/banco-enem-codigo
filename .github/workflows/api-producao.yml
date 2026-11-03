@@ -1,0 +1,31 @@
+name: API em produção
+
+# Move o branch api-producao, que o servidor da Fase 1 acompanha (infra/atualiza.sh).
+# Automático depois do CI verde na main. Manual (volta de versão): Run workflow com o commit desejado.
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Commit a publicar (volta de versão = um commit anterior da main)
+        default: main
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || inputs.ref }}
+      - run: git push --force origin HEAD:refs/heads/api-producao

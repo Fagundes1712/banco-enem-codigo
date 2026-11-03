@@ -1,0 +1,43 @@
+name: Teste de restauração
+
+# Prova toda semana que o último backup do R2 abre. Só liga com a variável BACKUP_ATIVO = true (infra/README.md).
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  restaurar:
+    if: vars.BACKUP_ATIVO == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RCLONE_CONFIG_R2_TYPE: s3
+      RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+      RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      RCLONE_S3_NO_CHECK_BUCKET: "true"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y age rclone
+      - name: Baixa o backup mais recente e confere a idade
+        run: |
+          ultimo=$(rclone lsf r2:banco-enem-backup --include '*.dump.age' | sort | tail -1)
+          test -n "$ultimo"
+          # O nome traz a data: backup com mais de 2 dias quer dizer que o diário parou.
+          dia=$(echo "$ultimo" | sed 's/bancoenem-\(.*\)\.dump\.age/\1/')
+          test "$(date -d "$dia" +%s)" -ge "$(date -d '2 days ago' +%s)"
+          rclone copyto "r2:banco-enem-backup/$ultimo" "$RUNNER_TEMP/backup.age"
+      - name: Restaura numa cópia descartável
+        env:
+          CHAVE: ${{ secrets.BACKUP_CHAVE_PRIVADA }}
+        run: |
+          umask 077
+          printf '%s\n' "$CHAVE" > "$RUNNER_TEMP/chave.txt"
+          bash infra/testa-restauracao.sh "$RUNNER_TEMP/backup.age" "$RUNNER_TEMP/chave.txt"
