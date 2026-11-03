@@ -9,6 +9,7 @@ Ambientes, backup, restauração, monitoramento e incidentes. Deploy e rollback 
 | Testes | `npm run verify` (local, hook e CI) | Banco real; `BANCO=<arquivo>` usa outro. |
 | Homologação | Não existe. O PR é validado pelo CI e localmente. Um preview por PR exigiria outro repositório de Pages ou um serviço externo; não vale o custo de manutenção hoje. | — |
 | Produção | `https://fagundes1712.github.io/banco-enem-app/` | Conteúdo de `site/public/` publicado pelo `deploy.yml`. |
+| API, Fase 1 | Máquina da Oracle, ainda não criada (`infra/README.md`) | PostgreSQL e Redis na própria máquina, sem porta aberta. |
 
 Não há dados de clientes em servidor, então não há separação de dados de teste e produção a fazer.
 

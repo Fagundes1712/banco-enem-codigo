@@ -60,6 +60,48 @@ jobs:
           path: playwright-report/
           retention-days: 7
 
+  infra:
+    name: infra
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Sobe o servidor da Fase 1 em modo produção e confere o que fica exposto.
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Formato do cloud-init
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cloud-init
+          cloud-init schema --config-file infra/cloud-init.yaml
+      - name: Sobe a pilha
+        working-directory: infra
+        run: |
+          sed -e 's/^\(SENHA_[A-Z]*\|TURNSTILE_SECRET\|RESEND_API_KEY\|ABACATEPAY_API_KEY\)=$/\1=teste-ci-1234567890/' \
+              -e 's/^JWT_SECRET=$/JWT_SECRET=teste-ci-12345678901234567890123456789012/' \
+              -e 's/^ABACATEPAY_WEBHOOK_SECRET=$/ABACATEPAY_WEBHOOK_SECRET=teste-ci-1234567890/' \
+              -e 's/^ORIGEM_SECRET=$/ORIGEM_SECRET=origem-ci/' .env.example > .env
+          docker compose up -d --build
+      - name: API responde só com o segredo da Cloudflare
+        run: |
+          curl -fsS --retry 20 --retry-connrefused --retry-delay 2 -H "X-Origem: origem-ci" http://127.0.0.1:8080/saude
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/saude)" = 403
+      - name: Banco e Redis sem porta, API só em localhost, sem senha de migração
+        working-directory: infra
+        run: |
+          docker compose ps --format '{{.Service}} {{.Publishers}}'
+          test "$(docker compose port api 8080)" = "127.0.0.1:8080"
+          test -z "$(docker compose ps postgres redis --format '{{range .Publishers}}{{.PublishedPort}}{{end}}' | tr -d '0\n')"
+          if docker compose exec -T api env | grep -E 'MIGRACAO|SENHA_POSTGRES|PGPASSWORD'; then exit 1; fi
+          docker compose exec -T postgres psql -U postgres -d bancoenem -Atc "SELECT count(*) FROM pg_policies" | grep -qv '^0$'
+      - name: Subir de novo não quebra
+        working-directory: infra
+        run: |
+          docker compose up -d
+          curl -fsS --retry 20 --retry-connrefused --retry-all-errors --retry-delay 2 -H "X-Origem: origem-ci" http://127.0.0.1:8080/saude
+      - name: Registros se falhar
+        if: failure()
+        working-directory: infra
+        run: docker compose logs --no-color --tail=60
+
   api:
     name: api
     runs-on: ubuntu-latest
