@@ -15,7 +15,7 @@ from . import abacatepay
 from . import auditoria
 from .auth import Banco, limita, usuario_atual
 from .config import config
-from .db import Pagamento, Produto, Usuario, agora, sessao
+from .db import Movimento, Pagamento, Produto, Usuario, agora, assume_dono, sessao
 
 log = logging.getLogger("api")
 
@@ -83,12 +83,15 @@ def novo_pagamento(dados: NovoPagamento, usuario: Logado, banco: Banco):
         raise HTTPException(502, "O pagamento está indisponível agora.")
     pagamento.checkout_id = checkout["id"]
     banco.add(pagamento)
+    banco.add(Movimento(usuario_id=usuario.id, pagamento_id=pagamento.id, evento="criado", valor_centavos=p["centavos"]))
     banco.commit()
     return {"url": checkout["url"]}
 
 
 def sincroniza(banco: Session, checkout_id: str) -> str:
     """Pergunta à AbacatePay se o checkout foi pago e libera os dias uma vez só."""
+    # O webhook chega sem usuário logado: o dono vem do id do checkout.
+    assume_dono(banco, "checkout", checkout_id)
     conhecido = banco.scalar(select(Pagamento.status).where(Pagamento.checkout_id == checkout_id))
     if conhecido is None:
         return "desconhecido"
@@ -103,7 +106,7 @@ def sincroniza(banco: Session, checkout_id: str) -> str:
         update(Pagamento)
         .where(Pagamento.checkout_id == checkout_id, Pagamento.status == "pendente", Pagamento.valor_centavos == pago)
         .values(status="pago", pago_em=agora())
-        .returning(Pagamento.usuario_id, Pagamento.dias)
+        .returning(Pagamento.id, Pagamento.usuario_id, Pagamento.dias)
     ).first()
     if not linha:
         banco.rollback()
@@ -115,6 +118,7 @@ def sincroniza(banco: Session, checkout_id: str) -> str:
     usuario = banco.scalar(select(Usuario).where(Usuario.id == linha.usuario_id).with_for_update())
     inicio = max(usuario.assinatura_ate or agora(), agora())  # renovação antes de vencer soma os dias
     usuario.assinatura_ate = inicio + timedelta(days=linha.dias)
+    banco.add(Movimento(usuario_id=linha.usuario_id, pagamento_id=linha.id, evento="pago", valor_centavos=pago))
     banco.commit()
     auditoria.evento("assinatura_liberada", linha.usuario_id, dias=linha.dias)
     return "liberado"

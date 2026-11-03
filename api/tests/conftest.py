@@ -5,7 +5,7 @@ SITE = "http://localhost:8765"
 _pasta = tempfile.mkdtemp()
 os.environ.update(
     AMBIENTE="teste",
-    # O CI também roda com PostgreSQL de verdade (TESTE_DATABASE_URL).
+    # O CI roda como api_app num PostgreSQL migrado, com RLS (TESTE_DATABASE_URL e TESTE_ADMIN_DATABASE_URL).
     DATABASE_URL=os.environ.get("TESTE_DATABASE_URL") or f"sqlite:///{_pasta}/teste.db",
     REDIS_URL="",
     JWT_SECRET="x" * 40,
@@ -19,6 +19,8 @@ os.environ.update(
 
 import pytest  # noqa: E402
 from fastapi.testclient import TestClient  # noqa: E402
+from sqlalchemy import create_engine, text  # noqa: E402
+from sqlalchemy.pool import NullPool  # noqa: E402
 
 from app import abacatepay, servicos  # noqa: E402
 from app.db import Base, motor  # noqa: E402
@@ -68,9 +70,23 @@ def abacate(monkeypatch):
     return falsa
 
 
+def _limpa_banco():
+    admin = os.environ.get("TESTE_ADMIN_DATABASE_URL")
+    if not admin:
+        Base.metadata.drop_all(motor())
+        return
+    # O api_app não apaga tudo de propósito: quem limpa entre os testes é o administrador.
+    with create_engine(admin, poolclass=NullPool).begin() as c:
+        c.execute(text("TRUNCATE " + ", ".join(Base.metadata.tables) + " CASCADE"))
+
+
 @pytest.fixture
-def cliente(emails):
-    Base.metadata.drop_all(motor())
+def banco_limpo():
+    _limpa_banco()
+
+
+@pytest.fixture
+def cliente(emails, banco_limpo):
     with TestClient(app, headers={"Origin": SITE}) as c:
         yield c
 

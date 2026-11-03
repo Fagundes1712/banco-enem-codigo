@@ -1,11 +1,11 @@
-"""Tabelas e sessão do banco (PostgreSQL em produção, SQLite nos testes)."""
+"""Tabelas e sessão do banco (PostgreSQL com RLS em produção, SQLite nos testes locais)."""
 
 import uuid
 from collections.abc import Iterator
 from datetime import UTC, datetime
 from functools import lru_cache
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, create_engine
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, create_engine, event, func, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
 
 from .config import config
@@ -86,6 +86,19 @@ class Pagamento(Base):
     pago_em: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
+class Movimento(Base):
+    """Trilha de pagamentos só de inclusão: no banco, a API não tem permissão de editar nem apagar."""
+
+    __tablename__ = "movimentos"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_id)
+    # Sem chave estrangeira: a trilha fica depois de a conta ser excluída, só com o id interno.
+    usuario_id: Mapped[str] = mapped_column(String(36), index=True)
+    pagamento_id: Mapped[str] = mapped_column(String(36))
+    evento: Mapped[str] = mapped_column(String(10))  # criado | pago
+    valor_centavos: Mapped[int] = mapped_column(Integer)
+    em: Mapped[datetime] = mapped_column(DateTime, default=agora)
+
+
 @lru_cache
 def motor():
     url = config().database_url
@@ -94,14 +107,50 @@ def motor():
     return create_engine(url, **extra)
 
 
+def _reaplica_usuario(banco, _transacao, conexao) -> None:
+    # O set_config vale só para a transação; depois de um commit, a próxima começa sem usuário.
+    usuario_id = banco.info.get("usuario_id")
+    if usuario_id and conexao.dialect.name == "postgresql":
+        conexao.execute(select(func.set_config("app.usuario_id", usuario_id, True)))
+
+
 @lru_cache
 def _fabrica():
-    return sessionmaker(motor(), expire_on_commit=False)
+    fabrica = sessionmaker(motor(), expire_on_commit=False)
+    event.listen(fabrica, "after_begin", _reaplica_usuario)
+    return fabrica
 
 
 def criar_tabelas() -> None:
-    # shortcut: create_all não altera tabelas existentes; adotar Alembic antes da primeira mudança de schema em produção.
-    Base.metadata.create_all(motor())
+    # No PostgreSQL quem cria as tabelas é o Alembic (papel api_migracao); a API não tem permissão.
+    if motor().dialect.name == "sqlite":
+        Base.metadata.create_all(motor())
+
+
+def define_usuario(banco: Session, usuario_id: str) -> None:
+    """Diz ao banco de quem é esta sessão: o RLS só mostra as linhas dessa conta."""
+    banco.info["usuario_id"] = usuario_id
+    if motor().dialect.name == "postgresql":
+        banco.execute(select(func.set_config("app.usuario_id", usuario_id, True)))
+
+
+# Antes do login não há usuário da vez. Cada busca é uma função estreita do banco que devolve só o id do dono.
+_DONOS = {
+    "email": (func.conta_por_email, Usuario.id, Usuario.email),
+    "token_email": (func.dono_token_email, TokenEmail.usuario_id, TokenEmail.token_hash),
+    "sessao": (func.dono_sessao, Sessao.usuario_id, Sessao.token_hash),
+    "checkout": (func.dono_checkout, Pagamento.usuario_id, Pagamento.checkout_id),
+}
+
+
+def assume_dono(banco: Session, tipo: str, valor: str) -> str | None:
+    """Descobre o dono de um e-mail, token ou checkout e fixa o usuário da sessão. None se não houver."""
+    funcao, coluna, chave = _DONOS[tipo]
+    postgres = motor().dialect.name == "postgresql"
+    usuario_id = banco.scalar(select(funcao(valor)) if postgres else select(coluna).where(chave == valor))
+    if usuario_id:
+        define_usuario(banco, usuario_id)
+    return usuario_id
 
 
 def sessao() -> Iterator[Session]:

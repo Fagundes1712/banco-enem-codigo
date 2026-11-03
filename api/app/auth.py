@@ -1,5 +1,6 @@
 """Rotas de conta: cadastro, confirmação, login, renovação, logout e recuperação de senha."""
 
+import uuid
 from datetime import UTC, timedelta
 from typing import Annotated
 
@@ -12,7 +13,7 @@ from sqlalchemy.orm import Session
 from . import servicos
 from .auditoria import evento
 from .config import config
-from .db import Sessao, TokenEmail, Usuario, agora, sessao
+from .db import Sessao, TokenEmail, Usuario, agora, assume_dono, define_usuario, sessao
 from .seguranca import (
     ACESSO_SEGUNDOS,
     HASH_FALSO,
@@ -52,6 +53,8 @@ def exige_turnstile(token: str, request: Request, acao: str) -> None:
 
 def usuario_atual(banco: Banco, acesso: Annotated[str | None, Cookie()] = None) -> Usuario:
     dados = ler_acesso(acesso) if acesso else None
+    if dados:
+        define_usuario(banco, dados["sub"])
     usuario = banco.get(Usuario, dados["sub"]) if dados else None
     trocou = usuario and usuario.senha_trocada_em
     if not usuario or (trocou and dados["iat"] < int(trocou.replace(tzinfo=UTC).timestamp())):
@@ -109,6 +112,7 @@ def _envia_link(banco: Session, usuario: Usuario, tipo: str, fila: BackgroundTas
 
 def _usa_token(banco: Session, token: str, tipo: str) -> Usuario:
     """Marca o token como usado (uma vez só) e devolve o dono."""
+    assume_dono(banco, "token_email", hash_token(token))
     linha = banco.execute(
         update(TokenEmail)
         .where(
@@ -170,10 +174,11 @@ def cadastro(dados: Cadastro, request: Request, banco: Banco, fila: BackgroundTa
         raise HTTPException(400, "A senha precisa ter de 8 a 72 caracteres (acentos contam em dobro).")
     email = dados.email.lower()
     senha_hash = gerar_hash(dados.senha)  # antes da busca: mesmo tempo de resposta com ou sem conta
-    if banco.scalar(select(Usuario).where(Usuario.email == email)):
+    if assume_dono(banco, "email", email):
         # Mesma resposta para não revelar quem tem conta.
         return RESPOSTA_CADASTRO
-    usuario = Usuario(email=email, senha_hash=senha_hash, termos_versao=TERMOS_VERSAO)
+    usuario = Usuario(id=str(uuid.uuid4()), email=email, senha_hash=senha_hash, termos_versao=TERMOS_VERSAO)
+    define_usuario(banco, usuario.id)
     banco.add(usuario)
     banco.commit()
     _envia_link(banco, usuario, "confirmar", fila)
@@ -183,6 +188,7 @@ def cadastro(dados: Cadastro, request: Request, banco: Banco, fila: BackgroundTa
 @router.post("/confirmar")
 def confirmar(dados: Confirmacao, request: Request, banco: Banco):
     limita(f"confirmar:{ip_do_cliente(request)}", 10, 3600)
+    assume_dono(banco, "token_email", hash_token(dados.token))
     pendente = banco.scalar(
         select(TokenEmail).where(
             TokenEmail.token_hash == hash_token(dados.token),
@@ -208,6 +214,7 @@ def login(dados: Login, request: Request, resposta: Response, banco: Banco):
     limita(f"login-ip:{ip_do_cliente(request)}", 20, 600)
     limita(f"login-email:{email}", 5, 900)
     exige_turnstile(dados.turnstile, request, "login")
+    assume_dono(banco, "email", email)
     usuario = banco.scalar(select(Usuario).where(Usuario.email == email))
     if not confere_senha(dados.senha, usuario.senha_hash if usuario else HASH_FALSO) or not usuario:
         evento("login_falhou", usuario.id if usuario else None)
@@ -221,6 +228,8 @@ def login(dados: Login, request: Request, resposta: Response, banco: Banco):
 
 @router.post("/refresh")
 def refresh(resposta: Response, banco: Banco, fila: BackgroundTasks, renovacao: Annotated[str | None, Cookie()] = None):
+    if renovacao:
+        assume_dono(banco, "sessao", hash_token(renovacao))
     atual = banco.scalar(select(Sessao).where(Sessao.token_hash == hash_token(renovacao))) if renovacao else None
     if not atual or atual.expira_em <= agora():
         _apaga_cookies(resposta)
@@ -254,6 +263,7 @@ def _avisa(banco: Session, usuario_id: str, fila: BackgroundTasks, assunto: str,
 @router.post("/logout")
 def logout(resposta: Response, banco: Banco, renovacao: Annotated[str | None, Cookie()] = None):
     if renovacao:
+        assume_dono(banco, "sessao", hash_token(renovacao))
         banco.execute(update(Sessao).where(Sessao.token_hash == hash_token(renovacao)).values(revogada=True))
         banco.commit()
     _apaga_cookies(resposta)
@@ -266,6 +276,7 @@ def esqueci(dados: Esqueci, request: Request, banco: Banco, fila: BackgroundTask
     limita(f"esqueci-ip:{ip_do_cliente(request)}", 5, 3600)
     limita(f"esqueci-email:{email}", 3, 3600)
     exige_turnstile(dados.turnstile, request, "esqueci")
+    assume_dono(banco, "email", email)
     usuario = banco.scalar(select(Usuario).where(Usuario.email == email))
     if usuario:
         _envia_link(banco, usuario, "senha", fila)
