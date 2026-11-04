@@ -405,15 +405,6 @@ footer {
   letter-spacing: 0.02em;
 }
 
-/* Contagem de questões */
-.tab::after {
-  content: attr(data-n);
-  margin-top: 4px;
-  font: 500 0.8125rem/1.3 var(--f-sans);
-  color: var(--ink-2);
-  font-variant-numeric: tabular-nums;
-}
-
 .tab[aria-selected="true"] {
   background: var(--acc);
   border-color: var(--acc);
@@ -424,10 +415,6 @@ footer {
 .tab[aria-selected="true"]::before {
   background: color-mix(in srgb, var(--on-acc) 22%, transparent);
   color: var(--on-acc);
-}
-
-.tab[aria-selected="true"]::after {
-  color: color-mix(in srgb, var(--on-acc) 82%, transparent);
 }
 
 @media (hover: hover) and (pointer: fine) {

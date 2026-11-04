@@ -178,9 +178,14 @@ async function irTopico(w, id) {
     availNote().textContent
   );
   ok(
-    "lead mostra o total de " + unicas(banco).length + " questões únicas",
-    d.querySelector(".lead").textContent.includes(unicas(banco).length.toLocaleString("pt-BR") + " questões"),
+    "lead apresenta a coleção sem contagem",
+    d.querySelector(".lead").textContent ===
+      "Coleção de questões dos últimos 10 anos do enem, separadas de maneira inteligente",
     d.querySelector(".lead").textContent
+  );
+  ok(
+    "abas de área sem contagem de questões",
+    [...d.querySelectorAll(".tab")].every((t) => !t.hasAttribute("data-n"))
   );
   ok(
     "nota rodapé é disclaimer",

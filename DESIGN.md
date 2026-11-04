@@ -71,7 +71,7 @@ Só existem os tokens de `:root`, o bloco escuro e as regras `[data-area]`. Nunc
 
 ## 5. Componentes
 
-- **Áreas**: as quatro abas (`role="tablist"`) são cartões com sigla (`data-sigla`) e contagem (`data-n`) via pseudo-elementos, para não mudar o `textContent`. A selecionada fica cheia na cor da área.
+- **Áreas**: as quatro abas (`role="tablist"`) são cartões com sigla (`data-sigla`) via pseudo-elemento, para não mudar o `textContent`. A selecionada fica cheia na cor da área.
 - **Modos**: trilho afundado com a opção ativa em cartão branco.
 - **Botões**: pílula. `.primary` cheio na cor da área; `.btn` contornado; `.back` como link.
 - **Barra do simulado**: fixa, translúcida, cronômetro em pílula e botão "Sair" (pede confirmação e volta para onde o simulado começou, sem salvar), progresso de 4px de ponta a ponta.
