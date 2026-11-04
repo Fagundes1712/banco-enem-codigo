@@ -129,8 +129,7 @@ function home() {
       h(
         "p",
         { class: "lead" },
-        num(uniq(Q).length) +
-          " questões do ENEM, separadas por área e conteúdo. Bons estudos."
+        "Coleção de questões dos últimos 10 anos do enem, separadas de maneira inteligente"
       )
     ),
     h(
@@ -164,7 +163,6 @@ function home() {
             "aria-controls": "setup",
             "data-area": k,
             "data-sigla": k,
-            "data-n": plural(inArea(k).length, "questão", "questões"),
             tabindex: k === S.area ? 0 : -1,
             onclick: () => k !== S.area && swap(() => keep(() => {
               S = { ...S, area: k };
