@@ -25,7 +25,6 @@ let T = null;
 let tick = null;
 let H = readHist();
 let PRO = false; // assinatura ativa na conta; só ela mostra as notas
-const NOTA_LIVRE = true; // temporário: nota para todos os planos; false volta a travar no grátis
 
 /* ============================== Helpers ============================== */
 
@@ -173,13 +172,14 @@ const getJSON = (u) =>
     return r.json();
   });
 
-// Plano do usuário (contaAtual vem de js/conta.js). Sem login, rede ou API: grátis.
+// Plano do usuário (contaAtual vem de js/conta.js, com o login). Sem login,
+// sem rede ou sem API, fica no grátis.
 const plano = () =>
   Promise.resolve(typeof contaAtual === "function" ? contaAtual() : null)
     .then((c) => {
-      PRO = NOTA_LIVRE || !!c?.assinatura_ativa;
+      PRO = !!c?.assinatura_ativa;
     })
-    .catch(() => (PRO = NOTA_LIVRE));
+    .catch(() => {});
 
 // Entrar, sair, pagar ou excluir a conta (evento de js/conta.js) atualiza o plano. Cada tela lê PRO
 // ao ser desenhada e essas ações saem da tela de conta pelo swap, então não precisa redesenhar aqui

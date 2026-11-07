@@ -29,17 +29,12 @@ test("simulado aleatório do início ao resultado", async ({ page }) => {
     await page.locator(".alt").first().click();
     await page.getByRole("button", { name: i < 4 ? "Próxima" : "Finalizar simulado" }).click();
   }
-  // Sem conta é o plano grátis: a nota fica travada e o toque abre o convite do Pro,
-  // a não ser com NOTA_LIVRE (js/base.js), que mostra a nota para todos.
-  if (await page.evaluate("NOTA_LIVRE")) {
-    await expect(page.locator(".res .score")).toHaveText(/^\d+$/);
-  } else {
-    await expect(page.locator(".res .score")).toHaveText("PRO");
-    await page.locator(".res .ring").click();
-    const convite = page.getByRole("dialog", { name: "Nota no plano Pro" });
-    await convite.getByRole("button", { name: "Continuar estudando" }).click();
-    await expect(convite).toHaveCount(0);
-  }
+  // Sem conta é o plano grátis: a nota fica travada e o toque abre o convite do Pro.
+  await expect(page.locator(".res .score")).toHaveText("PRO");
+  await page.locator(".res .ring").click();
+  const convite = page.getByRole("dialog", { name: "Nota no plano Pro" });
+  await convite.getByRole("button", { name: "Continuar estudando" }).click();
+  await expect(convite).toHaveCount(0);
   await page.getByRole("button", { name: "Ver correções" }).click();
   await expect(page.getByRole("button", { name: "Voltar ao resultado" }).first()).toBeVisible();
 
