@@ -11,7 +11,7 @@
    - Nunca cacheia respostas com erro (status >= 500) nem não-GET.
    ============================================================= */
 
-const VERSION = "v43"; // v43: nota estimada liberada para todos os planos (v42: início sem contagem de questões nas abas e no texto de abertura; v41: contador de uso do painel no fim do simulado; v40: telas de conta e assinatura junto com as notas do plano Pro (v39: notas só no plano Pro; v38: fontes locais, sem Google Fonts; v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html))
+const VERSION = "v44"; // v44: nota de novo só no plano Pro (v43 liberou para todos; v42: início sem contagem de questões nas abas e no texto de abertura; v41: contador de uso do painel no fim do simulado; v40: telas de conta e assinatura junto com as notas do plano Pro (v39: notas só no plano Pro; v38: fontes locais, sem Google Fonts; v37: quadro de escolha sem linhas pontilhadas; v36: CSP sem unsafe-inline, style por CSSOM; v34: CSP no index.html))
 const SHELL = "banco-enem-shell-" + VERSION;
 const DATA = "banco-enem-data-" + VERSION;
 
