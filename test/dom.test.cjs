@@ -98,7 +98,7 @@ function boot(pro = true) {
   }
 
   // "use strict" no app.js mantém as declarações fora do escopo global.
-  window.eval(appJs + "\n;window.__nota = nota;");
+  window.eval(appJs + "\n;window.__nota = nota; window.__notaLivre = NOTA_LIVRE;");
   return window;
 }
 
@@ -972,6 +972,14 @@ async function irTopico(w, id) {
     const d3 = w3.document;
     const outra = [...d3.querySelectorAll(".tab")].find((t) => t.getAttribute("aria-selected") !== "true");
     const tag = outra.querySelector(".nota-tag");
+    if (w3.__notaLivre) {
+      ok("nota livre mostra a nota no grátis", [...d3.querySelectorAll(".nota-tag b")].every((b) => b.textContent !== "PRO"));
+      click(w3, tag);
+      await tick(10);
+      ok("nota livre não abre o convite do Pro", !d3.querySelector("dialog.modal[open]"));
+      await irTopico(w3, alvo);
+      ok("tópico no grátis mostra a nota", d3.querySelector(".nota-stat b").textContent !== "PRO");
+    } else {
     ok("grátis troca a nota por PRO", [...d3.querySelectorAll(".nota-tag b")].every((b) => b.textContent === "PRO"));
     click(w3, tag);
     await tick(10);
@@ -989,6 +997,8 @@ async function irTopico(w, id) {
     ok("Seja PRO abre a assinatura", d3.querySelector("main").textContent.includes("Você está no plano gratuito."));
     await irTopico(w3, alvo);
     ok("tópico no grátis esconde a nota", d3.querySelector(".nota-stat b").textContent === "PRO");
+
+    }
   }
 
   console.log(
