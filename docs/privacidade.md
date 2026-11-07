@@ -5,7 +5,7 @@ Levantamento técnico de 2026-10-28. Não é parecer jurídico; os pontos marcad
 ## Dados tratados
 | Dado | Onde fica | Quem acessa | Finalidade |
 |---|---|---|---|
-| Respostas, simulados terminados e notas (`banco-enem:hist`, `banco-enem:blocos`) | `localStorage` do navegador do estudante | Só o próprio navegador; nada é enviado ao projeto | Mostrar o histórico e o progresso |
+| Respostas, simulados terminados e notas (`banco-enem:hist`, `banco-enem:blocos`, `banco-enem:andamento`) | `localStorage` do navegador do estudante | Só o próprio navegador; nada é enviado ao projeto | Mostrar o histórico e o progresso |
 | Endereço IP e navegador de quem visita | Registros do GitHub Pages | GitHub (operador da hospedagem, nos EUA) | Entregar o site e segurança da hospedagem |
 
 O app não tem cadastro, cookies, analytics, anúncios nem formulário, e não coleta nome, e-mail ou documento. As respostas ficam no aparelho e não identificam a pessoa para o projeto.

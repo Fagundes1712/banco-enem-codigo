@@ -230,6 +230,7 @@ function abrir(b) {
         if (!r) return;
         start(r === "todas" ? qs : erradas, respostas);
         T.ctx = { top: b.top, bloco: b };
+        guardaAndamento();
       });
   });
 }

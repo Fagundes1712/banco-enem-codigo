@@ -89,6 +89,7 @@ function test() {
               onchange: () => {
                 T.ans[q.id] = l;
                 paint();
+                guardaAndamento();
               },
             }),
             h("span", { class: "bub", "aria-hidden": "true" }, l),
@@ -130,6 +131,7 @@ function test() {
       )
     )
   );
+  guardaAndamento();
 }
 
 function paint() {
@@ -174,10 +176,11 @@ function confirmDialog(msg, txt = {}) {
       setTimeout(() => dlg.remove(), 200);
       resolve(v);
     };
+    // Esc fecha sem escolher nenhum dos dois botões: resolve null.
     const onKey = (e) => {
       if (e.key === "Escape") {
         e.preventDefault();
-        done(false);
+        done(null);
       }
     };
     const cancel = h("button", { class: "btn", onclick: () => done(false) }, txt.cancel || "Continuar prova");
@@ -195,7 +198,7 @@ function confirmDialog(msg, txt = {}) {
     );
     dlg.addEventListener("cancel", (e) => {
       e.preventDefault();
-      done(false);
+      done(null);
     });
     document.body.append(dlg);
     document.addEventListener("keydown", onKey, true);
@@ -223,6 +226,7 @@ function sair() {
     ok: "Sair",
   }).then((yes) => {
     if (!yes || !T.live) return;
+    largaAndamento();
     clearInterval(tick);
     T.live = false;
     T.back();
@@ -236,6 +240,7 @@ function avisaUso() {
 }
 
 function closeExam() {
+  largaAndamento();
   clearInterval(tick);
   T.live = false;
   // Guarda a última tentativa de cada questão respondida (em branco não conta).
@@ -251,3 +256,79 @@ function closeExam() {
   result();
 }
 
+
+/* ======================== Bloco em andamento ======================== */
+
+// O bloco aberto fica guardado neste navegador a cada resposta e troca de
+// questão. Se o site fechar, ao voltar o estudante escolhe se continua.
+// Terminar ou sair do simulado apaga o registro.
+const AKEY = "banco-enem:andamento";
+
+function guardaAndamento() {
+  if (!T || !T.live) return;
+  const c = T.ctx || {};
+  try {
+    localStorage.setItem(
+      AKEY,
+      JSON.stringify({
+        qs: T.qs.map((q) => q.id),
+        ans: T.ans,
+        i: T.i,
+        ms: (T.pausa || Date.now()) - T.t0,
+        volta: T.back === home ? "home" : T.back === respostas ? "resp" : "top",
+        top: c.top || null,
+        bloco: c.bloco ? c.bloco.t : null,
+      })
+    );
+  } catch {
+    /* armazenamento indisponível: o bloco só vale nesta sessão */
+  }
+}
+
+function largaAndamento() {
+  try {
+    localStorage.removeItem(AKEY);
+  } catch {
+    /* nada guardado */
+  }
+}
+
+// Fora da tela o relógio para; ao voltar, o tempo parado não conta.
+document.addEventListener("visibilitychange", () => {
+  if (!T || !T.live) return;
+  if (document.hidden) {
+    T.pausa = Date.now();
+    guardaAndamento();
+  } else if (T.pausa) {
+    T.t0 += Date.now() - T.pausa;
+    T.pausa = null;
+  }
+});
+
+// Chamado no boot, com o banco carregado.
+function retomar() {
+  let a = null;
+  try {
+    a = JSON.parse(localStorage.getItem(AKEY));
+  } catch {
+    /* registro ilegível: segue sem ele */
+  }
+  if (!a || !Array.isArray(a.qs)) return;
+  const por = new Map(Q.map((q) => [q.id, q]));
+  const qs = a.qs.map((id) => por.get(id)).filter(Boolean);
+  if (!qs.length) return largaAndamento();
+  confirmDialog("Suas respostas e o tempo do bloco ficaram guardados.", {
+    title: "Você saiu antes de terminar as questões",
+    ok: "Voltar de onde parei",
+    cancel: "Abandonar bloco",
+  }).then((sim) => {
+    if (sim === null) return; // Esc: o bloco segue guardado para a próxima vez
+    if (!sim) return largaAndamento();
+    const back = a.volta === "resp" ? respostas : a.volta === "top" && IX.top[a.top] ? () => topico(a.top) : home;
+    start(qs, back, Math.min(Math.max(0, a.i | 0), qs.length - 1));
+    for (const q of qs) if (a.ans && a.ans[q.id]) T.ans[q.id] = a.ans[q.id];
+    T.t0 = Date.now() - (Number(a.ms) || 0);
+    T.ctx = { top: a.top, bloco: R.find((b) => b.t === a.bloco) };
+    test();
+  });
+}

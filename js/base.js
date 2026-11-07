@@ -163,7 +163,6 @@ const altc = (t) =>
 const fmt = (s) =>
   String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
 
-
 /* ============================== Carga ================================ */
 
 const getJSON = (u) =>
@@ -214,6 +213,7 @@ function boot(d, t) {
   for (const q of Q) q._ok = !!q.topico && consistent(q);
   home();
   if (typeof contaInicio === "function") contaInicio(); // links do e-mail e volta do pagamento (js/conta.js)
+  retomar(); // bloco que ficou aberto quando o site fechou (js/simulado.js)
 }
 
 function consistent(q) {

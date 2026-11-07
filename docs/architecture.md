@@ -33,7 +33,7 @@ App estático, sem framework e sem build. Login e assinatura ficam numa API em P
 ## Decisões
 - **Scripts clássicos, não módulos ES:** os arquivos de `js/` compartilham o escopo global (`const`/`let` de topo) e precisam carregar na ordem do `index.html`. O teste lê essa mesma ordem. Motivo: manter o app sem build e funcionando como antes da divisão (2026-10-24).
 - **Dados fora do código:** JSON buscado com `fetch`, cacheado pelo service worker.
-- **Histórico local:** `localStorage`, sem servidor. `banco-enem:hist` guarda a última resposta de cada questão; `banco-enem:blocos` guarda os simulados terminados.
+- **Histórico local:** `localStorage`, sem servidor. `banco-enem:hist` guarda a última resposta de cada questão; `banco-enem:blocos` guarda os simulados terminados; `banco-enem:andamento` guarda o simulado aberto (questões, respostas, questão atual e tempo, com o relógio parado fora da tela) e, ao reabrir o site, o app pergunta se volta de onde parou ou abandona o bloco. Terminar ou sair apaga o registro.
 
 - **Segredos só na API:** senha, tokens, chaves e preço nunca passam pelo JavaScript do site; o JWT vive em cookie `HttpOnly` (2026-10-28, issue #12).
 
