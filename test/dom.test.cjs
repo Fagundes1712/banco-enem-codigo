@@ -991,6 +991,62 @@ async function irTopico(w, id) {
     ok("tópico no grátis esconde a nota", d3.querySelector(".nota-stat b").textContent === "PRO");
   }
 
+  console.log("\n== Bloco em andamento ==");
+  {
+    const AK = "banco-enem:andamento";
+    const w4 = boot();
+    await tick(60);
+    const d4 = w4.document;
+    ok("sem bloco guardado não pergunta nada", !d4.querySelector("dialog.modal[open]"));
+    await irTopico(w4, alvo);
+    click(w4, d4.querySelector(".qtd .btn.primary"));
+    await tick(20);
+    const radio = d4.querySelector(".alt input");
+    radio.checked = true;
+    radio.dispatchEvent(new w4.Event("change", { bubbles: true }));
+    click(w4, [...d4.querySelectorAll(".nav .btn")].find((b) => b.textContent === "Próxima"));
+    await tick(20);
+    const g = JSON.parse(w4.localStorage.getItem(AK));
+    ok("bloco aberto fica guardado", !!g && g.i === 1 && Object.keys(g.ans).length === 1 && g.volta === "top" && g.top === alvo);
+
+    // Reabre o site com o registro guardado, com 90 s já passados.
+    const reabre = async (reg) => {
+      const w = boot();
+      w.localStorage.setItem(AK, JSON.stringify(reg));
+      await tick(60);
+      return w;
+    };
+    const w5 = await reabre({ ...g, ms: 90000 });
+    const d5 = w5.document;
+    const dlg = d5.querySelector("dialog.modal[open]");
+    ok("ao voltar pergunta pelo bloco", !!dlg && dlg.querySelector("h2").textContent === "Você saiu antes de terminar as questões");
+    ok(
+      "duas opções: voltar e abandonar",
+      !!dlg && [...dlg.querySelectorAll(".btn")].map((b) => b.textContent).sort().join() === "Abandonar bloco,Voltar de onde parei"
+    );
+    click(w5, [...dlg.querySelectorAll(".btn")].find((b) => b.textContent === "Voltar de onde parei"));
+    await tick(20);
+    ok("volta na questão onde parou", d5.querySelector(".bar-row span").textContent === "Questão 2 de " + g.qs.length);
+    ok("resposta dada continua marcada", d5.querySelectorAll(".dot.on").length === 1);
+    const tm = d5.getElementById("tm").textContent;
+    ok("timer segue do tempo guardado", /1:3\d$/.test(tm), tm);
+    click(w5, d5.querySelector(".btn.sair"));
+    await tick(10);
+    click(w5, [...d5.querySelectorAll("dialog.modal[open] .btn")].find((b) => b.textContent === "Sair"));
+    await tick(20);
+    ok("sair apaga o bloco guardado", !w5.localStorage.getItem(AK));
+    ok("sair do bloco retomado volta ao tópico", d5.querySelector("h1").textContent === TOP[alvo].nome);
+
+    const w6 = await reabre(g);
+    const d6 = w6.document;
+    click(w6, [...d6.querySelectorAll("dialog.modal[open] .btn")].find((b) => b.textContent === "Abandonar bloco"));
+    await tick(20);
+    ok("abandonar apaga o bloco e fica no início", !w6.localStorage.getItem(AK) && !d6.querySelector(".bar-row"));
+
+    const w7 = await reabre({ ...g, qs: ["nao-existe"] });
+    ok("bloco com questões que sumiram é descartado", !w7.document.querySelector("dialog.modal[open]") && !w7.localStorage.getItem(AK));
+  }
+
   console.log(
     "\n== Resultado: " + pass + " passaram, " + fail + " falharam ==\n"
   );
